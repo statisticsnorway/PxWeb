@@ -258,7 +258,7 @@ namespace PXWeb
                 //Start PX-Web background worker
                 PxWebBackgroundWorker.Work(PXWeb.Settings.Current.Features.BackgroundWorker.SleepTime);
             }
-
+            InitializeLogFlusher();
         }
 
         protected void Session_Start(object sender, EventArgs e)
@@ -483,5 +483,11 @@ namespace PXWeb
             _cacheController.Initialize(lstCache);
             PXWeb.Management.PxContext.CacheController = _cacheController;
         }
+    }
+
+    private void InitializeLogFlusher()
+    {
+        PXWeb.Management.LogFlusher logFlusher = new PXWeb.Management.LogFlusher();
+        logFlusher.InitializeSchedualFlush();
     }
 }

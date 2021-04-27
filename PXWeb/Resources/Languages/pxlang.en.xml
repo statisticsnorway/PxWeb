@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language xmlns="http://www.pc-axis.scb.se/" name="en">
+  <sentence name="CtrlVariableSelectorSearchValuesTooltip" value="Search" />
+  <sentence name="FileTypeCsvWithoutHeadingAndTabulator" value="Tab delimited without heading (csv) &#xD;&#xA;" />
+  <sentence name="FileTypeCsvWithHeadingAndSemiColon" value="Semicolon delimited with heading (csv) &#xD;&#xA;" />
+  <sentence name="FileTypeRelational" value="Relational file (txt) &#xD;&#xA;" />
+  <sentence name="FileTypeChartPng" value="Chart (png)" />
+   <sentence name="CtrlNavigationFlowStep2" value="Choose variables" />
+  <sentence name="CtrlSaveQueryAsCaption" value="Save the result as:" />
+  <sentence name="PxWebTableCropped" value="Maximum of {0} rows and {1} columns can be displayed on screen." />
+  <sentence name="PxWebSelectVariable" value="Choose variables" />
+  <sentence name="PxWebChangeToThisLanguage" value="English version" />
+  <sentence name="PxWebApplicationTitle" value="PX-Web" />
+  <sentence name="PxWebApplicationName" value=" " />
+  <sentence name="PxWebLogoAlt" value="PX-Web" />
+</language>
