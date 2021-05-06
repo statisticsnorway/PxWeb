@@ -222,6 +222,8 @@
     <Compile Include="RequestLimiter.cs" />
     <Compile Include="ResponseBucket.cs" />
     <Compile Include="Serializers\ChartSerializer.cs" />
+    <Compile Include="Serializers\Csv2Serializer.cs" />
+    <Compile Include="Serializers\Csv3Serializer.cs" />
     <Compile Include="Serializers\CsvSerializer.cs" />
     <Compile Include="Serializers\IWebSerializer.cs" />
     <Compile Include="Serializers\JsonSerializer.cs" />
@@ -235,6 +237,10 @@
     <Compile Include="SSDRouteHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Norway\LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
+      <Project>{03cd4269-7c00-403e-9d19-f3c7b1f9dde8}</Project>
+      <Name>Norway.LogVisitorStatistics</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PCAxis.Charts\PCAxis.Chart.csproj">
       <Project>{DF9DA2F6-7942-4834-8B51-8F6358DE8DB8}</Project>
       <Name>PCAxis.Chart</Name>

@@ -1,19 +1,15 @@
 ﻿@include file-header("_table.scss TODO etter side 3");
 
 #pxwebcontent #pcaxis_tablediv .table-title {
-    /*font-size: 150%;
+  font-size: 150%;
   line-height: 200%;
   text-transform: none;
   font-weight: bold;
   padding: 5px 5px 5px 5px;
+  background-color: $pxweb-white;
+  border-style: none;
   padding-bottom: 1em;
-  */
-    @include pxweb-table-title;
-    background-color: $pxweb-white;
-    border-style: none;
-    padding-bottom: 25px;
-    padding-top: 25px;
-    display:table-cell;
+  padding-top: 15px;
 }
 
 #pxwebcontent .table-class {
@@ -29,12 +25,12 @@
 }
 
 #pxwebcontent .table-class td {
-    margin: 0px;
-    text-align: right;
-    border: $pxweb-dark-2 1px solid;
-    background-color: $pxweb-white;
-    color: #000000;
-    font-size: 1em;
+  margin: 0px;
+  text-align: right;
+  border: $pxweb-dark-2 1px solid;
+  background-color: $pxweb-white;
+  color: #000000;
+  font-size: 1em;
 }
 
 #pxwebcontent .table-sort-header {
@@ -44,10 +40,10 @@
 }
 
 #pxwebcontent .table-class th, #pxwebcontent .table-class td.left {
-    margin: 0px;
-    text-align: left;
-    border: $pxweb-dark-2 1px solid;
-    background-color: $pxweb-green-1;
+  margin: 0px;
+  text-align: left;
+  border: $pxweb-dark-2 1px solid;
+  background-color: $pxweb-green-1;
 }
 
 #pxwebcontent td.right {
@@ -110,8 +106,9 @@
   padding: 5px 5px 5px 5px;
 }
 
+
 #pxwebcontent .attribute-cell {
-  background-image: URL("../../images/attribute.gif");
+  background-image: URL("../../../images/attribute.gif");
   background-repeat: no-repeat;
   background-position: top right;
   cursor: pointer;

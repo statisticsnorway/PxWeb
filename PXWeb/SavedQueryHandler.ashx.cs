@@ -270,7 +270,10 @@ namespace PXWeb
 
             sq.LoadedQueryName = queryName;
             PCAxis.Query.SavedQueryManager.Current.MarkAsRunned(queryName);
-            VisitorStatisticsQueryHelper.LoggStatistics("SavedQuery", _language, sq.Sources[0].DatabaseId, model.Meta.MainTable, "Presentation", sq.Output.Type, model.Data.MatrixSize, model.Meta.ContentVariable.Values.Count(), cached);
+
+            bool cached = false;  //TODO Was allways false in assembla
+            int ContentVariablesCount = model.Meta.ContentVariable is null ? 0 : model.Meta.ContentVariable.Values.Count();  //For testing with px-files
+            Norway.LogVisitorStatistics.SavedQueryHelper.LoggStatistics("SavedQuery", _language, sq.Sources[0].DatabaseId, model.Meta.MainTable, "Presentation", sq.Output.Type, model.Data.MatrixSize, ContentVariablesCount, cached);
 
             // Tell the selection page that it sholud clear the PxModel
             if (_format.Equals(PxUrl.PAGE_SELECT))

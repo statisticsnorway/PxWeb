@@ -564,6 +564,7 @@
     <Compile Include="Code\Management\GotoRouteHandler.cs" />
     <Compile Include="Code\Management\IPxUrl.cs" />
     <Compile Include="Code\Management\IRouteExtender.cs" />
+    <Compile Include="Code\Management\Norway\LogFlusher.cs" />
     <Compile Include="Code\Management\PartTableHelper.cs" />
     <Compile Include="Code\Management\PxContext.cs" />
     <Compile Include="Code\Management\PxImageExpressionBuilder.cs" />
@@ -856,6 +857,10 @@
     <ProjectReference Include="..\CSSFriendly\CSSFriendly.csproj">
       <Project>{1439911B-BE4E-48A0-9208-927321992C67}</Project>
       <Name>CSSFriendly</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Norway\LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
+      <Project>{03cd4269-7c00-403e-9d19-f3c7b1f9dde8}</Project>
+      <Name>Norway.LogVisitorStatistics</Name>
     </ProjectReference>
     <ProjectReference Include="..\PCAxis.Api\PCAxis.Api.csproj">
       <Project>{8eb90826-a01b-494d-a596-e5c5f9815c3b}</Project>

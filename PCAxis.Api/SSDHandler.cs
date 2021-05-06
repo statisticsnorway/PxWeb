@@ -66,7 +66,7 @@ namespace PCAxis.Api
         private IEnumerable<MetaList> GetMetaList(HttpContext context, PxMenuItem item)
         {
             // Logs usage
-            VisitorStatistics.VisitorStatisticsApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "metadata", "", "", "", "", 0, "false");
+            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "metadata", "", "", "", "", 0, "false");
 
             return item.SubItems.Where(t=>!(t is Headline )).Select(i => new MetaList
             {
@@ -316,7 +316,7 @@ namespace PCAxis.Api
             //context.Response.OutputStream.Write(cacheResponse.ResponseData, 0, cacheResponse.ResponseData.Length);
             context.Send(cacheResponse, true);
 
-            VisitorStatistics.VisitorStatisticsApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "data", language, db, tablePath.Last(), tableQuery.Response.Format, builder.Model.Data.MatrixSize, "false");
+            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "data", language, db, tablePath.Last(), tableQuery.Response.Format, builder.Model.Data.MatrixSize, "false");
 
 
 
@@ -432,11 +432,11 @@ namespace PCAxis.Api
 
                             var matrixSize = 1;
 
-                            VisitorStatistics.VisitorStatisticsApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "data", language, db, routeParts.ToArray().Last(), tableQuery.Response.Format, matrixSize, "true");
+                            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "data", language, db, routeParts.ToArray().Last(), tableQuery.Response.Format, matrixSize, "true");
                         }
                         else
                         {
-                            VisitorStatistics.VisitorStatisticsApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "metadata", "", "", "", "", 0, "true");
+                            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "metadata", "", "", "", "", 0, "true");
                         }
 #if DEBUG
                         stopWatch.Stop();
@@ -469,7 +469,7 @@ namespace PCAxis.Api
                     cacheResponse.ContentType = "application/json; charset=" + System.Text.Encoding.UTF8.WebName;
                     cacheResponse.ResponseData = context.Response.ContentEncoding.GetBytes(obj.ToJSON(options.PrettyPrint));
                     context.Send(cacheResponse, true);
-                    VisitorStatistics.VisitorStatisticsApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "config", "", "", "", "", 0, "false");
+                    Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "config", "", "", "", "", 0, "false");
 
 #if DEBUG
                     stopWatch.Stop();
@@ -609,7 +609,7 @@ namespace PCAxis.Api
                                 context.Send(cacheResponse, true);
 
                             // Logs usage
-                            VisitorStatistics.VisitorStatisticsApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "metadata", "", "", "", "", 0, "false");
+                            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "metadata", "", "", "", "", 0, "false");
                         }
                         else if (context.Request.HttpMethod == "POST" && currentItem.MenuType == typeof(TableLink))
                         {
