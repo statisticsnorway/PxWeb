@@ -675,13 +675,18 @@
 	
 	 <sentence name="CancelButton" value="Cancel"/>
 
-	 <!-- PX-Web -->
-	 <sentence name="PxWebApplicationTitle" value="PX-Web 2017 v1"/>
-	 <sentence name="PxWebApplicationName" value="PX-Web 2017 v1"/>
-   <sentence name="PxWebLogoAlt" value="PX-Web 2017 v1"/>
+
+	 <!-- PxWeb -->
+	 <sentence name="PxWebApplicationTitle" value="PxWeb 2021 v1"/>
+	 <sentence name="PxWebApplicationName" value="PxWeb 2021 v1"/>
+   <sentence name="PxWebLogoAlt" value="PxWeb Logotype"/>
    <sentence name="PxWebHome" value="Home"/>
    <sentence name="PxWebHomeImageScreenReader" value="Icon representing home" />
-   <sentence name="PxWebChangeToThisLanguage" value="Error, PxWebChangeToThisLanguage not tranlated" />
+   <sentence name="PxWebChangeToThisLanguage" value="English" />
+   <sentence name="PxWebSubHeaderChooseVariables" value="Choose variables"/>
+   <sentence name="PxWebSubHeaderResult" value="Result"/>
+   <sentence name="PxWebOfficialStatisticsLogo" value="Logotype for official statistics"/>
+
    <sentence name="PxWebMenuBurger" value="Menu" />
    <sentence name="PxWebMenu" value="Menu"/>
    <sentence name="PxWebMenuExplanationRegionHeader" value="Letter code after table title shows lowest regional level:" />
@@ -805,9 +810,10 @@
   <!-- PX-Web Administration -->
 
 	 <sentence name="PxWebAdminLogout" value="Log out"/>
-	 <sentence name="PxWebAdminHeading" value="PX-Web Administration"/>
-	 <sentence name="PxWebAdminVersion" value="PX-Web 2017 v1"/>
-	 <sentence name="PxWebAdminHomePage" value="PX-Web Homepage"/>
+	 <sentence name="PxWebAdminHeading" value="PxWeb Administration"/>
+	 <sentence name="PxWebAdminVersion" value="PxWeb 2021 v1"/>
+	 <sentence name="PxWebAdminHomePage" value="PxWeb Homepage"/>
+
 	 <sentence name="PxWebAdminSaveButton" value="Save"/>
 	 <sentence name="PxWebAdminGenerateButton" value="Generate"/>
 	 <sentence name="PxWebAdminMenuHome" value="Home"/>
@@ -1318,10 +1324,15 @@
   <sentence name="PxWebAdminSettingsGeneralSiteApplicationName" value="Application name"/>
 	 <sentence name="PxWebAdminSettingsGeneralSiteApplicationNameInfo" value="Name of the PX-Web installation"/>
 	 <sentence name="PxWebAdminSettingsGeneralSiteLogoPath" value="Logo path"/>
-	 <sentence name="PxWebAdminSettingsGeneralSiteLogoPathInfo" value="Name of the image file"/>
 
-	 <sentence name="PxWebAdminSettingsLanguageDefaultLanguage" value="Default language"/>
-	 <sentence name="PxWebAdminSettingsLanguageDefaultLanguageInfo" value="The default language for the PX-Web site"/>
+   <sentence name="PxWebAdminSettingsGeneralSiteLogoPathInfo" value="Name of the image file"/>
+   <sentence name="PxWebAdminSettingsMainHeaderForTables" value="Main header for table pages"/>
+   <sentence name="PxWebAdminSettingsMainHeaderForTablesTableName" value="Table name"/> 
+   <sentence name="PxWebAdminSettingsMainHeaderForTablesStatisticArea" value="Statistics area"/>
+   <sentence name="PxWebAdminSettingsMainHeaderForTablesInfo" value="Type of heading that will be used for table pages"/>
+   <sentence name="PxWebAdminSettingsLanguageDefaultLanguage" value="Default language"/>
+	 <sentence name="PxWebAdminSettingsLanguageDefaultLanguageInfo" value="The default language for the PxWeb site"/>
+
 	 <sentence name="PxWebAdminSettingsLanguageSiteLanguages" value="Language"/>
 	 <sentence name="PxWebAdminSettingsLanguageSiteLanguagesInfo" value="Selected languages will be available on the PX-Web site."/>
 	 <sentence name="PxWebAdminSettingsLanguageDecimalSeparator" value="Decimal separator"/>
