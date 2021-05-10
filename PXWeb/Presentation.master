@@ -8,7 +8,6 @@
     <asp:ContentPlaceHolder ID="cphHead" runat="server">
     </asp:ContentPlaceHolder>
 </asp:Content>
-
 <asp:Content runat="server" ID="ContentTitle" ContentPlaceHolderID="TitlePlaceHolder">
         <% if ( PXWeb.Settings.Current.Presentation.NewTitleLayout)
            { %>
