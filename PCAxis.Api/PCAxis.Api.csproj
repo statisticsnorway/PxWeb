@@ -238,7 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Norway\LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
-      <Project>{03cd4269-7c00-403e-9d19-f3c7b1f9dde8}</Project>
+      <Project>{e2beb3f3-511a-41ae-a8ad-dee6d2d56e3f}</Project>
       <Name>Norway.LogVisitorStatistics</Name>
     </ProjectReference>
     <ProjectReference Include="..\PCAxis.Charts\PCAxis.Chart.csproj">

@@ -38,7 +38,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PX.Security", "PX.Security\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCAxis.JsonStat2.Web.Controls", "PCAxis.JsonStat2.Web.Controls\PCAxis.JsonStat2.Web.Controls.csproj", "{6E74C29D-772B-40B8-868F-DC74711E052D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Norway.LogVisitorStatistics", "Norway\LogVisitorStatistics\Norway.LogVisitorStatistics.csproj", "{03CD4269-7C00-403E-9D19-F3C7B1F9DDE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Norway.LogVisitorStatistics", "Norway\LogVisitorStatistics\Norway.LogVisitorStatistics.csproj", "{E2BEB3F3-511A-41AE-A8AD-DEE6D2D56E3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,10 +106,10 @@ Global
 		{6E74C29D-772B-40B8-868F-DC74711E052D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E74C29D-772B-40B8-868F-DC74711E052D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E74C29D-772B-40B8-868F-DC74711E052D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03CD4269-7C00-403E-9D19-F3C7B1F9DDE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03CD4269-7C00-403E-9D19-F3C7B1F9DDE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03CD4269-7C00-403E-9D19-F3C7B1F9DDE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03CD4269-7C00-403E-9D19-F3C7B1F9DDE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2BEB3F3-511A-41AE-A8AD-DEE6D2D56E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BEB3F3-511A-41AE-A8AD-DEE6D2D56E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BEB3F3-511A-41AE-A8AD-DEE6D2D56E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BEB3F3-511A-41AE-A8AD-DEE6D2D56E3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
