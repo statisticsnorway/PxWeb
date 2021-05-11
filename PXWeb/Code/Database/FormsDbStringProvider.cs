@@ -7,6 +7,7 @@ using System.Data.Common;
 
 namespace PXWeb.Database
 {
+    //TODO: Consider moving to sql-nuget ?
     public class FormsDbStringProvider : IDbStringProvider
     {
         public string GetConnectionString(SqlDbConfig config, string user, string password)

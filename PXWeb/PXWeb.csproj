@@ -548,6 +548,7 @@
     <Compile Include="Code\Database\Builders\MenuBuilder.cs" />
     <Compile Include="Code\Database\CnmmDatabaseBuilder.cs" />
     <Compile Include="Code\Database\DatabaseSpider.cs" />
+    <Compile Include="Code\Database\FormsDbStringProvider.cs" />
     <Compile Include="Code\Database\Handlers\AliasFileHandler.cs" />
     <Compile Include="Code\Database\Handlers\LinkFileHandler.cs" />
     <Compile Include="Code\Database\Handlers\MenuSortFileHandler.cs" />
