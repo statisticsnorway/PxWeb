@@ -1,8 +1,5 @@
 ﻿@include file-header("_PxWeb.scss");
 
-h1 {
-    @include pxweb-h1-title;
-}
 
 #pxwebcontent {
   background: $pxweb-background;
@@ -156,7 +153,7 @@ h1 {
 }
 
 #pxwebcontent .databaseList {
-    margin-left: 15px;
+    /*margin-left: 15px;*/
 }
 
 #pxwebcontent .search_searchresulttext {
@@ -252,15 +249,15 @@ h1 {
 }
 
 #pxwebcontent .px-settings {
-   @include open-sans;
-  padding: 10px 10px 10px 10px;
-  border: solid 6px $pxweb-dark-2;
-  width: max-content;
-  overflow: auto;
-  background-color: $pxweb-background;
-  position: relative;
-  z-index: 2;
-  font-size: 14px;
+    @include open-sans;
+    padding: 10px 10px 10px 10px;
+    border: solid 6px $pxweb-green-4;
+    width: max-content;
+    overflow: auto;
+    background-color: $pxweb-background;
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
 }
 
 #pxwebcontent .px_setting_validator {
@@ -508,17 +505,19 @@ h1 {
 
 
 #pxwebcontent .officialStatisticsImage {
-    height: 18px;
-    width: 150px;
-    margin-left: 15px;
-    margin-bottom: 12px;
+    height: 24px;
+    width: 200px;
+    /*margin-left: 15px;*/
+    margin-left: 0px;
+    margin-top: -15px;
+    margin-bottom: 32px;
 }
 
 /* jQuery UI controls */
-#PageElements {
+/*#PageElements {
     background: $pxweb-background;
 }
-
+*/
 .ui-draggable .ui-dialog-titlebar {
     background: $pxweb-dark-5;
     border: $pxweb-dark-5;
