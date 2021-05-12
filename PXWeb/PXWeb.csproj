@@ -582,6 +582,7 @@
     <Compile Include="Code\Modules\PXWebHttpModule.cs" />
     <Compile Include="Code\Modules\SecurityHttpModule.cs" />
     <Compile Include="Code\Search\SearchHelper.cs" />
+    <Compile Include="Code\Security\CNMMMembershipProvider.cs" />
     <Compile Include="Code\Security\DefaultAuthorization.cs" />
     <Compile Include="Code\Security\PXWebDefaultMembershipProvider.cs" />
     <Compile Include="Code\Security\PXWebLicenseMembershipProvider.cs" />
