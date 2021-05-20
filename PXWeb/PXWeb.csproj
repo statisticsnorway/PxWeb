@@ -890,8 +890,8 @@
       <Project>{1439911B-BE4E-48A0-9208-927321992C67}</Project>
       <Name>CSSFriendly</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Norway\LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
-      <Project>{e2beb3f3-511a-41ae-a8ad-dee6d2d56e3f}</Project>
+    <ProjectReference Include="..\Norway\Norway.LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
+      <Project>{b8a6d94a-89b3-42a6-a058-bedea9965f78}</Project>
       <Name>Norway.LogVisitorStatistics</Name>
     </ProjectReference>
     <ProjectReference Include="..\PCAxis.Api\PCAxis.Api.csproj">
