@@ -237,8 +237,8 @@
     <Compile Include="SSDRouteHandler.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Norway\LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
-      <Project>{e2beb3f3-511a-41ae-a8ad-dee6d2d56e3f}</Project>
+    <ProjectReference Include="..\Norway\Norway.LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
+      <Project>{b8a6d94a-89b3-42a6-a058-bedea9965f78}</Project>
       <Name>Norway.LogVisitorStatistics</Name>
     </ProjectReference>
     <ProjectReference Include="..\PCAxis.Charts\PCAxis.Chart.csproj">
