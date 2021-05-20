@@ -51,13 +51,15 @@
             <% if (PXWeb.Settings.Current.General.Modules.ShowLogin)
                 { %>
                 <div id="loginBanner" class="login">
-                  <h1 class="loginBannerHeader">PxWeb</h1>
+                  <h1 class="loginBannerHeader">Statistikkbanken PX-Web Intern</h1>
                   <uc1:Login ID="login"  runat="server"></uc1:Login>
                 </div>
             <%  } %>
            
+
             <pxc:Breadcrumb ID="breadcrumb1" runat="server"/>
             <pxwebCustomControl:HeadingLabel ID="lblH1Title" runat="server" Text="" CssClass="h1title"></pxwebCustomControl:HeadingLabel>
+
              
             <pxc:NavigationFlow ID="navigationFlowControl" runat="server" Visible="false" /> 
             <div id="table-title">

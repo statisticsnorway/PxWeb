@@ -23,11 +23,10 @@
 }
 
 #pxwebcontent .datasort_tabletitle {
-    /*font-size: 100%;
+  font-size: 100%;
   font-weight: bold;
   line-height: 150%;
-  padding-bottom: 5px;*/
-    @include pxweb-table-title;
+  padding-bottom: 5px;
 }
 
 #pxwebcontent table.tablesorter thead tr th {

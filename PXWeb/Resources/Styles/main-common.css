@@ -2,20 +2,20 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-/*@import './color-themes/_dark.scss';*/
-/*@import './color-themes/_light.scss';*/
 /*#region  Active colors */
-/*$pxweb-green-1: #ecfeed;*/
 /*#endregion*/
 /*#region  Active colors inside pxbox*/
 /*#endregion*/
+/*$pxweb-green-4
+$pxbox-green-4
+$pxbox-green-2*/
 /*#region  Main color scheme */
 /*#region Buttons */
 /*#endregion*/
 /*#region Links */
 /*#endregion*/
 /*#endregion*/
+/*@import './color-themes/_light.scss';*/
 /*@import './color-themes/_screen-reader.scss';*/
 /*#region  Inactive colors - not in used */
 /*
@@ -47,41 +47,8 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent html {
   /* Always display scroll. This prevents the auto-centering of the page to jump around between pages 
-    /* where one page has scrollbar and the other one do not*/
+    /* where one page has scrollbar and the other one don't*/
   height: 102%; }
-
-h1 {
-  font-family: Roboto Condensed, sans-serif;
-  font-weight: 700;
-  line-height: 100%;
-  margin-top: 5px;
-  /*    margin-left: 15px;*/
-  display: block;
-  color: #222;
-  font-size: 30px;
-  margin-bottom: 32px; }
-
-h2 {
-  font-family: Roboto Condensed, sans-serif;
-  font-weight: 700;
-  line-height: 100%;
-  margin-top: 5px;
-  /*    margin-left: 15px;*/
-  display: block;
-  color: #222;
-  font-size: 28px;
-  margin-bottom: 22px; }
-
-h3 {
-  font-family: Roboto Condensed, sans-serif;
-  font-weight: 700;
-  line-height: 100%;
-  margin-top: 5px;
-  /*    margin-left: 15px;*/
-  display: block;
-  color: #222;
-  font-size: 22px;
-  margin-bottom: 12px; }
 
 #pxwebcontent p {
   margin-bottom: 4px; }
@@ -208,28 +175,28 @@ h3 {
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: center;
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="expand-icon"><polyline points="18 15 12 9 6 15"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="expand-icon"><polyline points="18 15 12 9 6 15"></polyline></svg>'); }
     #pxwebcontent .pxweb-accordion .accordion-header:focus {
       outline: #9272fc solid 2px;
       outline-offset: 2px; }
     #pxwebcontent .pxweb-accordion .accordion-header.closed {
-      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="expand-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="expand-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>');
       z-index: 0; }
     #pxwebcontent .pxweb-accordion .accordion-header .header-text {
-      color: #222;
+      color: #162327;
       padding-left: 30px; }
     #pxwebcontent .pxweb-accordion .accordion-header .sub-header {
-      color: #007694; }
+      color: #00824d; }
     #pxwebcontent .pxweb-accordion .accordion-header:hover .header-text, #pxwebcontent .pxweb-accordion .accordion-header:hover .sub-header {
-      color: #007694; }
+      color: #00824d; }
   #pxwebcontent .pxweb-accordion:not(.without-borders):before {
-    border-top: 1px solid #949494;
+    border-top: 1px solid #c3dcdc;
     content: '';
     height: 2px;
     padding-bottom: 8px;
     display: block; }
   #pxwebcontent .pxweb-accordion:not(.without-borders):after {
-    border-bottom: 1px solid #949494;
+    border-bottom: 1px solid #c3dcdc;
     content: '';
     height: 2px;
     margin-bottom: -1px;
@@ -248,7 +215,7 @@ h3 {
     font-family: 'Roboto', sans-serif !important;
     font-stretch: normal;
     font-weight: normal;
-    color: #222;
+    color: #162327;
     font-size: 16px;
     padding: 8px 20px 8px 0; }
     #pxwebcontent .pxweb-accordion .accordion-body.closed {
@@ -271,9 +238,9 @@ h3 {
   text-align: left;
   align-items: center;
   background-color: #fff;
-  border: 2px solid #007694;
+  border: 2px solid #00824d;
   border-radius: 2px;
-  color: #007694;
+  color: #00824d;
   display: flex;
   font-size: 16px;
   font-weight: bold;
@@ -292,16 +259,16 @@ h3 {
   #pxwebcontent .pxweb-btn:hover, #pxwebcontent .pxweb-btn:active {
     cursor: pointer; }
   #pxwebcontent .pxweb-btn:hover, #pxwebcontent .pxweb-btn:focus {
-    background-color: #007694;
+    background-color: #00824d;
     color: #fff;
     text-decoration: underline; }
   #pxwebcontent .pxweb-btn:active {
-    background-color: #006885;
+    background-color: #274247;
     color: #fff; }
   #pxwebcontent .pxweb-btn:disabled {
     background-color: #fff;
-    border-color: #949494;
-    color: #949494;
+    border-color: #c3dcdc;
+    color: #c3dcdc;
     cursor: not-allowed; }
     #pxwebcontent .pxweb-btn:disabled:hover, #pxwebcontent .pxweb-btn:disabled:focus {
       text-decoration: none; }
@@ -312,20 +279,20 @@ h3 {
   #pxwebcontent .pxweb-btn.primary-btn {
     background: transparent;
     background-repeat: no-repeat;
-    background-color: #007694;
+    background-color: #00824d;
     color: #fff;
-    border: 2px solid #007694; }
+    border: 2px solid #00824d; }
     #pxwebcontent .pxweb-btn.primary-btn.with-icon {
       background-position: 8px 8px;
       padding-left: 40px; }
     #pxwebcontent .pxweb-btn.primary-btn:hover, #pxwebcontent .pxweb-btn.primary-btn:active, #pxwebcontent .pxweb-btn.primary-btn:focus {
-      background-color: #006885;
-      border: 2px solid #006885;
+      background-color: #274247;
+      border: 2px solid #274247;
       text-decoration: underline; }
     #pxwebcontent .pxweb-btn.primary-btn:disabled {
-      background: #949494;
+      background: #c3dcdc;
       background-repeat: no-repeat;
-      border: 2px solid #949494;
+      border: 2px solid #c3dcdc;
       color: #fff;
       cursor: not-allowed;
       font-weight: normal; }
@@ -344,16 +311,16 @@ h3 {
     border-color: #c3dcdc;
     color: #c3dcdc; }
   #pxwebcontent .pxbox .pxweb-btn.negative {
-    background-color: #007694;
+    background-color: #274247;
     color: #fff;
     border-color: #fff; }
     #pxwebcontent .pxbox .pxweb-btn.negative:hover, #pxwebcontent .pxbox .pxweb-btn.negative:focus {
       background-color: #fff;
-      color: #007694;
-      border-color: #007694; }
+      color: #274247;
+      border-color: #274247; }
     #pxwebcontent .pxbox .pxweb-btn.negative:active {
       background-color: #fff;
-      color: #007694; }
+      color: #274247; }
 
 /* **********************************  common/_checkbox.scss *********************************** */
 #pxwebcontent .pxweb-checkbox {
@@ -370,15 +337,15 @@ h3 {
   text-align: left;
   user-select: none; }
   #pxwebcontent .pxweb-checkbox:hover .checkbox-label:before, #pxwebcontent .pxweb-checkbox:focus .checkbox-label:before {
-    border: 2px solid #007694; }
+    border: 2px solid #00824d; }
   #pxwebcontent .pxweb-checkbox input[type=checkbox] {
     cursor: pointer;
     opacity: 0;
     position: absolute; }
     #pxwebcontent .pxweb-checkbox input[type=checkbox]:focus + .checkbox-label:before {
-      border: 2px solid #007694; }
+      border: 2px solid #00824d; }
     #pxwebcontent .pxweb-checkbox input[type=checkbox]:checked + .checkbox-label:before {
-      background: #006885; }
+      background: #274247; }
     #pxwebcontent .pxweb-checkbox input[type=checkbox]:checked + .checkbox-label:after {
       border: solid #fff;
       border-width: 0 2px 2px 0;
@@ -392,10 +359,10 @@ h3 {
       width: 6px; }
     #pxwebcontent .pxweb-checkbox input[type=checkbox]:disabled + .checkbox-label {
       background: #fff;
-      color: #949494;
+      color: #c3dcdc;
       cursor: default; }
       #pxwebcontent .pxweb-checkbox input[type=checkbox]:disabled + .checkbox-label:before {
-        border: 1px solid #949494; }
+        border: 1px solid #c3dcdc; }
   #pxwebcontent .pxweb-checkbox .checkbox-label {
     align-items: center;
     cursor: pointer;
@@ -404,7 +371,7 @@ h3 {
     position: relative; }
     #pxwebcontent .pxweb-checkbox .checkbox-label:before {
       background: #fff;
-      border: 1px solid #006885;
+      border: 1px solid #274247;
       border-radius: 2px;
       box-sizing: border-box;
       content: '';
@@ -417,11 +384,11 @@ h3 {
 #pxwebcontent .pxbox .pxweb-checkbox {
   /*color: $pxbox-dark-6;*/ }
   #pxwebcontent .pxbox .pxweb-checkbox:hover .checkbox-label:before, #pxwebcontent .pxbox .pxweb-checkbox:focus .checkbox-label:before {
-    border: 2px solid #007694; }
+    border: 2px solid #00824d; }
   #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:focus + .checkbox-label:before {
-    border: 2px solid #007694; }
+    border: 2px solid #00824d; }
   #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:checked + .checkbox-label:before {
-    background: #F8F7F6; }
+    background: #274247; }
   #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:checked + .checkbox-label:after {
     border: solid #fff;
     border-width: 0 2px 2px 0; }
@@ -432,15 +399,15 @@ h3 {
       border: 1px solid #c3dcdc; }
   #pxwebcontent .pxbox .pxweb-checkbox .checkbox-label:before {
     background: #fff;
-    border: 1px solid #222; }
+    border: 1px solid #274247; }
 
 /* **********************************  common/_checkbox-pxbox-override.scss *********************************** */
 #pxwebcontent .pxbox .pxweb-checkbox .checkbox-label:before {
-  background: #F8F7F6;
-  border: 1px solid #007694; }
+  background: #274247;
+  border: 1px solid #b6e8b8; }
 
 #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:checked + .checkbox-label:after {
-  border: solid #007694;
+  border: solid #b6e8b8;
   border-width: 0 2px 2px 0;
   content: '';
   display: block;
@@ -452,11 +419,11 @@ h3 {
   width: 6px; }
 
 #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:hover + .checkbox-label:before {
-  background: #007694; }
+  background: #b6e8b8; }
 
 #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:checked:hover + .checkbox-label:after {
-  background-color: #007694;
-  border: solid #F8F7F6;
+  background-color: #b6e8b8;
+  border: solid #274247;
   border-width: 0 2px 2px 0;
   content: '';
   display: block;
@@ -468,7 +435,7 @@ h3 {
   width: 6px; }
 
 #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:checked:focus + .checkbox-label:after {
-  border: solid #F8F7F6;
+  border: solid #274247;
   border-width: 0 2px 2px 0;
   content: '';
   display: block;
@@ -480,10 +447,10 @@ h3 {
   width: 6px; }
 
 #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:focus + .checkbox-label:before {
-  background: #007694; }
+  background: #b6e8b8; }
 
 #pxwebcontent .pxbox .pxweb-checkbox:hover .checkbox-label:before, .pxbox #pxwebcontent .pxweb-checkbox:focus .checkbox-label:before {
-  border: 2px solid #007694; }
+  border: 2px solid #b6e8b8; }
 
 #pxwebcontent .pxweb-checkbox input[type=checkbox]:focus + .checkbox-label:before {
   outline: 2px solid #9272fc;
@@ -498,14 +465,14 @@ h3 {
   margin: 0;
   position: relative;
   width: 100%;
-  border-top-color: #006885; }
+  border-top-color: #274247; }
   #pxwebcontent .pxweb-divider.with-margin {
     margin-top: 8px;
     margin-bottom: 8px; }
 
 /* **********************************  common/_divider-pxbox.scss *********************************** */
 #pxwebcontent .pxbox .pxweb-divider {
-  border-top-color: #007694; }
+  border-top-color: #b6e8b8; }
 
 /*@import './common/_glossary.scss';*/
 /*@import './common/_glossary-pxbox.scss';*/
@@ -521,21 +488,21 @@ h3 {
   position: relative;
   width: 100%; }
   #pxwebcontent .pxweb-input:hover input {
-    border: 1px solid #A3E8F5;
-    outline: 1px solid #A3E8F5; }
+    border: 1px solid #b6e8b8;
+    outline: 1px solid #b6e8b8; }
     #pxwebcontent .pxweb-input:hover input:disabled {
-      border: 1px solid #006885; }
+      border: 1px solid #274247; }
   #pxwebcontent .pxweb-input .input-wrapper {
     display: flex; }
     #pxwebcontent .pxweb-input .input-wrapper ::placeholder {
-      color: #595959;
+      color: #2d6975;
       opacity: 1; }
     #pxwebcontent .pxweb-input .input-wrapper :-ms-input-placeholder {
-      color: #595959; }
+      color: #2d6975; }
     #pxwebcontent .pxweb-input .input-wrapper ::-ms-input-placeholder {
-      color: #595959; }
+      color: #2d6975; }
   #pxwebcontent .pxweb-input label {
-    color: #222;
+    color: #162327;
     cursor: text;
     font-size: 14px;
     margin-bottom: 4px;
@@ -545,9 +512,9 @@ h3 {
     font-stretch: normal;
     font-weight: normal;
     background: #fff;
-    border: 1px solid #006885;
+    border: 1px solid #274247;
     box-sizing: border-box;
-    color: #595959;
+    color: #2d6975;
     font-size: 14px;
     height: 34px;
     padding: 12px 12px;
@@ -556,7 +523,7 @@ h3 {
     #pxwebcontent .pxweb-input input.with-icon {
       padding: 4px 44px 4px 10px; }
     #pxwebcontent .pxweb-input input:disabled {
-      border: 1px solid #006885;
+      border: 1px solid #274247;
       cursor: not-allowed; }
     #pxwebcontent .pxweb-input input:focus {
       outline: 2px solid #9272fc;
@@ -569,8 +536,8 @@ h3 {
   #pxwebcontent .pxweb-input.negative .input-wrapper ::-ms-input-placeholder {
     color: #fff; }
   #pxwebcontent .pxweb-input.negative:hover input {
-    border: 1px solid #A3E8F5;
-    outline: 1px solid #A3E8F5; }
+    border: 1px solid #b6e8b8;
+    outline: 1px solid #b6e8b8; }
     #pxwebcontent .pxweb-input.negative:hover input:disabled {
       border: 1px solid #fff; }
   #pxwebcontent .pxweb-input.negative label {
@@ -582,27 +549,27 @@ h3 {
     #pxwebcontent .pxweb-input.negative input:disabled {
       border: 1px solid #fff; }
     #pxwebcontent .pxweb-input.negative input:focus {
-      border: 1px solid #A3E8F5;
-      outline: 1px solid #A3E8F5;
+      border: 1px solid #b6e8b8;
+      outline: 1px solid #b6e8b8;
       outline-offset: 0; }
   #pxwebcontent .pxweb-input.negative .icon-wrapper > * {
-    color: #A3E8F5; }
+    color: #b6e8b8; }
   #pxwebcontent .pxweb-input.negative .icon-wrapper.search-icon {
     cursor: pointer; }
     #pxwebcontent .pxweb-input.negative .icon-wrapper.search-icon:hover, #pxwebcontent .pxweb-input.negative .icon-wrapper.search-icon:focus {
       background: #fff; }
       #pxwebcontent .pxweb-input.negative .icon-wrapper.search-icon:hover > *, #pxwebcontent .pxweb-input.negative .icon-wrapper.search-icon:focus > * {
-        color: #006885; }
+        color: #274247; }
   #pxwebcontent .pxweb-input.negative.error input {
-    border: 1px solid #ee0000;
-    outline: 1px solid #ee0000; }
+    border: 1px solid #ed5935;
+    outline: 1px solid #ed5935; }
   #pxwebcontent .pxweb-input.negative.error .icon-wrapper > * {
-    color: #ee0000; }
+    color: #ed5935; }
   #pxwebcontent .pxweb-input.error input {
-    border: 1px solid #ee0000;
-    outline: 1px solid #ee0000; }
+    border: 1px solid #ed5935;
+    outline: 1px solid #ed5935; }
   #pxwebcontent .pxweb-input.error .icon-wrapper > * {
-    color: #ee0000; }
+    color: #ed5935; }
   #pxwebcontent .pxweb-input .icon-wrapper {
     background-color: transparent;
     border: none;
@@ -624,46 +591,21 @@ h3 {
       outline: #9272fc solid 2px;
       outline-offset: 2px; }
     #pxwebcontent .pxweb-input .icon-wrapper > * {
-      color: #007694; }
+      color: #00824d; }
     #pxwebcontent .pxweb-input .icon-wrapper.search-icon {
       cursor: pointer; }
       #pxwebcontent .pxweb-input .icon-wrapper.search-icon:hover, #pxwebcontent .pxweb-input .icon-wrapper.search-icon:focus {
-        background: #007694;
+        background: #00824d;
         outline-offset: 0px; }
         #pxwebcontent .pxweb-input .icon-wrapper.search-icon:hover > *, #pxwebcontent .pxweb-input .icon-wrapper.search-icon:focus > * {
           color: #fff; }
 
-#pxwebcontent .pxweb-input-error {
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal;
-  background: #ee0000;
-  color: #fff;
-  display: flex;
-  font-size: 14px;
-  font-weight: bold;
-  justify-content: center;
-  line-height: normal;
-  margin-top: 12px;
-  padding: 4px 8px;
-  position: relative;
-  /*    &.negative {
-        color: $pxweb-dark-5;
-    }*/ }
-  #pxwebcontent .pxweb-input-error:before {
-    border-color: transparent transparent #ee0000 transparent;
-    border-style: solid;
-    border-width: 8px;
-    content: '';
-    position: absolute;
-    top: -16px; }
-
 /* **********************************  common/_input-pxbox.scss *********************************** */
 #pxwebcontent .pxbox .pxweb-input:hover input {
-  border: 1px solid #007694;
-  outline: 1px solid #007694; }
+  border: 1px solid #b6e8b8;
+  outline: 1px solid #b6e8b8; }
   #pxwebcontent .pxbox .pxweb-input:hover input:disabled {
-    border: 1px solid #222; }
+    border: 1px solid #274247; }
 
 #pxwebcontent .pxbox .pxweb-input .input-wrapper ::placeholder {
   color: #2d6975; }
@@ -675,14 +617,14 @@ h3 {
   color: #2d6975; }
 
 #pxwebcontent .pxbox .pxweb-input label {
-  color: #222; }
+  color: #162327; }
 
 #pxwebcontent .pxbox .pxweb-input input {
   background: #fff;
-  border: 1px solid #222;
+  border: 1px solid #274247;
   color: #2d6975; }
   #pxwebcontent .pxbox .pxweb-input input:disabled {
-    border: 1px solid #222; }
+    border: 1px solid #274247; }
 
 #pxwebcontent .pxbox .pxweb-input.negative .input-wrapper ::placeholder {
   color: #fff; }
@@ -694,8 +636,8 @@ h3 {
   color: #fff; }
 
 #pxwebcontent .pxbox .pxweb-input.negative:hover input {
-  border: 1px solid #007694;
-  outline: 1px solid #007694; }
+  border: 1px solid #b6e8b8;
+  outline: 1px solid #b6e8b8; }
   #pxwebcontent .pxbox .pxweb-input.negative:hover input:disabled {
     border: 1px solid #fff; }
 
@@ -708,45 +650,69 @@ h3 {
   #pxwebcontent .pxbox .pxweb-input.negative input:disabled {
     border: 1px solid #fff; }
   #pxwebcontent .pxbox .pxweb-input.negative input:focus {
-    border: 1px solid #007694;
-    outline: 1px solid #007694; }
+    border: 1px solid #b6e8b8;
+    outline: 1px solid #b6e8b8; }
 
 #pxwebcontent .pxbox .pxweb-input.negative .icon-wrapper > * {
-  color: #007694; }
+  color: #b6e8b8; }
 
 #pxwebcontent .pxbox .pxweb-input.negative .icon-wrapper.search-icon:hover, #pxwebcontent .pxbox .pxweb-input.negative .icon-wrapper.search-icon:focus {
   background: #fff; }
   #pxwebcontent .pxbox .pxweb-input.negative .icon-wrapper.search-icon:hover > *, #pxwebcontent .pxbox .pxweb-input.negative .icon-wrapper.search-icon:focus > * {
-    color: #222; }
+    color: #274247; }
 
 #pxwebcontent .pxbox .pxweb-input.negative.error input {
-  border: 1px solid #ee0000;
-  outline: 1px solid #ee0000; }
+  border: 1px solid #ed5935;
+  outline: 1px solid #ed5935; }
 
 #pxwebcontent .pxbox .pxweb-input.negative.error .icon-wrapper > * {
-  color: #ee0000; }
+  color: #ed5935; }
 
 #pxwebcontent .pxbox .pxweb-input.error input {
-  border: 1px solid #ee0000;
-  outline: 1px solid #ee0000; }
+  border: 1px solid #ed5935;
+  outline: 1px solid #ed5935; }
 
 #pxwebcontent .pxbox .pxweb-input.error .icon-wrapper > * {
-  color: #ee0000; }
+  color: #ed5935; }
 
 #pxwebcontent .pxbox .pxweb-input .icon-wrapper > * {
-  color: #007694; }
+  color: #00824d; }
 
 #pxwebcontent .pxbox .pxweb-input .icon-wrapper.search-icon {
   background-repeat: no-repeat;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
   background-position: center; }
   #pxwebcontent .pxbox .pxweb-input .icon-wrapper.search-icon:hover, #pxwebcontent .pxbox .pxweb-input .icon-wrapper.search-icon:focus {
-    background: #007694;
+    background: #00824d;
     background-repeat: no-repeat;
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
     background-position: center; }
     #pxwebcontent .pxbox .pxweb-input .icon-wrapper.search-icon:hover > *, #pxwebcontent .pxbox .pxweb-input .icon-wrapper.search-icon:focus > * {
       color: #fff; }
+
+#pxwebcontent .pxweb-input-error {
+  font-family: 'Roboto', sans-serif !important;
+  font-stretch: normal;
+  font-weight: normal;
+  background: #ed5935;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  justify-content: center;
+  line-height: normal;
+  margin-top: 12px;
+  padding: 4px 8px;
+  position: relative; }
+  #pxwebcontent .pxweb-input-error.negative {
+    color: #274247; }
+  #pxwebcontent .pxweb-input-error:before {
+    border-color: transparent transparent #ed5935 transparent;
+    border-style: solid;
+    border-width: 8px;
+    content: '';
+    position: absolute;
+    top: -16px; }
 
 /* **********************************  common/_link.scss *********************************** */
 #pxwebcontent .pxweb-link a:hover {
@@ -757,12 +723,12 @@ h3 {
   font-stretch: normal;
   font-weight: normal;
   align-items: center;
-  background-image: linear-gradient(120deg, #007694 0%, #007694 100%);
+  background-image: linear-gradient(120deg, #00824d 0%, #00824d 100%);
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 100% 0;
-  border-bottom: 1px solid #007694;
-  color: #007694;
+  border-bottom: 1px solid #00824d;
+  color: #00824d;
   cursor: pointer;
   display: inline-flex;
   font-size: 16px;
@@ -784,39 +750,39 @@ h3 {
     font-size: 20px;
     font-weight: bold; }
     #pxwebcontent .pxweb-link.header .link-text {
-      color: #222; }
+      color: #00824d; }
   #pxwebcontent .pxweb-link:hover, #pxwebcontent .pxweb-link:focus {
     background-size: 100% 100%;
-    color: white;
+    color: #fff;
     outline: 0;
     text-decoration: none;
-    border-bottom-color: #007694; }
+    border-bottom-color: #00824d; }
     #pxwebcontent .pxweb-link:hover .link-text, #pxwebcontent .pxweb-link:focus .link-text {
       text-decoration: none;
-      color: white; }
+      color: #fff; }
   #pxwebcontent .pxweb-link.with-icon {
     padding: 2px 2px 0;
     border-bottom: none; }
     #pxwebcontent .pxweb-link.with-icon i {
       font-size: 16px; }
     #pxwebcontent .pxweb-link.with-icon .link-text {
-      color: #222; }
+      color: #00824d; }
     #pxwebcontent .pxweb-link.with-icon:hover, #pxwebcontent .pxweb-link.with-icon:focus {
-      color: white; }
+      color: #fff; }
       #pxwebcontent .pxweb-link.with-icon:hover .link-text, #pxwebcontent .pxweb-link.with-icon:focus .link-text {
-        color: white; }
+        color: #fff; }
   #pxwebcontent .pxweb-link .link-text {
-    color: #007694;
+    color: #00824d;
     transition: color .1s; }
     #pxwebcontent .pxweb-link .link-text:hover, #pxwebcontent .pxweb-link .link-text:focus {
-      color: white;
+      color: #fff;
       outline: 0; }
 
 /* **********************************  common/_link-pxbox.scss *********************************** */
 #pxwebcontent .pxbox .pxweb-link.negative {
-  background-image: linear-gradient(120deg, #007694 0%, #007694 100%);
-  border-bottom: 1px solid #222;
-  color: #222;
+  background-image: linear-gradient(120deg, #b6e8b8 0%, #b6e8b8 100%);
+  border-bottom: 1px solid #fff;
+  color: #fff;
   /*
     &:hover, &:focus {
       color: $pxbox-dark-5;
@@ -827,15 +793,15 @@ h3 {
     }
     */ }
   #pxwebcontent .pxbox .pxweb-link.negative .link-text {
-    color: #222; }
+    color: #fff; }
   #pxwebcontent .pxbox .pxweb-link.negative.with-icon {
     border-bottom: none; }
     #pxwebcontent .pxbox .pxweb-link.negative.with-icon .link-text {
-      color: #222; }
+      color: #fff; }
     #pxwebcontent .pxbox .pxweb-link.negative.with-icon:hover, #pxwebcontent .pxbox .pxweb-link.negative.with-icon:focus {
-      color: #222; }
+      color: #162327; }
       #pxwebcontent .pxbox .pxweb-link.negative.with-icon:hover .link-text, #pxwebcontent .pxbox .pxweb-link.negative.with-icon:focus .link-text {
-        color: #222; }
+        color: #162327; }
 
 #pxwebcontent .pxweb-nested-accordion {
   font-family: 'Roboto', sans-serif !important;
@@ -856,7 +822,7 @@ h3 {
     line-height: inherit;
     padding: 0;
     text-align: left;
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="expand-icon"><polyline points="18 15 12 9 6 15"></polyline></svg>');
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="expand-icon"><polyline points="18 15 12 9 6 15"></polyline></svg>');
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: center; }
@@ -864,7 +830,7 @@ h3 {
       outline: #9272fc solid 2px;
       outline-offset: 2px; }
     #pxwebcontent .pxweb-nested-accordion .nested-accordion-header.closed {
-      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="expand-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="expand-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>');
       z-index: 0; }
     #pxwebcontent .pxweb-nested-accordion .nested-accordion-header .button-grid {
       align-items: center;
@@ -873,26 +839,26 @@ h3 {
       grid-column-gap: 16px;
       grid-template-columns: 15px 1fr; }
     #pxwebcontent .pxweb-nested-accordion .nested-accordion-header .expand-icon {
-      color: #007694;
+      color: #00824d;
       font-size: 16px; }
     #pxwebcontent .pxweb-nested-accordion .nested-accordion-header .header-text {
       font-family: 'Roboto', sans-serif !important;
       font-stretch: normal;
       font-weight: normal;
-      color: #222;
+      color: #162327;
       font-size: 16px;
       font-weight: bold;
       line-height: 1.25;
       padding-left: 30px; }
     #pxwebcontent .pxweb-nested-accordion .nested-accordion-header:hover .header-text {
-      color: #007694; }
+      color: #00824d; }
     #pxwebcontent .pxweb-nested-accordion .nested-accordion-header.open .header-text, #pxwebcontent .pxweb-nested-accordion .nested-accordion-header.open .sub-header {
-      color: #007694; }
+      color: #00824d; }
   #pxwebcontent .pxweb-nested-accordion .nested-accordion-body {
     font-family: 'Open Sans', sans-serif !important;
     font-stretch: normal;
     font-weight: normal;
-    color: #222;
+    color: #162327;
     font-size: 16px;
     padding: 10px 10px 10px 30px; }
     #pxwebcontent .pxweb-nested-accordion .nested-accordion-body.closed {
@@ -901,7 +867,7 @@ h3 {
 
 /* **********************************  common/_title.scss *********************************** */
 #pxwebcontent .pxweb-title {
-  color: #222;
+  color: #162327;
   margin-top: 0; }
   #pxwebcontent .pxweb-title.negative {
     color: #fff; }
@@ -957,6 +923,6 @@ h3 {
 
 /* **********************************  common/_title-pxbox.scss *********************************** */
 #pxwebcontent .pxbox .pxweb-title {
-  color: #222; }
+  color: #162327; }
   #pxwebcontent .pxbox .pxweb-title.negative {
-    color: #222; }
+    color: #fff; }

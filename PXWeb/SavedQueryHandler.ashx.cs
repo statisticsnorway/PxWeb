@@ -31,7 +31,7 @@ namespace PXWeb
             _blackList.Add(OperationConstants.PER_PART);
             _blackList.Add(OperationConstants.CHANGE_TEXT);
             if (Settings.Current.Features.SavedQuery.EnableLimitRequest)
-                _requestLimiter = new PCAxis.Api.RequestLimiter("RQLIMIT_SQ:", Settings.Current.Features.SavedQuery.LimiterTimespan, Settings.Current.Features.SavedQuery.LimiterRequests, PCAxis.Api.Settings.Current.LimiterHttpHeaderName);
+                _requestLimiter = new PCAxis.Api.RequestLimiter("RQLIMIT_SQ:", Settings.Current.Features.SavedQuery.LimiterTimespan, Settings.Current.Features.SavedQuery.LimiterRequests, Settings.Current.Features.SavedQuery.LimiterHttpHeaderName);
         }
 
         private string _format;
@@ -270,6 +270,10 @@ namespace PXWeb
 
             sq.LoadedQueryName = queryName;
             PCAxis.Query.SavedQueryManager.Current.MarkAsRunned(queryName);
+
+            bool cached = false;  //TODO Was allways false in assembla
+            int ContentVariablesCount = model.Meta.ContentVariable is null ? 0 : model.Meta.ContentVariable.Values.Count();  //For testing with px-files
+            Norway.LogVisitorStatistics.SavedQueryHelper.LoggStatistics("SavedQuery", _language, sq.Sources[0].DatabaseId, model.Meta.MainTable, "Presentation", sq.Output.Type, model.Data.MatrixSize, ContentVariablesCount, cached);
 
             // Tell the selection page that it sholud clear the PxModel
             if (_format.Equals(PxUrl.PAGE_SELECT))

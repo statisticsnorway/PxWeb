@@ -213,7 +213,7 @@ public static class PCAxisRepository
                                 {
                                     TableLink tbl = (TableLink)item;
 
-                                    if (string.Compare(tbl.ID.Selection, nodeId, true) == 0)
+                                    if (string.Compare(tbl.ID.Selection, nodeId, false) == 0)
                                     {
                                         tblFix = tbl;
                                     }

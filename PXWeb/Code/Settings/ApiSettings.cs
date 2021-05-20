@@ -47,6 +47,9 @@ namespace PXWeb
             xpath = "./enableCache";
             EnableCache = SettingsHelper.GetSettingValue(xpath, apiNode, true);
 
+            xpath = "./logFlush";
+            LogFlush = SettingsHelper.GetSettingValue(xpath, apiNode, "00:15");
+
             xpath = "./showQueryInformation";
             ShowQueryInformation = SettingsHelper.GetSettingValue(xpath, apiNode, true);
             
@@ -96,6 +99,9 @@ namespace PXWeb
             xpath = "./enableCache";
             SettingsHelper.SetSettingValue(xpath, apiNode, EnableCache.ToString());
 
+            xpath = "./logFlush";
+            SettingsHelper.SetSettingValue(xpath, apiNode, LogFlush.ToString());
+
             xpath = "./showQueryInformation";
             SettingsHelper.SetSettingValue(xpath, apiNode, ShowQueryInformation.ToString());
 
@@ -124,6 +130,7 @@ namespace PXWeb
         public bool EnableCORS { get; set; }
         public bool EnableCache { get; set; }
         public string ClearCache { get; set; }
+        public string LogFlush { get; set; }
         public bool ShowQueryInformation { get; set; }
         public string InfoURL { get; set; }
         public int FetchCellLimit { get; set; }
