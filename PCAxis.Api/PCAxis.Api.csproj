@@ -142,8 +142,8 @@
     <Reference Include="PCAxis.Serializers.JsonStat2, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PCAxis.Serializers.JsonStat2.1.0.1\lib\netstandard2.0\PCAxis.Serializers.JsonStat2.dll</HintPath>
     </Reference>
-    <Reference Include="PCAxis.Sql, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Sql.1.0.1\lib\netstandard2.0\PCAxis.Sql.dll</HintPath>
+    <Reference Include="PCAxis.Sql, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCAxis.Sql.1.1.0-rc\lib\netstandard2.0\PCAxis.Sql.dll</HintPath>
     </Reference>
     <Reference Include="PX.Serializers.Json, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PX.Serializers.Json.1.0.1\lib\netstandard2.0\PX.Serializers.Json.dll</HintPath>
@@ -237,8 +237,8 @@
     <Compile Include="SSDRouteHandler.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Norway\LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
-      <Project>{e2beb3f3-511a-41ae-a8ad-dee6d2d56e3f}</Project>
+    <ProjectReference Include="..\Norway\Norway.LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
+      <Project>{b8a6d94a-89b3-42a6-a058-bedea9965f78}</Project>
       <Name>Norway.LogVisitorStatistics</Name>
     </ProjectReference>
     <ProjectReference Include="..\PCAxis.Charts\PCAxis.Chart.csproj">
