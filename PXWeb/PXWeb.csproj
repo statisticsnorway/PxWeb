@@ -336,6 +336,7 @@
     <None Include="Scripts\jquery-3.5.1.slim.js" />
     <None Include="Scripts\jquery-3.5.1.slim.min.js" />
     <Content Include="Search.aspx" />
+    <Content Include="TableList.aspx" />
     <Content Include="UserControls\AccordianAboutTableControl.ascx" />
     <Content Include="UserControls\Login.ascx" />
     <Content Include="UserControls\MenuExplanation.ascx" />
@@ -834,6 +835,12 @@
     </Compile>
     <Compile Include="Table.aspx.designer.cs">
       <DependentUpon>Table.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TableList.aspx.cs">
+      <DependentUpon>TableList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TableList.aspx.designer.cs">
+      <DependentUpon>TableList.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AccordianAboutTableControl.ascx.cs">
       <DependentUpon>AccordianAboutTableControl.ascx</DependentUpon>
