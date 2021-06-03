@@ -332,4 +332,8 @@ ASALocalRun/
 .mfractor/
 /PXWeb/App_Data/Queries
 /PXWeb/logs
+/PXWeb/databases.config
+/PXWeb/setting.config
 /PXWeb/SqlDb.config
+/PXWeb/Web.config
+/PXWeb/Resources/PX/Databases/utv_24v_intern

@@ -125,14 +125,14 @@
     <Reference Include="PCAxis.Metadata, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PCAxis.Metadata.1.0.1\lib\netstandard2.0\PCAxis.Metadata.dll</HintPath>
     </Reference>
-    <Reference Include="PCAxis.PX.Core, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.PX.Core.1.0.1\lib\netstandard2.0\PCAxis.PX.Core.dll</HintPath>
+    <Reference Include="PCAxis.PX.Core, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCAxis.PX.Core.1.0.2\lib\netstandard2.0\PCAxis.PX.Core.dll</HintPath>
     </Reference>
     <Reference Include="PCAxis.Query, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PCAxis.Query.1.0.1\lib\netstandard2.0\PCAxis.Query.dll</HintPath>
     </Reference>
-    <Reference Include="PCAxis.Sql, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Sql.1.0.1\lib\netstandard2.0\PCAxis.Sql.dll</HintPath>
+    <Reference Include="PCAxis.Sql, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCAxis.Sql.1.1.0-rc\lib\netstandard2.0\PCAxis.Sql.dll</HintPath>
     </Reference>
     <Reference Include="PXWeb.SavedQuery.MsSql, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PXWeb.SavedQuery.MsSql.1.0.1\lib\netstandard2.0\PXWeb.SavedQuery.MsSql.dll</HintPath>
@@ -215,6 +215,10 @@
     <Content Include="DbScript\SQL\Create_SavedQueryMeta.sql" />
     <Content Include="Login.aspx" />
     <Content Include="DbScript\SQL\regsql_mrp.sql" />
+    <Content Include="Monitor\accept.png" />
+    <Content Include="Monitor\Default.aspx" />
+    <Content Include="Monitor\exclamation.png" />
+    <Content Include="Monitor\IndexStatus.aspx" />
     <Content Include="Ping\Default.aspx" />
     <Content Include="Resources\Images\alert-16.gif" />
     <Content Include="Resources\Images\arrow-down-10.gif" />
@@ -230,6 +234,7 @@
     <Content Include="Resources\Images\button-small.gif" />
     <Content Include="Resources\Images\button_save_as_json.gif" />
     <Content Include="Resources\Images\download-16.gif" />
+    <Content Include="Resources\Images\Error_red.png" />
     <Content Include="Resources\Images\House.gif" />
     <Content Include="Resources\Images\jsons.gif" />
     <Content Include="Resources\Images\minus-16.gif" />
@@ -318,6 +323,13 @@
     <Content Include="Resources\Styles\scss\not_in_use\_AReadMe.txt" />
     <Content Include="Resources\Styles\scss\common\_nested-accordion.scss" />
     <Content Include="Resources\PX\Databases\Example\Misc\OfficialStatistics\officialstatistics.px" />
+    <Content Include="Monitor\web.config" />
+    <None Include="Monitor\Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="Monitor\Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <None Include="Scripts\jquery-3.5.1.js" />
     <None Include="Scripts\jquery-3.5.1.min.js" />
@@ -543,9 +555,11 @@
       <DependentUpon>ChartHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Code\BackgroundWorker\PxWebBackgroundWorker.cs" />
+    <Compile Include="Code\CustomControls\HeadingLabel.cs" />
     <Compile Include="Code\Database\Builders\MenuBuilder.cs" />
     <Compile Include="Code\Database\CnmmDatabaseBuilder.cs" />
     <Compile Include="Code\Database\DatabaseSpider.cs" />
+    <Compile Include="Code\Database\FormsDbStringProvider.cs" />
     <Compile Include="Code\Database\Handlers\AliasFileHandler.cs" />
     <Compile Include="Code\Database\Handlers\LinkFileHandler.cs" />
     <Compile Include="Code\Database\Handlers\MenuSortFileHandler.cs" />
@@ -564,6 +578,7 @@
     <Compile Include="Code\Management\GotoRouteHandler.cs" />
     <Compile Include="Code\Management\IPxUrl.cs" />
     <Compile Include="Code\Management\IRouteExtender.cs" />
+    <Compile Include="Code\Management\Norway\LogFlusher.cs" />
     <Compile Include="Code\Management\PartTableHelper.cs" />
     <Compile Include="Code\Management\PxContext.cs" />
     <Compile Include="Code\Management\PxImageExpressionBuilder.cs" />
@@ -578,6 +593,7 @@
     <Compile Include="Code\Modules\PXWebHttpModule.cs" />
     <Compile Include="Code\Modules\SecurityHttpModule.cs" />
     <Compile Include="Code\Search\SearchHelper.cs" />
+    <Compile Include="Code\Security\CNMMMembershipProvider.cs" />
     <Compile Include="Code\Security\DefaultAuthorization.cs" />
     <Compile Include="Code\Security\PXWebDefaultMembershipProvider.cs" />
     <Compile Include="Code\Security\PXWebLicenseMembershipProvider.cs" />
@@ -594,6 +610,7 @@
     <Compile Include="Code\Settings\DatabaseInfo.cs" />
     <Compile Include="Code\Settings\DatabaseSettings.cs" />
     <Compile Include="Code\Settings\DatabasesSettings.cs" />
+    <Compile Include="Code\Settings\Enums\MainHeaderForTablesType.cs" />
     <Compile Include="Code\Settings\Enums\SearchIndexStatusType.cs" />
     <Compile Include="Code\Settings\Enums\MenuModeType.cs" />
     <Compile Include="Code\Settings\Enums\MenuViewLinkModeType.cs" />
@@ -749,6 +766,22 @@
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Monitor\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\IndexStatus.aspx.cs">
+      <DependentUpon>IndexStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\IndexStatus.aspx.designer.cs">
+      <DependentUpon>IndexStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\JsonTableQuery.cs" />
+    <Compile Include="Monitor\JsonTableResult.cs" />
     <Compile Include="Ping\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -856,6 +889,10 @@
     <ProjectReference Include="..\CSSFriendly\CSSFriendly.csproj">
       <Project>{1439911B-BE4E-48A0-9208-927321992C67}</Project>
       <Name>CSSFriendly</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Norway\Norway.LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
+      <Project>{b8a6d94a-89b3-42a6-a058-bedea9965f78}</Project>
+      <Name>Norway.LogVisitorStatistics</Name>
     </ProjectReference>
     <ProjectReference Include="..\PCAxis.Api\PCAxis.Api.csproj">
       <Project>{8eb90826-a01b-494d-a596-e5c5f9815c3b}</Project>
@@ -1461,4 +1498,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>rem call "$(SolutionDir)GetConfig.bat"</PreBuildEvent>
+  </PropertyGroup>
 </Project>

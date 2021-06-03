@@ -10,10 +10,11 @@ using System.Globalization;
 using PCAxis.Menu;
 using PCAxis.Menu.Implementations;
 using PCAxis.Web.Controls;
+using System.Configuration;
 using log4net;
 using PCAxis.Web.Core.Enums;
 using PCAxis.Web.Core;
-using System.Web.Security;
+using System.Net; //ssb
 
 namespace PXWeb
 {
@@ -76,37 +77,100 @@ namespace PXWeb
             set;
         }
 
+        public string templateHead;
+        public string templateTop;
+        public string templateFoot;
+        //string cmsGenericTemplateUrl = "system/ramme?markerrom=statistikk";
+        string cmsGenericTemplateUrl = "system/xpramme";
+
+        public string Language
+        {
+            get
+            {
+                return PxUrlObj.Language;
+            }
+        }
+
+        private string _cmsHost;
+
+        private string CmsHost
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_cmsHost))
+                {
+                    _cmsHost = ConfigurationManager.AppSettings["cmsHost"];
+                }
+
+                return _cmsHost;
+            }
+        }
+
+        private int? _cacheTimeInMinutesCMSloadedContent;
+
+        private int CacheTimeInMinutesCMSloadedContent
+        {
+            get
+            {
+                if (!_cacheTimeInMinutesCMSloadedContent.HasValue && ! string.IsNullOrWhiteSpace(ConfigurationManager.AppSettings["CacheServiceExpirationInMinutes"]))
+                {
+                    _cacheTimeInMinutesCMSloadedContent = int.Parse(ConfigurationManager.AppSettings["CacheServiceExpirationInMinutes"]);
+                }
+
+                return _cacheTimeInMinutesCMSloadedContent.HasValue ? _cacheTimeInMinutesCMSloadedContent.Value : 10;
+            }
+        }
+        
+        private string _kortNavnWeb;
+
+        private string KortNavnWeb
+        {
+            get
+            {
+                if (_kortNavnWeb == null)
+                {
+                    _kortNavnWeb = GetTableListName() ?? "";
+                }
+
+                return _kortNavnWeb;
+            }
+        }
+        
+        private string GetTableListName()
+        {
+            var tableListPath = RouteInstance.RouteExtender.GetTableListPath(PxUrlObj.Path);
+            if (string.IsNullOrEmpty(tableListPath)) return tableListPath;
+            return RouteInstance.RouteExtender.GetLastNodeFromPath(tableListPath);
+        }
+		
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (!PXWeb.Settings.Current.Selection.StandardApplicationHeadTitle)
-            {
-                HeadTitle = Server.HtmlEncode(GetLocalizedString("PxWebApplicationTitle"));
-            }
-
-            if (DoNotUseBreadCrumb())
-            {
-                Page.Controls.Remove(this.breadcrumb1);
-            }
+            var queryStringPart = ValidationManager.GetValue(Page.Request.QueryString[PCAxis.Web.Core.StateProvider.StateProviderFactory.REQUEST_ID]);
 
             //Add eventhandlers
             LinkManager.RegisterEnsureQueries(new EnsureQueriesEventHandler(LinkManager_EnsureQueries));
-            
-            if (PxUrlObj.Language != null)
+
+            var pxUrl = RouteInstance.PxUrlProvider.Create(null);
+            string urlLanguage = pxUrl.Language;
+
+            if (urlLanguage != null)
             {
-                if (!(LocalizationManager.CurrentCulture.Name == PxUrlObj.Language))
+                if (!(LocalizationManager.CurrentCulture.Name == urlLanguage))
                 {
-                    if (PxUrlObj.Database != null)
+                    if (urlLanguage != null)
                     {
                         DatabaseInfo dbi = null;
-                        dbi = PXWeb.Settings.Current.General.Databases.GetDatabase(PxUrlObj.Database);
-                        
-                        if (dbi.Type == DatabaseType.CNMM)
+
+                        IPxUrl url = RouteInstance.PxUrlProvider.Create(null);
+                        dbi = PXWeb.Settings.Current.General.Databases.GetDatabase(url.Database);
+
+                        if (dbi.Type == DatabaseType.CNMM && !this.Page.Request.Url.AbsolutePath.Split('/').Contains("uttrekk"))
                         {
                             PCAxis.Web.Core.Management.PaxiomManager.PaxiomModelBuilder = null;
                             PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel = null;
                         }
                     }
-                    LocalizationManager.ChangeLanguage(PxUrlObj.Language);
+                    LocalizationManager.ChangeLanguage(urlLanguage);
                 }
             }
             else
@@ -115,6 +179,7 @@ namespace PXWeb
                 LocalizationManager.ChangeLanguage(lang);
 
                 List<LinkManager.LinkItem> linkItems = new List<LinkManager.LinkItem>();
+                //linkItems.Add(new LinkManager.LinkItem(urlLanguage, lang));
                 linkItems.Add(new LinkManager.LinkItem(PxUrl.LANGUAGE_KEY, lang));
 
                 //Replaced Request.Url.AbsolutePath with Request.AppRelativeCurrentExecutionFilePath
@@ -131,28 +196,11 @@ namespace PXWeb
 
             if (!IsPostBack)
             {
-                if (!DoNotUseBreadCrumb())
-                {
-                    InitializeBreadcrumb();
-                }
-                
-
                 if (PXWeb.Settings.Current.Navigation.ShowNavigationFlow)
                     InitializeNavigationFlow();
             }
 
-            if (!DoNotUseBreadCrumb())
-            {
-                breadcrumb1.GetMenu = GetMenu;
-            }
-            
             //navigationFlowControl.GetMenu = GetMenu;
-        }
-
-        private bool DoNotUseBreadCrumb()
-        {
-            if (RouteInstance.RouteExtender == null) return false;
-            return !RouteInstance.RouteExtender.ShowBreadcrumb();
         }
 
         /// <summary>
@@ -160,24 +208,17 @@ namespace PXWeb
         /// </summary>
         protected void Page_Load(object sender, EventArgs e)
         {
-            ToTheTopButtonLiteralText.Text = GetLocalizedString("PxWebToTheTopButtonLiteralText");
-            SkipToMain.Text = GetLocalizedString("PxWebSkipToMainContentLinkText");
-            SkipToMain.Attributes.Add("aria-label", GetLocalizedString("PxWebSkipToMainContentLinkScreenReader"));
-            SkipToMain.Attributes.Add("href", GetLocalizedString("#pxcontent"));
-
-            if (PXWeb.Settings.Current.General.Global.ShowInformationTypes.OfficialStatistics)
+            GetCMSContents();
+            string ctrlname = Request.Params.Get("__EVENTTARGET");
+            bool languageChanged = false;
+            if (!string.IsNullOrEmpty(ctrlname))
             {
-                if (PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel != null && PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel.Meta.OfficialStatistics)
+                if ((ctrlname.Contains("cboSelectLanguages")))
                 {
-                    OfficialStatisticsImage = "";
-                    if (!string.IsNullOrWhiteSpace(PxUrlObj.Language))
-                    {
-                        string img = $"official_statistics_{ PxUrlObj.Language }.svg";
-                        OfficialStatisticsImage = ResolveUrl(System.IO.Path.Combine(PXWeb.Settings.Current.General.Paths.ImagesPath, img));
-                    }
+                    languageChanged = true;
                 }
             }
-
+            ToTheTopButtonLiteralText.Text = GetLocalizedString("PxWebToTheTopButtonLiteralText");
         }
 
         /// <summary>
@@ -202,13 +243,20 @@ namespace PXWeb
         /// </summary>
         public void SetH1TextMenuLevel()
         {
-            if (!string.IsNullOrEmpty(PxUrlObj.Path))
+            if (PXWeb.Settings.Current.General.Site.MainHeaderForTables == MainHeaderForTablesType.StatisticArea)
             {
-                PCAxis.Menu.Item itm = GetMenu(PxUrlObj.Path);
-                if (itm != null && !string.IsNullOrEmpty(itm.Text))
+                if (!string.IsNullOrEmpty(PxUrlObj.Path))
                 {
-                    lblH1Title.Text = itm.Text;
+                    PCAxis.Menu.Item itm = GetMenu(PxUrlObj.Path);
+                    if (itm != null && !string.IsNullOrEmpty(itm.Text))
+                    {
+                        lblH1Title.Text = itm.Text;
+                    }
                 }
+            }
+            else
+            {
+                lblH1Title.Visible = false;
             }
         }
 
@@ -224,13 +272,14 @@ namespace PXWeb
             }
         }
 
+
         /// <summary>
         /// Page unload - remove eventhandler for LinkManager.EnsureQueries
         /// </summary>
         protected void Page_Unload(object sender, EventArgs e)
         {
 
-           LinkManager.UnregisterEnsureQueries(LinkManager_EnsureQueries);
+            LinkManager.UnregisterEnsureQueries(LinkManager_EnsureQueries);
         }
 
 
@@ -239,109 +288,74 @@ namespace PXWeb
         /// </summary>
         private void LoadPageContent()
         {
-           
+            //Title
+            //litTitle.Text = Server.HtmlEncode(GetLocalizedString("PxWebApplicationTitle"));
+            //if (string.IsNullOrEmpty(litTitle.Text))
+            //{
+            //    litTitle.Text = "PX-Web";
+            //}
+
             //Logo
-            if (!PXWeb.Settings.Current.Selection.StandardApplicationHeadTitle)
+            if (PXWeb.Settings.Current.Selection.StandardApplicationHeadTitle)
             {
                 HeadTitle = Server.HtmlEncode(GetLocalizedString("PxWebApplicationTitle"));
             }
-
-            imgSiteLogo.Src = Path.Combine(_imagesPath, _logoPath);
-            imgSiteLogo.Alt = GetLocalizedString("PxWebLogoAlt");
-            if (_logoPath.Length < 5)
-            {
-                imgSiteLogo.Visible = false;
-            }
-
-            //Application name
-            litAppName.Text = Server.HtmlEncode(GetLocalizedString("PxWebApplicationName"));
-
-            //Languages
-           
-            string html = "";
-            foreach (LanguageSettings lang in PXWeb.Settings.Current.General.Language.SiteLanguages)
-            {
-                if (!(lang.Name == PxUrlObj.Language))
-                {
-                    html += GetChangeToLanguageLink(lang.Name);
-                 }
-                
-            }
-            //For testing CSS when more than one language: html += GetChangeToLanguageLink("sv");
-            ChangeLanguageLiteral.Text = html;
 
             //Footer
             lblFooterText.Text = _footertext;
         }
 
-        private string GetChangeToLanguageLink(string langName)
+        /// <summary>
+        /// Eventhandler for LinkManager.EnsureQueries (calles from LinkManager.CreateLink) 
+        /// that adds dictionaryitems to add to the created link.
+        /// </summary>
+        /// <param name="queries"></param>
+        protected void LinkManager_EnsureQueries(object sender, EnsureQueriesEventArgs e)
         {
-
-            List<LinkManager.LinkItem> linkItems = new List<LinkManager.LinkItem>();
-            linkItems.Add(new LinkManager.LinkItem("px_language", langName));
-            if (!string.IsNullOrEmpty(PxUrlObj.Layout))
-            {
-                linkItems.Add(new LinkManager.LinkItem(PxUrl.LAYOUT_KEY, PxUrlObj.Layout));
-            }
-            //Replaced Request.Url.AbsolutePath with Request.AppRelativeCurrentExecutionFilePath
-            //so that the links will be right even if the site is running without UserFriendlyURL
-            string langUrl = PCAxis.Web.Core.Management.LinkManager.CreateLink(Request.AppRelativeCurrentExecutionFilePath, false, linkItems.ToArray());
-
-            string langText = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebChangeToThisLanguage", new CultureInfo(langName));
-            return String.Format("<div class=\"pxweb-link\"> <a class=\"px-change-lang\" href=\"{0}\"> <span class=\"link-text px-change-lang\">{1}</span></a> </div> ", langUrl, Server.HtmlEncode(langText));
+            Dictionary<string, string> queries = e.Queries;
+            AddToQueries(queries, "px_db"); // Identifies selected PX- or SQL-database
+            AddToQueries(queries, "px_language");
+            AddToQueries(queries, "px_path"); // path within database 
+            AddToQueries(queries, "px_tableid"); // Identifies selected PX-file or SQL-table
+            AddToQueries(queries, "rxid");
         }
 
-         /// <summary>
-         /// Eventhandler for LinkManager.EnsureQueries (calles from LinkManager.CreateLink) 
-         /// that adds dictionaryitems to add to the created link.
-         /// </summary>
-         /// <param name="queries"></param>
-         protected void  LinkManager_EnsureQueries(object sender, EnsureQueriesEventArgs e)
-         {
-             Dictionary<string, string> queries = e.Queries;
-             AddToQueries(queries, "px_db"); // Identifies selected PX- or SQL-database
-             AddToQueries(queries, "px_language");
-             AddToQueries(queries, "px_path"); // path within database 
-             AddToQueries(queries, "px_tableid"); // Identifies selected PX-file or SQL-table
-             AddToQueries(queries, "rxid");
-         }
 
-
-         protected void AddToQueries(Dictionary<string,string> queries,string key)
-         {
-             if (Page.RouteData.Values[key] != null)
-             {
-                 if (queries.ContainsKey(key))
-                 {
+        protected void AddToQueries(Dictionary<string, string> queries, string key)
+        {
+            if (Page.RouteData.Values[key] != null)
+            {
+                if (queries.ContainsKey(key))
+                {
                     queries[key] = ValidationManager.GetValue(Page.RouteData.Values[key].ToString());
-                 }
-                 else
-                 {
-                     queries.Add(key, ValidationManager.GetValue(Page.RouteData.Values[key].ToString()));
-                 }
-             }
-             else if (QuerystringManager.GetQuerystringParameter(key) != null)
-             {
-                 if (queries.ContainsKey(key))
-                 {
-                     queries[key] = QuerystringManager.GetQuerystringParameter(key);
-                 }
-                 else
-                 {
-                     queries.Add(key, QuerystringManager.GetQuerystringParameter(key));
-                 }
-             }
-         }
+                }
+                else
+                {
+                    queries.Add(key, ValidationManager.GetValue(Page.RouteData.Values[key].ToString()));
+                }
+            }
+            else if (HttpContext.Current.Request.QueryString[key] != null)
+            {
+                if (queries.ContainsKey(key))
+                {
+                    queries[key] = ValidationManager.GetValue(HttpContext.Current.Request.QueryString[key]);
+                }
+                else
+                {
+                    queries.Add(key, ValidationManager.GetValue(HttpContext.Current.Request.QueryString[key]));
+                }
+            }
+        }
 
-         /// <summary>
-         /// Get text in the currently selected language
-         /// </summary>
-         /// <param name="key">Key identifying the string in the language file</param>
-         /// <returns>Localized string</returns>
-         public string GetLocalizedString(string key)
-         {
-             string lang = LocalizationManager.CurrentCulture.Name;
-             return PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString(key, new CultureInfo(lang));
+        /// <summary>
+        /// Get text in the currently selected language
+        /// </summary>
+        /// <param name="key">Key identifying the string in the language file</param>
+        /// <returns>Localized string</returns>
+        public string GetLocalizedString(string key)
+        {
+            string lang = LocalizationManager.CurrentCulture.Name;
+            return PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString(key, new CultureInfo(lang));
         }
 
         /// <summary>
@@ -350,12 +364,9 @@ namespace PXWeb
         /// <param name="mode">Breadcrumb mode</param>
         /// <param name="subpage">Optional parameter breadcrumb name</param>
         public void SetBreadcrumb(PCAxis.Web.Controls.Breadcrumb.BreadcrumbMode mode, string subpage = "")
-         {
-            if (!DoNotUseBreadCrumb())
-            {
-                breadcrumb1.Update(mode, subpage);
-            }
-         }
+        {
+            //breadcrumb1.Update(mode, subpage);
+        }
 
         public void SetNavigationFlowMode(PCAxis.Web.Controls.NavigationFlow.NavigationFlowMode mode)
         {
@@ -373,7 +384,6 @@ namespace PXWeb
         {
             navigationFlowControl.Visible = show;
         }
-
 
         private void InitializeNavigationFlow()
         {
@@ -426,110 +436,6 @@ namespace PXWeb
                 navigationFlowControl.Table = url.Table;
             }
         }
-         private void InitializeBreadcrumb()
-         {
-            IPxUrl url = RouteInstance.PxUrlProvider.Create(null);
-            DatabaseInfo dbi = null;
-
-             if (!string.IsNullOrEmpty(url.Database))
-             {
-                 
-                 try
-                 {
-                     IHomepageSettings homepage = PXWeb.Settings.Current.Database[url.Database].Homepages.GetHomepage(url.Language);
-                     breadcrumb1.HomePageIsExternal = homepage.IsExternal;
-                     breadcrumb1.HomePage = homepage.Url;
-                     if (PXWeb.Settings.Current.Menu.MenuMode == MenuModeType.TreeViewWithoutFiles)
-                     {
-                         breadcrumb1.UseTableList = true;
-                     }
-                     else
-                     {
-                         breadcrumb1.UseTableList = false;
-                     }
-                 }
-                 catch (KeyNotFoundException e)
-                 {
-                     log.Debug("url.Database = " + url.Database + ", url.Language = " + url.Language);
-                     log.Debug("Getting KeyNotFoundException for url.Database. Possible keys are:");
-                     foreach (string dbid in PXWeb.Settings.Current.Database.Keys)
-                     {
-                         log.Debug("dbid = " + dbid);
-                     }
-                     log.Debug("That all, folks!");
-                     log.Error("The error.", e);
-                     throw e;
-                 }
-                 
-             }
-             else
-             {
-                 breadcrumb1.HomePageIsExternal = false;
-                 breadcrumb1.HomePage = "Default.aspx";
-             }
-
-             breadcrumb1.HomePageName = GetLocalizedString("PxWebHome");
-             breadcrumb1.HomePageImage = true;
-             breadcrumb1.MenuPage = "Menu.aspx";
-             breadcrumb1.SelectionPage = "Selection.aspx";
-             breadcrumb1.TablePathParam = "px_path";
-             breadcrumb1.LayoutParam = "layout";
-             
-             if (string.IsNullOrEmpty(url.Database))
-             {
-                 return;
-             }
-
-             dbi = PXWeb.Settings.Current.General.Databases.GetDatabase(url.Database);
-
-             breadcrumb1.DatabaseId = dbi.Id;
-             breadcrumb1.DatabaseName = dbi.GetDatabaseName(LocalizationManager.CurrentCulture.TwoLetterISOLanguageName);
-
-             if (string.IsNullOrEmpty(url.Path))
-             {
-                 return;
-             }
-
-             //MenuPath path;
-             //if (dbi.Type == DatabaseType.CNMM)
-             //{
-             //    path = MenuPathFactory.Create(LinkType.Table);
-             //}
-             //else
-             //{
-             //    path = MenuPathFactory.Create(LinkType.PX);
-             //}
-
-             ////string tablePath = url.Path.Replace("___", "/");
-             //string tablePath = path.Decompress(url.Path);
-             //breadcrumb1.TablePath = tablePath;
-
-             if (dbi.Type == DatabaseType.CNMM)
-             {
-                 breadcrumb1.DatabaseType = PCAxis.Web.Core.Enums.DatabaseType.CNMM;
-             }
-             else
-             {
-                 breadcrumb1.DatabaseType = PCAxis.Web.Core.Enums.DatabaseType.PX;
-             }
-
-             breadcrumb1.TablePath = System.Web.HttpUtility.UrlDecode(url.Path);
-
-             if (string.IsNullOrEmpty(url.Table))
-             {
-                 return;
-             }
-
-             if ((dbi.Type == PCAxis.Web.Core.Enums.DatabaseType.CNMM) && (!url.Table.Contains(":")))
-             {
-                 breadcrumb1.Table = url.Database + ":" + url.Table;
-             }
-             else
-             {
-                 breadcrumb1.Table = url.Table;
-             }
-         }
-
 
         private IPxUrl _pxUrl = null;
 
@@ -571,6 +477,321 @@ namespace PXWeb
             }
         }
 
+        private string ReplaceLanguageLink(string topTemplateHtml)
+        {
+            if (string.IsNullOrEmpty(topTemplateHtml)) return topTemplateHtml;
+
+            var linkIndex = topTemplateHtml.IndexOf("<a id=\"change-language\"");
+            if (linkIndex == -1) return topTemplateHtml;
+            var endLinkStartNodeRelativeIndex = topTemplateHtml.Substring(linkIndex).IndexOf(">") + 1;
+            var linkNodeStart = topTemplateHtml.Substring(linkIndex, endLinkStartNodeRelativeIndex);
+            var hrefStartIndex = linkNodeStart.IndexOf(" href=");
+            var linkNodePart1 = linkNodeStart.Substring(0, hrefStartIndex);
+            var currentUrl = Page.Request.Url.AbsoluteUri;
+            var changeLanguageUrl = PxUrlObj.Language == "no" ? currentUrl.Replace("/statbank/", "/en/statbank/") : currentUrl.Replace("/en/statbank/", "/statbank/");
+            var presentationUrlPartStartIndex = changeLanguageUrl.ToLower().IndexOf("tableview");
+            if (presentationUrlPartStartIndex < 0)
+            {
+                 presentationUrlPartStartIndex = changeLanguageUrl.ToLower().IndexOf("chartview");
+            }
+            if (presentationUrlPartStartIndex > 0)
+            {
+                var deltapresentationUrlPartEndIndex = changeLanguageUrl.Substring(presentationUrlPartStartIndex).IndexOf("/");
+                changeLanguageUrl=changeLanguageUrl.ToLower().Remove(presentationUrlPartStartIndex - 1, deltapresentationUrlPartEndIndex + 2 );
+            }
+            var linkNodePart2 = string.Format(" href=\"{0}\">", changeLanguageUrl);
+            var newLinkNodeStart = linkNodePart1 + linkNodePart2;
+
+            return topTemplateHtml.Replace(linkNodeStart, newLinkNodeStart);
+        }
+
+        private void GetCMSContents()
+        {
+            string pageUrl = Request.ServerVariables["PATH_INFO"];
+            
+            if (string.IsNullOrEmpty(KortNavnWeb))
+            {
+                templateHead = getGenericTemplatePart("head").ToString();
+                templateTop = getGenericTemplatePart("top").ToString();
+                templateFoot = getGenericTemplatePart("foot").ToString();
+            }
+            else
+            {
+                templateHead = getTemplatePart("head").ToString();
+                templateTop = getTemplatePart("top").ToString();
+                templateFoot = getTemplatePart("foot").ToString();
+            }
+
+            templateTop = ReplaceLanguageLink(templateTop);
+            templateTop = templateTop.Replace("class=\"mega-menu hidden-by-default\"", "class=\"mega-menu hidden-by-default\" style=\"display: none;\"");
+            templateTop = templateTop.Replace("<a href=\"#content\"", "<a href=\"#pxcontent\"");
+        }
+
+        private string GetCacheTemplateId(string part)
+        {
+            return part + "_" + "_" + KortNavnWeb + "_" + "_" + Language;
+        }
+
+        private string getTemplatePart(string part)
+        {
+            string templateId = GetCacheTemplateId(part);
+            if (Cache[templateId] == null)
+            {
+                getTemplate();
+            }
+            
+            string templatePart = Cache[templateId] as string;
+
+            if (templatePart == null)
+            {
+                templatePart = (string)_templateByIdSetOnRequestByPart[part];
+            }
+            
+            if (part == "top")
+            {
+                templatePart = insertChangeLanguage(templatePart);
+            }
+
+            return templatePart;
+        }
+
+        private const string _genericTemplateCacheId = "genericTemplateCachePage";
+
+        private string GettGenericTemplateCacheId(string part)
+        {
+            return _genericTemplateCacheId + part + "_" + Language;
+        }
+
+        private string getGenericTemplatePart(string part)
+        {
+            string genericTemplateCacheId = GettGenericTemplateCacheId(part);
+
+            if (Cache[genericTemplateCacheId] == null)
+            {
+                getGenericTemplate();
+            }
+
+            string templatePart = Cache[genericTemplateCacheId] as string;
+
+            if (templatePart == null)
+            {
+                templatePart = _genericTemplateByIdSetOnRequestByPart[part];
+            }
+            
+            if (part == "top")
+            {
+                templatePart = insertChangeLanguage(templatePart);
+            }
+
+            templatePart = templatePart.Replace("href = \"/", string.Format("href = \"{0}", RouteInstance.RouteExtender.HomeSitePage));
+            templatePart = templatePart.Replace("src = \"/", string.Format("src = \"{0}", RouteInstance.RouteExtender.HomeSitePage));
+
+            return templatePart;
+        }
+
+        private string insertChangeLanguage(string topPart)
+        {
+
+            string pageUrl = Request.ServerVariables["PATH_INFO"];
+            string topPartAfterCLInsert = "";
+            if (PxUrlObj.Language == "en")
+            {
+                pageUrl = pageUrl.Replace("/en/", "/");
+                topPartAfterCLInsert = topPart.Replace("change-language\" lang=\"no\" href=\"#\"", "change-language\" href=" + pageUrl);
+            }
+            else if (PxUrlObj.Language == "no")
+            {
+                pageUrl = pageUrl.ToLower().Replace("/statistikkbanken/", "/en/statistikkbanken/");
+                topPartAfterCLInsert = topPart.Replace("change-language\" lang=\"en\" href=\"#\"", "change-language\" href=" + pageUrl);
+            }
+
+            return topPartAfterCLInsert;
+        }
+
+        private Dictionary<string, string> _genericTemplateByIdSetOnRequestByPart = new Dictionary<string, string>();
+
+        private string GetGenericTemplateCacheId()
+        {
+            return _genericTemplateCacheId + "_" + Language;
+        }
+
+        private string GetGenericTemplateHtml()
+        {
+            var result = Cache[GetGenericTemplateCacheId()] as string;
+            if (!string.IsNullOrEmpty(result)) return result;
+
+            string cmsHostEn = CmsHost + "en/";
+            string url;
+            if (Language == "no")
+            {
+                url = CmsHost + cmsGenericTemplateUrl;
+            }
+            else
+            {
+                url = cmsHostEn + cmsGenericTemplateUrl;
+            }
+
+            result = invokeHttp(url);
+            Cache.Insert(GetGenericTemplateCacheId(), result, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
+
+            return result;
+        }
+
+        private void getGenericTemplate()
+        {
+            string result = GetGenericTemplateHtml();
+
+            string headRamme = extractHead(result);
+            string topRamme = extractTop(result);
+            string bottomRamme = extractBottom(result);
+
+            _genericTemplateByIdSetOnRequestByPart["head"] = headRamme;
+            _genericTemplateByIdSetOnRequestByPart["top"] = topRamme;
+            _genericTemplateByIdSetOnRequestByPart["top"] = bottomRamme;
+
+            string headerTemplateCacheId = GettGenericTemplateCacheId("head");
+            string topTemplateCacheId = GettGenericTemplateCacheId("top");
+            string footTemplateCacheId = GettGenericTemplateCacheId("foot");
+
+            Cache.Insert(headerTemplateCacheId, headRamme, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
+            Cache.Insert(topTemplateCacheId, topRamme, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
+            Cache.Insert(footTemplateCacheId, bottomRamme, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
+
+        }
+
+        private Dictionary<string, string> _templateByIdSetOnRequestByPart = new Dictionary<string, string>();
+            
+        private void getTemplate()
+        {
+            string cmsHost = ConfigurationManager.AppSettings["cmsHost"];
+            string cmsHostEn = cmsHost + "en/";
+            string url;
+            if (Language == "no")
+            {
+                url = cmsHost;
+            }
+            else
+            {
+                url = cmsHostEn;
+            }
+
+            url = url + KortNavnWeb;
+            url = url + "?fane=statbank-web";
+            
+            string result;
+            try
+            {
+                result = invokeHttp(url);
+            }
+            catch
+            {
+                result = GetGenericTemplateHtml();
+            }
+            string headRamme = extractHead(result);
+            string topRamme = extractTop(result);
+            string bottomRamme = extractBottom(result);
+
+            if (ShouldUseAbsoluteReferences())
+            {
+                headRamme = MakeAbsoluteReferences(headRamme);
+                topRamme = MakeAbsoluteReferences(topRamme);
+                bottomRamme = MakeAbsoluteReferences(bottomRamme);
+            }
+
+            _templateByIdSetOnRequestByPart["head"] = headRamme;
+            _templateByIdSetOnRequestByPart["top"] = topRamme;
+            _templateByIdSetOnRequestByPart["foot"] = bottomRamme;
+            
+            var headerTemplateCacheId = GetCacheTemplateId("head");
+            var topTemplateCacheId = GetCacheTemplateId("top");
+            var footTemplateCacheId = GetCacheTemplateId("foot");
+
+            Cache.Insert(headerTemplateCacheId, headRamme, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
+            Cache.Insert(topTemplateCacheId, topRamme, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
+            Cache.Insert(footTemplateCacheId, bottomRamme, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
+        }
+
+        private bool ShouldUseAbsoluteReferences()
+        {
+            string fullUrl = Request.Url.OriginalString;
+            var fullUrlPathParts = fullUrl.Split('/');
+            return !fullUrlPathParts.Any(x => !string.IsNullOrEmpty(x) && x.ToLower() == RouteInstance.RouteExtender.SitePathStart.ToLower());
+        }
+
+        private string MakeAbsoluteReferences(string html)
+        {
+            html = html.Replace("href=\"/", string.Format("href=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
+            html = html.Replace("src=\"/", string.Format("src=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
+            html = html.Replace("logoUrl\":\"", string.Format("logoUrl\":\"{0}",RouteInstance.RouteExtender.HomeSitePage.Substring(0,RouteInstance.RouteExtender.HomeSitePage.Length-1)));
+            html = html.Replace("path\":\"", string.Format("path\":\"{0}", RouteInstance.RouteExtender.HomeSitePage.Substring(0, RouteInstance.RouteExtender.HomeSitePage.Length - 1)));
+
+            return html;
+        }
+
+        private string extractHead(string result)
+        {
+            // Henter ut head fra cms-malen
+            //int linkStartIndex = result.IndexOf("<link");
+            int linkStartIndex = result.IndexOf("<!-- UA");
+            result = result.Substring(linkStartIndex);
+            int headStopIndex = result.IndexOf("</head>");
+            result = result.Substring(0, headStopIndex);
+            return result;
+        }
+
+        private string extractTop(string result)
+        {
+            //Henter ut body fra cms-malen til og med main-content <div id = "main-content">
+            int indexOfBody = result.IndexOf("<body");
+            result = result.Substring(indexOfBody);
+            int mainContentIndex = result.IndexOf("row-cols-1");
+            result = result.Substring(0, mainContentIndex + 12);
+            return result;
+        }
+
+        private string extractBottom(string result)
+        {
+            // Henter ut foot fra cms-malen
+            int mainContentIndex = result.IndexOf("row-cols-1");
+            result = result.Substring(mainContentIndex + 23);
+            result = result.Substring(0, result.Length);
+            return result;
+        }
+        
+        private string invokeHttp(string url)
+        {
+            String strResult = null;
+            WebRequest objRequest = HttpWebRequest.Create(url);
+
+            objRequest.Timeout = CMSloadedContentTimeout;
+
+            using (WebResponse objResponse = objRequest.GetResponse())
+            {
+                using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
+                {
+                    strResult = sr.ReadToEnd();
+                    sr.Close();
+                }
+            }
+            
+            return strResult;
+        }
+
+        private int? _CMSloadedContentTimeout = null;
+
+        private int CMSloadedContentTimeout
+        {
+            get
+            {
+                if (!_CMSloadedContentTimeout.HasValue && !string.IsNullOrWhiteSpace(ConfigurationManager.AppSettings["CMSloadedContentTimeout"]))
+                {
+                    _CMSloadedContentTimeout = int.Parse(ConfigurationManager.AppSettings["CMSloadedContentTimeout"]);
+                }
+
+                return _CMSloadedContentTimeout ?? 100000;
+            }
+        }
+
         private string _displayVersion = null;
 
         public string DisplayVersion
@@ -589,11 +810,10 @@ namespace PXWeb
 
                     _displayVersion = displayVersion;
                 }
-                
+
                 return _displayVersion;
             }
         }
-
-
     }
 }
+
