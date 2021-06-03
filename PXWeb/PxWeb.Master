@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PxWeb.master.cs" Inherits="PXWeb.PxWeb" %>
-
 <%@ Register Src="~/UserControls/Login.ascx" TagPrefix="uc1" TagName="Login" %>
 <%@ Register TagPrefix="pxwebCustomControl" Namespace="PXWeb.CustomControls" Assembly="PXWeb" %>
 
@@ -7,28 +6,34 @@
 
 <html lang="<%= HtmlLang %>">
   <head runat="server">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
     <title><asp:Literal runat="server" ID="LiteralTitle"></asp:Literal></title>
-    <link href="<%= ResolveUrl("~/Resources/Styles/reset.css") + "?v=" + DisplayVersion  %>" rel="stylesheet" type="text/css" media="screen" />
+      <!--debug start templateHead-->
+     <%Response.Write(templateHead);%>
+      <!--debug end templateHead-->
     <link href="<%= ResolveUrl("~/Resources/Styles/main-common.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/main-pxweb.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
-    <link href="<%= ResolveUrl("~/Resources/Styles/jQuery/redmond/jquery-ui.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/jQuery/tablesorter/style.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/main-custom.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
-    
-    <script src="<%= ResolveUrl("~/Resources/Scripts/jquery-3.5.1.min.js") %>?v=<%= DisplayVersion %>"></script>
-    <script src="<%= ResolveUrl("~/Resources/Scripts/jquery-ui-1.12.1.min.js") %>?v=<%= DisplayVersion %>"></script>
+
     <script src="<%= ResolveUrl("~/Resources/Scripts/pcaxis.web.client.js") %>?v=<%= DisplayVersion %>"></script>
     <script src="<%= ResolveUrl("~/Resources/Scripts/pcaxis.web.controls.js") %>?v=<%= DisplayVersion %>"></script>
     <script src="<%= ResolveUrl("~/Resources/Scripts/jquery.tablesorter.min.js") %>?v=<%= DisplayVersion %>"></script>
     <script src="<%= ResolveUrl("~/Resources/Scripts/jquery.metadata.js") %>?v=<%= DisplayVersion %>"></script>
     <script src="<%= ResolveUrl("~/Resources/Scripts/format.20110630-1100.min.js") %>?v=<%= DisplayVersion %>"></script>
+    
+
 
     <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
     </asp:ContentPlaceHolder>
+   
 </head>
-<body>
-    <div id="pxwebcontent">
+<!--body-->
+    <!--debug start templateTop-->
+<%Response.Write(templateTop);%>
+ <!--debug end templateTop-->
+
+<div id="pxwebcontent">
     <form id="form1" runat="server">
         <asp:LinkButton ID="ToTheTopButton" runat="server" CssClass="top-link pxweb-btn negative hide" Text="">
             <svg class="icon-top-link-button" viewBox="0 0 24 24" width="40" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" >
@@ -36,7 +41,7 @@
             </svg><asp:Literal ID="ToTheTopButtonLiteralText" runat="server"/>
         </asp:LinkButton>
         <div id="wrap">
-            <header id="header" class="header flex-row flex-wrap justify-space-between">
+<%--            <header id="header" class="header flex-row flex-wrap justify-space-between">
                 <asp:HyperLink runat="server" ID="SkipToMain" CssClass="screenreader-only pxweb-link"></asp:HyperLink>
                 <div class="headerleft flex-row" role="banner">
                         <img id="imgSiteLogo"  enableviewstate="false" runat="server" src="" alt="" class="imgSiteLogo" />
@@ -47,7 +52,7 @@
                           <asp:Literal ID="ChangeLanguageLiteral" EnableViewState="false" runat="server" />
                     </div>
                 </div>
-            </header>
+            </header>--%>
             <% if (PXWeb.Settings.Current.General.Modules.ShowLogin)
                 { %>
                 <div id="loginBanner" class="login">
@@ -86,39 +91,45 @@
             </footer>
         </div>
     </form>
+    
 </div>
-    <script>
-        "use strict";
-        // Set a variable for our button element.
-        var scrollToTopButton = document.getElementById('<%=ToTheTopButton.ClientID%>');
-        var lastScrollYPos = 0;
 
-        scrollToTopButton.className = "top-link pxweb-btn negative hidden";
+<script>
+    "use strict";
+    // Set a variable for our button element.
+    var scrollToTopButton = document.getElementById('<%=ToTheTopButton.ClientID%>');
+    var lastScrollYPos = 0;
 
-        // Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
-        var scrollFunc = function scrollFunc(lastScrollYPos) {
-            // Get the current scroll value
-            var y = window.pageYOffset; // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
+    scrollToTopButton.className = "top-link pxweb-btn negative hidden";
 
-            if (y > 300 && y < lastScrollYPos) {
-                scrollToTopButton.className = "top-link pxweb-btn negative show";
-            } else {
-                scrollToTopButton.className = "top-link pxweb-btn negative hidden";
-                scrollToTopButton.blur();
-            }
-        };
+    // Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
+    var scrollFunc = function scrollFunc(lastScrollYPos) {
+        // Get the current scroll value
+        var y = window.pageYOffset; // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
 
-        window.addEventListener('scroll', function (e) {
-            scrollFunc(lastScrollYPos);
-            lastScrollYPos = window.scrollY;
-        });
+        if (y > 300 && y < lastScrollYPos) {
+            scrollToTopButton.className = "top-link pxweb-btn negative show";
+        } else {
+            scrollToTopButton.className = "top-link pxweb-btn negative hidden";
+            scrollToTopButton.blur();
+        }
+    };
 
-        scrollToTopButton.onclick = function (e) {
-            e.preventDefault();
-            document.documentElement.scrollTop = 0;
-        };
+    window.addEventListener('scroll', function (e) {
+        scrollFunc(lastScrollYPos);
+        lastScrollYPos = window.scrollY;
+    });
+
+    scrollToTopButton.onclick = function (e) {
+        e.preventDefault();
+        document.documentElement.scrollTop = 0;
+    };
 </script>
-</body>
-</html>
+
+ <!--debug start templateFoot-->
+<%Response.Write(templateFoot);%>
+ <!--debug end templateFoot-->
 
 
+<!--/body-->
+<!--/html-->
