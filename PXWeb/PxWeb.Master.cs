@@ -81,6 +81,7 @@ namespace PXWeb
         public string templateTop;
         public string templateFoot;
         //string cmsGenericTemplateUrl = "system/ramme?markerrom=statistikk";
+        
         string cmsGenericTemplateUrl = "system/xpramme";
 
         public string Language
@@ -508,19 +509,24 @@ namespace PXWeb
         private void GetCMSContents()
         {
             string pageUrl = Request.ServerVariables["PATH_INFO"];
-            
-            if (string.IsNullOrEmpty(KortNavnWeb))
-            {
-                templateHead = getGenericTemplatePart("head").ToString();
-                templateTop = getGenericTemplatePart("top").ToString();
-                templateFoot = getGenericTemplatePart("foot").ToString();
-            }
-            else
-            {
-                templateHead = getTemplatePart("head").ToString();
-                templateTop = getTemplatePart("top").ToString();
-                templateFoot = getTemplatePart("foot").ToString();
-            }
+
+            // context frame not ready for XP
+            //if (string.IsNullOrEmpty(KortNavnWeb))
+            //{
+            //    templateHead = getGenericTemplatePart("head").ToString();
+            //    templateTop = getGenericTemplatePart("top").ToString();
+            //    templateFoot = getGenericTemplatePart("foot").ToString();
+            //}
+            //else
+            //{
+            //    templateHead = getTemplatePart("head").ToString();
+            //    templateTop = getTemplatePart("top").ToString();
+            //    templateFoot = getTemplatePart("foot").ToString();
+            //}
+
+            templateHead = getGenericTemplatePart("head").ToString();
+            templateTop = getGenericTemplatePart("top").ToString();
+            templateFoot = getGenericTemplatePart("foot").ToString();
 
             templateTop = ReplaceLanguageLink(templateTop);
             templateTop = templateTop.Replace("class=\"mega-menu hidden-by-default\"", "class=\"mega-menu hidden-by-default\" style=\"display: none;\"");
@@ -644,6 +650,14 @@ namespace PXWeb
             string headRamme = extractHead(result);
             string topRamme = extractTop(result);
             string bottomRamme = extractBottom(result);
+
+            if (ShouldUseAbsoluteReferences())
+            {
+                headRamme = MakeAbsoluteReferences(headRamme);
+                topRamme = MakeAbsoluteReferences(topRamme);
+                bottomRamme = MakeAbsoluteReferences(bottomRamme);
+            }
+
 
             _genericTemplateByIdSetOnRequestByPart["head"] = headRamme;
             _genericTemplateByIdSetOnRequestByPart["top"] = topRamme;
