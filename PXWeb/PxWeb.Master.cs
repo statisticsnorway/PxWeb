@@ -739,7 +739,6 @@ namespace PXWeb
             html = html.Replace("src=\"/", string.Format("src=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
             html = html.Replace("logoUrl\":\"", string.Format("logoUrl\":\"{0}",RouteInstance.RouteExtender.HomeSitePage.Substring(0,RouteInstance.RouteExtender.HomeSitePage.Length-1)));
             html = html.Replace("path\":\"", string.Format("path\":\"{0}", RouteInstance.RouteExtender.HomeSitePage.Substring(0, RouteInstance.RouteExtender.HomeSitePage.Length - 1)));
-            html = html.Replace("bundle.js","bundlex.js");  // test
 
             return html;
         }
@@ -789,8 +788,9 @@ namespace PXWeb
                     sr.Close();
                 }
             }
-            
-            return strResult;
+
+            //return  strResult;
+            return strResult.Replace("bundle.js", "bundlex.js");
         }
 
         private int? _CMSloadedContentTimeout = null;
