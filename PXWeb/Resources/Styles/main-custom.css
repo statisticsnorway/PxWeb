@@ -58,8 +58,12 @@ $scrollbar-color: #b0b0b0;
   width: auto;
   display: inline; }
 
+#pxwebcontent .variableselector_valuesselect_variabletitle {
+    color: #ffffff;
+}
 #pxwebcontent .variableselector_valuesselect_variabletitle::first-letter {
-  text-transform: capitalize; }
+    text-transform: capitalize;
+}
 
 #pxwebcontent .selectfromgroup-variable::first-letter {
   text-transform: capitalize; }
@@ -370,3 +374,18 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
   width: 99%; }
 
 /*  @import './custom/_Custom-external.scss'; */
+
+#pxwebcontent .variableselector_valuesselect_statistics_panel {
+    border-top-style: solid;
+    border-top-color: #b6e8b8;
+    border-top-width: 2px;
+    padding-top: 7px;
+}
+
+#pxwebcontent .variableselector_valuesselect_variabletitle label:first-letter {
+    text-transform: capitalize;
+}
+#pxwebcontent .variableselector_valuesselect_mandatory_text:after {
+    content: "*";
+    font-size: 28px;
+}
