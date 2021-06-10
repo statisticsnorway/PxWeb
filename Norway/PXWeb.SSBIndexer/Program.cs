@@ -33,9 +33,9 @@ namespace PXWeb.SSBIndexer
         static void Main(string[] args)
         {
 #if DEBUG
-            
+
             //args = new[] { "update", @"C:\pc-axis\Customized\SSB\PX-Web_2016_V1\PXWeb\Resources\PX\Databases\", "table", "no" };
-           // args = new[] { "create", @"C:\pc-axis\Customized\SSB\PX-Web_2016_V1\PXWeb\Resources\PX\Databases\", "utv", "no" };
+            // args = new[] { "create", @"C:\pc-axis\Customized\SSB\PX-Web_2016_V1\PXWeb\Resources\PX\Databases\", "utv", "no" };
 #endif
             _logger = log4net.LogManager.GetLogger(typeof(Program));
             _logger.InfoFormat("=== SSBIndexer started ===");
@@ -58,6 +58,10 @@ namespace PXWeb.SSBIndexer
             else if (_task == "update")
             {
                 success = UpdateIndex();
+            }
+            else if (_task == "testing")
+            {
+                success = TestingIndex();
             }
 
             if (!EndTask(success))
@@ -102,13 +106,54 @@ namespace PXWeb.SSBIndexer
                 _logger.InfoFormat("Create Index ended successfully");
                 return true;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.ErrorFormat("Failed to create Index for {0}", _database);
                 _logger.ErrorFormat(e.InnerException.ToString());
                 return false;
             }
 
+        }
+
+
+        /// <summary>
+        /// Test system by updating one table
+        /// </summary>
+        private static bool TestingIndex()
+        {
+            _logger.InfoFormat("Testing system by updating one table started. lang = en only");
+            try
+            {
+                ISearchIndex updater = GetUpdater();
+
+                if (updater == null)
+                    return false;
+                List<PCAxis.Search.TableUpdate> lst = new List<TableUpdate>();
+
+                PCAxis.Search.TableUpdate tbl = new PCAxis.Search.TableUpdate();
+                tbl.Id = "AKUAarNY";
+                tbl.Path = "al/al03/aku/SBMENU420/AKUAarNY";
+                lst.Add(tbl);
+
+                Indexer indexer = new Indexer(GetIndexDirectoryPath(_database, "en"), _menuMethod, _database, "en");
+
+                if (indexer.UpdateIndex(lst))
+                {
+                    _logger.Info("Successfully test updated the " + _database + " - en search index");
+                    return true;
+                }
+                else
+                {
+                    _logger.Error("Failed test to update the " + _database + " - en search index");
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                _logger.Error("Failed to TESTING update the " + _database + " - " + "search index");
+                _logger.ErrorFormat(e.InnerException.ToString());
+                return false;
+            }
         }
 
         /// <summary>
@@ -152,7 +197,7 @@ namespace PXWeb.SSBIndexer
                 _logger.InfoFormat("Update Index ended");
                 return true;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.Error("Failed to update the " + _database + " - " + "search index");
                 _logger.ErrorFormat(e.InnerException.ToString());
@@ -226,7 +271,7 @@ namespace PXWeb.SSBIndexer
                 node.InnerText = "Indexing";
 
                 node = xdoc.SelectSingleNode("/settings/searchIndex/indexUpdated");
-                
+
                 if (node == null)
                 {
                     _logger.Error("PrepareTask: Could not get search index updated");
@@ -305,7 +350,7 @@ namespace PXWeb.SSBIndexer
 
             xdoc.Save(_configPath);
             return true;
-        }       
+        }
 
         /// <summary>
         /// Verifies that the database.config file exists in the database directory
@@ -346,7 +391,7 @@ namespace PXWeb.SSBIndexer
                 return false;
             }
 
-            if ((args[0].ToLower() != "create") && (args[0].ToLower() != "update"))
+            if ((args[0].ToLower() != "create") && (args[0].ToLower() != "update") && (args[0].ToLower() != "testing"))
             {
                 _logger.Error("Parameter error - Illegal action");
                 return false;
@@ -392,7 +437,7 @@ namespace PXWeb.SSBIndexer
             try
             {
                 string nodeId = PathHandlerFactory.Create(PCAxis.Web.Core.Enums.DatabaseType.CNMM).GetPathString(node);
-                 menu = GetCnmmMenuAndItem(dbid, nodeId, lang, out menuItem);
+                menu = GetCnmmMenuAndItem(dbid, nodeId, lang, out menuItem);
                 currentItem = menuItem;
                 return menu;
             }
@@ -415,7 +460,7 @@ namespace PXWeb.SSBIndexer
             }
             catch (Exception e)
             {
-                _logger.Error("Failed in sqlDbConfig  dbid=" + dbid + " ,nodeId=" + nodeId + ", Error=" + e.Message +  ". Creation of search index aborted.");
+                _logger.Error("Failed in sqlDbConfig  dbid=" + dbid + " ,nodeId=" + nodeId + ", Error=" + e.Message + ". Creation of search index aborted.");
                 currentItem = null;
                 return null;
             }
@@ -480,7 +525,7 @@ namespace PXWeb.SSBIndexer
             }
             catch (Exception e)
             {
-                _logger.Error("Error in ConfigDatamodelMenu.Create.   dbid=" + dbid + " ,nodeId=" + nodeId  + "Error=" + e.Message + ". Creation of search index aborted.");
+                _logger.Error("Error in ConfigDatamodelMenu.Create.   dbid=" + dbid + " ,nodeId=" + nodeId + "Error=" + e.Message + ". Creation of search index aborted.");
                 currentItem = null;
                 return null;
             }
