@@ -485,7 +485,6 @@ namespace PXAxis.Routing.SSB
                 
                 foreach (var presentationUrl in GetAllPresentationUrls())
                 {
-                    RouteTable.Routes.MapPageRoute("Custom" + presentationUrl + "FootnoteRoute", presentationUrl + SSBUrl.VIEW_FOOTNOTES_IDENTIFIER, "~/FootnotesPresentation.aspx");
                     RouteTable.Routes.MapPageRoute("Custom" + presentationUrl + "InformationRoute", presentationUrl + SSBUrl.VIEW_INFORMATION_IDENTIFIER, "~/InformationPresentation.aspx");
                 }
             }
