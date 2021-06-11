@@ -406,3 +406,6 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
     font-weight: 400;
     /*font-family: "Oswald", "Calibri", "Arial", "DejaVu Sans", sans-serif !important*/
 }
+#pxwebcontent .top-link {
+    max-height: none;
+}
