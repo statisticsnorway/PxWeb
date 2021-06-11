@@ -901,6 +901,10 @@
       <Project>{b8a6d94a-89b3-42a6-a058-bedea9965f78}</Project>
       <Name>Norway.LogVisitorStatistics</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Norway\PCAxis.Metadata\Norway.PCAxis.Metadata.csproj">
+      <Project>{eb39cded-f208-450b-bead-c66ea8c423d6}</Project>
+      <Name>Norway.PCAxis.Metadata</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PCAxis.Api\PCAxis.Api.csproj">
       <Project>{8eb90826-a01b-494d-a596-e5c5f9815c3b}</Project>
       <Name>PCAxis.Api</Name>
