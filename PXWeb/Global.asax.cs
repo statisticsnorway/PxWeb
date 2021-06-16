@@ -218,6 +218,7 @@ namespace PXWeb
 
             if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["RouteExtender"]))
             {
+                _logger.DebugFormat("RouteExtender:", ConfigurationManager.AppSettings["RouteExtender"]);
                 RouteInstance.RouteExtender = Activator.CreateInstance(Type.GetType(ConfigurationManager.AppSettings["RouteExtender"])) as IRouteExtender;
                 RouteInstance.RouteExtender.MetaCacheService = _metaCacheService;
                 RouteInstance.RouteExtender.Db = PCAxis.Sql.DbConfig.SqlDbConfigsStatic.DefaultDatabase;
