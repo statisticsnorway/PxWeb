@@ -510,27 +510,27 @@ namespace PXWeb
         {
             string pageUrl = Request.ServerVariables["PATH_INFO"];
 
-            // context frame not ready for XP
-            //if (string.IsNullOrEmpty(KortNavnWeb))
-            //{
-            //    templateHead = getGenericTemplatePart("head").ToString();
-            //    templateTop = getGenericTemplatePart("top").ToString();
-            //    templateFoot = getGenericTemplatePart("foot").ToString();
-            //}
-            //else
-            //{
-            //    templateHead = getTemplatePart("head").ToString();
-            //    templateTop = getTemplatePart("top").ToString();
-            //    templateFoot = getTemplatePart("foot").ToString();
-            //}
+            //context frame not ready for XP
+            if (string.IsNullOrEmpty(KortNavnWeb))
+                {
+                    templateHead = getGenericTemplatePart("head").ToString();
+                    templateTop = getGenericTemplatePart("top").ToString();
+                    templateFoot = getGenericTemplatePart("foot").ToString();
+                }
+                else
+                {
+                    templateHead = getTemplatePart("head").ToString();
+                    templateTop = getTemplatePart("top").ToString();
+                    templateFoot = getTemplatePart("foot").ToString();
+                }
 
-            templateHead = getGenericTemplatePart("head").ToString();
-            templateTop = getGenericTemplatePart("top").ToString();
-            templateFoot = getGenericTemplatePart("foot").ToString();
+           // templateHead = getGenericTemplatePart("head").ToString();
+           // templateTop = getGenericTemplatePart("top").ToString();
+           // templateFoot = getGenericTemplatePart("foot").ToString();
 
             templateTop = ReplaceLanguageLink(templateTop);
             templateTop = templateTop.Replace("class=\"mega-menu hidden-by-default\"", "class=\"mega-menu hidden-by-default\" style=\"display: none;\"");
-            templateTop = templateTop.Replace("<a href=\"#content\"", "<a href=\"#pxcontent\"");
+            templateTop = templateTop.Replace("href=\"#content\"", "href=\"#pxcontent\"");
         }
 
         private string GetCacheTemplateId(string part)
@@ -696,7 +696,7 @@ namespace PXWeb
             string result;
             try
             {
-                result = invokeHttp(url);
+               result = invokeHttp(url);
             }
             catch
             {
@@ -747,7 +747,8 @@ namespace PXWeb
         {
             // Henter ut head fra cms-malen
             //int linkStartIndex = result.IndexOf("<link");
-            int linkStartIndex = result.IndexOf("<!-- UA");
+            //int linkStartIndex = result.IndexOf("<!-- UA");
+            int linkStartIndex = result.IndexOf("<head>")+6;
             result = result.Substring(linkStartIndex);
             int headStopIndex = result.IndexOf("</head>");
             result = result.Substring(0, headStopIndex);
@@ -759,17 +760,18 @@ namespace PXWeb
             //Henter ut body fra cms-malen til og med main-content <div id = "main-content">
             int indexOfBody = result.IndexOf("<body");
             result = result.Substring(indexOfBody);
-            int mainContentIndex = result.IndexOf("row-cols-1");
-            result = result.Substring(0, mainContentIndex + 12);
+            int mainContentIndex = result.IndexOf("<div id=\"statbank-placeholder\"></div>");
+            result = result.Substring(0, mainContentIndex);
+            
+
             return result;
         }
 
         private string extractBottom(string result)
         {
             // Henter ut foot fra cms-malen
-            int mainContentIndex = result.IndexOf("row-cols-1");
-            result = result.Substring(mainContentIndex + 23);
-            result = result.Substring(0, result.Length);
+            int mainContentIndex = result.IndexOf("<div id=\"statbank-placeholder\"></div>");
+            result = result.Substring(mainContentIndex+41);
             return result;
         }
         
@@ -782,13 +784,13 @@ namespace PXWeb
 
             using (WebResponse objResponse = objRequest.GetResponse())
             {
-                using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
-                {
-                    strResult = sr.ReadToEnd();
-                    sr.Close();
-                }
-            }
-
+                        using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
+                        {
+                            strResult = sr.ReadToEnd();
+                            sr.Close();
+                        }
+                    }               
+           
             //return  strResult;
             return strResult.Replace("bundle.js", "bundlex.js");
         }
