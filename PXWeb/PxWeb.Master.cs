@@ -477,33 +477,41 @@ namespace PXWeb
                 return null;
             }
         }
-
         private string ReplaceLanguageLink(string topTemplateHtml)
         {
             if (string.IsNullOrEmpty(topTemplateHtml)) return topTemplateHtml;
 
-            var linkIndex = topTemplateHtml.IndexOf("<a id=\"change-language\"");
+            var langSearchIndex = topTemplateHtml.IndexOf("title=\"language-changer\"");
+            var temp1Search = topTemplateHtml.Substring(0, langSearchIndex);
+            var linkIndex = temp1Search.LastIndexOf("<a");
             if (linkIndex == -1) return topTemplateHtml;
             var endLinkStartNodeRelativeIndex = topTemplateHtml.Substring(linkIndex).IndexOf(">") + 1;
             var linkNodeStart = topTemplateHtml.Substring(linkIndex, endLinkStartNodeRelativeIndex);
-            var hrefStartIndex = linkNodeStart.IndexOf(" href=");
+
+            var hrefStartIndex = linkNodeStart.LastIndexOf("href");
             var linkNodePart1 = linkNodeStart.Substring(0, hrefStartIndex);
+
+            var endLinkEndNodeRelativeIndex = topTemplateHtml.Substring(langSearchIndex).IndexOf(">")+1;
+            var linkNodePart3 = topTemplateHtml.Substring(langSearchIndex, endLinkEndNodeRelativeIndex);
+
             var currentUrl = Page.Request.Url.AbsoluteUri;
             var changeLanguageUrl = PxUrlObj.Language == "no" ? currentUrl.Replace("/statbank/", "/en/statbank/") : currentUrl.Replace("/en/statbank/", "/statbank/");
             var presentationUrlPartStartIndex = changeLanguageUrl.ToLower().IndexOf("tableview");
             if (presentationUrlPartStartIndex < 0)
             {
-                 presentationUrlPartStartIndex = changeLanguageUrl.ToLower().IndexOf("chartview");
+                presentationUrlPartStartIndex = changeLanguageUrl.ToLower().IndexOf("chartview");
             }
             if (presentationUrlPartStartIndex > 0)
             {
                 var deltapresentationUrlPartEndIndex = changeLanguageUrl.Substring(presentationUrlPartStartIndex).IndexOf("/");
-                changeLanguageUrl=changeLanguageUrl.ToLower().Remove(presentationUrlPartStartIndex - 1, deltapresentationUrlPartEndIndex + 2 );
+                changeLanguageUrl = changeLanguageUrl.ToLower().Remove(presentationUrlPartStartIndex - 1, deltapresentationUrlPartEndIndex + 2);
             }
-            var linkNodePart2 = string.Format(" href=\"{0}\">", changeLanguageUrl);
-            var newLinkNodeStart = linkNodePart1 + linkNodePart2;
+            var linkNodePart2 = string.Format(" href=\"{0}\" ", changeLanguageUrl);
+            var newLinkNodeStart = linkNodePart1 + linkNodePart2 + linkNodePart3;
 
             return topTemplateHtml.Replace(linkNodeStart, newLinkNodeStart);
+     
+        //    return "test";
         }
 
         private void GetCMSContents()
