@@ -320,6 +320,7 @@
     <Content Include="Resources\Styles\main-pxweb.css" />
     <Content Include="Resources\Styles\main-pxweb.min.css" />
     <Content Include="Resources\Styles\print.css" />
+    <Content Include="Resources\Styles\main-custom2.css" />
     <Content Include="Resources\Styles\scss\not_in_use\_AReadMe.txt" />
     <Content Include="Resources\Styles\scss\common\_nested-accordion.scss" />
     <Content Include="Resources\PX\Databases\Example\Misc\OfficialStatistics\officialstatistics.px" />
