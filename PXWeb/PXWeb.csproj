@@ -261,6 +261,8 @@
     <Content Include="Resources\Images\small_button_select_by_group.gif" />
     <Content Include="Resources\Images\small_button_txt.png" />
     <Content Include="Resources\Images\small_button_xlsx.png" />
+    <Content Include="Resources\Images\SSB-top-banner.png" />
+    <Content Include="Resources\Images\SSB_logo.png" />
     <Content Include="Resources\Images\svg\arrow-down-hover.svg" />
     <Content Include="Resources\Images\svg\arrow-down.svg" />
     <Content Include="Resources\Images\svg\arrow-up-hover.svg" />
