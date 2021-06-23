@@ -233,7 +233,7 @@ namespace PXWeb
 
                 if (dbi != null)
                 {
-                    lblH1Title.Text = dbi.GetDatabaseName(PxUrlObj.Language);
+                   // lblH1Title.Text = dbi.GetDatabaseName(PxUrlObj.Language);
                 }
             }
 
