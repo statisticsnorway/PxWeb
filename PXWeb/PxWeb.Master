@@ -53,7 +53,7 @@
             <% if (PXWeb.Settings.Current.General.Modules.ShowLogin)
                 { %>
                 <div id="loginBanner" class="login">
-                  <span class="loginBannerHeader">Statistikkbanken PX-Web Intern</span>
+                  <span class="loginBannerHeader">Statistikkbanken Intern</span>
                   <uc1:Login ID="login"  runat="server"></uc1:Login>
                 </div>
             <%  } %>
