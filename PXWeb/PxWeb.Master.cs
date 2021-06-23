@@ -779,7 +779,7 @@ namespace PXWeb
         {
             // Henter ut foot fra cms-malen
             int mainContentIndex = result.IndexOf("<div id=\"statbank-placeholder\"></div>");
-            result = result.Substring(mainContentIndex+41);
+            result = result.Substring(mainContentIndex+43);
             return result;
         }
         
@@ -790,15 +790,24 @@ namespace PXWeb
 
             objRequest.Timeout = CMSloadedContentTimeout;
 
+            //try
+            //{
+            //    WebResponse objResponse = objRequest.GetResponse();
+            //}
+            //catch (Exception e)
+            //{
+
+            //}
+
             using (WebResponse objResponse = objRequest.GetResponse())
             {
-                        using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
-                        {
-                            strResult = sr.ReadToEnd();
-                            sr.Close();
-                        }
-                    }               
-           
+                using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
+                {
+                    strResult = sr.ReadToEnd();
+                    sr.Close();
+                }
+            }
+
             //return  strResult;
             return strResult.Replace("bundle.js", "bundlex.js");
         }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="C:\Program Files (x86)\MSBuild\ExtensionPack\4.0\MSBuild.ExtensionPack.VersionNumber.targets"/>
+  <ItemGroup>
+    <MyConfigSourceFiles Include="..\konfigfiler\*.config" Exclude="app.config"/>
+    <!--SSBOnlySource Include="..\..\SSBOnlySource\px-web-ekstern\SSBOnlySource\*.*"/-->
+    <AssemblyInfoFiles Include="..\PXWeb\properties\AssemblyInfo.cs"/>    
+  </ItemGroup>
+  <PropertyGroup>
+    <OutputFolder>output</OutputFolder>
+	<ExcludeFoldersFromDeployment>
+    ..\PxWeb\Admin
+  </ExcludeFoldersFromDeployment>
+  </PropertyGroup>
+  <Target Name="SetVersion">
+    <AssemblyInfo
+      AssemblyInfoFiles="@(AssemblyInfoFiles)"
+      AssemblyVersion="$(version)"/>
+  </Target>
+  <Target Name="NugetRestore">
+    <Exec Command="C:\NuGet\v_4.6.2\nuget.exe restore ..\PCAxis.PX-Web.sln " />
+  </Target>
+  <Target Name="AfterResolveReferences">
+    <!-- Redefine referencepath to add dependencies-->
+    <ItemGroup>
+      <ReferencePath Include="@(ReferenceDependencyPaths)"></ReferencePath>
+    </ItemGroup>
+  </Target>
+
+  <Target Name="Clean">
+    <RemoveDir Directories="..\PxWeb\output\" ContinueOnError="false"/>
+    <MSBuild Projects="../PCAxis.PX-Web.sln" Properties="Configuration=Debug" Targets="Clean"/>
+  </Target>
+  <Target Name="BeforeBuild">
+    <Copy SourceFiles="@(MyConfigSourceFiles)" DestinationFolder="..\PxWeb\" ContinueOnError="false" />
+    <!--Copy SourceFiles="@(SSBOnlySource)" DestinationFolder="..\PxWeb\" ContinueOnError="false" /-->
+    <!--Copy SourceFiles="..\konfigfiler\app.config" DestinationFolder="..\PXWeb.SSBIndexer\" ContinueOnError="false" /-->
+  </Target>
+  <Target Name="Compile" DependsOnTargets="BeforeBuild;Clean;NugetRestore;AfterResolveReferences;SetVersion">
+    <MSBuild Projects="..\PCAxis.PX-Web.sln" Properties="Configuration=Debug"/>
+  </Target>
+  <Target Name="Publish" DependsOnTargets="Compile">
+    <MSBuild Projects="..\PCAxis.PX-Web.sln" Properties="Configuration=Debug;WebProjectOutputDir=$(OutputFolder)\;OutDir=$(OutputFolder)\bin\"/>
+  </Target>
+  <Target Name="AfterBuild" AfterTargets="Publish">
+  <!--
+    <Copy SourceFiles="..\PXWeb.SavedQuery.Oracle\output\bin\PXWeb.SavedQuery.Oracle.dll" DestinationFolder="..\PxWeb\output\bin\" ContinueOnError="false" />
+	<Copy SourceFiles="..\PCAxis.SSB.MetaIdProvider\output\bin\PCAxis.Metadata.SSB.dll" DestinationFolder="..\PxWeb\output\bin\" ContinueOnError="false" />
+	<Copy SourceFiles="..\PXAxis.Routing.SSB\output\bin\PXAxis.Routing.SSB.dll" DestinationFolder="..\PxWeb\output\bin\" ContinueOnError="false" />
+    <Copy SourceFiles="..\PXWeb\404SSB.html" DestinationFolder="..\PxWeb\output\" ContinueOnError="false" />
+    <Copy SourceFiles="..\PXWeb\500SSB.html" DestinationFolder="..\PxWeb\output\" ContinueOnError="false" />
+	-->
+  </Target>
+   <Target Name="RunTests" AfterTargets="Publish">
+    <Delete Files="$(OutputFolder)TestResult.trx" />
+	<!--<Exec Command="&quot;%VS170COMNTOOLS%..\IDE\Extensions\TestPlatform\vstest.console.exe&quot; ..\PCAxis.Sql.DbConfig.Tests\bin\Debug\PCAxis.Sql.DbConfig.Tests.dll /ResultsDirectory:output /Logger:trx;LogFileName=TestResult.trx" />-->
+	<!--<Exec Command="&quot;%VS120COMNTOOLS%..\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe&quot; ..\PXWeb.SeleniumTests\bin\Debug\PXWeb.SeleniumTests.dll /logger:trx" /> -->
+  </Target>
+</Project>
