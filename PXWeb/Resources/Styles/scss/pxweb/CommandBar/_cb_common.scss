@@ -44,11 +44,12 @@
     margin-right: 0px;
   }
 
-  #pxwebcontent select option:checked {
-    background: $pxweb-green-4 linear-gradient(0deg, $pxweb-green-4 0%, $pxweb-green-4 100%);
-    -webkit-text-fill-color: $pxweb-white;
-    //background for unselected values is always white from user agent style
-  }
+#pxwebcontent select option:checked {
+  background: $pxweb-green-4 linear-gradient(0deg, $pxweb-green-4 0%, $pxweb-green-4 100%);
+  -webkit-text-fill-color: $pxweb-white;
+  color: white;
+  //background for unselected values is always white from user agent style
+}
 
 @media #{$mobile} {
   #pxwebcontent .commandbar_container {

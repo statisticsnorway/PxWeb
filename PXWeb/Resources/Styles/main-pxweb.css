@@ -940,7 +940,9 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent select option:checked {
   background: #00824d linear-gradient(0deg, #00824d 0%, #00824d 100%);
-  -webkit-text-fill-color: #fff; }
+  -webkit-text-fill-color: #fff; 
+  color:white;
+}
 
 @media screen and (max-width: 767px) {
   #pxwebcontent .commandbar_container {
