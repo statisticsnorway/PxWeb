@@ -25,7 +25,7 @@ namespace PXWeb.Views
                 case PxUrl.VIEW_CHART_IDENTIFIER :
                     return new ChartViewSerializer();
                 case PxUrl.VIEW_FOOTNOTES_IDENTIFIER :
-                    return new FootnoteViewSerializer();
+                    return new TableViewSerializer();
                 case PxUrl.VIEW_INFORMATION_IDENTIFIER :
                     return new InformationViewSerializer();
                 case PxUrl.VIEW_SORTEDTABLE_IDENTIFIER :
