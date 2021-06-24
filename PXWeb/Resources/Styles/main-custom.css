@@ -409,3 +409,13 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 #pxwebcontent .top-link {
     max-height: none;
 }
+h1 {
+    font-size: 56px;
+    line-height: 80px;
+    font-family: Roboto Condensed,sans-serif !important;
+    font-stretch: condensed;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}

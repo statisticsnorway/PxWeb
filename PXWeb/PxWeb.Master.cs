@@ -233,7 +233,7 @@ namespace PXWeb
 
                 if (dbi != null)
                 {
-                   // lblH1Title.Text = dbi.GetDatabaseName(PxUrlObj.Language);
+                   lblH1Title.Text = dbi.GetDatabaseName(PxUrlObj.Language);
                 }
             }
 
@@ -699,8 +699,10 @@ namespace PXWeb
             }
 
             url = url + KortNavnWeb;
-            url = url + "?fane=statbank-web";
-            
+            //url = url + "?fane=statbank-web";
+            url = url + "?xpframe=statbank";
+
+
             string result;
             try
             {
