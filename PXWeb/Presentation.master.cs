@@ -233,7 +233,7 @@ namespace PXWeb
         /// <summary>
         /// Initialize the Table query web component
         /// </summary>
-        private void InitializeTableQuery()
+        private void SSBInitializeTableQuery()
         {
             string helpPage;
             string db;
@@ -269,6 +269,56 @@ namespace PXWeb
 
             TableQueryInformation.Table = ""; //PxUrlObject.Table;
             //Path, not table, should perhaps be the empty one, but that yields a dobble slash: /v0/no/table//08880  
+
+            TableQueryInformation.SaveApiQueryText = PXWeb.Settings.Current.Features.Api.SaveApiQueryText;
+
+            helpPage = PCAxis.Web.Controls.Configuration.ConfigurationHelper.GetPxPage("apihelp");
+            if (string.IsNullOrEmpty(helpPage))
+            {
+                helpPage = "~/ApiHelp.aspx";
+            }
+
+            TableQueryInformation.RoutePrefix = PXWeb.Settings.Current.Features.Api.RoutePrefix; //"api/v0/";
+            TableQueryInformation.MoreInfoURL = helpPage;
+            TableQueryInformation.MoreInfoIsExternalPage = true;
+        }
+
+        /// <summary>
+        /// Initialize the Table query web component
+        /// </summary>
+        private void InitializeTableQuery()
+        {
+            string helpPage;
+            string db;
+
+            TableQueryInformation.ShowSaveApiQueryButton = PXWeb.Settings.Current.Features.Api.ShowSaveApiQueryButton;
+
+            if (!PXWeb.Settings.Current.Features.General.ApiEnabled || !PXWeb.Settings.Current.Features.Api.ShowQueryInformation)
+            {
+                TableQueryInformation.Visible = false;
+                return;
+            }
+
+            db = PxUrlObject.Database;
+
+            if (string.IsNullOrEmpty(db))
+            {
+                TableQueryInformation.Visible = false;
+                return;
+            }
+
+            PaxiomManager.QueryModel.Response.Format = PXWeb.Settings.Current.Features.Api.DefaultExampleResponseFormat;
+            DatabaseInfo dbi = PXWeb.Settings.Current.General.Databases.GetDatabase(db);
+
+            if (dbi.Type == PCAxis.Web.Core.Enums.DatabaseType.CNMM)
+            {
+                TableQueryInformation.DatabaseType = PCAxis.Web.Core.Enums.DatabaseType.CNMM;
+            }
+
+            TableQueryInformation.URLRoot = PXWeb.Settings.Current.Features.Api.UrlRoot;
+            TableQueryInformation.Database = db;
+            TableQueryInformation.Path = PxUrlObject.Path;
+            TableQueryInformation.Table = PxUrlObject.Table;
 
             TableQueryInformation.SaveApiQueryText = PXWeb.Settings.Current.Features.Api.SaveApiQueryText;
 
