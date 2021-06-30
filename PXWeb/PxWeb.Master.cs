@@ -81,8 +81,12 @@ namespace PXWeb
         public string templateTop;
         public string templateFoot;
         //string cmsGenericTemplateUrl = "system/ramme?markerrom=statistikk";
-        
+
         string cmsGenericTemplateUrl = "system/xpramme";
+        //string backupCMSramme = "<head></head><body class=\"xp-page\"><div class=\"headerleft flex-row\" role=\"banner\"><img src = \"../../Resources/Images/svg/SSB_logo_black.svg\" id=\"imgSiteLogo\" alt=\"SSB\" class=\"logo\"><span class=\"siteLogoText\"><p>Vi har for øyeblikket problemer med hjemmesiden til SSB</p></span></div><div id=\"statbank-placeholder\"></div></body></html>";
+
+        string backupCMSramme;
+ 
 
         public string Language
         {
@@ -143,9 +147,14 @@ namespace PXWeb
             if (string.IsNullOrEmpty(tableListPath)) return tableListPath;
             return RouteInstance.RouteExtender.GetLastNodeFromPath(tableListPath);
         }
-		
+		private string approot;
+        private string backupCmsCss;
+        private string backupCmsImg;
+        private bool connectedToCMS=true;
+
         protected void Page_Init(object sender, EventArgs e)
         {
+
             var queryStringPart = ValidationManager.GetValue(Page.Request.QueryString[PCAxis.Web.Core.StateProvider.StateProviderFactory.REQUEST_ID]);
 
             //Add eventhandlers
@@ -153,6 +162,25 @@ namespace PXWeb
 
             var pxUrl = RouteInstance.PxUrlProvider.Create(null);
             string urlLanguage = pxUrl.Language;
+
+
+            approot = ResolveUrl("~");
+            backupCmsCss = ResolveUrl("~/Resources/Styles/bundlebackup.css");
+            backupCmsImg = ResolveUrl("~/Resources/Images/svg/SSB_logo_black.svg");
+            //try
+            //{
+            //    if (urlLanguage == "no")
+            //    {
+            //        backupCMSramme = System.IO.File.ReadAllText(Server.MapPath(@"~\App_Data\BackupCms\BackupCmsFrame.html"));
+            //    }else
+            //    {
+            //        backupCMSramme = System.IO.File.ReadAllText(Server.MapPath(@"~\App_Data\BackupCms\BackupCmsFrameEn.html"));
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+
+            //}
 
             if (urlLanguage != null)
             {
@@ -482,6 +510,11 @@ namespace PXWeb
             if (string.IsNullOrEmpty(topTemplateHtml)) return topTemplateHtml;
 
             var langSearchIndex = topTemplateHtml.IndexOf("title=\"language-changer\"");
+            if (langSearchIndex < 0)
+            {
+                return topTemplateHtml;
+            }
+
             var temp1Search = topTemplateHtml.Substring(0, langSearchIndex);
             var linkIndex = temp1Search.LastIndexOf("<a");
             if (linkIndex == -1) return topTemplateHtml;
@@ -622,6 +655,31 @@ namespace PXWeb
             return topPartAfterCLInsert;
         }
 
+
+
+        private string GetBackupTemplateHtml()
+        {
+            var result = Cache[GetGenericTemplateCacheId()] as string;
+            if (!string.IsNullOrEmpty(result)) return result;
+            if (Language == "no")
+            {
+                backupCMSramme = System.IO.File.ReadAllText(Server.MapPath(@"~\App_Data\BackupCms\BackupCmsFrame.html"));
+            }
+            else
+            {
+                backupCMSramme = System.IO.File.ReadAllText(Server.MapPath(@"~\App_Data\BackupCms\BackupCmsFrameEn.html"));
+            }
+            result = backupCMSramme.Replace("backupcmscss", backupCmsCss).Replace("backupcmsimg",backupCmsImg);
+            //Cache.Insert(GetGenericTemplateCacheId(), result, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
+
+            return result;
+        }
+
+
+
+
+
+
         private Dictionary<string, string> _genericTemplateByIdSetOnRequestByPart = new Dictionary<string, string>();
 
         private string GetGenericTemplateCacheId()
@@ -645,11 +703,20 @@ namespace PXWeb
                 url = cmsHostEn + cmsGenericTemplateUrl;
             }
 
-            result = invokeHttp(url);
+            try
+            {
+                result = invokeHttp(url);
+            }
+            catch
+            {
+                result = GetBackupTemplateHtml();
+                connectedToCMS = false;
+            }
             Cache.Insert(GetGenericTemplateCacheId(), result, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
 
             return result;
         }
+
 
         private void getGenericTemplate()
         {
@@ -682,6 +749,7 @@ namespace PXWeb
 
         }
 
+
         private Dictionary<string, string> _templateByIdSetOnRequestByPart = new Dictionary<string, string>();
             
         private void getTemplate()
@@ -710,7 +778,7 @@ namespace PXWeb
             }
             catch
             {
-                result = GetGenericTemplateHtml();
+                 result = GetGenericTemplateHtml();
             }
             string headRamme = extractHead(result);
             string topRamme = extractTop(result);
@@ -745,11 +813,12 @@ namespace PXWeb
 
         private string MakeAbsoluteReferences(string html)
         {
-            html = html.Replace("href=\"/", string.Format("href=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
-            html = html.Replace("src=\"/", string.Format("src=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
-            html = html.Replace("logoUrl\":\"", string.Format("logoUrl\":\"{0}",RouteInstance.RouteExtender.HomeSitePage.Substring(0,RouteInstance.RouteExtender.HomeSitePage.Length-1)));
-            html = html.Replace("path\":\"", string.Format("path\":\"{0}", RouteInstance.RouteExtender.HomeSitePage.Substring(0, RouteInstance.RouteExtender.HomeSitePage.Length - 1)));
-
+            if (connectedToCMS) { 
+                html = html.Replace("href=\"/", string.Format("href=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
+                html = html.Replace("src=\"/", string.Format("src=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
+                html = html.Replace("logoUrl\":\"", string.Format("logoUrl\":\"{0}",RouteInstance.RouteExtender.HomeSitePage.Substring(0,RouteInstance.RouteExtender.HomeSitePage.Length-1)));
+                html = html.Replace("path\":\"", string.Format("path\":\"{0}", RouteInstance.RouteExtender.HomeSitePage.Substring(0, RouteInstance.RouteExtender.HomeSitePage.Length - 1)));
+            }
             return html;
         }
 
@@ -781,37 +850,36 @@ namespace PXWeb
         {
             // Henter ut foot fra cms-malen
             int mainContentIndex = result.IndexOf("<div id=\"statbank-placeholder\"></div>");
-            result = result.Substring(mainContentIndex+43);
+            result = result.Substring(mainContentIndex+37);
             return result;
         }
         
         private string invokeHttp(string url)
         {
-            String strResult = null;
-            WebRequest objRequest = HttpWebRequest.Create(url);
-
-            objRequest.Timeout = CMSloadedContentTimeout;
-
+ 
             //try
             //{
-            //    WebResponse objResponse = objRequest.GetResponse();
-            //}
-            //catch (Exception e)
-            //{
+                String strResult = null;
+                WebRequest objRequest = HttpWebRequest.Create(url);
 
-            //}
-
-            using (WebResponse objResponse = objRequest.GetResponse())
-            {
-                using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
+                objRequest.Timeout = CMSloadedContentTimeout;
+                using (WebResponse objResponse = objRequest.GetResponse())
                 {
-                    strResult = sr.ReadToEnd();
-                    sr.Close();
-                }
-            }
 
-            //return  strResult;
-            return strResult.Replace("bundle.js", "bundlex.js");
+                    using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
+                    {
+                        strResult = sr.ReadToEnd();
+                        sr.Close();
+                    }
+    
+                }
+                return strResult.Replace("bundle.js", "bundlex.js");
+            //}
+            //catch
+            //{
+              //  return GetBackupTemplateHtml();
+                //return backupCMSramme;
+            //}
         }
 
         private int? _CMSloadedContentTimeout = null;

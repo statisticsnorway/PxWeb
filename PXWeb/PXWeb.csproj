@@ -212,6 +212,8 @@
     <Content Include="Admin\Settings-Navigation.aspx" />
     <Content Include="Admin\Users-General.aspx" />
     <Content Include="ApiHelp.aspx" />
+    <Content Include="App_Data\BackupCms\BackupCmsFrameEn.html" />
+    <Content Include="App_Data\BackupCms\BackupCmsFrame.html" />
     <Content Include="DbScript\SQL\Create_SavedQueryMeta.sql" />
     <Content Include="Login.aspx" />
     <Content Include="DbScript\SQL\regsql_mrp.sql" />
