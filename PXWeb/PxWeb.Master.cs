@@ -80,11 +80,7 @@ namespace PXWeb
         public string templateHead;
         public string templateTop;
         public string templateFoot;
-        //string cmsGenericTemplateUrl = "system/ramme?markerrom=statistikk";
-
         string cmsGenericTemplateUrl = "system/xpramme";
-        //string backupCMSramme = "<head></head><body class=\"xp-page\"><div class=\"headerleft flex-row\" role=\"banner\"><img src = \"../../Resources/Images/svg/SSB_logo_black.svg\" id=\"imgSiteLogo\" alt=\"SSB\" class=\"logo\"><span class=\"siteLogoText\"><p>Vi har for øyeblikket problemer med hjemmesiden til SSB</p></span></div><div id=\"statbank-placeholder\"></div></body></html>";
-
         string backupCMSramme;
  
 
@@ -147,7 +143,6 @@ namespace PXWeb
             if (string.IsNullOrEmpty(tableListPath)) return tableListPath;
             return RouteInstance.RouteExtender.GetLastNodeFromPath(tableListPath);
         }
-		private string approot;
         private string backupCmsCss;
         private string backupCmsImg;
         private bool connectedToCMS=true;
@@ -163,24 +158,8 @@ namespace PXWeb
             var pxUrl = RouteInstance.PxUrlProvider.Create(null);
             string urlLanguage = pxUrl.Language;
 
-
-            approot = ResolveUrl("~");
             backupCmsCss = ResolveUrl("~/Resources/Styles/bundlebackup.css");
             backupCmsImg = ResolveUrl("~/Resources/Images/svg/SSB_logo_black.svg");
-            //try
-            //{
-            //    if (urlLanguage == "no")
-            //    {
-            //        backupCMSramme = System.IO.File.ReadAllText(Server.MapPath(@"~\App_Data\BackupCms\BackupCmsFrame.html"));
-            //    }else
-            //    {
-            //        backupCMSramme = System.IO.File.ReadAllText(Server.MapPath(@"~\App_Data\BackupCms\BackupCmsFrameEn.html"));
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-
-            //}
 
             if (urlLanguage != null)
             {
@@ -670,8 +649,6 @@ namespace PXWeb
                 backupCMSramme = System.IO.File.ReadAllText(Server.MapPath(@"~\App_Data\BackupCms\BackupCmsFrameEn.html"));
             }
             result = backupCMSramme.Replace("backupcmscss", backupCmsCss).Replace("backupcmsimg",backupCmsImg);
-            //Cache.Insert(GetGenericTemplateCacheId(), result, null, DateTime.Now.AddMinutes(CacheTimeInMinutesCMSloadedContent), System.Web.Caching.Cache.NoSlidingExpiration);
-
             return result;
         }
 
