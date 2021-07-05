@@ -749,18 +749,23 @@ namespace PXWeb
 
 
             string result;
+            string headRamme;
+            string topRamme;
+            string bottomRamme;
             try
             {
-               result = invokeHttp(url);
+                result = invokeHttp(url);
+                headRamme = extractHead(result);
+                topRamme = extractTop(result);
+                bottomRamme = extractBottom(result);
             }
             catch
             {
-                 result = GetGenericTemplateHtml();
+                result = GetGenericTemplateHtml();
+                 headRamme = extractHead(result);
+                 topRamme = extractTop(result);
+                 bottomRamme = extractBottom(result);
             }
-            string headRamme = extractHead(result);
-            string topRamme = extractTop(result);
-            string bottomRamme = extractBottom(result);
-
             if (ShouldUseAbsoluteReferences())
             {
                 headRamme = MakeAbsoluteReferences(headRamme);
@@ -850,12 +855,14 @@ namespace PXWeb
                     }
     
                 }
-                return strResult.Replace("bundle.js", "bundlex.js");
+         
+            //return strResult.Replace("bundle.js", "bundlex.js").Replace("00a4381f9.js", "00a4381f9x.js");
+            return strResult.Replace("bundle.js", "bundlex.js");
             //}
             //catch
             //{
-              //  return GetBackupTemplateHtml();
-                //return backupCMSramme;
+            //  return GetBackupTemplateHtml();
+            //return backupCMSramme;
             //}
         }
 
