@@ -80,7 +80,7 @@ namespace PXWeb
         public string templateHead;
         public string templateTop;
         public string templateFoot;
-        string cmsGenericTemplateUrl = "system/xpramme";
+        string cmsGenericTemplateUrl = "system/xpramme?xpframe=statbank";
         string backupCMSramme;
  
 
