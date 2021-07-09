@@ -171,9 +171,9 @@ body {
 #footer {
   padding-left: 10px; }
 
-#header {
+/*#header {
   padding-left: 10px; }
-
+*/
 #navigation-path {
   padding-left: 10px; }
 
@@ -289,7 +289,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 #pxwebcontent input[type="submit"] {
   background-image: unset; }
 
-/*#endregion*/
+#endregion
 #pxwebcontent .presentation-left table {
   overflow: auto; }
 
@@ -355,7 +355,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
   #pxwebcontent .menu-tablelist td {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    font-weight: normal; }
+    /*font-weight: normal; }*/
 
 #pxwebcontent .pxweb-table-end {
   margin-bottom: 30px; }
