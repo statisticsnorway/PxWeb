@@ -355,7 +355,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
   #pxwebcontent .menu-tablelist td {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    /*font-weight: normal; }*/
+    /*font-weight: normal; */}
 
 #pxwebcontent .pxweb-table-end {
   margin-bottom: 30px; }
@@ -407,7 +407,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
     /*font-family: "Oswald", "Calibri", "Arial", "DejaVu Sans", sans-serif !important*/
 }
 #pxwebcontent .top-link {
-    max-height: none;
+    max-height:none;
 }
 h1 {
     font-size: 56px;
