@@ -366,7 +366,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 #pxwebcontent .menu-tablelist h2, #pxwebcontent .menu-tablelist .accordion-header .header-text {
   font-family: Roboto;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   margin-top: 10px; }
 
 #pxwebcontent .menu-tablelist .accordion-header {
@@ -410,7 +410,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
     max-height:none;
 }
 h1 {
-    font-size: 56px;
+    font-size: 48px;
     line-height: 80px;
     font-family: Roboto Condensed,sans-serif !important;
     font-stretch: condensed;
@@ -418,4 +418,11 @@ h1 {
     margin-top: 0;
     margin-bottom: .5rem;
     margin-top: 0;
+}
+.statbank-title {
+    color: #00824d;
+}
+#pxwebcontent .footnotes_container h3, #pxwebcontent .footnotes_container h4, #pxwebcontent .footnotes_container .accordion-header, #pxwebcontent .footnotes_container .obs-notes {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
 }
