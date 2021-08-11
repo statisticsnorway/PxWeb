@@ -239,7 +239,7 @@ public static class PCAxisRepository
                             };
                             m.Restriction = item =>
                             {
-                                //jira SS-373. Openes up, to let the database take care of access controll. 
+                                //jira SS-373. Opens up, to let the database take care of access controll. 
                                 return true;
                             };
                         });
