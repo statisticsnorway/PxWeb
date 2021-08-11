@@ -364,10 +364,11 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
   border-bottom: 0; }
 
 #pxwebcontent .menu-tablelist h2, #pxwebcontent .menu-tablelist .accordion-header .header-text {
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 18px;
-  margin-top: 10px; }
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
 
 #pxwebcontent .menu-tablelist .accordion-header {
   /*width stop focus-frame from getting cut. Check if needed after new CMS is in place*/
@@ -420,7 +421,8 @@ h1 {
     margin-top: 0;
 }
 .statbank-title {
-    color: #00824d;
+    color: black;
+    font-family: 'Roboto Condensed'
 }
 #pxwebcontent .footnotes_container h3, #pxwebcontent .footnotes_container h4, #pxwebcontent .footnotes_container .accordion-header, #pxwebcontent .footnotes_container .obs-notes {
     font-family: 'Roboto Condensed', sans-serif;
