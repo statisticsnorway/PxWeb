@@ -428,3 +428,10 @@ h1 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
 }
+
+/* backup if cms is not available*/
+
+.px-messages-backupcms{
+    margin-top:10px;
+    margin-bottom:10px
+}
