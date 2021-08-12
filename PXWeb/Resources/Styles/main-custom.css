@@ -171,9 +171,9 @@ body {
 #footer {
   padding-left: 10px; }
 
-#header {
+/*#header {
   padding-left: 10px; }
-
+*/
 #navigation-path {
   padding-left: 10px; }
 
@@ -289,7 +289,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 #pxwebcontent input[type="submit"] {
   background-image: unset; }
 
-/*#endregion*/
+#endregion
 #pxwebcontent .presentation-left table {
   overflow: auto; }
 
@@ -355,7 +355,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
   #pxwebcontent .menu-tablelist td {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    font-weight: normal; }
+    /*font-weight: normal; */}
 
 #pxwebcontent .pxweb-table-end {
   margin-bottom: 30px; }
@@ -364,10 +364,11 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
   border-bottom: 0; }
 
 #pxwebcontent .menu-tablelist h2, #pxwebcontent .menu-tablelist .accordion-header .header-text {
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 15px;
-  margin-top: 10px; }
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
 
 #pxwebcontent .menu-tablelist .accordion-header {
   /*width stop focus-frame from getting cut. Check if needed after new CMS is in place*/
@@ -407,5 +408,23 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
     /*font-family: "Oswald", "Calibri", "Arial", "DejaVu Sans", sans-serif !important*/
 }
 #pxwebcontent .top-link {
-    max-height: none;
+    max-height:none;
+}
+h1 {
+    font-size: 48px;
+    line-height: 80px;
+    font-family: Roboto Condensed,sans-serif !important;
+    font-stretch: condensed;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+.statbank-title {
+    color: black;
+    font-family: 'Roboto Condensed'
+}
+#pxwebcontent .footnotes_container h3, #pxwebcontent .footnotes_container h4, #pxwebcontent .footnotes_container .accordion-header, #pxwebcontent .footnotes_container .obs-notes {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
 }
