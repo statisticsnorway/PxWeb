@@ -68,8 +68,8 @@
             <%  } %>
            
 
-            <pxc:Breadcrumb ID="breadcrumb1" runat="server"/>
-            <pxwebCustomControl:HeadingLabel ID="lblH1Title" runat="server" Text="" CssClass="h1title"></pxwebCustomControl:HeadingLabel>
+            <pxc:Breadcrumb ID="breadcrumb1" Visible="false"  runat="server"/>
+            <pxwebCustomControl:HeadingLabel ID="lblH1Title" runat="server" Visible="false" Text="" CssClass="h1title"></pxwebCustomControl:HeadingLabel>
 
              
             <pxc:NavigationFlow ID="navigationFlowControl" runat="server" Visible="false" /> 
