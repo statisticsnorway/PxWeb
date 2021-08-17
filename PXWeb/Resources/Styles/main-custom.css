@@ -289,7 +289,19 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 #pxwebcontent input[type="submit"] {
   background-image: unset; }
 
-#endregion
+/*budle.css sets margin to 0px. radiobutton looses space in front of text.*/
+#pxwebcontent input[type="radio"] {
+    margin: 3px 3px 0px 5px;
+}
+#pxwebcontent label{
+    display:inline;
+}
+/*override bundle.css to get correct size of boxes*/
+#pxwebcontent .commandbar-listbox-container {
+    box-sizing:content-box;
+}
+#endregion 
+
 #pxwebcontent .presentation-left table {
   overflow: auto; }
 
