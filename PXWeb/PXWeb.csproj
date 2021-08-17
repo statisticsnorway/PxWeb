@@ -914,6 +914,22 @@
       <Project>{DF9DA2F6-7942-4834-8B51-8F6358DE8DB8}</Project>
       <Name>PCAxis.Chart</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PCAxis.Excel.Web.Controls\PCAxis.Excel.Web.Controls.csproj">
+      <Project>{30d1fc66-e47b-4417-8bd5-1693f09e028b}</Project>
+      <Name>PCAxis.Excel.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCAxis.Html5Table.Web.Controls\PCAxis.Html5Table.Web.Controls.csproj">
+      <Project>{c21f6414-06b0-406c-9864-b6c72d2009bb}</Project>
+      <Name>PCAxis.Html5Table.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCAxis.JsonStat.Web.Controls\PCAxis.JsonStat.Web.Controls.csproj">
+      <Project>{6c558014-e4db-4399-a759-12e916f0ba4e}</Project>
+      <Name>PCAxis.JsonStat.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCAxis.JsonStat2.Web.Controls\PCAxis.JsonStat2.Web.Controls.csproj">
+      <Project>{6e74c29d-772b-40b8-868f-dc74711e052d}</Project>
+      <Name>PCAxis.JsonStat2.Web.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PCAxis.Search\PCAxis.Search.csproj">
       <Project>{dd41bc03-2b7a-4d76-af3c-39830ae8e75d}</Project>
       <Name>PCAxis.Search</Name>
@@ -925,6 +941,10 @@
     <ProjectReference Include="..\PCAxis.Web.Core\PCAxis.Web.Core.vbproj">
       <Project>{BC004D40-DDC6-446E-A3DF-5D4BA0AE92B8}</Project>
       <Name>PCAxis.Web.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PX.Json.Web.Controls\PX.Json.Web.Controls.csproj">
+      <Project>{cd8b2dc6-72c2-4459-9bc8-eb5291877316}</Project>
+      <Name>PX.Json.Web.Controls</Name>
     </ProjectReference>
     <ProjectReference Include="..\PX.Security\PX.Security.csproj">
       <Project>{dcb50c42-c3d0-48f9-9c1f-8d5af99ddb95}</Project>
