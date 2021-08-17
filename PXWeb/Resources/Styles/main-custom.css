@@ -296,7 +296,12 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 #pxwebcontent label{
     display:inline;
 }
-#endregion
+/*override bundle.css to get correct size of boxes*/
+#pxwebcontent .commandbar-listbox-container {
+    box-sizing:content-box;
+}
+#endregion 
+
 #pxwebcontent .presentation-left table {
   overflow: auto; }
 
