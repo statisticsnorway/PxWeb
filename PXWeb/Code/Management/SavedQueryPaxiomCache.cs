@@ -250,6 +250,7 @@ namespace PXWeb.Management
 
         public void Clear()
         {
+            _logger.Info("Cache cleared");
             ClearCache();
         }
 

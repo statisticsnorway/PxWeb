@@ -83,7 +83,7 @@ namespace PCAxis.Search
                     if (db == null)
                     {
                         _logger.Error("Failed to access database '" + _database + "'. Creation of search index aborted.");
-                        writer.Rollback(); 
+                        writer.Rollback();
                         _logger.Error("Rollback of '" + _database + "' done");
                         return false;
                     }
@@ -206,6 +206,7 @@ namespace PCAxis.Search
                 }
             }
             return true;
+
         }
         #endregion
 

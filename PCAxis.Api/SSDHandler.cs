@@ -66,9 +66,9 @@ namespace PCAxis.Api
         private IEnumerable<MetaList> GetMetaList(HttpContext context, PxMenuItem item)
         {
             // Logs usage
-            _usageLogger.Info(String.Format("url={0}, type=metadata, caller={1}, cached=false", context.Request.RawUrl, context.Request.UserHostAddress));
+            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "metadata", "", "", "", "", 0, "false");
 
-            return item.SubItems.Select(i => new MetaList
+            return item.SubItems.Where(t=>!(t is Headline )).Select(i => new MetaList
             {
                 Id = i.ID.Selection.Replace('\\', '/'),
                 Text = i.Text,
@@ -89,10 +89,6 @@ namespace PCAxis.Api
             if (menuItem is TableLink)
             {
                 return "t";
-            }
-            else if (menuItem is Headline)
-            {
-                return "h";
             }
             else
             {
@@ -196,7 +192,7 @@ namespace PCAxis.Api
                     Text = variable.Name,
                     Elimination = variable.Elimination,
                     Time = variable.IsTime,
-					Map = string.IsNullOrEmpty(variable.Map)? null : variable.Map,
+                    Map = string.IsNullOrEmpty(variable.Map)? null : variable.Map,
                     Values = variable.Values.Count > Settings.Current.MaxValues ? null : variable.Values.Select(value => value.Code).ToArray(),
                     ValueTexts = variable.Values.Count > Settings.Current.MaxValues ? null : variable.Values.Select(value => value.Value).ToArray()
                 }).ToArray()
@@ -284,6 +280,12 @@ namespace PCAxis.Api
                 case "csv":
                     serializer = new CsvSerializer();
                     break;
+                case "csv2":
+                    serializer = new Csv2Serializer();
+                    break;
+                case "csv3":
+                    serializer = new Csv3Serializer();
+                    break;
                 case "json":
                     serializer = new JsonSerializer();
                     break;
@@ -313,14 +315,20 @@ namespace PCAxis.Api
             //context.Response.AddHeader("Content-Type", cacheResponse.ContentType);
             //context.Response.OutputStream.Write(cacheResponse.ResponseData, 0, cacheResponse.ResponseData.Length);
             context.Send(cacheResponse, true);
-            //Logs usage
-            _usageLogger.Info(String.Format("url={0}, type=data, caller={3}, cached=false, format={1}, matrix-size={2}", context.Request.RawUrl, tableQuery.Response.Format, builder.Model.Data.MatrixSize, context.Request.UserHostAddress));
+
+            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "data", language, db, tablePath.Last(), tableQuery.Response.Format, builder.Model.Data.MatrixSize, "false");
+
+
+
+
+
+
         }
 
         private void Write403Response(HttpContext context)
         {
             context.SendJSONError(Error("Too many values selected", false), 403);
-            _usageLogger.Info(String.Format("url={0}, type=error, caller={1}, cached=false, message=Too many values selected", context.Request.RawUrl, context.Request.UserHostAddress));
+            _logger.Info(String.Format("url={0}, type=error, caller={1}, cached=false, message=Too many values selected", context.Request.RawUrl, context.Request.UserHostAddress));
         }
 
 
@@ -337,6 +345,29 @@ namespace PCAxis.Api
 #endif
             try
             {
+                //Note to mergers: Due to logging, the next lines was moved here from below
+                List<string> routeParts = null;
+                string language = null;
+                string db = null;
+
+                // Fetch the route data
+                var routeData = context.Items["RouteData"] as RouteData;
+                if (routeData.Values["language"] != null)
+                    language = routeData.Values["language"].ToString();
+
+                if (routeData.Values["path"] != null)
+                {
+                    routeParts = routeData.Values["path"].ToString().Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                    db = routeParts.First();
+                    routeParts.RemoveAt(0);
+                }
+
+                // Parse query string
+                var options = new Options(context.Request.QueryString);
+
+                var queryKeys = context.Request.QueryString.ToString().Split('&');
+                //End Note to mergers.
+
                 string cacheKey = ""; // Key to request stored in cache
                 ResponseBucket cacheResponse; // Request stored in cache
                 string postData = ""; // Data part of POST request (contains JSON query)
@@ -393,11 +424,19 @@ namespace PCAxis.Api
                         context.Send(cacheResponse, false);
                         if (context.Request.HttpMethod == "POST")
                         {
-                            _usageLogger.Info(String.Format("url={0}, type=data, caller={3}, cached=true, format={1}, matrix-size={2}", context.Request.RawUrl, cacheResponse.ContentType, "?", context.Request.UserHostAddress));
+                            var tableQuery = JsonHelper.Deserialize<TableQuery>(cacheResponse.PostData) as TableQuery;
+                            if (tableQuery.Response == null || tableQuery.Response.Format == null)
+                            {
+                                tableQuery.Response = new QueryResponse() { Format = _defaultResponseFormat };
+                            }
+
+                            var matrixSize = 1;
+
+                            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "data", language, db, routeParts.ToArray().Last(), tableQuery.Response.Format, matrixSize, "true");
                         }
                         else
                         {
-                            _usageLogger.Info(String.Format("url={0}, type=metadata, caller={1}, cached=true, format=?, matrix-size=?", context.Request.RawUrl, context.Request.UserHostAddress));
+                            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "metadata", "", "", "", "", 0, "true");
                         }
 #if DEBUG
                         stopWatch.Stop();
@@ -415,26 +454,8 @@ namespace PCAxis.Api
                 cacheResponse.Key = cacheKey;
                 cacheResponse.Url = context.Request.Url.AbsoluteUri;
                 cacheResponse.PostData = postData;
-                
-                List<string> routeParts = null;
-                string language = null;
-                string db = null;
 
-                // Fetch the route data
-                var routeData = context.Items["RouteData"] as RouteData;
-                if (routeData.Values["language"] != null)
-                    language = routeData.Values["language"].ToString();
-
-                if (routeData.Values["path"] != null)
-                {
-                    routeParts = routeData.Values["path"].ToString().Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries).ToList();
-                    db = routeParts.First();
-                    routeParts.RemoveAt(0);
-                }
-                // Parse query string
-                var options = new Options(context.Request.QueryString);
-
-                var queryKeys = context.Request.QueryString.ToString().Split('&');
+                //Note to mergers. The code above was moved from here.
 
                 if (queryKeys.Contains("config"))
                 {
@@ -448,7 +469,7 @@ namespace PCAxis.Api
                     cacheResponse.ContentType = "application/json; charset=" + System.Text.Encoding.UTF8.WebName;
                     cacheResponse.ResponseData = context.Response.ContentEncoding.GetBytes(obj.ToJSON(options.PrettyPrint));
                     context.Send(cacheResponse, true);
-                    _usageLogger.Info(String.Format("url={0}, type=config, caller={1}, cached=false", context.Request.RawUrl, context.Request.UserHostAddress));
+                    Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "config", "", "", "", "", 0, "false");
 
 #if DEBUG
                     stopWatch.Stop();
@@ -512,7 +533,7 @@ namespace PCAxis.Api
                                 var results = PCAxis.Search.SearchManager.Current.Search(db, language, text, out status);
 
                                 if (status == Search.SearchStatusType.Successful && results.Count > 0)
-                                {
+                                      {
                                     if (_logger.IsDebugEnabled)
                                     {
                                         if (results.Count > 1)
@@ -549,24 +570,24 @@ namespace PCAxis.Api
                                     // Find tables using the search function
                                     PCAxis.Search.SearchStatusType status;
 
-                                    cacheResponse.ContentType = "application/json; charset=" + System.Text.Encoding.UTF8.WebName;
-                                    cacheResponse.ResponseData = context.Response.ContentEncoding.GetBytes(GetSearchResult(db, language, options.SearchQuery, options.SearchFilter, routeParts, out status).ToJSON(options.PrettyPrint));
-                                    
-                                    if (status == Search.SearchStatusType.Successful)
-                                    {
-                                        context.Send(cacheResponse, false); // Send without caching
-                                    }
-                                    else
-                                    {
-                                        // Trying to search a non-indexed database...
-                                        context.SendJSONError(Error("Search not activated", false), 400);
-                                        _usageLogger.Info(String.Format("url={0}, type=error, caller={1}, cached=false, message=Search not activated", context.Request.RawUrl, context.Request.UserHostAddress));
-                                        _logger.Warn(String.Format("Search not activated for {0} - {1}", db, language));
+                                cacheResponse.ContentType = "application/json; charset=" + System.Text.Encoding.UTF8.WebName;
+                                cacheResponse.ResponseData = context.Response.ContentEncoding.GetBytes(GetSearchResult(db, language, options.SearchQuery, options.SearchFilter, routeParts, out status).ToJSON(options.PrettyPrint));
+
+                                if (status == Search.SearchStatusType.Successful)
+                                {
+                                    context.Send(cacheResponse, false); // Send without caching
+                                }
+                                else
+                                {
+                                    // Trying to search a non-indexed database...
+                                    context.SendJSONError(Error("Search not activated", false), 400);
+                                    _logger.Info(String.Format("url={0}, type=error, caller={1}, cached=false, message=Search not activated", context.Request.RawUrl, context.Request.UserHostAddress));
+                                    _logger.Warn(String.Format("Search not activated for {0} - {1}", db, language));
 #if DEBUG
-                                        stopWatch.Stop();
-                                        logTime.InfoFormat(System.Reflection.MethodBase.GetCurrentMethod().Name + " Done in ms = {0}", stopWatch.ElapsedMilliseconds);
+                                    stopWatch.Stop();
+                                    logTime.InfoFormat(System.Reflection.MethodBase.GetCurrentMethod().Name + " Done in ms = {0}", stopWatch.ElapsedMilliseconds);
 #endif
-                                        return;
+                                    return;
                                     }
                                 }
                                 else
@@ -587,20 +608,20 @@ namespace PCAxis.Api
 
                                 context.Send(cacheResponse, true);
 
-                                // Logs usage
-                                _usageLogger.Info(String.Format("url={0}, type=metadata, caller={1}, cached=false, format=json", context.Request.RawUrl, context.Request.UserHostAddress));
-                            }
-                            else if (context.Request.HttpMethod == "POST" && currentItem.MenuType == typeof(TableLink))
-                            {
-                                // Current item is not a list. Try to return table data.
-                                SendTableData(context, language, db, routeParts.ToArray(), cacheResponse);
-                            }
-                            else
-                            {
-                                context.SendJSONError(Error("Parameter error", false), 404);
-                                // Logs usage
-                                _usageLogger.Info(String.Format("url={0}, type=error, caller={1}, cached=false, message=Parameter error", context.Request.RawUrl, context.Request.UserHostAddress));
-                            }
+                            // Logs usage
+                            Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "metadata", "", "", "", "", 0, "false");
+                        }
+                        else if (context.Request.HttpMethod == "POST" && currentItem.MenuType == typeof(TableLink))
+                        {
+                            // Current item is not a list. Try to return table data.
+                            SendTableData(context, language, db, routeParts.ToArray(), cacheResponse);
+                        }
+                        else
+                        {
+                            context.SendJSONError(Error("Parameter error", false), 404);
+                            // Logs usage
+                            _logger.Info(String.Format("url={0}, type=error, caller={1}, cached=false, message=Parameter error", context.Request.RawUrl, context.Request.UserHostAddress));
+                        }
                         //}
                     }
 
@@ -627,29 +648,25 @@ namespace PCAxis.Api
                     context.SendJSONError(Error("Parameter error", false), ex.GetHttpCode());
                 }
                 // Logs usage
-                _usageLogger.Info(String.Format("url={0}, type=error, caller={1}, cached=false", context.Request.RawUrl, context.Request.UserHostAddress), ex);
+                _logger.Info(String.Format("url={0}, type=error, caller={1}, cached=false", context.Request.RawUrl, context.Request.UserHostAddress), ex);
                 _logger.Warn(ex);
             }
             catch (Exception ex)
             {
-                //if (context.Request.HttpMethod != "OPTIONS")
-                //{
-
 #if DEBUG
-                    stopWatch.Stop();
-                    logTime.InfoFormat(System.Reflection.MethodBase.GetCurrentMethod().Name + " Error Done in ms = {0}", stopWatch.ElapsedMilliseconds);
+                stopWatch.Stop();
+                logTime.InfoFormat(System.Reflection.MethodBase.GetCurrentMethod().Name + " Error Done in ms = {0}", stopWatch.ElapsedMilliseconds);
 #endif
-                    try
-                    {
-                        context.SendJSONError(Error("Parameter error", false), 404);
-                    }
-                    catch (Exception sendEx)
-                    {
-                        _logger.Error(String.Format("url={0}, type=error, caller={1}", context.Request.RawUrl, context.Request.UserHostAddress), sendEx);
-                    }
-                    _usageLogger.Info(String.Format("url={0}, type=error, caller={1}, cached=false ", context.Request.RawUrl, context.Request.UserHostAddress), ex);
-                    _logger.Warn(ex);
-                //}
+                try
+                {
+                    context.SendJSONError(Error("Parameter error", false), 404);
+                }
+                catch(Exception sendEx)
+                {
+                    _logger.Error(String.Format("url={0}, type=error, caller={1}", context.Request.RawUrl, context.Request.UserHostAddress), sendEx);
+                }
+                _logger.Info(String.Format("url={0}, type=error, caller={1}, cached=false ", context.Request.RawUrl, context.Request.UserHostAddress), ex);
+                _logger.Warn(ex);
             }
         }
     }

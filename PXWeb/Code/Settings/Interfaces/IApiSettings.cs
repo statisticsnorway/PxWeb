@@ -39,6 +39,12 @@ namespace PXWeb
         /// </summary>
         int FetchCellLimit { get; }
 
+
+        /// <summary>
+        /// times to flush log
+        /// </summary>
+        string  LogFlush { get; }
+
         /// <summary>
         /// Is Cross-Origin-Resource-Sharing allowed?
         /// </summary>

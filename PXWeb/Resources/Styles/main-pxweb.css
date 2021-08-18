@@ -1,16 +1,17 @@
-﻿/*@import './color-themes/_dark.scss';*/
-/*@import './color-themes/_light.scss';*/
-/*#region  Active colors */
-/*$pxweb-green-1: #ecfeed;*/
+﻿/*#region  Active colors */
 /*#endregion*/
 /*#region  Active colors inside pxbox*/
 /*#endregion*/
+/*$pxweb-green-4
+$pxbox-green-4
+$pxbox-green-2*/
 /*#region  Main color scheme */
 /*#region Buttons */
 /*#endregion*/
 /*#region Links */
 /*#endregion*/
 /*#endregion*/
+/*@import './color-themes/_light.scss';*/
 /*@import './color-themes/_screen-reader.scss';*/
 /*#region  Inactive colors - not in used */
 /*
@@ -36,34 +37,34 @@ $scrollbar-color: #b0b0b0;
   padding-left: 25px;
   background-repeat: no-repeat;
   width: 100%;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23b6e8b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>');
   background-position-y: center; }
   #pxwebcontent .pxbox .arrow-right-pxbox-icon:hover {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23162327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'); }
 
 #pxwebcontent .external-link-pxbox-icon {
   padding-left: 22px;
   background-repeat: no-repeat;
   width: 100%;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" > <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" > </path > <polyline points="15 3 21 3 21 9" > </polyline > <line x1="10" y1="14" x2="21" y2="3" > </line > </svg >');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23b6e8b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" > <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" > </path > <polyline points="15 3 21 3 21 9" > </polyline > <line x1="10" y1="14" x2="21" y2="3" > </line > </svg >');
   background-position-y: center; }
   #pxwebcontent .external-link-pxbox-icon:hover {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" > <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" > </path > <polyline points="15 3 21 3 21 9" > </polyline > <line x1="10" y1="14" x2="21" y2="3" > </line > </svg >'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23162327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" > <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" > </path > <polyline points="15 3 21 3 21 9" > </polyline > <line x1="10" y1="14" x2="21" y2="3" > </line > </svg >'); }
 
 #pxwebcontent .external-link-icon {
   padding-left: 22px;
   background-repeat: no-repeat;
   width: 100%;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" > <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" > </path > <polyline points="15 3 21 3 21 9" > </polyline > <line x1="10" y1="14" x2="21" y2="3" > </line > </svg >');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" > <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" > </path > <polyline points="15 3 21 3 21 9" > </polyline > <line x1="10" y1="14" x2="21" y2="3" > </line > </svg >');
   background-position-y: center; }
   #pxwebcontent .external-link-icon:hover {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" > <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" > </path > <polyline points="15 3 21 3 21 9" > </polyline > <line x1="10" y1="14" x2="21" y2="3" > </line > </svg >'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link" > <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" > </path > <polyline points="15 3 21 3 21 9" > </polyline > <line x1="10" y1="14" x2="21" y2="3" > </line > </svg >'); }
 
 #pxwebcontent .envelope-icon {
   padding-left: 22px;
   background-repeat: no-repeat;
   width: 100%;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23003892" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>');
   background-position-y: center; }
 
 #pxwebcontent .Information-warning-box-icon {
@@ -91,7 +92,7 @@ $scrollbar-color: #b0b0b0;
     background-color: #3396d2;
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>'); }
   #pxwebcontent .information-warning-box.changed-text {
-    background-color: pink;
+    background-color: #ffb216;
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>'); }
 
 #pxwebcontent .Information-warning-box-icon.small {
@@ -106,27 +107,18 @@ $scrollbar-color: #b0b0b0;
 /* **********************************  _PxWeb.scss *********************************** */
 #pxwebcontent {
   background: #fff;
-  /*  @include just-open-sans;*/
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
-  color: #222;
+  color: #333;
   font-size: 14px;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   text-size-adjust: none; }
 
-#pxwebcontent select {
-  font-size: 100%;
-  font-family: 'Open Sans', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal; }
-
 #pxwebcontent .pxbox.negative {
-  background-color: #F8F7F6;
-  border: solid 1px #949494;
-  color: #222; }
+  background-color: #274247;
+  border: solid 1px #000;
+  color: #fff; }
 
 #pxwebcontent #wrap {
   margin: 0px auto;
@@ -159,15 +151,15 @@ $scrollbar-color: #b0b0b0;
   padding: 12px 0 5px 10px; }
 
 #pxwebcontent #header h1 a {
-  color: #222;
+  color: #57626a;
   text-decoration: none; }
 
 #pxwebcontent #header h1 a:hover {
-  color: #222;
+  color: #57626a;
   text-decoration: none; }
 
 #pxwebcontent #header h2 {
-  color: #222;
+  color: #ccc;
   font-size: 1.25em;
   font-weight: 100;
   padding: 0 0 0 11px;
@@ -175,9 +167,9 @@ $scrollbar-color: #b0b0b0;
   line-height: 12px; }
 
 #pxwebcontent #header span {
-  font-size: 3.0em;
-  font-weight: 700;
-  letter-spacing: -1px;
+  font-size: 3.8em;
+  font-weight: 100;
+  letter-spacing: -3px;
   padding: 12px 0 0 10px; }
 
 #pxwebcontent .headerleft {
@@ -229,9 +221,6 @@ $scrollbar-color: #b0b0b0;
 #pxwebcontent .tableAlternatingRow {
   background-color: #eee; }
 
-#pxwebcontent .databaseList {
-  /*margin-left: 15px;*/ }
-
 #pxwebcontent .search_searchresulttext {
   font-weight: bold;
   margin-top: 10px;
@@ -264,7 +253,7 @@ $scrollbar-color: #b0b0b0;
   margin-bottom: 15px; }
 
 #pxwebcontent .settings_panel a {
-  color: #222; }
+  color: #333; }
 
 #pxwebcontent .chart-links {
   float: right; }
@@ -274,15 +263,15 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent .panelshowlink {
   width: auto;
-  background-color: #F8F7F6;
+  background-color: #E9F3E9;
   padding: 10px 0 10px 0;
   margin-top: 5px;
   display: inline-block;
-  border: 1px solid #949494;
+  border: 1px solid #c3dcdc;
   cursor: pointer; }
 
 #pxwebcontent .panelshowlink.savequery {
-  background-color: #F8F7F6; }
+  background-color: #E9F3E9; }
 
 #pxwebcontent .px-settings-imagelink {
   vertical-align: middle;
@@ -312,7 +301,7 @@ $scrollbar-color: #b0b0b0;
   font-stretch: normal;
   font-weight: normal;
   padding: 10px 10px 10px 10px;
-  border: solid 6px #007694;
+  border: solid 6px #00824d;
   width: max-content;
   overflow: auto;
   background-color: #fff;
@@ -321,7 +310,7 @@ $scrollbar-color: #b0b0b0;
   font-size: 14px; }
 
 #pxwebcontent .px_setting_validator {
-  color: #ee0000; }
+  color: #ed5935; }
 
 #pxwebcontent .px_setting_heading {
   font-weight: bold;
@@ -369,21 +358,21 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent .px_settings_cancel {
   margin-right: 20px;
-  background: #007694;
+  background: #00824d;
   color: #fff;
   padding: 2px 4px 2px 5px;
   font-weight: bold; }
 
 #pxwebcontent .px_setting_apply {
   margin-right: 20px;
-  background: #007694;
+  background: #00824d;
   color: #fff;
   padding: 2px 4px 2px 5px;
   font-weight: bold;
-  border: 1px solid #222; }
+  border: 1px solid #ccc; }
 
 #pxwebcontent .chart_information {
-  background-color: #222;
+  background-color: #ccc;
   padding: 20px 20px 20px 20px;
   display: inline-block;
   width: 731px;
@@ -400,7 +389,7 @@ $scrollbar-color: #b0b0b0;
   display: inline-block;
   background-color: #eee;
   padding: 10px 10px 10px 10px;
-  border: solid 1px #222;
+  border: solid 1px #ccc;
   margin-top: 10px; }
 
 #pxwebcontent .headingtext {
@@ -419,20 +408,20 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent .px-messages {
   /*text-align: justify; UnWcag   */
-  border: 2px solid #fba504;
+  border: 2px solid #3396d2;
   margin-top: 5px;
   width: auto;
   vertical-align: middle; }
   #pxwebcontent .px-messages.small {
     align-items: center; }
   #pxwebcontent .px-messages.px-warning {
-    border: 2px solid pink; }
+    border: 2px solid #ffb216; }
 
 #pxwebcontent .saved_query_unsafe_panel {
   width: 100%; }
 
 #pxwebcontent .errorMessage {
-  font-family: Verdana;
+  font-family: 'Verdana';
   font-size: 0.9em;
   color: #B0272E;
   display: block; }
@@ -509,58 +498,6 @@ $scrollbar-color: #b0b0b0;
 #pxwebcontent .hideonmobile {
   /* don't hide on non-mobile devices */ }
 
-#pxwebcontent .officialStatisticsImage {
-  height: 24px;
-  width: 200px;
-  /*margin-left: 15px;*/
-  margin-left: 0px;
-  margin-top: -15px;
-  margin-bottom: 32px; }
-
-/* jQuery UI controls */
-/*#PageElements {
-    background: $pxweb-background;
-}
-*/
-.ui-draggable .ui-dialog-titlebar {
-  background: #006885;
-  border: #006885; }
-
-.ui-dialog-title {
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal; }
-
-.ui-widget-content {
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal;
-  background: #fff; }
-
-.footnote_heading {
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 10px; }
-
-.footnote_valuenote_header {
-  font-weight: 700;
-  margin-top: 10px; }
-
-.footnote_valuenote_key {
-  font-style: italic;
-  margin-top: 10px; }
-
-.footnote_note_value {
-  margin-top: 10px; }
-
-.footnote_varnote_key {
-  font-weight: 700;
-  margin-top: 10px; }
-
-.footnote_cellnote_key {
-  font-weight: 700;
-  margin-top: 10px; }
-
 /* **********************************  _PxWebButtons.scss *********************************** */
 #pxwebcontent .pxweb-buttons {
   background-repeat: no-repeat;
@@ -576,111 +513,111 @@ $scrollbar-color: #b0b0b0;
     #pxwebcontent .pxweb-buttons.maximize-icon:hover, #pxwebcontent .pxweb-buttons.maximize-icon:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize-2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.key-icon {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>'); }
     #pxwebcontent .pxweb-buttons.key-icon:hover, #pxwebcontent .pxweb-buttons.key-icon:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>'); }
   #pxwebcontent .pxweb-buttons.pivotManual {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>'); }
     #pxwebcontent .pxweb-buttons.pivotManual:hover, #pxwebcontent .pxweb-buttons.pivotManual:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>'); }
   #pxwebcontent .pxweb-buttons.pivotCW {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>'); }
     #pxwebcontent .pxweb-buttons.pivotCW:hover, #pxwebcontent .pxweb-buttons.pivotCW:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>'); }
   #pxwebcontent .pxweb-buttons.pivotCCW {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-ccw"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-ccw"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>'); }
     #pxwebcontent .pxweb-buttons.pivotCCW:hover, #pxwebcontent .pxweb-buttons.pivotCCW:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-ccw"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>'); }
   #pxwebcontent .pxweb-buttons.deleteVariable {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.deleteVariable:hover, #pxwebcontent .pxweb-buttons.deleteVariable:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.changeTextCodePresentation {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>'); }
     #pxwebcontent .pxweb-buttons.changeTextCodePresentation:hover, #pxwebcontent .pxweb-buttons.changeTextCodePresentation:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>'); }
   #pxwebcontent .pxweb-buttons.perPart {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-percent"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-percent"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>'); }
     #pxwebcontent .pxweb-buttons.perPart:hover, #pxwebcontent .pxweb-buttons.perPart:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-percent"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>'); }
   #pxwebcontent .pxweb-buttons.sum {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.sum:hover, #pxwebcontent .pxweb-buttons.sum:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.subtract {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.subtract:hover, #pxwebcontent .pxweb-buttons.subtract:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.divide {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-divide"><circle cx="12" cy="6" r="2"></circle><line x1="5" y1="12" x2="19" y2="12"></line><circle cx="12" cy="18" r="2"></circle></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-divide"><circle cx="12" cy="6" r="2"></circle><line x1="5" y1="12" x2="19" y2="12"></line><circle cx="12" cy="18" r="2"></circle></svg>'); }
     #pxwebcontent .pxweb-buttons.divide:hover, #pxwebcontent .pxweb-buttons.divide:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-divide"><circle cx="12" cy="6" r="2"></circle><line x1="5" y1="12" x2="19" y2="12"></line><circle cx="12" cy="18" r="2"></circle></svg>'); }
   #pxwebcontent .pxweb-buttons.multiply {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.multiply:hover, #pxwebcontent .pxweb-buttons.multiply:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.changeValueOrder {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shuffle"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shuffle"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.changeValueOrder:hover, #pxwebcontent .pxweb-buttons.changeValueOrder:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shuffle"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.chartViewColumn {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.chartViewColumn:hover, #pxwebcontent .pxweb-buttons.chartViewColumn:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.chartViewLine {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>'); }
     #pxwebcontent .pxweb-buttons.chartViewLine:hover, #pxwebcontent .pxweb-buttons.chartViewLine:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>'); }
   #pxwebcontent .pxweb-buttons.tableViewSorted {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>'); }
     #pxwebcontent .pxweb-buttons.tableViewSorted:hover, #pxwebcontent .pxweb-buttons.tableViewSorted:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-down"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>'); }
   #pxwebcontent .pxweb-buttons.download-icon {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.download-icon:hover, #pxwebcontent .pxweb-buttons.download-icon:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.database-icon {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-database"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>'); }
     #pxwebcontent .pxweb-buttons.database-icon:hover, #pxwebcontent .pxweb-buttons.database-icon:focus {
-      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-database"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>'); }
+      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23274247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-database"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>'); }
   #pxwebcontent .pxweb-buttons.checked-icon {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>'); }
     #pxwebcontent .pxweb-buttons.checked-icon:hover, #pxwebcontent .pxweb-buttons.checked-icon:focus {
-      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>'); }
+      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23274247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>'); }
   #pxwebcontent .pxweb-buttons.cancel-icon {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.cancel-icon:hover, #pxwebcontent .pxweb-buttons.cancel-icon:focus {
-      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>'); }
+      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23274247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.arrow-down {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>'); }
     #pxwebcontent .pxweb-buttons.arrow-down:hover, #pxwebcontent .pxweb-buttons.arrow-down:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>'); }
   #pxwebcontent .pxweb-buttons.arrow-up {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>'); }
     #pxwebcontent .pxweb-buttons.arrow-up:hover, #pxwebcontent .pxweb-buttons.arrow-up:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>'); }
   #pxwebcontent .pxweb-buttons.arrow-left {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>'); }
     #pxwebcontent .pxweb-buttons.arrow-left:hover, #pxwebcontent .pxweb-buttons.arrow-left:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>'); }
   #pxwebcontent .pxweb-buttons.arrow-right {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'); }
     #pxwebcontent .pxweb-buttons.arrow-right:hover, #pxwebcontent .pxweb-buttons.arrow-right:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'); }
   #pxwebcontent .pxweb-buttons.selectfromgroup-groupsbutton {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>'); }
     #pxwebcontent .pxweb-buttons.selectfromgroup-groupsbutton:hover, #pxwebcontent .pxweb-buttons.selectfromgroup-groupsbutton:focus {
-      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>'); }
+      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23274247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>'); }
   #pxwebcontent .pxweb-buttons.selectfromgroup-cancel {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.selectfromgroup-cancel:hover, #pxwebcontent .pxweb-buttons.selectfromgroup-cancel:focus {
-      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>'); }
+      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23274247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.burger_menu-icon {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.burger_menu-icon:hover, #pxwebcontent .pxweb-buttons.burger_menu-icon:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>'); }
   #pxwebcontent .pxweb-buttons.burger_menu_open-icon {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'); }
     #pxwebcontent .pxweb-buttons.burger_menu_open-icon:hover, #pxwebcontent .pxweb-buttons.burger_menu_open-icon:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'); }
 
@@ -691,19 +628,19 @@ $scrollbar-color: #b0b0b0;
   height: 1px;
   min-height: 30px; }
   #pxwebcontent .pxweb-symbol-buttons.arrow-up {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>'); }
     #pxwebcontent .pxweb-symbol-buttons.arrow-up:hover, #pxwebcontent .pxweb-symbol-buttons.arrow-up:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>'); }
   #pxwebcontent .pxweb-symbol-buttons.arrow-down {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>'); }
     #pxwebcontent .pxweb-symbol-buttons.arrow-down:hover, #pxwebcontent .pxweb-symbol-buttons.arrow-down:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>'); }
   #pxwebcontent .pxweb-symbol-buttons.arrow-left {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>'); }
     #pxwebcontent .pxweb-symbol-buttons.arrow-left:hover, #pxwebcontent .pxweb-symbol-buttons.arrow-left:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>'); }
   #pxwebcontent .pxweb-symbol-buttons.arrow-right {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'); }
     #pxwebcontent .pxweb-symbol-buttons.arrow-right:hover, #pxwebcontent .pxweb-symbol-buttons.arrow-right:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'); }
 
@@ -715,17 +652,17 @@ $scrollbar-color: #b0b0b0;
   #pxwebcontent .variableselector-buttons.variableselector_valuesselect_deselect_all_button {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>'); }
     #pxwebcontent .variableselector-buttons.variableselector_valuesselect_deselect_all_button:hover, #pxwebcontent .variableselector-buttons.variableselector_valuesselect_deselect_all_button:focus {
-      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>'); }
+      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23274247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>'); }
   #pxwebcontent .variableselector-buttons.variableselector_valuesselect_select_all_button {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>'); }
     #pxwebcontent .variableselector-buttons.variableselector_valuesselect_select_all_button:hover, #pxwebcontent .variableselector-buttons.variableselector_valuesselect_select_all_button:focus {
-      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>'); }
+      background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23274247" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>'); }
   #pxwebcontent .variableselector-buttons.variableselector-list-view {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="5" x2="21" y2="5"></line><line x1="3" y1="11" x2="21" y2="11"></line><line x1="3" y1="17" x2="21" y2="17"></line><line x1="3" y1="23" x2="21" y2="23"></line></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="5" x2="21" y2="5"></line><line x1="3" y1="11" x2="21" y2="11"></line><line x1="3" y1="17" x2="21" y2="17"></line><line x1="3" y1="23" x2="21" y2="23"></line></svg>'); }
     #pxwebcontent .variableselector-buttons.variableselector-list-view:hover, #pxwebcontent .variableselector-buttons.variableselector-list-view:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="5" x2="21" y2="5"></line><line x1="3" y1="11" x2="21" y2="11"></line><line x1="3" y1="17" x2="21" y2="17"></line><line x1="3" y1="23" x2="21" y2="23"></line></svg>'); }
   #pxwebcontent .variableselector-buttons.variableselector-compact-view {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>'); }
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>'); }
     #pxwebcontent .variableselector-buttons.variableselector-compact-view:hover, #pxwebcontent .variableselector-buttons.variableselector-compact-view:focus {
       background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>'); }
 
@@ -806,7 +743,7 @@ $scrollbar-color: #b0b0b0;
   margin-top: 10px;
   font-family: 'Open Sans';
   font-size: 14px;
-  color: #222; }
+  color: #333; }
 
 #pxwebcontent .meta_tablelink {
   display: block;
@@ -840,21 +777,14 @@ $scrollbar-color: #b0b0b0;
 
 /* **********************************  _menu.scss *********************************** */
 #pxwebcontent .menu_databasename {
-  /*@include open-sans;
+  font-family: 'Open Sans', sans-serif !important;
+  font-stretch: normal;
+  font-weight: normal;
   font-size: 200%;
   line-height: 100%;
   margin-top: 15px;
   margin-bottom: 30px;
-  display: block;*/
-  font-family: Roboto Condensed, sans-serif;
-  font-weight: 700;
-  line-height: 100%;
-  margin-top: 5px;
-  /*    margin-left: 15px;*/
-  display: block;
-  color: #222;
-  /*    font-size: 28px;*/
-  margin-bottom: 12px; }
+  display: block; }
 
 #pxwebcontent .menuTopLeftContent {
   float: left; }
@@ -864,26 +794,31 @@ $scrollbar-color: #b0b0b0;
   vertical-align: top; }
 
 #pxwebcontent .menuExplanation {
-  font-family: 'Open Sans', sans-serif !important; }
+  font-family: 'Open Sans Regular'; }
 
-#pxwebcontent .menuExplanationDiv {
+#pxwebcontent .menuExplanationHeader {
+  font-family: 'Open Sans Regular';
+  font-weight: bold; }
+
+#pxwebcontent .menuExplanationFrame {
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  border-style: dashed;
+  border-style: solid;
   border-width: 2px;
-  border-color: #007694; }
+  border-color: #00824d;
+  margin-bottom: 4px; }
 
 /* **********************************  _top-link.scss *********************************** */
 #pxwebcontent .top-link.pxweb-btn.negative {
   color: #fff;
   border-color: #fff;
-  background-color: #006885; }
+  background-color: #274247; }
 
 #pxwebcontent .top-link.pxweb-btn.negative:hover, #pxwebcontent top-link.pxweb-btn:focus {
-  color: #006885;
-  border-color: #006885;
+  color: #274247;
+  border-color: #274247;
   background-color: #fff; }
 
 #pxwebcontent .top-link {
@@ -908,73 +843,40 @@ $scrollbar-color: #b0b0b0;
 
 /*@import './pxweb/_Admin.scss';*/
 /* **********************************  _breadcrumb.scss TODO *********************************** */
-#pxwebcontent .breadcrumb_container {
-  background: #fff; }
-
-#pxwebcontent .breadcrumb_text {
-  color: #006885;
-  /*font-family: Verdana;*/
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal;
-  font-size: 14px;
-  display: inline-block;
-  background-image: none !important;
-  transition: none; }
-
-#pxwebcontent .breadcrumb_text:hover {
-  color: #006885;
-  /*font-family: Verdana;*/
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal;
+#pxwebcontent .pxweb-link.breadcrumb_text {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px; }
 
-#pxwebcontent .breadcrumb_text:focus {
-  color: #006885;
-  outline: #9272fc solid 2px;
-  outline-offset: 2px; }
-
 #pxwebcontent .breadcrumb_text_nolink {
-  color: #222;
-  /*font-family: Verdana;*/
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   display: inline-block; }
 
 #pxwebcontent .breadcrumb_text_nolink:hover {
-  color: #222;
-  /*font-family: Verdana;*/
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal;
+  color: #000;
   text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px; }
 
 #pxwebcontent .breadcrumb_sep {
-  color: #006885;
-  font-family: Verdana;
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal;
+  color: #00824d;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px; }
 
 #pxwebcontent .breadcrumb_homebutton {
   width: 20px;
   height: 20px;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23006885" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" > <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" > </path > <polyline points="9 22 9 12 15 12 15 22" > </polyline > </svg >');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home" > <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" > </path > <polyline points="9 22 9 12 15 12 15 22" > </polyline > </svg >');
   background-repeat: no-repeat;
   vertical-align: middle;
   outline: none; }
 
 #pxwebcontent #breadcrumb {
-  border-top: 3px solid #006885;
+  border-top: 3px solid #00824d;
   background: #fff;
   text-transform: none;
-  /*padding: 5px 15px 20px;*/
-  padding: 5px 0px 20px;
+  padding: 5px 15px 20px;
   min-height: 30px; }
 
 /* **********************************  _CommandBar.scss TODO *********************************** */
@@ -1001,7 +903,7 @@ $scrollbar-color: #b0b0b0;
 
 /* **********************************  CommandBar/_cb_common.scss *********************************** */
 #pxwebcontent .commandbar_container {
-  border: solid 6px #007694;
+  border: solid 6px #00824d;
   padding: 10px 10px 10px 10px;
   clear: both;
   /*float: left;*/
@@ -1019,7 +921,7 @@ $scrollbar-color: #b0b0b0;
   /*font-weight: bold; these are roboto condensed  */
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
-  border-bottom: 1px solid #007694; }
+  border-bottom: 1px solid #00824d; }
 
 /* The "Cancel" and "Ok" buttons */
 #pxwebcontent .container_exit_buttons_row {
@@ -1040,7 +942,7 @@ $scrollbar-color: #b0b0b0;
   margin-right: 0px; }
 
 #pxwebcontent select option:checked {
-  background: #007694 linear-gradient(0deg, #007694 0%, #007694 100%);
+  background: #00824d linear-gradient(0deg, #00824d 0%, #00824d 100%);
   -webkit-text-fill-color: #fff; }
 
 @media screen and (max-width: 767px) {
@@ -1074,8 +976,7 @@ $scrollbar-color: #b0b0b0;
     color: white;*/
   font-weight: bold;
   font-family: 'Roboto Condensed', sans-serif;
-  /*border: 1px solid #008451;*/
-  border: 1px solid #949494; }
+  border: 1px solid #008451; }
 
 #pxwebcontent .commandbar_dropdown {
   height: 50px;
@@ -1114,9 +1015,6 @@ $scrollbar-color: #b0b0b0;
   text-align: center;
   text-decoration: underline; }
 
-#pxwebcontent .commandbar_sum_titletext {
-  font-weight: bold; }
-
 #pxwebcontent .commandbar_sum_sumallvaluesnewvariabelname_dropdown {
   padding: 0 2px 0 5px; }
 
@@ -1138,9 +1036,9 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent .commandbar-listbox-container {
   /*float: left;*/
-  border: 1px solid #949494;
+  border: 1px solid #00824d;
   padding: 20px;
-  background-color: #F8F7F6;
+  background-color: #ecfeed;
   flex: 0 0 42%;
   margin-top: 10px; }
 
@@ -1182,7 +1080,7 @@ $scrollbar-color: #b0b0b0;
 #pxwebcontent p.commandbar_pivot_heading {
   width: 100%;
   font-weight: bold;
-  border-bottom: 2px solid #006885; }
+  border-bottom: 2px solid #00824d; }
 
 #pxwebcontent .commandbar_pivot_title {
   font-weight: bold; }
@@ -1303,14 +1201,14 @@ $scrollbar-color: #b0b0b0;
   font-family: 'Open Sans', sans-serif; }
 
 #pxwebcontent .green-rule-thin {
-  border-bottom: 1px solid #007694; }
+  border-bottom: 1px solid #00824d; }
 
 #pxwebcontent .commandbar_perpart_radio_horisontal label {
   padding: 0 5px 0 5px;
   vertical-align: text-bottom; }
 
 #pxwebcontent .commandbar_perpart_errormessage {
-  color: #ee0000; }
+  color: #ed5935; }
 
 #pxwebcontent .per_part_rootdiv .commandbar_perpart_radio.commandbar_radioButtonList label {
   text-transform: capitalize; }
@@ -1338,7 +1236,7 @@ $scrollbar-color: #b0b0b0;
   padding: 0 0 5px 0; }
 
 #pxwebcontent .commandbar_changepresentation_errormessage {
-  color: #ee0000; }
+  color: #ed5935; }
 
 /* ********* End. Back in _CommandBar.scss */
 #pxwebcontent .commandbar_sum_sumallvaluesnewvariabelname_textbox {
@@ -1430,22 +1328,13 @@ $scrollbar-color: #b0b0b0;
   line-height: 100%; }
 
 #pxwebcontent .datasort_tabletitle {
-  /*font-size: 100%;
+  font-size: 100%;
   font-weight: bold;
   line-height: 150%;
-  padding-bottom: 5px;*/
-  font-family: Roboto Condensed, sans-serif;
-  font-weight: 700;
-  line-height: 100%;
-  margin-top: 5px;
-  /*    margin-left: 15px;*/
-  display: block;
-  color: #222;
-  /*    font-size: 28px;*/
-  margin-bottom: 12px; }
+  padding-bottom: 5px; }
 
 #pxwebcontent table.tablesorter thead tr th {
-  background-color: #F8F7F6; }
+  background-color: #ecfeed; }
 
 #pxwebcontent .tablesorter th {
   font-size: 16px; }
@@ -1467,13 +1356,13 @@ $scrollbar-color: #b0b0b0;
   /*For fullscreen*/ }
 
 #pxwebcontent table.tablesorter thead tr .header {
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-and-down"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="7 10 12 5 17 10"></polyline><polyline points="17 14 12 19 7 14"></polyline></svg>'); }
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-and-down"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="7 10 12 5 17 10"></polyline><polyline points="17 14 12 19 7 14"></polyline></svg>'); }
 
 #pxwebcontent table.tablesorter thead tr .headerSortDown {
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>'); }
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>'); }
 
 #pxwebcontent table.tablesorter thead tr .headerSortUp {
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>'); }
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>'); }
 
 /*hide all 3, then show one*/
 #pxwebcontent table.tablesorter thead th .screenreader-only span {
@@ -1493,7 +1382,7 @@ $scrollbar-color: #b0b0b0;
   background-color: #fff; }
 
 #pxwebcontent table.tablesorter tbody tr:hover {
-  background-color: pink; }
+  background-color: #f2f0ff; }
 
 /* **********************************  _excel.scss TODO *********************************** */
 #pxwebcontent div.excelcontainer {
@@ -1582,7 +1471,7 @@ $scrollbar-color: #b0b0b0;
 
 /*this copy of class=pxweb-link is needed because these a-elements are stored in the datasource and thus outside "our" controll.*/
 #pxwebcontent .footnotes_container a {
-  color: #007694; }
+  color: #00824d; }
   #pxwebcontent .footnotes_container a:hover, #pxwebcontent .footnotes_container a:focus {
     color: #fff; }
 
@@ -1591,12 +1480,12 @@ $scrollbar-color: #b0b0b0;
   font-stretch: normal;
   font-weight: normal;
   align-items: center;
-  background-image: linear-gradient(120deg, #007694 0%, #007694 100%);
+  background-image: linear-gradient(120deg, #00824d 0%, #00824d 100%);
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 100% 0;
-  border-bottom: 1px solid #007694;
-  color: #007694;
+  border-bottom: 1px solid #00824d;
+  color: #00824d;
   cursor: pointer;
   display: inline-flex;
   font-size: 14px;
@@ -1655,19 +1544,16 @@ $scrollbar-color: #b0b0b0;
   margin: 4em 0 -1em 0;
   font-weight: bold; }
 
-/*.hierarchical_tableinformation_title, #pxwebcontent .h2title h2 {
-    @include pxweb-table-title;
-}*/
-.hierarchical_tableinformation_title {
+#pxwebcontent .hierarchical_tableinformation_title, #pxwebcontent .h2title h2 {
   font-family: Roboto Condensed, sans-serif;
+  font-size: 28px;
   font-weight: 700;
   line-height: 100%;
-  margin-top: 5px;
-  /*    margin-left: 15px;*/
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 15px;
   display: block;
-  color: #222;
-  /*    font-size: 28px;*/
-  margin-bottom: 12px; }
+  color: #333; }
 
 #pxwebcontent .hierarchical_tableinformation_description {
   font-weight: bold;
@@ -1780,7 +1666,7 @@ $scrollbar-color: #b0b0b0;
   flex-wrap: wrap;
   cursor: pointer;
   background-repeat: no-repeat;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="metadata-logo"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23b6e8b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="metadata-logo"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>');
   background-position-x: right;
   background-position-y: top;
   padding-right: 30px; }
@@ -1794,7 +1680,7 @@ $scrollbar-color: #b0b0b0;
   margin-right: 40px; }
 
 #pxwebcontent .metadata-text-wrap {
-  border-bottom: 1px dotted #007694;
+  border-bottom: 1px dotted #00824d;
   display: inline-block;
   line-height: inherit; }
 
@@ -1817,7 +1703,7 @@ $scrollbar-color: #b0b0b0;
   outline-offset: 2px; }
 
 #pxwebcontent .metadata-open-btn:focus, #pxwebcontent .metadata-open-btn:hover {
-  background-color: #007694; }
+  background-color: #00824d; }
 
 #pxwebcontent .metadata-open-btn:hover .metadata-logo, #pxwebcontent .metadata-open-btn:focus .metadata-logo {
   color: #fff; }
@@ -1831,7 +1717,7 @@ $scrollbar-color: #b0b0b0;
   font-size: 14px;
   opacity: 0;
   transition: opacity .18s;
-  border: 1.5px solid #007694; }
+  border: 1.5px solid #b6e8b8; }
 
 #pxwebcontent .metadata-popup.open {
   display: inline-block;
@@ -1840,8 +1726,8 @@ $scrollbar-color: #b0b0b0;
   margin-top: 20px; }
 
 #pxwebcontent .metadata-content {
-  background-color: #F8F7F6;
-  color: #222;
+  background-color: #274247;
+  color: #fff;
   padding: 20px;
   position: relative;
   display: flex;
@@ -1856,7 +1742,7 @@ $scrollbar-color: #b0b0b0;
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-bottom-color: #007694;
+  border-bottom-color: #b6e8b8;
   border-width: 16px;
   margin-left: -20px; }
 
@@ -1887,7 +1773,7 @@ $scrollbar-color: #b0b0b0;
   margin-top: 0px; }
 
 #pxwebcontent .pxbox .metadata-links .pxweb-link.with-icon {
-  border-bottom: 1px solid #007694; }
+  border-bottom: 1px solid #b6e8b8; }
 
 #pxwebcontent .pxbox .metadata-links .link-text {
   font-size: 14px; }
@@ -1900,29 +1786,29 @@ $scrollbar-color: #b0b0b0;
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: #222;
-  color: #007694;
+  background-color: #274247;
+  color: #b6e8b8;
   cursor: pointer;
   background-color: transparent;
   border: none;
   align-self: center;
   background-repeat: no-repeat;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23b6e8b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>');
   background-position-x: 4px;
   background-position-y: center; }
   #pxwebcontent .metadata-close-btn:hover {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>');
-    background-color: #007694;
+    background-color: #00824d;
     color: #fff; }
 
 #pxwebcontent .metadata-close-btn:focus {
-  background-color: #007694;
+  background-color: #00824d;
   outline: #9272fc solid 2px;
   outline-offset: 2px;
   color: #fff; }
 
 #pxwebcontent .metadata-close-text {
-  color: #222;
+  color: #fff;
   padding: 4px;
   margin-left: 15px; }
 
@@ -1965,10 +1851,10 @@ $scrollbar-color: #b0b0b0;
   z-index: 1; }
 
 #pxwebcontent span.pxweb-link.nav-step {
-  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif !important; }
+  font-family: 'Roboto Condensed', 'Open Sans', sans-serif !important; }
 
 #pxwebcontent span.nav-step {
-  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif !important;
+  font-family: 'Roboto Condensed', 'Open Sans', sans-serif !important;
   text-decoration: none;
   border-bottom: none;
   font-size: 18px;
@@ -1976,12 +1862,12 @@ $scrollbar-color: #b0b0b0;
   margin-top: 5px; }
 
 #pxwebcontent span.nav-step.active {
-  color: #222;
+  color: #293F44;
   font-size: 24px;
   font-weight: bold; }
 
 #pxwebcontent span.nav-step.future {
-  color: #006885;
+  color: #274247;
   line-height: 1.25; }
 
 #pxwebcontent span.nav-step.passive {
@@ -2046,8 +1932,8 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent .savequery_cancel {
   margin-right: 15px;
-  background: #007694;
-  color: #fff;
+  background: #25a23c;
+  color: white;
   border: 1px solid #ccc;
   font-weight: bold;
   padding: 2px 4px 2px 5px;
@@ -2055,8 +1941,8 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent .savequery_create {
   margin-right: 15px;
-  background: #007694;
-  color: #fff;
+  background: #25a23c;
+  color: white;
   border: 1px solid #ccc;
   font-weight: bold;
   padding: 2px 4px 2px 5px;
@@ -2075,18 +1961,18 @@ $scrollbar-color: #b0b0b0;
 #pxwebcontent .saveas_dropdownlist {
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dd-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dd-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>');
   padding: .6em 1.4em .5em 2.2em;
-  border: 1px solid #222;
+  border: 1px solid #162327;
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: left .4em top 50%, 0 0;
   background-size: 24px auto, 100%;
   width: 100%; }
   #pxwebcontent .saveas_dropdownlist:hover {
-    border: 1px solid #007694; }
+    border: 1px solid #00824d; }
   #pxwebcontent .saveas_dropdownlist:focus {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dd-icon"><polyline points="18 15 12 9 6 15"></polyline></svg>');
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dd-icon"><polyline points="18 15 12 9 6 15"></polyline></svg>');
     outline: #9272fc solid 2px;
     outline-offset: 2px; }
 
@@ -2151,44 +2037,20 @@ $scrollbar-color: #b0b0b0;
 /* **********************************  _search.scss TODO  *********************************** */
 /* Used for Search webcontrol */
 #pxwebcontent .search_panel {
-  border: solid 3px #006885;
-  background-color: #F8F7F6;
-  padding: 3px 10px 10px 10px;
-  margin-bottom: 10px; }
+  border: solid 3px #2870ae;
+  background-color: #eee;
+  padding: 3px 10px 10px 10px; }
 
 #pxwebcontent .search_label {
-  /*font-family: Verdana;*/
-  /*@include pxweb-font;*/
-  /*font-size: 0.9em;*/
-  font-family: 'Roboto Condensed', sans-serif !important;
-  font-stretch: condensed;
-  font-weight: bold;
-  font-size: 15px;
-  margin-top: 5px;
+  font-family: Verdana;
+  font-size: 0.9em;
   display: block; }
 
 #pxwebcontent .search_textbox {
-  width: 200px;
-  margin: 0 5px 5px 0;
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal; }
-  #pxwebcontent .search_textbox:focus {
-    outline: #9272fc solid 2px;
-    outline-offset: 2px; }
-
-#pxwebcontent .search_button {
-  display: inline-block;
-  cursor: pointer; }
-  #pxwebcontent .search_button:focus {
-    outline: #9272fc solid 2px;
-    outline-offset: 2px; }
+  width: 200px; }
 
 #pxwebcontent .search_error {
-  /*font-family: Verdana;*/
-  font-family: 'Roboto', sans-serif !important;
-  font-stretch: normal;
-  font-weight: normal;
+  font-family: Verdana;
   font-size: 0.9em;
   color: #B0272E;
   display: block;
@@ -2212,7 +2074,7 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent hr.green-rule {
   width: 100%;
-  border-color: #007694; }
+  border-color: #b6e8b8; }
 
 #pxwebcontent .searchvalues-listbox-container {
   margin-top: 10px; }
@@ -2295,8 +2157,8 @@ $scrollbar-color: #b0b0b0;
   background-size: 24px auto, 100%;
   font-size: 16px; }
   #pxwebcontent select.selectfromgroup-selectgrouping:hover {
-    border: 1px solid #007694;
-    outline: #007694 solid 1px; }
+    border: 1px solid #b6e8b8;
+    outline: #b6e8b8 solid 1px; }
   #pxwebcontent select.selectfromgroup-selectgrouping:focus {
     background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dd-icon"><polyline points="18 15 12 9 6 15"></polyline></svg>');
     outline: #9272fc solid 2px;
@@ -2333,27 +2195,15 @@ $scrollbar-color: #b0b0b0;
 
 /* **********************************  _table.scss TODO etter side 3 *********************************** */
 #pxwebcontent #pcaxis_tablediv .table-title {
-  /*font-size: 150%;
+  font-size: 150%;
   line-height: 200%;
   text-transform: none;
   font-weight: bold;
   padding: 5px 5px 5px 5px;
-  padding-bottom: 1em;
-  */
-  font-family: Roboto Condensed, sans-serif;
-  font-weight: 700;
-  line-height: 100%;
-  margin-top: 5px;
-  /*    margin-left: 15px;*/
-  display: block;
-  color: #222;
-  /*    font-size: 28px;*/
-  margin-bottom: 12px;
   background-color: #fff;
   border-style: none;
-  padding-bottom: 25px;
-  padding-top: 25px;
-  display: table-cell; }
+  padding-bottom: 1em;
+  padding-top: 15px; }
 
 #pxwebcontent .table-class {
   border-right: none;
@@ -2369,7 +2219,7 @@ $scrollbar-color: #b0b0b0;
 #pxwebcontent .table-class td {
   margin: 0px;
   text-align: right;
-  border: #949494 1px solid;
+  border: #c3dcdc 1px solid;
   background-color: #fff;
   color: #000000;
   font-size: 1em; }
@@ -2382,8 +2232,8 @@ $scrollbar-color: #b0b0b0;
 #pxwebcontent .table-class th, #pxwebcontent .table-class td.left {
   margin: 0px;
   text-align: left;
-  border: #949494 1px solid;
-  background-color: #F8F7F6; }
+  border: #c3dcdc 1px solid;
+  background-color: #ecfeed; }
 
 #pxwebcontent td.right {
   text-align: right; }
@@ -2408,13 +2258,13 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent th.table-header-first {
   font-weight: bold;
-  background-color: #F8F7F6;
+  background-color: #ecfeed;
   padding: 5px 5px 5px 5px;
   text-align: center; }
 
 #pxwebcontent .table-class td.table-header-first {
   font-weight: bold;
-  background-color: #F8F7F6; }
+  background-color: #ecfeed; }
 
 #pxwebcontent th.table-header-middle {
   font-weight: bold;
@@ -2438,13 +2288,13 @@ $scrollbar-color: #b0b0b0;
   padding: 5px 5px 5px 5px; }
 
 #pxwebcontent .attribute-cell {
-  background-image: url("../images/attribute.gif");
+  background-image: url("../../images/attribute.gif");
   background-repeat: no-repeat;
   background-position: top right;
   cursor: pointer; }
 
 #pxwebcontent .table-class .table-hover {
-  background-color: pink; }
+  background-color: #f2f0ff; }
 
 #pxwebcontent .attribute-cell a {
   color: Black; }
@@ -2767,7 +2617,7 @@ $scrollbar-color: #b0b0b0;
   border-top-right-radius: 0px; }
 
 #pxwebcontent .ui-tabs-tab li {
-  background-color: #006885; }
+  background-color: #274247; }
 
 /* **********************************  _tablelist.scss TODO part of menu *********************************** */
 /*Used in PCAxis.Web.Controls\Menu\TableOfContent\TableOfContent.ascx */
@@ -2788,17 +2638,11 @@ $scrollbar-color: #b0b0b0;
   list-style-position: outside;
   list-style-image: url("../images/Document.gif"); }
 
-/*#pxwebcontent .tableofcontent_link {
-    background: url(../images/Document.gif) 0 0 no-repeat;*/
-/*text-indent: 20px;*/
-/*padding: 0 0 0 20px;
-    display: block;
-}*/
 #pxwebcontent .tableofcontent_link {
-  background: none;
+  background: url(../images/Document.gif) 0 0 no-repeat;
+  /*text-indent: 20px;*/
   padding: 0 0 0 20px;
-  display: block;
-  color: #006885; }
+  display: block; }
 
 #pxwebcontent .tableofcontent_tablelistlink {
   background: url(../images/folder.png) 0 0 no-repeat;
@@ -2819,46 +2663,33 @@ $scrollbar-color: #b0b0b0;
   color: #b1b1b1; }
 
 #pxwebcontent #TableOfContent div.AspNet-TreeView .AspNet-TreeView-Collapse {
-  /*    background: url(../images/folder.png) 0 0 no-repeat;*/
-  /*float: none;
-    cursor: pointer;*/
-  padding: 0 18px 0 0; }
+  background: url(../images/folder.png) 0 0 no-repeat;
+  float: none;
+  cursor: pointer;
+  padding: 0 12px 0 0; }
 
 #pxwebcontent #TableOfContent div.AspNet-TreeView .AspNet-TreeView-Expand {
-  /*    background: url(../images/folder.png) 0 0 no-repeat;*/
-  /*float: none;
-    cursor: pointer;*/
-  padding: 0 18px 0 0; }
+  background: url(../images/folder.png) 0 0 no-repeat;
+  float: none;
+  cursor: pointer;
+  padding: 0 12px 0 0; }
 
 #pxwebcontent #TableOfContent div.AspNet-TreeView li.AspNet-TreeView-Leaf {
   /*background:  url(../../images/Document.gif) 0 0 no-repeat;
   padding: 0 0 5px 20px;*/
-  /*    width: 750px; */
+  width: 750px;
   white-space: normal; }
-  #pxwebcontent #TableOfContent div.AspNet-TreeView li.AspNet-TreeView-Leaf:focus {
-    outline: #9272fc solid 2px;
-    outline-offset: 2px; }
 
 #pxwebcontent #TableOfContent div.AspNet-TreeView li.AspNet-TreeView-Leaf a {
-  cursor: pointer;
-  display: block; }
-  #pxwebcontent #TableOfContent div.AspNet-TreeView li.AspNet-TreeView-Leaf a:focus {
-    outline: #9272fc solid 2px;
-    outline-offset: 2px; }
+  cursor: pointer; }
 
 #pxwebcontent #TableOfContent div.AspNet-TreeView li.AspNet-TreeView-Leaf span.AspNet-TreeView-NonLink {
   text-decoration: none;
   font-weight: bold;
   background: none; }
-  #pxwebcontent #TableOfContent div.AspNet-TreeView li.AspNet-TreeView-Leaf span.AspNet-TreeView-NonLink:focus {
-    outline: #9272fc solid 2px;
-    outline-offset: 2px; }
 
 #pxwebcontent .AspNet-TreeView-ClickableNonLink {
   font-weight: bold; }
-  #pxwebcontent .AspNet-TreeView-ClickableNonLink:focus {
-    outline: #9272fc solid 2px;
-    outline-offset: 2px; }
 
 /* **********************************  _tablequery.scss *********************************** */
 /* Used for TableQuery webcontrol, displays api query on resultpage */
@@ -2867,7 +2698,7 @@ $scrollbar-color: #b0b0b0;
   padding: 10px;
   border-style: dashed;
   border-width: 2px;
-  border-color: #007694; }
+  border-color: #00824d; }
 
 #pxwebcontent .tablequery_informationtext {
   display: block; }
@@ -2907,7 +2738,7 @@ $scrollbar-color: #b0b0b0;
   font-stretch: condensed;
   font-weight: bold;
   float: left;
-  background: #007694;
+  background: #00824d;
   color: #fff; }
 
 /* **********************************  _tablequery.scss TODO in real use? *********************************** */
@@ -2960,18 +2791,14 @@ $scrollbar-color: #b0b0b0;
 #pxwebcontent .AspNet-TreeView-Hide {
   display: none; }
 
-div.AspNet-TreeView ul li {
-  border-top: 1px solid #949494;
-  padding: 9px 0; }
-
-/*#pxwebcontent div.AspNet-TreeView ul li {
+#pxwebcontent div.AspNet-TreeView ul li {
   white-space: nowrap;
-  padding: 9px 0;
+  padding: 3px 0 2px 0;
   font-size: small;
-  font-family: Tahoma;
-}*/
+  font-family: Tahoma; }
+
 #pxwebcontent div.AspNet-TreeView ul ul {
-  margin: 9px 0 -9px 30px; }
+  margin: 2px 0 2px 10px; }
 
 #pxwebcontent div.AspNet-TreeView ul li img {
   border: none;
@@ -2982,42 +2809,22 @@ div.AspNet-TreeView ul li {
   text-decoration: none; }
 
 #pxwebcontent div.AspNet-TreeView li.AspNet-TreeView-Parent {
-  /*margin-left: 10px;*/ }
+  margin-left: 10px; }
 
 #pxwebcontent div.AspNet-TreeView li.AspNet-TreeView-Leaf {
-  /*margin-left: 10px;*/ }
+  margin-left: 10px; }
 
 #pxwebcontent div.AspNet-TreeView .AspNet-TreeView-ClickableNonlink {
   cursor: pointer; }
 
-/*#pxwebcontent a:hover, #pxwebcontent .AspNet-TreeView-ClickableNonLink:hover {
-    text-decoration: underline !important;
-}*/
-span.AspNet-TreeView-ClickableNonLink {
-  font-family: Verdana,Arial,sans-serif;
-  cursor: pointer;
-  font-family: Roboto;
-  font-weight: normal;
-  padding-top: 0px;
-  font-size: 16px;
-  line-height: 26px; }
-
-#pxwebcontent .AspNet-TreeView-ClickableNonLink {
-  font-weight: normal;
-  color: #006885; }
-
-#pxwebcontent .AspNet-TreeView-ClickableNonLink:hover {
-  text-decoration: underline !important; }
-
-/*#pxwebcontent div.AspNet-TreeView .AspNet-TreeView-Collapse {
+#pxwebcontent div.AspNet-TreeView .AspNet-TreeView-Collapse {
   background-image: url(../../images/collapse.gif);
   background-repeat: no-repeat;
   background-position: center left;
   width: 15px;
   margin-right: 3px;
   float: left;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 #pxwebcontent div.AspNet-TreeView .AspNet-TreeView-Expand {
   background: url(../../images/expand.gif);
@@ -3026,56 +2833,14 @@ span.AspNet-TreeView-ClickableNonLink {
   width: 15px;
   margin-right: 3px;
   float: left;
-  cursor: pointer;
-}*/
-span.AspNet-TreeView-Expand, span.AspNet-TreeView-Collapse {
-  background-image: none !important;
-  position: relative;
-  margin-right: 5px !important; }
-  span.AspNet-TreeView-Expand:focus, span.AspNet-TreeView-Collapse:focus {
-    outline: #9272fc solid 2px;
-    outline-offset: 2px; }
+  cursor: pointer; }
 
-span.AspNet-TreeView-Expand::before, span.AspNet-TreeView-Collapse::before {
-  line-height: 1;
-  font-size: 1.4rem;
-  /*color: #1e00be;*/
-  color: #007694;
-  font-weight: normal;
-  position: absolute;
-  left: 0px;
-  top: -2px;
-  font-family: "Material icons";
-  font-feature-settings: 'liga' 1; }
-
-span.AspNet-TreeView-Expand::before {
-  content: "\e148"; }
-
-span.AspNet-TreeView-Collapse::before {
-  content: "\e15d"; }
-
-/*#pxwebcontent div.AspNet-TreeView a,
-#pxwebcontent div.AspNet-TreeView a:visited,
-#pxwebcontent div.AspNet-TreeView a:active,
-#pxwebcontent div.AspNet-TreeView a:hover,
-#pxwebcontent div.AspNet-TreeView a:link {
-  color: $pxweb-black-2;
-}*/
 #pxwebcontent div.AspNet-TreeView a,
 #pxwebcontent div.AspNet-TreeView a:visited,
 #pxwebcontent div.AspNet-TreeView a:active,
 #pxwebcontent div.AspNet-TreeView a:hover,
 #pxwebcontent div.AspNet-TreeView a:link {
-  font-family: Roboto;
-  font-weight: normal;
-  padding-top: 0px;
-  font-size: 16px;
-  line-height: 26px;
-  color: #006885;
-  /*    text-decoration: normal;*/ }
-
-#pxwebcontent div.AspNet-TreeView a:hover {
-  text-decoration: underline !important; }
+  color: #000; }
 
 #pxwebcontent div.AspNet-TreeView .AspNet-TreeView-Selected a {
   font-weight: bold !important;
@@ -3123,7 +2888,7 @@ span.AspNet-TreeView-Collapse::before {
   clear: both; }
 
 #pxwebcontent .variableselector_selectionerror_label {
-  color: #ee0000; }
+  color: #ed5935; }
 
 #pxwebcontent .variableselector_selectionerror_label_text {
   display: none; }
@@ -3140,8 +2905,8 @@ span.AspNet-TreeView-Collapse::before {
   padding-bottom: 10px;
   background-position-x: 10px;
   background-position-y: 10px;
-  border: 2px solid #ee0000 !important;
-  border-left: 4px solid #ee0000 !important;
+  border: 2px solid #ed5935 !important;
+  border-left: 4px solid #ed5935 !important;
   width: auto;
   margin-top: 1em !important;
   margin-bottom: 1em !important;
@@ -3192,7 +2957,7 @@ span.AspNet-TreeView-Collapse::before {
   font-family: 'Roboto Condensed', sans-serif !important;
   font-stretch: condensed;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 28px;
   display: inline-block;
   padding-right: 40px;
   overflow-wrap: break-word; }
@@ -3203,13 +2968,13 @@ span.AspNet-TreeView-Collapse::before {
   font-stretch: normal;
   font-weight: normal;
   font-size: 16px;
-  color: #222;
+  color: #162327;
   cursor: pointer; }
 
 #pxwebcontent select.variableselector_valuesselect_aggregations {
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dd-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dd-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>');
   padding: .6em 1.4em .5em 2.2em;
   border: 1px solid #fff;
   background-color: #fff;
@@ -3217,10 +2982,10 @@ span.AspNet-TreeView-Collapse::before {
   background-position: left .4em top 50%, 0 0;
   background-size: 24px auto, 100%; }
   #pxwebcontent select.variableselector_valuesselect_aggregations:hover {
-    border: 1px solid #007694;
-    outline: #007694 solid 1px; }
+    border: 1px solid #b6e8b8;
+    outline: #b6e8b8 solid 1px; }
   #pxwebcontent select.variableselector_valuesselect_aggregations:focus {
-    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007694" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dd-icon"><polyline points="18 15 12 9 6 15"></polyline></svg>');
+    background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2300824d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dd-icon"><polyline points="18 15 12 9 6 15"></polyline></svg>');
     outline: #9272fc solid 2px;
     outline-offset: 2px; }
 
@@ -3229,16 +2994,11 @@ span.AspNet-TreeView-Collapse::before {
   font-size: smaller; }
 
 #pxwebcontent .variableselector_valuesselect_hiddeneventbutton_panel {
-  /*    height: 22px;*/
-  display: none; }
+  height: 22px; }
 
 #pxwebcontent .variableselector_valuesselect_statistics_panel {
   white-space: nowrap;
-  overflow: hidden;
-  border-top-style: solid;
-  border-top-color: #007694;
-  border-top-width: 2px;
-  padding-top: 7px; }
+  overflow: hidden; }
 
 #pxwebcontent .variableselector_valuesselect_valueslistbox {
   width: 100%;
@@ -3268,7 +3028,7 @@ span.AspNet-TreeView-Collapse::before {
   font-stretch: normal;
   font-weight: normal;
   font-size: 14px;
-  color: #222; }
+  color: #fff; }
 
 #pxwebcontent .variableselector_valuesselect_search_textstart_checkbox {
   margin-top: 6px; }
@@ -3328,11 +3088,11 @@ span.AspNet-TreeView-Collapse::before {
 
 /*Green background color inside valuelist*/
 #pxwebcontent .pxbox select[multiple] option:checked {
-  background: #007694 linear-gradient(0deg, #007694 0%, #007694 100%);
+  background: #00824d linear-gradient(0deg, #00824d 0%, #00824d 100%);
   -webkit-text-fill-color: #fff; }
 
 #pxwebcontent .pxbox .variableselector_valuesselect_search_textstart_checkbox.pxweb-checkbox input[type=checkbox] {
-  border-color: #007694; }
+  border-color: #b6e8b8; }
 
 #pxwebcontent .mandatory_container {
   font-family: 'Roboto Condensed', sans-serif !important;
@@ -3340,16 +3100,11 @@ span.AspNet-TreeView-Collapse::before {
   font-weight: bold; }
 
 #pxwebcontent .variableselector_valuesselect_mandatory_text {
-  font-size: 12px;
-  /*    font-weight: 400;*/ }
+  font-size: 12px; }
 
-#pxwebcontent .variableselector_valuesselect_mandatory_text:after {
-  content: "*";
+#pxwebcontent .variableselector_valuesselect_mandatory_star {
   font-size: 28px; }
 
-/*#pxwebcontent .variableselector_valuesselect_mandatory_star {
-    font-size: 28px;
-}*/
 #pxwebcontent .link-buttons-container {
   flex-basis: 100%; }
 

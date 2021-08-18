@@ -169,7 +169,7 @@ namespace PXWeb
             settings.LegendFontSize = Settings.Current.Features.Charts.Legend.FontSize;
             settings.LegendHeight = Settings.Current.Features.Charts.Legend.Height;
             settings.LineThickness = Settings.Current.Features.Charts.LineThickness;
-            settings.Logotype = Settings.Current.Features.Charts.Logotype;            
+            settings.Logotype = Settings.Current.Features.Charts.Logotype;
             settings.ShowLegend = Settings.Current.Features.Charts.Legend.Visible;
             settings.TimeSortOrder = Settings.Current.Features.Charts.TimeSortOrder;
             //settings.Title = PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel.Meta.Title;
@@ -181,7 +181,7 @@ namespace PXWeb
             settings.LineThicknessPhrame = Settings.Current.Features.Charts.LineThicknessPhrame;
             settings.LogotypePath = Settings.Current.General.Paths.ImagesPath;
             settings.LineColorPhrame = Settings.Current.Features.Charts.LineColorPhrame;
-           
+
         }
 
         protected void Application_Start(object sender, EventArgs e)
@@ -205,7 +205,7 @@ namespace PXWeb
             {
                 RouteManager.AddApiRoute();
             }
-            
+
             if (ConfigurationManager.AppSettings["CacheServiceExpirationInMinutes"] != null)
             {
                 int cacheServiceExpirationInMinutes = int.Parse(ConfigurationManager.AppSettings["CacheServiceExpirationInMinutes"]);
@@ -222,6 +222,7 @@ namespace PXWeb
 
             if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["RouteExtender"]))
             {
+                _logger.DebugFormat("RouteExtender:", ConfigurationManager.AppSettings["RouteExtender"]);
                 RouteInstance.RouteExtender = Activator.CreateInstance(Type.GetType(ConfigurationManager.AppSettings["RouteExtender"])) as IRouteExtender;
                 RouteInstance.RouteExtender.MetaCacheService = _metaCacheService;
                 RouteInstance.RouteExtender.Db = PCAxis.Sql.DbConfig.SqlDbConfigsStatic.DefaultDatabase;
@@ -247,7 +248,7 @@ namespace PXWeb
             }
 
             //Initialize Index search
-            SearchManager.Current.Initialize(PXWeb.Settings.Current.General.Paths.PxDatabasesPath, 
+            SearchManager.Current.Initialize(PXWeb.Settings.Current.General.Paths.PxDatabasesPath,
                                             new PCAxis.Search.GetMenuDelegate(PXWeb.Management.PxContext.GetMenuAndItem),
                                             PXWeb.Settings.Current.Features.Search.CacheTime,
                                             PXWeb.Settings.Current.Features.Search.DefaultOperator);
@@ -258,16 +259,16 @@ namespace PXWeb
             InitializeCacheController();
 
             if (PXWeb.Settings.Current.Features.General.BackgroundWorkerEnabled)
-            {                
+            {
                 //Start PX-Web background worker
                 PxWebBackgroundWorker.Work(PXWeb.Settings.Current.Features.BackgroundWorker.SleepTime);
             }
-
+            InitializeLogFlusher();
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-           // InitializeChartSettings();
+            // InitializeChartSettings();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -334,7 +335,7 @@ namespace PXWeb
             //         , new SSDRouteHandler()
             //    ));
 
-            
+
 
             RouteTable.Routes.MapPageRoute("DefaultRoute",
                                            PxUrl.PX_START + "/",
@@ -351,7 +352,7 @@ namespace PXWeb
             RouteTable.Routes.MapPageRoute("DbSearchRoute",
                                            PxUrl.PX_START + "/" +
                                            "{" + PxUrl.LANGUAGE_KEY + "}/" +
-                                           "{" + PxUrl.DB_KEY + "}/" + 
+                                           "{" + PxUrl.DB_KEY + "}/" +
                                             PxUrl.VIEW_SEARCH + "/",
                                            "~/Search.aspx");
             RouteTable.Routes.MapPageRoute("DbPathRoute",
@@ -389,14 +390,6 @@ namespace PXWeb
                                            "{" + PxUrl.TABLE_KEY + "}/" +
                                            PxUrl.VIEW_TIPS_IDENTIFIER + "/",
                                            "~/MarkingTips.aspx");
-            RouteTable.Routes.MapPageRoute("SelectionFootnotesRoute",
-                                           PxUrl.PX_START + "/" +
-                                           "{" + PxUrl.LANGUAGE_KEY + "}/" +
-                                           "{" + PxUrl.DB_KEY + "}/" +
-                                           "{" + PxUrl.PATH_KEY + "}/" +
-                                           "{" + PxUrl.TABLE_KEY + "}/" +
-                                           PxUrl.VIEW_FOOTNOTES_IDENTIFIER + "/",
-                                           "~/FootnotesSelection.aspx");
             RouteTable.Routes.MapPageRoute("TablePresentationRoute",
                                            PxUrl.PX_START + "/" +
                                            "{" + PxUrl.LANGUAGE_KEY + "}/" +
@@ -479,6 +472,13 @@ namespace PXWeb
 
             _cacheController.Initialize(lstCache);
             PXWeb.Management.PxContext.CacheController = _cacheController;
+        }
+
+
+        private void InitializeLogFlusher()
+        {
+            PXWeb.Management.LogFlusher logFlusher = new PXWeb.Management.LogFlusher();
+            logFlusher.InitializeSchedualFlush();
         }
     }
 }

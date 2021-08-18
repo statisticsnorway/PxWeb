@@ -401,7 +401,6 @@ namespace PXWeb
             {
                 lnkInformation.NavigateUrl = PCAxis.Web.Core.Management.LinkManager.CreateLink("~/InformationSelection.aspx");
                 lnkInformation.Text = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebInformation");
-                lnkFootnotes.NavigateUrl = PCAxis.Web.Core.Management.LinkManager.CreateLink("~/FootnotesSelection.aspx");
                 lnkFootnotes.Text = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebFootnotes");
                 InitializeDetailedInformation(path);
                 InformationLinks.Visible = true;

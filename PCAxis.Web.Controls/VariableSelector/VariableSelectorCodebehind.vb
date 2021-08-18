@@ -624,6 +624,7 @@ Public Class VariableSelectorCodebehind
                 valuesetsAndGroupingsCount += VariableSelect.Variable.Groupings.Count
             End If
 
+            'Was in UU: If (valuesetsAndGroupingsCount > 1) Then
             If (valuesetsAndGroupingsCount > 0) Then
 
 

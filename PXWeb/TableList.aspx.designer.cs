@@ -7,37 +7,50 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PXWeb {
-    
-    
-    public partial class FootnotesSelection {
-        
+namespace PXWeb
+{
+
+
+    public partial class TableList
+    {
+
         /// <summary>
-        /// TableInformationFootnoteSelect control.
+        /// TableListExplanation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::PCAxis.Web.Controls.TableInformation TableInformationFootnoteSelect;
-        
+        protected global::System.Web.UI.WebControls.Panel TableListExplanation;
+
         /// <summary>
-        /// FootnoteSelectLink control.
+        /// MenuExplanation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::PCAxis.Web.Controls.Footnote FootnoteSelectLink;
-        
+        protected global::PXWeb.UserControls.MenuExplanation MenuExplanation;
+
+        /// <summary>
+        /// MenuTableList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel MenuTableList;
+
         /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>
         /// Auto-generated property.
         /// </remarks>
-        public new PXWeb.PxWeb Master {
-            get {
+        public new PXWeb.PxWeb Master
+        {
+            get
+            {
                 return ((PXWeb.PxWeb)(base.Master));
             }
         }

@@ -135,7 +135,8 @@ public static class PCAxisRepository
                     string menu = nodePath.Length > 1 ? nodePath[nodePath.Length-2]:"START";
 
                     if (tid.Contains("'") || menu.Contains("'")) throw new ArgumentException("Possible SQL injection");
-                    menuObj = MenuObject.Create(GetCnmmMenu(db, language, tid, menu));
+                    var tmpCnmmMenu = GetCnmmMenu(db, language, tid, menu);
+                    menuObj = MenuObject.Create(tmpCnmmMenu);
                 }
 
                 // Request object to be stored in cache
@@ -213,7 +214,7 @@ public static class PCAxisRepository
                                 {
                                     TableLink tbl = (TableLink)item;
 
-                                    if (string.Compare(tbl.ID.Selection, nodeId, true) == 0)
+                                    if (string.Compare(tbl.ID.Selection, nodeId, false) == 0)
                                     {
                                         tblFix = tbl;
                                     }
@@ -235,6 +236,11 @@ public static class PCAxisRepository
                                 {
                                     item.SortCode = item.Text;
                                 }
+                            };
+                            m.Restriction = item =>
+                            {
+                                //jira SS-373. Opens up, to let the database take care of access controll. 
+                                return true;
                             };
                         });
 
