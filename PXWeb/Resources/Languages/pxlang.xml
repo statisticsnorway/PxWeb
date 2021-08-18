@@ -688,6 +688,8 @@
    <sentence name="PxWebOfficialStatisticsLogo" value="Logotype for official statistics"/>
 
    <sentence name="PxWebMenuBurger" value="Menu" />
+   <sentence name="PxWebTools" value="Tools" />
+   <sentence name="PxWebToolsClose" value="Close" />
    <sentence name="PxWebMenu" value="Menu"/>
    <sentence name="PxWebMenuExplanationRegionHeader" value="Letter code after table title shows lowest regional level:" />
    <sentence name="PxWebMenuExplanationRegion" value="(C) = county, (M) = municipality, (BU) = Basic statistical unit, (UD) = urban district, (US) = urban settlement" />
@@ -771,20 +773,21 @@
   <sentence name="PxWebSearchResultText" value ="Searchresult: ({0} hits)"/>
   <sentence name="PxWebSearchResultColumnTable" value ="Table"/>
   <sentence name="PxWebSearchResultColumnPublished" value ="Published"/>
-  <sentence name="PxWebTitleDefault" value ="PX-Web - Select database"/>
-  <sentence name="PxWebTitleApiHelp" value ="PX-Web - API help"/>
-  <sentence name="PxWebTitleChart" value ="PX-Web - Chart"/>
-  <sentence name="PxWebTitleDataSort" value ="PX-Web - Sort"/>
-  <sentence name="PxWebTitleErrorGeneral" value ="PX-Web - Oooops!"/>
-   <sentence name="PxWebTitleInformationPresentation" value ="PX-Web - Information"/>
-  <sentence name="PxWebInformationSelection" value ="PX-Web - Information"/>
-  <sentence name="PxWebTitleMarkingTips" value ="PX-Web - Tips"/>
-  <sentence name="PxWebTitleMenu" value ="PX-Web - Select table"/>
-  <sentence name="PxWebTitleSearch" value ="PX-Web - Search"/>
-  <sentence name="PxWebTitleSelection" value ="PX-Web - Select variable and values"/>
-  <sentence name="PxWebTitleTable" value ="PX-Web - Table"/>
-  <sentence name="PxWebSavedQueryUnsafeMessageHeading" value ="The table contains customized text"/>
-  <sentence name="PxWebSavedQueryUnsafeMessage" value ="Text was added manually, which did not exist in the original table."/>
+  <sentence name="PxWebTitleDefault" value ="PxWeb - Select database"/>
+  <sentence name="PxWebTitleApiHelp" value ="PxWeb - API help"/>
+  <sentence name="PxWebTitleChart" value ="PxWeb - Chart"/>
+  <sentence name="PxWebTitleDataSort" value ="PxWeb - Sort"/>
+  <sentence name="PxWebTitleErrorGeneral" value ="PxWeb - Oooops!"/>
+   <sentence name="PxWebTitleFootnotesSelection" value ="PxWeb - Footnotes"/>
+  <sentence name="PxWebTitleInformationPresentation" value ="PxWeb - Information"/>
+  <sentence name="PxWebTitleInformationSelection" value ="PxWeb - Information"/>
+  <sentence name="PxWebTitleMarkingTips" value ="PxWeb - Tips"/>
+  <sentence name="PxWebTitleMenu" value ="PxWeb - Select table"/>
+  <sentence name="PxWebTitleSearch" value ="PxWeb - Search"/>
+  <sentence name="PxWebTitleSelection" value ="PxWeb - Select variable and values"/>
+  <sentence name="PxWebTitleTable" value ="PxWeb - Table"/>
+<sentence name="PxWebSavedQueryUnsafeMessageHeading" value ="Text has been changed"/>
+  <sentence name="PxWebSavedQueryUnsafeMessage" value ="The text in the table differs from the original in the database, because it has been changed manually"/>
   <sentence name="PxWebGeneralErrorMessage" value ="An error has occurred. The error has been registered"/>
   <sentence name="PxWebSavedQueryExecuteErrorMessage" value ="Your saved query can not be found. The table can have been moved or removed."/>
   <sentence name="PxWebReturnToStartpage" value ="Return to start page"/>
