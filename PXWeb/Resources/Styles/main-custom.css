@@ -168,9 +168,10 @@ body {
 .statistikkside-metaloft {
   padding-left: 10px; }
 
-#footer {
-  padding-left: 10px; }
 
+/*#footer {
+  padding-left: 10px; }
+*/
 /*#header {
   padding-left: 10px; }
 */
@@ -446,4 +447,21 @@ h1 {
 .px-messages-backupcms{
     margin-top:10px;
     margin-bottom:10px
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 21px;
+        margin-left:10px;
+    }
+    .col {
+        padding-left: 0px;
+        padding-right: 0px
+    }
+    .xp-region {
+        margin-left:0px;
+    }
+    #pxwebcontent .top-link {
+        box-sizing: content-box;
+    }
 }
