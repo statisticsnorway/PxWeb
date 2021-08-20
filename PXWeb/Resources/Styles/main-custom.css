@@ -460,6 +460,7 @@ h1 {
     }
     .xp-region {
         margin-left:0px;
+        width:100%;
     }
     #pxwebcontent .top-link {
         box-sizing: content-box;
