@@ -236,6 +236,11 @@ public static class PCAxisRepository
                                     item.SortCode = item.Text;
                                 }
                             };
+                            m.Restriction = item =>
+                            {
+                                //jira SS-373. Opens up, to let the database take care of access controll. 
+                                return true;
+                            };
                         });
 
             

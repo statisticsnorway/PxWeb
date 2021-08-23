@@ -95,7 +95,7 @@ namespace PXWeb
                 if (PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel != null)
                 {
                     Master.SetBreadcrumb(PCAxis.Web.Controls.Breadcrumb.BreadcrumbMode.Presentation);
-                    Master.SetH1TextMenuLevel();
+                    //Master.SetH1TextMenuLevel();
                     Master.SetNavigationFlowMode(PCAxis.Web.Controls.NavigationFlow.NavigationFlowMode.Third);
                     Master.SetNavigationFlowVisibility(PXWeb.Settings.Current.Navigation.ShowNavigationFlow);
                     InitializeCommandBar();

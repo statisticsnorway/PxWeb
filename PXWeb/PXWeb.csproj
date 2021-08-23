@@ -101,11 +101,11 @@
     <Reference Include="Oracle.ManagedDataAccess, Version=2.0.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.Core.2.19.60\lib\netstandard2.0\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="PCAxis.Common, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Common.1.0.1\lib\netstandard2.0\PCAxis.Common.dll</HintPath>
+    <Reference Include="PCAxis.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PcAxis.Common.1.0.2\lib\netstandard2.0\PCAxis.Common.dll</HintPath>
     </Reference>
-    <Reference Include="PCAxis.Core, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Core.1.0.2\lib\netstandard2.0\PCAxis.Core.dll</HintPath>
+    <Reference Include="PCAxis.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PcAxis.Core.1.0.3\lib\netstandard2.0\PCAxis.Core.dll</HintPath>
     </Reference>
     <Reference Include="PCAxis.Encryption, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PCAxis.Encryption.1.0.0\lib\netstandard2.0\PCAxis.Encryption.dll</HintPath>
@@ -128,11 +128,11 @@
     <Reference Include="PCAxis.PX.Core, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PCAxis.PX.Core.1.0.2\lib\netstandard2.0\PCAxis.PX.Core.dll</HintPath>
     </Reference>
-    <Reference Include="PCAxis.Query, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Query.1.0.1\lib\netstandard2.0\PCAxis.Query.dll</HintPath>
+    <Reference Include="PCAxis.Query, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PcAxis.Query.1.0.2\lib\netstandard2.0\PCAxis.Query.dll</HintPath>
     </Reference>
-    <Reference Include="PCAxis.Sql, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Sql.1.0.1\lib\netstandard2.0\PCAxis.Sql.dll</HintPath>
+    <Reference Include="PCAxis.Sql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PcAxis.Sql.1.1.0\lib\netstandard2.0\PCAxis.Sql.dll</HintPath>
     </Reference>
     <Reference Include="PXWeb.SavedQuery.MsSql, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PXWeb.SavedQuery.MsSql.1.0.1\lib\netstandard2.0\PXWeb.SavedQuery.MsSql.dll</HintPath>
@@ -215,6 +215,10 @@
     <Content Include="DbScript\SQL\Create_SavedQueryMeta.sql" />
     <Content Include="Login.aspx" />
     <Content Include="DbScript\SQL\regsql_mrp.sql" />
+    <Content Include="Monitor\accept.png" />
+    <Content Include="Monitor\Default.aspx" />
+    <Content Include="Monitor\exclamation.png" />
+    <Content Include="Monitor\IndexStatus.aspx" />
     <Content Include="Ping\Default.aspx" />
     <Content Include="Resources\Images\alert-16.gif" />
     <Content Include="Resources\Images\arrow-down-10.gif" />
@@ -257,6 +261,8 @@
     <Content Include="Resources\Images\small_button_select_by_group.gif" />
     <Content Include="Resources\Images\small_button_txt.png" />
     <Content Include="Resources\Images\small_button_xlsx.png" />
+    <Content Include="Resources\Images\SSB-top-banner.png" />
+    <Content Include="Resources\Images\SSB_logo.png" />
     <Content Include="Resources\Images\svg\arrow-down-hover.svg" />
     <Content Include="Resources\Images\svg\arrow-down.svg" />
     <Content Include="Resources\Images\svg\arrow-up-hover.svg" />
@@ -319,6 +325,13 @@
     <Content Include="Resources\Styles\scss\not_in_use\_AReadMe.txt" />
     <Content Include="Resources\Styles\scss\common\_nested-accordion.scss" />
     <Content Include="Resources\PX\Databases\Example\Misc\OfficialStatistics\officialstatistics.px" />
+    <Content Include="Monitor\web.config" />
+    <None Include="Monitor\Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="Monitor\Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <None Include="Scripts\jquery-3.5.1.js" />
     <None Include="Scripts\jquery-3.5.1.min.js" />
@@ -671,7 +684,6 @@
     <Compile Include="Code\Views\ChartViewSerializer.cs" />
     <Compile Include="Code\Views\FileChartViewSerializer.cs" />
     <Compile Include="Code\Views\FileViewSerializer.cs" />
-    <Compile Include="Code\Views\FootnoteViewSerializer.cs" />
     <Compile Include="Code\Views\InformationViewSerializer.cs" />
     <Compile Include="Code\Views\IViewSerializer.cs" />
     <Compile Include="Code\Views\ScreenViewSerializerAdapter.cs" />
@@ -699,20 +711,6 @@
     </Compile>
     <Compile Include="ErrorGeneral.aspx.designer.cs">
       <DependentUpon>ErrorGeneral.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FootnotesPresentation.aspx.cs">
-      <DependentUpon>FootnotesPresentation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FootnotesPresentation.aspx.designer.cs">
-      <DependentUpon>FootnotesPresentation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FootnotesSelection.aspx.cs">
-      <DependentUpon>FootnotesSelection.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FootnotesSelection.aspx.designer.cs">
-      <DependentUpon>FootnotesSelection.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -755,6 +753,22 @@
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Monitor\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\IndexStatus.aspx.cs">
+      <DependentUpon>IndexStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\IndexStatus.aspx.designer.cs">
+      <DependentUpon>IndexStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\JsonTableQuery.cs" />
+    <Compile Include="Monitor\JsonTableResult.cs" />
     <Compile Include="Ping\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -863,9 +877,13 @@
       <Project>{1439911B-BE4E-48A0-9208-927321992C67}</Project>
       <Name>CSSFriendly</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Norway\LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
-      <Project>{e2beb3f3-511a-41ae-a8ad-dee6d2d56e3f}</Project>
+    <ProjectReference Include="..\Norway\Norway.LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
+      <Project>{b8a6d94a-89b3-42a6-a058-bedea9965f78}</Project>
       <Name>Norway.LogVisitorStatistics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Norway\PCAxis.Metadata\Norway.PCAxis.Metadata.csproj">
+      <Project>{eb39cded-f208-450b-bead-c66ea8c423d6}</Project>
+      <Name>Norway.PCAxis.Metadata</Name>
     </ProjectReference>
     <ProjectReference Include="..\PCAxis.Api\PCAxis.Api.csproj">
       <Project>{8eb90826-a01b-494d-a596-e5c5f9815c3b}</Project>
@@ -879,6 +897,22 @@
       <Project>{DF9DA2F6-7942-4834-8B51-8F6358DE8DB8}</Project>
       <Name>PCAxis.Chart</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PCAxis.Excel.Web.Controls\PCAxis.Excel.Web.Controls.csproj">
+      <Project>{30d1fc66-e47b-4417-8bd5-1693f09e028b}</Project>
+      <Name>PCAxis.Excel.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCAxis.Html5Table.Web.Controls\PCAxis.Html5Table.Web.Controls.csproj">
+      <Project>{c21f6414-06b0-406c-9864-b6c72d2009bb}</Project>
+      <Name>PCAxis.Html5Table.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCAxis.JsonStat.Web.Controls\PCAxis.JsonStat.Web.Controls.csproj">
+      <Project>{6c558014-e4db-4399-a759-12e916f0ba4e}</Project>
+      <Name>PCAxis.JsonStat.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCAxis.JsonStat2.Web.Controls\PCAxis.JsonStat2.Web.Controls.csproj">
+      <Project>{6e74c29d-772b-40b8-868f-dc74711e052d}</Project>
+      <Name>PCAxis.JsonStat2.Web.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PCAxis.Search\PCAxis.Search.csproj">
       <Project>{dd41bc03-2b7a-4d76-af3c-39830ae8e75d}</Project>
       <Name>PCAxis.Search</Name>
@@ -890,6 +924,10 @@
     <ProjectReference Include="..\PCAxis.Web.Core\PCAxis.Web.Core.vbproj">
       <Project>{BC004D40-DDC6-446E-A3DF-5D4BA0AE92B8}</Project>
       <Name>PCAxis.Web.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PX.Json.Web.Controls\PX.Json.Web.Controls.csproj">
+      <Project>{cd8b2dc6-72c2-4459-9bc8-eb5291877316}</Project>
+      <Name>PX.Json.Web.Controls</Name>
     </ProjectReference>
     <ProjectReference Include="..\PX.Security\PX.Security.csproj">
       <Project>{dcb50c42-c3d0-48f9-9c1f-8d5af99ddb95}</Project>
@@ -974,8 +1012,6 @@
   <ItemGroup>
     <Content Include="CommandBarCustomPlugins.config" />
     <Content Include="DataSort.aspx" />
-    <Content Include="FootnotesPresentation.aspx" />
-    <Content Include="FootnotesSelection.aspx" />
     <Content Include="Global.asax" />
     <Content Include="InformationPresentation.aspx" />
     <Content Include="InformationSelection.aspx" />
