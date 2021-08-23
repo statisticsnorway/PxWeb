@@ -101,8 +101,8 @@
     <Reference Include="Oracle.ManagedDataAccess, Version=2.0.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.Core.2.19.60\lib\netstandard2.0\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="PCAxis.Common, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Common.1.0.1\lib\netstandard2.0\PCAxis.Common.dll</HintPath>
+    <Reference Include="PCAxis.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PcAxis.Common.1.0.2\lib\netstandard2.0\PCAxis.Common.dll</HintPath>
     </Reference>
     <Reference Include="PCAxis.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PcAxis.Core.1.0.3\lib\netstandard2.0\PCAxis.Core.dll</HintPath>
@@ -128,8 +128,8 @@
     <Reference Include="PCAxis.PX.Core, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PCAxis.PX.Core.1.0.2\lib\netstandard2.0\PCAxis.PX.Core.dll</HintPath>
     </Reference>
-    <Reference Include="PCAxis.Query, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Query.1.0.1\lib\netstandard2.0\PCAxis.Query.dll</HintPath>
+    <Reference Include="PCAxis.Query, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PcAxis.Query.1.0.2\lib\netstandard2.0\PCAxis.Query.dll</HintPath>
     </Reference>
     <Reference Include="PCAxis.Sql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PcAxis.Sql.1.1.0\lib\netstandard2.0\PCAxis.Sql.dll</HintPath>
@@ -263,6 +263,8 @@
     <Content Include="Resources\Images\small_button_select_by_group.gif" />
     <Content Include="Resources\Images\small_button_txt.png" />
     <Content Include="Resources\Images\small_button_xlsx.png" />
+    <Content Include="Resources\Images\SSB-top-banner.png" />
+    <Content Include="Resources\Images\SSB_logo.png" />
     <Content Include="Resources\Images\svg\arrow-down-hover.svg" />
     <Content Include="Resources\Images\svg\arrow-down.svg" />
     <Content Include="Resources\Images\svg\arrow-up-hover.svg" />

@@ -281,6 +281,7 @@ Public Class TableQueryCodebehind
             Dim postUrl = txtUrl.Text.Trim()
 
             If (postUrl.EndsWith("/")) Then
+                'Will we ever get here?
                 postUrl = postUrl.Remove(postUrl.Length - 1)
             End If
 
