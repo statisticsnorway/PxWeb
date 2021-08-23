@@ -396,9 +396,9 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
     padding-top: 7px;
 }
 
-#pxwebcontent .variableselector_valuesselect_variabletitle label:first-letter {
+/*#pxwebcontent .variableselector_valuesselect_variabletitle:first-letter {
     text-transform: capitalize;
-}
+}*/
 #pxwebcontent .variableselector_valuesselect_mandatory_text:after {
     content: "*";
     font-size: 28px;
