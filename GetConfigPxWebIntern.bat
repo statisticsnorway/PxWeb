@@ -5,10 +5,13 @@ copy C:\git_adm.ssb.no\configRepos\px-web-intern\localhost\konfigfiler\setting.c
 copy C:\git_adm.ssb.no\configRepos\px-web-intern\localhost\konfigfiler\SqlDb.config .
 copy C:\git_adm.ssb.no\configRepos\px-web-intern\localhost\konfigfiler\Web.config .
 
-rem cd PXWebIndeksering\
-rem mkdir utv_24v_intern
-rem copy C:\git_adm.ssb.no\config\px-web-intern\MetaIDConf\database.config utv_24v_intern\.
-rem copy C:\git_adm.ssb.no\config\px-web-intern\MetaIDConf\metadata.config utv_24v_intern\.
-echo "Done. Without PXWebIndeksering"
+cd Resources\PX\Databases\
+mkdir utv_24v_intern
+copy C:\git_adm.ssb.no\configRepos\px-web-intern\localhost\MetaId\database.config utv_24v_intern\.
+copy C:\git_adm.ssb.no\configRepos\px-web-intern\localhost\MetaId\metadata.config utv_24v_intern\.
+
+
+echo "Done."
+pause
 
 

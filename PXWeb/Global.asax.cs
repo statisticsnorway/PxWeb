@@ -218,6 +218,7 @@ namespace PXWeb
 
             if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["RouteExtender"]))
             {
+                _logger.DebugFormat("RouteExtender:", ConfigurationManager.AppSettings["RouteExtender"]);
                 RouteInstance.RouteExtender = Activator.CreateInstance(Type.GetType(ConfigurationManager.AppSettings["RouteExtender"])) as IRouteExtender;
                 RouteInstance.RouteExtender.MetaCacheService = _metaCacheService;
                 RouteInstance.RouteExtender.Db = PCAxis.Sql.DbConfig.SqlDbConfigsStatic.DefaultDatabase;
@@ -385,14 +386,6 @@ namespace PXWeb
                                            "{" + PxUrl.TABLE_KEY + "}/" +
                                            PxUrl.VIEW_TIPS_IDENTIFIER + "/",
                                            "~/MarkingTips.aspx");
-            RouteTable.Routes.MapPageRoute("SelectionFootnotesRoute",
-                                           PxUrl.PX_START + "/" +
-                                           "{" + PxUrl.LANGUAGE_KEY + "}/" +
-                                           "{" + PxUrl.DB_KEY + "}/" +
-                                           "{" + PxUrl.PATH_KEY + "}/" +
-                                           "{" + PxUrl.TABLE_KEY + "}/" +
-                                           PxUrl.VIEW_FOOTNOTES_IDENTIFIER + "/",
-                                           "~/FootnotesSelection.aspx");
             RouteTable.Routes.MapPageRoute("TablePresentationRoute",
                                            PxUrl.PX_START + "/" +
                                            "{" + PxUrl.LANGUAGE_KEY + "}/" +
@@ -411,15 +404,6 @@ namespace PXWeb
                                            PxUrl.VIEW_CHART_IDENTIFIER + "/" +
                                            "{" + PxUrl.LAYOUT_KEY + "}/",
                                            "~/Chart.aspx");
-            RouteTable.Routes.MapPageRoute("FootnotesPresentationRoute",
-                                           PxUrl.PX_START + "/" +
-                                           "{" + PxUrl.LANGUAGE_KEY + "}/" +
-                                           "{" + PxUrl.DB_KEY + "}/" +
-                                           "{" + PxUrl.PATH_KEY + "}/" +
-                                           "{" + PxUrl.TABLE_KEY + "}/" +
-                                           PxUrl.VIEW_FOOTNOTES_IDENTIFIER + "/" +
-                                           "{" + PxUrl.LAYOUT_KEY + "}/",
-                                           "~/FootnotesPresentation.aspx");
             RouteTable.Routes.MapPageRoute("InformationPresentationRoute",
                                            PxUrl.PX_START + "/" +
                                            "{" + PxUrl.LANGUAGE_KEY + "}/" +
