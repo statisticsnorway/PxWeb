@@ -4,8 +4,7 @@
     <siteMapNode url="Menu.aspx" title="PxWebMenu"  description="">
       <siteMapNode url="Selection.aspx" title="PxWebSelection"  description="">
 			 <siteMapNode url="InformationSelection.aspx" title="PxWebInformation"  description="" />
-			 <siteMapNode url="FootnotesSelection.aspx" title="PxWebFootnotes"  description="" />
-			 <siteMapNode url="MarkingTips.aspx" title="PxWebMarkingTips"  description="" />
+       <siteMapNode url="MarkingTips.aspx" title="PxWebMarkingTips"  description="" />
 			 <siteMapNode url="Presentation.aspx" title="PxWebPresentation"  description="" >
 				  <siteMapNode url="InformationPresentation.aspx" title="PxWebInformation"  description="" />
           <siteMapNode url="DataSort.aspx" title="PxWebDataSort"  description="" />
