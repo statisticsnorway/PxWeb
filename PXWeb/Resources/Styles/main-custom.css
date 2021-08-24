@@ -168,9 +168,10 @@ body {
 .statistikkside-metaloft {
   padding-left: 10px; }
 
-#footer {
-  padding-left: 10px; }
 
+/*#footer {
+  padding-left: 10px; }
+*/
 /*#header {
   padding-left: 10px; }
 */
@@ -289,7 +290,19 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 #pxwebcontent input[type="submit"] {
   background-image: unset; }
 
-#endregion
+/*budle.css sets margin to 0px. radiobutton looses space in front of text.*/
+#pxwebcontent input[type="radio"] {
+    margin: 3px 3px 0px 5px;
+}
+#pxwebcontent label{
+    display:inline;
+}
+/*override bundle.css to get correct size of boxes*/
+#pxwebcontent .commandbar-listbox-container {
+    box-sizing:content-box;
+}
+#endregion 
+
 #pxwebcontent .presentation-left table {
   overflow: auto; }
 
@@ -427,4 +440,29 @@ h1 {
 #pxwebcontent .footnotes_container h3, #pxwebcontent .footnotes_container h4, #pxwebcontent .footnotes_container .accordion-header, #pxwebcontent .footnotes_container .obs-notes {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
+}
+
+/* backup if cms is not available*/
+
+.px-messages-backupcms{
+    margin-top:10px;
+    margin-bottom:10px
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 21px;
+        margin-left:10px;
+    }
+    .col {
+        padding-left: 0px;
+        padding-right: 0px
+    }
+    .xp-region {
+        margin-left:0px;
+        width:100%;
+    }
+    #pxwebcontent .top-link {
+        box-sizing: content-box;
+    }
 }
