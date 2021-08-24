@@ -665,11 +665,7 @@ namespace PCAxis.Api
                     {
                         _logger.Error(String.Format("url={0}, type=error, caller={1}", context.Request.RawUrl, context.Request.UserHostAddress), sendEx);
                     }
-                }
-                catch(Exception sendEx)
-                {
-                    _logger.Error(String.Format("url={0}, type=error, caller={1}", context.Request.RawUrl, context.Request.UserHostAddress), sendEx);
-                }
+                
                 _logger.Info(String.Format("url={0}, type=error, caller={1}, cached=false ", context.Request.RawUrl, context.Request.UserHostAddress), ex);
                 _logger.Warn(ex);
             }
