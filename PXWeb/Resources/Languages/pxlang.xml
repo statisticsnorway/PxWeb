@@ -688,6 +688,8 @@
    <sentence name="PxWebOfficialStatisticsLogo" value="Logotype for official statistics"/>
 
    <sentence name="PxWebMenuBurger" value="Menu" />
+   <sentence name="PxWebTools" value="Tools" />
+   <sentence name="PxWebToolsClose" value="Close" />
    <sentence name="PxWebMenu" value="Menu"/>
    <sentence name="PxWebMenuExplanationRegionHeader" value="Letter code after table title shows lowest regional level:" />
    <sentence name="PxWebMenuExplanationRegion" value="(C) = county, (M) = municipality, (BU) = Basic statistical unit, (UD) = urban district, (US) = urban settlement" />
