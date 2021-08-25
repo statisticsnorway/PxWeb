@@ -164,7 +164,7 @@ namespace PCAxis.Api
         public void Clear()
         {
             _logger.Info("Cache cleared started");
-            ClearCache();
+             ClearCache();
             _logger.Info("Cache cleared finished");
         }
 
