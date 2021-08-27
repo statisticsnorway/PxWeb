@@ -24,9 +24,7 @@ namespace PCAxis.Api.Serializers
         {
             cacheResponse.ContentType = "text/csv; charset=" + System.Text.Encoding.Default.WebName;
 
-            //OBS OBS TODO Waiting for nu nuget
-            //PCAxis.Paxiom.IPXModelStreamSerializer serializer = new PCAxis.Paxiom.Csv2FileSerializer();
-            PCAxis.Paxiom.IPXModelStreamSerializer serializer = new PCAxis.Paxiom.CsvFileSerializer();
+            PCAxis.Paxiom.IPXModelStreamSerializer serializer = new PCAxis.Paxiom.Csv2FileSerializer();
 
             using (System.IO.MemoryStream stream = new System.IO.MemoryStream())
             {
