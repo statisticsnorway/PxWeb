@@ -856,8 +856,9 @@ namespace PXWeb
     
                 }
          
-            //return strResult.Replace("bundle.js", "bundlex.js").Replace("00a4381f9.js", "00a4381f9x.js");
-            return strResult.Replace("bundle.js", "bundlex.js");
+            
+            //return strResult.Replace("bundle.js", "bundlex.js").Replace("xpramme","");
+            return strResult.Replace("<script src=\"https://www.utv.ssb.no/_/asset/mimir:0000017b874d5770/js/bundle.js\"></script>", "").Replace("xpramme", "");
             //}
             //catch
             //{
