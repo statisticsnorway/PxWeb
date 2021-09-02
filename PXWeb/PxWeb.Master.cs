@@ -94,7 +94,7 @@ namespace PXWeb
 
         private string _cmsHost;
 
-        private string CmsHost
+        public string CmsHost
         {
             get
             {
@@ -855,10 +855,9 @@ namespace PXWeb
                     }
     
                 }
-         
-            
-            //return strResult.Replace("bundle.js", "bundlex.js").Replace("xpramme","");
-            return strResult.Replace("<script src=\"https://www.utv.ssb.no/_/asset/mimir:0000017b874d5770/js/bundle.js\"></script>", "").Replace("xpramme", "");
+
+            return strResult.Replace("bundle.js", "ie.js").Replace("xpramme", "");
+
             //}
             //catch
             //{
