@@ -855,8 +855,7 @@ namespace PXWeb
                     }
     
                 }
-
-            return strResult.Replace("bundle.js", "ie.js").Replace("xpramme", "");
+            return strResult.Replace("xpramme", "");
 
             //}
             //catch
