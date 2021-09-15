@@ -13,7 +13,7 @@ using System.Xml.Linq;
 namespace PCAxis.Api.Serializers
 {
     /// <summary>
-    /// CSV serializer
+    /// CSV2 serializer
     /// </summary>
     public class Csv2Serializer : IWebSerializer
     {

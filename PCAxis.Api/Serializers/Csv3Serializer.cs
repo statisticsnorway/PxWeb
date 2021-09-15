@@ -12,7 +12,6 @@ namespace PCAxis.Api.Serializers
         public void Serialize(PCAxis.Paxiom.PXModel model, ResponseBucket cacheResponse)
         {
             cacheResponse.ContentType = "text/csv; charset=" + System.Text.Encoding.Default.WebName;
-
             PCAxis.Paxiom.IPXModelStreamSerializer serializer = new PCAxis.Paxiom.Csv3FileSerializer();
 
             using (System.IO.MemoryStream stream = new System.IO.MemoryStream())
