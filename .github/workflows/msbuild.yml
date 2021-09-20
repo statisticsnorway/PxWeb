@@ -20,9 +20,9 @@ jobs:
     - uses: NuGet/setup-nuget@v1
 
     - name: Restore NuGet packages
-      run: nuget restore
+      run: nuget restore PCAxis.PX-Web.sln
 
     - name: Build the application
-      run: msbuild /p:Configuration=$env:Configuration
+      run: msbuild /p:Configuration=$env:Configuration  PCAxis.PX-Web.sln
       env:
         Configuration: ${{ matrix.configuration }}
