@@ -523,8 +523,8 @@
    <sentence name="MasterPageSaveQueryInfoLatest" value="{0} most recent time periods" />
    <sentence name="MasterPageSaveQueryInfoFromTime" value="Fixed start time point {0} and all newer time periods" />
    <sentence name="MasterPageSaveQueryInfoFixedTimeSelection" value="Unchanged table" />
-  <sentence name="MasterPageFullscreen" value="Fullscreen" />
-  <sentence name="MasterPageExitFullscreen" value="Exit Fullscreen" />
+  <sentence name="MasterPageFullscreen" value="Fullscreeeeen" />
+  <sentence name="MasterPageExitFullscreen" value="Exit Fullscreeeeen" />
 
 
   <sentence name="CtrlSelectFromGroupHeading" value="Select values from group for variable: {0}" />
