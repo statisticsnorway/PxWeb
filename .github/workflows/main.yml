@@ -4,7 +4,7 @@
 name: Build and deploy ASP app to Azure Web App - PXCloud2
 
 on:
-  push:
+  pull_request:
     branches:
       - master
   workflow_dispatch:
