@@ -84,7 +84,7 @@
    <sentence name="CtrlCommandBarFunctionPivotManualListboxRowScreenReader" value="Select variables to be desplayed as rows in the table" />
    <sentence name="CtrlCommandBarFunctionPivotManualListboxColumnScreenReader" value="Select variables to be displayed as columns in the table" />
    <sentence name="CtrlCommandBarFunctionPivotCW" value="Pivot clockwise"/>
-	 <sentence name="CtrlCommandBarFunctionPivotCWTitle" value="Pivot clockwise"/>
+	 <sentence name="CtrlCommandBarFunctionPivotCWTitle" value="Pivot rock around the clockwise"/>
 	 <sentence name="CtrlCommandBarFunctionPivotCWAlt" value="Pivot clockwise"/>
 	 <sentence name="CtrlCommandBarFunctionPivotCCW" value="Pivot counterclockwise"/>
 	 <sentence name="CtrlCommandBarFunctionPivotCCWTitle" value="Pivot counterclockwise"/>
