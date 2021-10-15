@@ -139,9 +139,14 @@ namespace PXWeb
         
         private string GetTableListName()
         {
-            var tableListPath = RouteInstance.RouteExtender.GetTableListPath(PxUrlObj.Path);
-            if (string.IsNullOrEmpty(tableListPath)) return tableListPath;
-            return RouteInstance.RouteExtender.GetLastNodeFromPath(tableListPath);
+            if (RouteInstance.RouteExtender != null)
+            {
+                var tableListPath = RouteInstance.RouteExtender.GetTableListPath(PxUrlObj.Path);
+                if (string.IsNullOrEmpty(tableListPath)) return tableListPath;
+                return RouteInstance.RouteExtender.GetLastNodeFromPath(tableListPath);
+            }
+
+            return null;
         }
         private string backupCmsCss;
         private string backupCmsImg;
@@ -160,6 +165,11 @@ namespace PXWeb
 
             backupCmsCss = ResolveUrl("~/Resources/Styles/bundlebackup.css");
             backupCmsImg = ResolveUrl("~/Resources/Images/svg/SSB_logo_black.svg");
+
+            if (DoNotUseBreadCrumb())
+            {
+                Page.Controls.Remove(this.breadcrumb1);
+            }
 
             if (urlLanguage != null)
             {
@@ -206,8 +216,17 @@ namespace PXWeb
             {
                 if (PXWeb.Settings.Current.Navigation.ShowNavigationFlow)
                     InitializeNavigationFlow();
+                
+                if (!DoNotUseBreadCrumb())
+                {
+                    InitializeBreadcrumb();
+                }
             }
 
+            if (!DoNotUseBreadCrumb())
+            {
+                breadcrumb1.GetMenu = GetMenu;
+            }
             //navigationFlowControl.GetMenu = GetMenu;
         }
 
@@ -373,7 +392,10 @@ namespace PXWeb
         /// <param name="subpage">Optional parameter breadcrumb name</param>
         public void SetBreadcrumb(PCAxis.Web.Controls.Breadcrumb.BreadcrumbMode mode, string subpage = "")
         {
-            //breadcrumb1.Update(mode, subpage);
+            if (!DoNotUseBreadCrumb())
+            {
+                breadcrumb1.Update(mode, subpage);
+            }
         }
 
         public void SetNavigationFlowMode(PCAxis.Web.Controls.NavigationFlow.NavigationFlowMode mode)
@@ -608,9 +630,17 @@ namespace PXWeb
             {
                 templatePart = insertChangeLanguage(templatePart);
             }
-
-            templatePart = templatePart.Replace("href = \"/", string.Format("href = \"{0}", RouteInstance.RouteExtender.HomeSitePage));
-            templatePart = templatePart.Replace("src = \"/", string.Format("src = \"{0}", RouteInstance.RouteExtender.HomeSitePage));
+            
+            if (RouteInstance.RouteExtender == null)
+            {
+                templatePart = templatePart.Replace("href = \"/", string.Format("href = \"{0}", ConfigurationManager.AppSettings["HomeSitePage"]));
+                templatePart = templatePart.Replace("src = \"/", string.Format("src = \"{0}", ConfigurationManager.AppSettings["HomeSitePage"]));
+            }
+            else
+            {
+                templatePart = templatePart.Replace("href = \"/", string.Format("href = \"{0}", RouteInstance.RouteExtender.HomeSitePage));
+                templatePart = templatePart.Replace("src = \"/", string.Format("src = \"{0}", RouteInstance.RouteExtender.HomeSitePage));
+            }
 
             return templatePart;
         }
@@ -788,6 +818,8 @@ namespace PXWeb
 
         private bool ShouldUseAbsoluteReferences()
         {
+            if (RouteInstance.RouteExtender == null)
+                return true;
             string fullUrl = Request.Url.OriginalString;
             var fullUrlPathParts = fullUrl.Split('/');
             return !fullUrlPathParts.Any(x => !string.IsNullOrEmpty(x) && x.ToLower() == RouteInstance.RouteExtender.SitePathStart.ToLower());
@@ -795,11 +827,21 @@ namespace PXWeb
 
         private string MakeAbsoluteReferences(string html)
         {
-            if (connectedToCMS) { 
-                html = html.Replace("href=\"/", string.Format("href=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
-                html = html.Replace("src=\"/", string.Format("src=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
-                html = html.Replace("logoUrl\":\"", string.Format("logoUrl\":\"{0}",RouteInstance.RouteExtender.HomeSitePage.Substring(0,RouteInstance.RouteExtender.HomeSitePage.Length-1)));
-                html = html.Replace("path\":\"", string.Format("path\":\"{0}", RouteInstance.RouteExtender.HomeSitePage.Substring(0, RouteInstance.RouteExtender.HomeSitePage.Length - 1)));
+            if (connectedToCMS) {
+                if (RouteInstance.RouteExtender != null)
+                {
+                    html = html.Replace("href=\"/", string.Format("href=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
+                    html = html.Replace("src=\"/", string.Format("src=\"{0}", RouteInstance.RouteExtender.HomeSitePage));
+                    html = html.Replace("logoUrl\":\"", string.Format("logoUrl\":\"{0}", RouteInstance.RouteExtender.HomeSitePage.Substring(0, RouteInstance.RouteExtender.HomeSitePage.Length - 1)));
+                    html = html.Replace("path\":\"", string.Format("path\":\"{0}", RouteInstance.RouteExtender.HomeSitePage.Substring(0, RouteInstance.RouteExtender.HomeSitePage.Length - 1)));
+                }
+                else
+                {
+                    html = html.Replace("href=\"/", string.Format("href=\"{0}", ConfigurationManager.AppSettings["HomeSitePage"]));
+                    html = html.Replace("src=\"/", string.Format("src=\"{0}", ConfigurationManager.AppSettings["HomeSitePage"]));
+                    html = html.Replace("logoUrl\":\"", string.Format("logoUrl\":\"{0}", ConfigurationManager.AppSettings["HomeSitePage"].Substring(0, ConfigurationManager.AppSettings["HomeSitePage"].Length - 1)));
+                    html = html.Replace("path\":\"", string.Format("path\":\"{0}", ConfigurationManager.AppSettings["HomeSitePage"].Substring(0, ConfigurationManager.AppSettings["HomeSitePage"].Length - 1)));
+                }
             }
             return html;
         }
@@ -838,31 +880,23 @@ namespace PXWeb
         
         private string invokeHttp(string url)
         {
- 
-            //try
-            //{
-                String strResult = null;
-                WebRequest objRequest = HttpWebRequest.Create(url);
 
-                objRequest.Timeout = CMSloadedContentTimeout;
-                using (WebResponse objResponse = objRequest.GetResponse())
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            String strResult = null;
+            WebRequest objRequest = HttpWebRequest.Create(url);
+
+            objRequest.Timeout = CMSloadedContentTimeout;
+            using (WebResponse objResponse = objRequest.GetResponse())
+            {
+
+                using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
                 {
-
-                    using (StreamReader sr = new StreamReader(objResponse.GetResponseStream()))
-                    {
-                        strResult = sr.ReadToEnd();
-                        sr.Close();
-                    }
-    
+                    strResult = sr.ReadToEnd();
+                    sr.Close();
                 }
-            return strResult.Replace("xpramme", "");
 
-            //}
-            //catch
-            //{
-            //  return GetBackupTemplateHtml();
-            //return backupCMSramme;
-            //}
+            }
+            return strResult.Replace("xpramme", "");
         }
 
         private int? _CMSloadedContentTimeout = null;
@@ -901,6 +935,116 @@ namespace PXWeb
 
                 return _displayVersion;
             }
+        }
+
+        private void InitializeBreadcrumb()
+        {
+            IPxUrl url = RouteInstance.PxUrlProvider.Create(null);
+            DatabaseInfo dbi = null;
+
+            if (!string.IsNullOrEmpty(url.Database))
+            {
+
+                try
+                {
+                    IHomepageSettings homepage = PXWeb.Settings.Current.Database[url.Database].Homepages.GetHomepage(url.Language);
+                    breadcrumb1.HomePageIsExternal = homepage.IsExternal;
+                    breadcrumb1.HomePage = homepage.Url;
+                    if (PXWeb.Settings.Current.Menu.MenuMode == MenuModeType.TreeViewWithoutFiles)
+                    {
+                        breadcrumb1.UseTableList = true;
+                    }
+                    else
+                    {
+                        breadcrumb1.UseTableList = false;
+                    }
+                }
+                catch (KeyNotFoundException e)
+                {
+                    log.Debug("url.Database = " + url.Database + ", url.Language = " + url.Language);
+                    log.Debug("Getting KeyNotFoundException for url.Database. Possible keys are:");
+                    foreach (string dbid in PXWeb.Settings.Current.Database.Keys)
+                    {
+                        log.Debug("dbid = " + dbid);
+                    }
+                    log.Debug("That all, folks!");
+                    log.Error("The error.", e);
+                    throw e;
+                }
+
+            }
+            else
+            {
+                breadcrumb1.HomePageIsExternal = false;
+                breadcrumb1.HomePage = "Default.aspx";
+            }
+
+            breadcrumb1.HomePageName = GetLocalizedString("PxWebHome");
+            breadcrumb1.HomePageImage = true;
+            breadcrumb1.MenuPage = "Menu.aspx";
+            breadcrumb1.SelectionPage = "Selection.aspx";
+            breadcrumb1.TablePathParam = "px_path";
+            breadcrumb1.LayoutParam = "layout";
+
+            if (string.IsNullOrEmpty(url.Database))
+            {
+                return;
+            }
+
+            dbi = PXWeb.Settings.Current.General.Databases.GetDatabase(url.Database);
+
+            breadcrumb1.DatabaseId = dbi.Id;
+            breadcrumb1.DatabaseName = dbi.GetDatabaseName(LocalizationManager.CurrentCulture.TwoLetterISOLanguageName);
+
+            if (string.IsNullOrEmpty(url.Path))
+            {
+                return;
+            }
+
+            //MenuPath path;
+            //if (dbi.Type == DatabaseType.CNMM)
+            //{
+            //    path = MenuPathFactory.Create(LinkType.Table);
+            //}
+            //else
+            //{
+            //    path = MenuPathFactory.Create(LinkType.PX);
+            //}
+
+            ////string tablePath = url.Path.Replace("___", "/");
+            //string tablePath = path.Decompress(url.Path);
+            //breadcrumb1.TablePath = tablePath;
+
+            if (dbi.Type == DatabaseType.CNMM)
+            {
+                breadcrumb1.DatabaseType = PCAxis.Web.Core.Enums.DatabaseType.CNMM;
+            }
+            else
+            {
+                breadcrumb1.DatabaseType = PCAxis.Web.Core.Enums.DatabaseType.PX;
+            }
+
+            breadcrumb1.TablePath = System.Web.HttpUtility.UrlDecode(url.Path);
+
+            if (string.IsNullOrEmpty(url.Table))
+            {
+                return;
+            }
+
+            if ((dbi.Type == PCAxis.Web.Core.Enums.DatabaseType.CNMM) && (!url.Table.Contains(":")))
+            {
+                breadcrumb1.Table = url.Database + ":" + url.Table;
+            }
+            else
+            {
+                breadcrumb1.Table = url.Table;
+            }
+        }
+
+        private bool DoNotUseBreadCrumb()
+        {
+            if (RouteInstance.RouteExtender == null) return false;
+            return !RouteInstance.RouteExtender.ShowBreadcrumb();
         }
     }
 }

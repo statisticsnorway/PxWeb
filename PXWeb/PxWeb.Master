@@ -66,7 +66,7 @@
             <%  } %>
            
            <%-- Setting breadcrumb an h1 title to invisible. Not used in external version. haven't removed because of reference i selection.aspx and presentation.master.cs--%>
-            <pxc:Breadcrumb ID="breadcrumb1" Visible="false"  runat="server"/> 
+            <pxc:Breadcrumb ID="breadcrumb1"  runat="server"/> 
             <pxwebCustomControl:HeadingLabel ID="lblH1Title" runat="server" Visible="false" Text="" CssClass="h1title"></pxwebCustomControl:HeadingLabel>
 
              
