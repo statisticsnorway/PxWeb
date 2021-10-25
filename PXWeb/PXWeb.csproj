@@ -258,6 +258,7 @@
     <Content Include="Monitor\Default.aspx" />
     <Content Include="Monitor\exclamation.png" />
     <Content Include="Monitor\IndexStatus.aspx" />
+    <Content Include="NoData.aspx" />
     <Content Include="Ping\Default.aspx" />
     <Content Include="Resources\Images\alert-16.gif" />
     <Content Include="Resources\Images\arrow-down-10.gif" />
@@ -325,6 +326,8 @@
     <Content Include="Resources\Images\svg\NavigationFlow\Step2_passive.svg" />
     <Content Include="Resources\Images\svg\NavigationFlow\Step3_active.svg" />
     <Content Include="Resources\Images\svg\NavigationFlow\Step3_future.svg" />
+    <Content Include="Resources\Images\svg\OhNoData_en.svg" />
+    <Content Include="Resources\Images\svg\OhNoData_no.svg" />
     <Content Include="Resources\Images\svg\select-all-hover.svg" />
     <Content Include="Resources\Images\svg\select-all.svg" />
     <Content Include="Resources\Images\svg\SSB_logo_black.svg" />
@@ -817,6 +820,13 @@
     </Compile>
     <Compile Include="Monitor\JsonTableQuery.cs" />
     <Compile Include="Monitor\JsonTableResult.cs" />
+    <Compile Include="NoData.aspx.cs">
+      <DependentUpon>NoData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoData.aspx.designer.cs">
+      <DependentUpon>NoData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Ping\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
