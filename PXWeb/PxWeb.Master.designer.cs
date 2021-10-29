@@ -60,42 +60,6 @@ namespace PXWeb
         protected global::System.Web.UI.WebControls.Literal ToTheTopButtonLiteralText;
 
         /// <summary>
-        /// SkipToMain control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink SkipToMain;
-
-        /// <summary>
-        /// imgSiteLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage imgSiteLogo;
-
-        /// <summary>
-        /// litAppName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litAppName;
-
-        /// <summary>
-        /// ChangeLanguageLiteral control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ChangeLanguageLiteral;
-
-        /// <summary>
         /// login control.
         /// </summary>
         /// <remarks>
