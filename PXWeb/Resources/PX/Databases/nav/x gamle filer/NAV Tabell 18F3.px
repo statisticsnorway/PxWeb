@@ -1,0 +1,56 @@
+CHARSET="ANSI";
+CODEPAGE="windows-1252";
+LANGUAGE="no";
+DECIMALS=1;
+SHOWDECIMALS=0;
+MATRIX="NAV18";
+SUBJECT-CODE="xx";
+SUBJECT-AREA="yy";
+DESCRIPTION="Uføretrygdede med barnetillegg per 31.03. Antall og andel, etter fylke, 2019-2021";
+TITLE="Uføretrygdede med barnetillegg per 31.03. Antall og andel, etter region, statistikkvariabel og år";
+CONTENTS="Uføretrygdede med barnetillegg per 31.03. Antall og andel,";
+UNITS="antall eller prosent";
+STUB="region";
+HEADING="statistikkvariabel","år";
+CONTVARIABLE="statistikkvariabel";
+VALUES("region")="Sum","03 Oslo","11 Rogaland","15 Møre og Romsdal","18 Nordland","30 Viken",
+"34 Innlandet","38 Vestfold og Telemark","42 Agder","46 Vestland","50 Trøndelag",
+"54 Troms og Finnmark","99 Bosatt i utlandet","Ukjent";
+VALUES("statistikkvariabel")="Uføretrygdede med barnetillegg",
+"Andel uføre med barnetillegg  (prosent av alle uføre)",
+"Andel av de uføretrydede som har barn under 18 år";
+VALUES("år")="2019","2020","2021";
+TIMEVAL("år")=TLIST(A1),"2019","2020","2021";
+CODES("år")="2019","2020","2021";
+ELIMINATION("region")="Sum";
+PRECISION("statistikkvariabel","Andel uføre med barnetillegg  (prosent av alle uføre)")=1;
+PRECISION("statistikkvariabel","Andel av de uføretrydede som har barn under 18 år")=1;
+LAST-UPDATED("Uføretrygdede med barnetillegg")="20210610 08:00";
+LAST-UPDATED("Andel uføre med barnetillegg  (prosent av alle uføre)")="20210610 08:00";
+LAST-UPDATED("Andel av de uføretrydede som har barn under 18 år")="20210610 08:00";
+UNITS("Uføretrygdede med barnetillegg")="Antall";
+UNITS("Andel uføre med barnetillegg  (prosent av alle uføre)")="Prosent";
+UNITS("Andel av de uføretrydede som har barn under 18 år")="Prosent";
+CONTACT("Uføretrygdede med barnetillegg")="nav.statistikk@nav.no";
+CONTACT("Andel uføre med barnetillegg  (prosent av alle uføre)")="nav.statistikk@nav.no";
+CONTACT("Andel av de uføretrydede som har barn under 18 år")="nav.statistikk@nav.no";
+REFPERIOD("Uføretrygdede med barnetillegg")="31.03.";
+REFPERIOD("Andel uføre med barnetillegg  (prosent av alle uføre)")="31.03.";
+REFPERIOD("Andel av de uføretrydede som har barn under 18 år")="31.03.";
+SOURCE="NAV";
+VALUENOTE("statistikkvariabel","Andel av de uføretrydede som har barn under 18 år")="Tall for barn under 18 år er hentet fra TPS (tjenestebasert persondatasystem med folkeregisteropplysninger).";
+DATA=
+25714 27225 27409 7.5 7.7 7.6 ".." ".." 18 
+2154 2374 2486 8 8.2 8.3 ".." ".." 18 
+1939 1968 1991 7.4 7.4 7.3 ".." ".." 19 
+1000 1057 1060 6.4 6.6 6.5 ".." ".." 17 
+1392 1497 1473 7 7.3 7.1 ".." ".." 17 
+5702 5916 5981 7.6 7.7 7.7 ".." ".." 19 
+2125 2223 2222 7.1 7.1 7.1 ".." ".." 16 
+2571 2755 2803 7.6 8 8 ".." ".." 18 
+2383 2552 2616 9.3 9.6 9.6 ".." ".." 21 
+2335 2443 2457 6.9 7 7 ".." ".." 18 
+2460 2604 2641 7.7 8 8 ".." ".." 18 
+1075 1161 1186 6.2 6.6 6.7 ".." ".." 16 
+573 622 463 8 8.5 6.3 ".." ".." 14 
+5 53 30 0 0 0 ".." ".." 0; 
