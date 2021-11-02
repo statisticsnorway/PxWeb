@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Menu>
+  <Language lang="no" default="true">
+    <MenuItem selection="nav" sortCode="nav">
+      <Description></Description>
+      <Text>nav</Text>
+      <TextShort></TextShort>
+      <MenuItem selection="nav\underemne" sortCode="underemne">
+        <Description></Description>
+        <Text>underemne</Text>
+        <TextShort></TextShort>
+        <Link selection="nav\underemne\NAV Tabell 18F3l.px" sortCode="NAV Tabell 18F3l" type="PX" category="O" tableId="" status="A">
+          <Description>Uføretrygdede med barnetillegg per 31.03. Antall og andel, etter fylke, 2019-2021</Description>
+          <Text>Uføretrygdede med barnetillegg per 31.03. Antall og andel, etter fylke, 2019-2021</Text>
+          <TextShort>NAV18</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">Sum, Oslo, Rogaland, Møre og Romsdal, ..., Ukjent</Attribute>
+          <Attribute name="Var1NumberOfValues">14</Attribute>
+          <Attribute name="Var2Name">statistikkvariabel</Attribute>
+          <Attribute name="Var2Values">Uføretrygdede med barnetillegg, Andel uføre med barnetillegg  (prosent av alle uføre), Andel av de uføretrydede som har barn under 18 år, </Attribute>
+          <Attribute name="Var2NumberOfValues">3</Attribute>
+          <Attribute name="Var3Name">år</Attribute>
+          <Attribute name="Var3Values">2019, 2020, 2021, </Attribute>
+          <Attribute name="Var3NumberOfValues">3</Attribute>
+          <Attribute name="size">6012</Attribute>
+          <Attribute name="cells">126</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\underemne\NAV Tabell 300PSTC3l.px" sortCode="NAV Tabell 300PSTC3l" type="PX" category="O" tableId="" status="A">
+          <Description>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter fylke og kjønn, 2021M01-2021M04</Description>
+          <Text>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter fylke og kjønn, 2021M01-2021M04</Text>
+          <TextShort>NAV300</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">I alt, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., Ukjent</Attribute>
+          <Attribute name="Var1NumberOfValues">14</Attribute>
+          <Attribute name="Var2Name">statistikkvariabel</Attribute>
+          <Attribute name="Var2Values">Mottakere av uføretrygd, Andel mottakere av uføretrygd (prosent), </Attribute>
+          <Attribute name="Var2NumberOfValues">2</Attribute>
+          <Attribute name="Var3Name">kjønn</Attribute>
+          <Attribute name="Var3Values">Begge kjønn, Kvinner, Menn, </Attribute>
+          <Attribute name="Var3NumberOfValues">3</Attribute>
+          <Attribute name="Var4Name">måned</Attribute>
+          <Attribute name="Var4Values">2021M01, 2021M02, 2021M03, 2021M04, </Attribute>
+          <Attribute name="Var4NumberOfValues">4</Attribute>
+          <Attribute name="size">7712</Attribute>
+          <Attribute name="cells">336</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\underemne\NAV Tabell 302PSTC3l.px" sortCode="NAV Tabell 302PSTC3l" type="PX" category="O" tableId="" status="A">
+          <Description>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter fylke, kommune og bydel, 2021M01-2021M04</Description>
+          <Text>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter fylke, kommune og bydel, 2021M01-2021M04</Text>
+          <TextShort>NAV301</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">Landet i alt, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., 500104 Heimdal</Attribute>
+          <Attribute name="Var1NumberOfValues">411</Attribute>
+          <Attribute name="Var2Name">statistikkvariabel</Attribute>
+          <Attribute name="Var2Values">Mottakere av uføretrygd, Andel mottakere av uføretrygd (prosent), </Attribute>
+          <Attribute name="Var2NumberOfValues">2</Attribute>
+          <Attribute name="Var3Name">måned</Attribute>
+          <Attribute name="Var3Values">2021M01, 2021M02, 2021M03, 2021M04, </Attribute>
+          <Attribute name="Var3NumberOfValues">4</Attribute>
+          <Attribute name="size">51935</Attribute>
+          <Attribute name="cells">3288</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+      </MenuItem>
+      <MenuItem selection="nav\x gamle filer" sortCode="x gamle filer">
+        <Description></Description>
+        <Text>x gamle filer</Text>
+        <TextShort></TextShort>
+        <Link selection="nav\x gamle filer\KOSsumhe2430000.px" sortCode="KOSsumhe2430000" type="PX" category="O" tableId="12221" status="A">
+          <Description></Description>
+          <Text>12221: Sosiale tjenester i NAV , etter statistikkvariabel, region og år</Text>
+          <TextShort>KOSsumhe2430000</TextShort>
+          <Attribute name="Var1Name">statistikkvariabel</Attribute>
+          <Attribute name="Var1Values">Årsverk for funksjon 243, Tilbud til personer med rusproblemer (årsverk), Antall saker med økonomisk rådgivning til personer som ikke mottar økonomisk sosialhjelp  (antall), Årsverk til økonomisk rådgivning på nivå II og III per 31.12 (årsverk), Kommunale årsverk i NAV-kontoret på statlige ansvarsområder (årsverk), ..., Livsoppholdsytelser til flyktninger etter kommunalt reglement (ja/nei) (ja=1, nei=0)</Attribute>
+          <Attribute name="Var1NumberOfValues">9</Attribute>
+          <Attribute name="Var2Name">region</Attribute>
+          <Attribute name="Var2Values">Halden, Moss, Sarpsborg, Fredrikstad, ..., Longyearbyen</Attribute>
+          <Attribute name="Var2NumberOfValues">724</Attribute>
+          <Attribute name="Var3Name">år</Attribute>
+          <Attribute name="Var3Values">2015, 2016, 2017, 2018, ..., 2020</Attribute>
+          <Attribute name="Var3NumberOfValues">6</Attribute>
+          <Attribute name="size">320541</Attribute>
+          <Attribute name="cells">39096</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210314 00:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>14.03.2021 00:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\x gamle filer\NAV Tabell 18F.px" sortCode="NAV Tabell 18F" type="PX" category="O" tableId="" status="A">
+          <Description></Description>
+          <Text>Uføretrygdede med barnetillegg per 31.03. Antall og andel, etter region, data og år</Text>
+          <TextShort>NAV18</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">Sum, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., Ukjent</Attribute>
+          <Attribute name="Var1NumberOfValues">14</Attribute>
+          <Attribute name="Var2Name">data</Attribute>
+          <Attribute name="Var2Values">Uføretrygdede med barnetillegg, Andel uføre med barnetillegg  (prosent av alle uføre), Andel av de uføretrydede som har barn under 18 år, </Attribute>
+          <Attribute name="Var2NumberOfValues">3</Attribute>
+          <Attribute name="Var3Name">år</Attribute>
+          <Attribute name="Var3Values">2019, 2020, 2021, </Attribute>
+          <Attribute name="Var3NumberOfValues">3</Attribute>
+          <Attribute name="size">2752</Attribute>
+          <Attribute name="cells">126</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\x gamle filer\NAV Tabell 18F3.px" sortCode="NAV Tabell 18F3" type="PX" category="O" tableId="" status="A">
+          <Description>Uføretrygdede med barnetillegg per 31.03. Antall og andel, etter fylke, 2019-2021</Description>
+          <Text>Uføretrygdede med barnetillegg per 31.03. Antall og andel, etter fylke, 2019-2021</Text>
+          <TextShort>NAV18</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">Sum, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., Ukjent</Attribute>
+          <Attribute name="Var1NumberOfValues">14</Attribute>
+          <Attribute name="Var2Name">statistikkvariabel</Attribute>
+          <Attribute name="Var2Values">Uføretrygdede med barnetillegg, Andel uføre med barnetillegg  (prosent av alle uføre), Andel av de uføretrydede som har barn under 18 år, </Attribute>
+          <Attribute name="Var2NumberOfValues">3</Attribute>
+          <Attribute name="Var3Name">år</Attribute>
+          <Attribute name="Var3Values">2019, 2020, 2021, </Attribute>
+          <Attribute name="Var3NumberOfValues">3</Attribute>
+          <Attribute name="size">2948</Attribute>
+          <Attribute name="cells">126</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\x gamle filer\NAV Tabell 300PSTC.px" sortCode="NAV Tabell 300PSTC" type="PX" category="O" tableId="" status="A">
+          <Description></Description>
+          <Text>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter region, data, kjønn og måned</Text>
+          <TextShort>NAV300</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">I alt, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., Ukjent</Attribute>
+          <Attribute name="Var1NumberOfValues">14</Attribute>
+          <Attribute name="Var2Name">data</Attribute>
+          <Attribute name="Var2Values">Mottakere av uføretrygd, Andel mottakere av uføretrygd (prosent), </Attribute>
+          <Attribute name="Var2NumberOfValues">2</Attribute>
+          <Attribute name="Var3Name">kjønn</Attribute>
+          <Attribute name="Var3Values">Begge kjønn, Kvinner, Menn, </Attribute>
+          <Attribute name="Var3NumberOfValues">3</Attribute>
+          <Attribute name="Var4Name">måned</Attribute>
+          <Attribute name="Var4Values">2021M01, 2021M02, 2021M03, 2021M04, </Attribute>
+          <Attribute name="Var4NumberOfValues">4</Attribute>
+          <Attribute name="size">5437</Attribute>
+          <Attribute name="cells">336</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\x gamle filer\NAV Tabell 300PSTC3.px" sortCode="NAV Tabell 300PSTC3" type="PX" category="O" tableId="" status="A">
+          <Description>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter fylke og kjønn, 2021K1-2021K4</Description>
+          <Text>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter fylke og kjønn, 2021K1-2021K4</Text>
+          <TextShort>NAV300</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">I alt, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., Ukjent</Attribute>
+          <Attribute name="Var1NumberOfValues">14</Attribute>
+          <Attribute name="Var2Name">statistikkvariabel</Attribute>
+          <Attribute name="Var2Values">Mottakere av uføretrygd, Andel mottakere av uføretrygd (prosent), </Attribute>
+          <Attribute name="Var2NumberOfValues">2</Attribute>
+          <Attribute name="Var3Name">kjønn</Attribute>
+          <Attribute name="Var3Values">Begge kjønn, Kvinner, Menn, </Attribute>
+          <Attribute name="Var3NumberOfValues">3</Attribute>
+          <Attribute name="Var4Name">måned</Attribute>
+          <Attribute name="Var4Values">2021M01, 2021M02, 2021M03, 2021M04, </Attribute>
+          <Attribute name="Var4NumberOfValues">4</Attribute>
+          <Attribute name="size">5640</Attribute>
+          <Attribute name="cells">336</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\x gamle filer\NAV Tabell 302PSTC.px" sortCode="NAV Tabell 302PSTC" type="PX" category="O" tableId="" status="A">
+          <Description></Description>
+          <Text>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter region, data og måned</Text>
+          <TextShort>NAV301</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">Landet i alt, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., Ukjent kommune</Attribute>
+          <Attribute name="Var1NumberOfValues">411</Attribute>
+          <Attribute name="Var2Name">data</Attribute>
+          <Attribute name="Var2Values">Mottakere av uføretrygd, Andel mottakere av uføretrygd (prosent), </Attribute>
+          <Attribute name="Var2NumberOfValues">2</Attribute>
+          <Attribute name="Var3Name">måned</Attribute>
+          <Attribute name="Var3Values">2021M01, 2021M02, 2021M03, 2021M04, </Attribute>
+          <Attribute name="Var3NumberOfValues">4</Attribute>
+          <Attribute name="size">43311</Attribute>
+          <Attribute name="cells">3288</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\x gamle filer\NAV Tabell 302PSTC3.px" sortCode="NAV Tabell 302PSTC3" type="PX" category="O" tableId="" status="A">
+          <Description>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter fylke, kommune og bydel, 2021K1-2021K4</Description>
+          <Text>Mottakere av uføretrygd. Antall og andel av befolkningen 18-67 år, etter fylke, kommune og bydel, 2021K1-2021K4</Text>
+          <TextShort>NAV301</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">Landet i alt, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., 500104 Heimdal</Attribute>
+          <Attribute name="Var1NumberOfValues">411</Attribute>
+          <Attribute name="Var2Name">statistikkvariabel</Attribute>
+          <Attribute name="Var2Values">Mottakere av uføretrygd, Andel mottakere av uføretrygd (prosent), </Attribute>
+          <Attribute name="Var2NumberOfValues">2</Attribute>
+          <Attribute name="Var3Name">måned</Attribute>
+          <Attribute name="Var3Values">2021M01, 2021M02, 2021M03, 2021M04, </Attribute>
+          <Attribute name="Var3NumberOfValues">4</Attribute>
+          <Attribute name="size">43523</Attribute>
+          <Attribute name="cells">3288</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+      </MenuItem>
+    </MenuItem>
+  </Language>
+  <Language lang="en" default="false">
+    <MenuItem selection="nav" sortCode="nav">
+      <Description></Description>
+      <Text>nav</Text>
+      <TextShort></TextShort>
+      <MenuItem selection="nav\underemne" sortCode="underemne">
+        <Description></Description>
+        <Text>underemne</Text>
+        <TextShort></TextShort>
+        <Link selection="nav\underemne\NAV Tabell 18F3l.px" sortCode="NAV Tabell 18F3l" type="PX" category="O" tableId="" status="A">
+          <Description>Recipients of disability benefit with child supplement per 31.03. Number and per cent, by county, 2019-2021</Description>
+          <Text>Recipients of disability benefit with child supplement per 31.03. Number and per cent, by county, 2019-2021</Text>
+          <TextShort>NAV18</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">Total, Oslo, Rogaland, Møre og Romsdal, ..., Unknown</Attribute>
+          <Attribute name="Var1NumberOfValues">14</Attribute>
+          <Attribute name="Var2Name">contents</Attribute>
+          <Attribute name="Var2Values">Recipients of disability benefit with child supplement, Recipients of disability benefit with child supplement (per cent of all with disability benefit), Per cent of recipients of disability benefi with children under 18 years, </Attribute>
+          <Attribute name="Var2NumberOfValues">3</Attribute>
+          <Attribute name="Var3Name">year</Attribute>
+          <Attribute name="Var3Values">2019, 2020, 2021, </Attribute>
+          <Attribute name="Var3NumberOfValues">3</Attribute>
+          <Attribute name="size">6012</Attribute>
+          <Attribute name="cells">126</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\underemne\NAV Tabell 300PSTC3l.px" sortCode="NAV Tabell 300PSTC3l" type="PX" category="O" tableId="" status="A">
+          <Description>Recipients of disability benefit. Number and per cent of population 18-67 years, by county and sex, 2021M01-2021M04</Description>
+          <Text>Recipients of disability benefit. Number and per cent of population 18-67 years, by county and sex, 2021M01-2021M04</Text>
+          <TextShort>NAV300</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">Total, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., Unknown</Attribute>
+          <Attribute name="Var1NumberOfValues">14</Attribute>
+          <Attribute name="Var2Name">contents</Attribute>
+          <Attribute name="Var2Values">Recipients of disability benefit, Percentage recipients of disability benefit, </Attribute>
+          <Attribute name="Var2NumberOfValues">2</Attribute>
+          <Attribute name="Var3Name">sex</Attribute>
+          <Attribute name="Var3Values">Both sexes, Women, Men, </Attribute>
+          <Attribute name="Var3NumberOfValues">3</Attribute>
+          <Attribute name="Var4Name">month</Attribute>
+          <Attribute name="Var4Values">2021M01, 2021M02, 2021M03, 2021M04, </Attribute>
+          <Attribute name="Var4NumberOfValues">4</Attribute>
+          <Attribute name="size">7712</Attribute>
+          <Attribute name="cells">336</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+        <Link selection="nav\underemne\NAV Tabell 302PSTC3l.px" sortCode="NAV Tabell 302PSTC3l" type="PX" category="O" tableId="" status="A">
+          <Description>Recipients of disability benefit. Number and per cent of population 18-67 years, by county, municipality and urban district, 2021M01-2021M04</Description>
+          <Text>Recipients of disability benefit. Number and per cent of population 18-67 years, by county, municipality and urban district, 2021M01-2021M04</Text>
+          <TextShort>NAV301</TextShort>
+          <Attribute name="Var1Name">region</Attribute>
+          <Attribute name="Var1Values">Total, 03 Oslo, 11 Rogaland, 15 Møre og Romsdal, ..., 500104 Heimdal</Attribute>
+          <Attribute name="Var1NumberOfValues">411</Attribute>
+          <Attribute name="Var2Name">contents</Attribute>
+          <Attribute name="Var2Values">Recipients of disability benefit, Percentage recipients of disability benefit, </Attribute>
+          <Attribute name="Var2NumberOfValues">2</Attribute>
+          <Attribute name="Var3Name">month</Attribute>
+          <Attribute name="Var3Values">2021M01, 2021M02, 2021M03, 2021M04, </Attribute>
+          <Attribute name="Var3NumberOfValues">4</Attribute>
+          <Attribute name="size">51935</Attribute>
+          <Attribute name="cells">3288</Attribute>
+          <Attribute name="updated">20211101 09:13</Attribute>
+          <Attribute name="modified">20210610 08:00</Attribute>
+          <Published>01.11.2021 09:13:13</Published>
+          <LastUpdated>10.06.2021 08:00:00</LastUpdated>
+          <StartTime></StartTime>
+          <EndTime></EndTime>
+        </Link>
+      </MenuItem>
+    </MenuItem>
+  </Language>
+</Menu>
