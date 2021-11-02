@@ -148,10 +148,30 @@ namespace PXWeb
         private string backupCmsImg;
         private bool connectedToCMS=true;
 
+        /*
+        private void CheckIfLoggedOut()
+        {
+            if (Request.Cookies["wasLoggedInPxWeb"] != null && Session["PXUSER"] == null && Session["PXPASSWORD"] == null)
+            {
+                Response.Cookies["wasLoggedInPxWeb"].Expires = DateTime.Now.AddDays(-1);
+                FormsAuthentication.SignOut();
+                Session.Clear();
+                Session["wasLoggedOutPxWeb"] = true;
+                Response.Redirect("~/" + PxUrl.PX_START + "/" + PxUrlObj.Language + "/?sessionExpired=true");
+            }
+        }
+        */
+
         protected void Page_Init(object sender, EventArgs e)
         {
 
             var queryStringPart = ValidationManager.GetValue(Page.Request.QueryString[PCAxis.Web.Core.StateProvider.StateProviderFactory.REQUEST_ID]);
+
+            if (DoNotUseBreadCrumb())
+            {
+                Page.Controls.Remove(this.breadcrumb1);
+                this.breadcrumb1.HomePage = "Default.aspx";
+            }
 
             //Add eventhandlers
             LinkManager.RegisterEnsureQueries(new EnsureQueriesEventHandler(LinkManager_EnsureQueries));
@@ -212,6 +232,13 @@ namespace PXWeb
             //navigationFlowControl.GetMenu = GetMenu;
         }
 
+        private bool DoNotUseBreadCrumb()
+        {
+            return true;
+         //   if (RouteInstance.RouteExtender == null) return false;
+         //   return !RouteInstance.RouteExtender.ShowBreadcrumb();
+        }
+
         /// <summary>
         /// Page load - set private properties and page content
         /// </summary>
@@ -219,14 +246,7 @@ namespace PXWeb
         {
             GetCMSContents();
             string ctrlname = Request.Params.Get("__EVENTTARGET");
-            bool languageChanged = false;
-            if (!string.IsNullOrEmpty(ctrlname))
-            {
-                if ((ctrlname.Contains("cboSelectLanguages")))
-                {
-                    languageChanged = true;
-                }
-            }
+            
             ToTheTopButtonLiteralText.Text = GetLocalizedString("PxWebToTheTopButtonLiteralText");
         }
 
