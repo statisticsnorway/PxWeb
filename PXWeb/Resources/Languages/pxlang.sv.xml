@@ -828,12 +828,10 @@
   <sentence name="PxWebAdminSettingsSelectionDefaultSearchInfo" value="Bestämmer om sökningen skal vara fritextsök eller sök i början av varibelnamnet." />
   <sentence name="PxWebAdminSettingsSelectionPreSelectFirstContentAndTime" value="Förvälj första värdet" />
   <sentence name="PxWebAdminSettingsSelectionPreSelectFirstContentAndTimeInfo" value="Bestämmer om första värdet för innehålls- samt tidsvariabeln ska förväljas på valsidan" />
-  <sentence name="PxWebAdminSettingsSelectionDefaultSearchFreeText" value="Fritextsök" />
-  <sentence name="PxWebAdminSettingsSelectionDefaultSearchBeginningOfWord" value="Början av ord" />
-
-  <sentence name="PxWebAdminSettingsSelectionEnablePathToMetadataSystem" value="Visa länk till metadata"/>
-  <sentence name="PxWebAdminSettingsSelectionEnablePathToMetadataSystemInfo" value="På sidan för val av variabler och värden visas en ny flik/länk som heter Metadata. När användaren klickar på en metadataikon bredvid en variabel på fliken 'Välj variabel' så öppnas Metadata fliken/länken. Ikonen för metadata visas bredvid variabler med ett definierat metaid."/>
-
+  <sentence name="PxWebAdminSettingsSelectionShowNoFootnoteForSelection" value="Text om fotnoter saknas" />
+  <sentence name="PxWebAdminSettingsSelectionShowNoFootnoteForSelectionInfo" value="Styr om text ska visas om fotnoter saknas" />
+  <sentence name="PxWebAdminSettingsSelectionSortVariableOrder" value="Sorterad variabelordning" />
+  <sentence name="PxWebAdminSettingsSelectionSortVariableOrderInfo" value="Om satt till 'Ja' kommer variabelordningen sorteras så att innehåll, tid och obligatoriska variabler visas först" />
   <sentence name="PxWebAdminSettingsNavigationNavigationFlowVisible" value="Visa navigeringsflöde" />
   <sentence name="PxWebAdminSettingsNavigationNavigationFlowVisibleInfo" value="Visa navigeringsflöde under brödsmula. Visar Välj tabell, välj variabel, visa tabell." />
   <sentence name="PxWebAdminSettingsSelectionSearchButtonMode" value="Visa sökknapp" />
