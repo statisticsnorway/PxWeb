@@ -544,10 +544,10 @@
   <sentence name="PxWebChangeToThisLanguage" value="Norsk versjon" />
   <sentence name="PxWebMenuBurger" value="Meny" />
   <sentence name="PxWebMenu" value="Meny" />
-  <sentence name="PxWebMenuExplanationRegionHeader" value="Kode på tabeltittel viser laveste regionsnivå: " />
-  <sentence name="PxWebMenuExplanationRegion" value="(F) = fylke, (K) = kommune, (G) = grunnkrets, (B) = bydel, (T) = tettsted." />
+  <sentence name="PxWebMenuExplanationRegionHeader" value="Bokstavkode etter tabelltittel viser laveste regionsnivå:" />
+  <sentence name="PxWebMenuExplanationRegion" value="(F) = fylke, (K) = kommune, (G) = grunnkrets, (B) = bydel, (T) = tettsted" />
   <sentence name="PxWebMenuExplanationTimePeriodHeader" value="Forklaring på tidsperiode:" />
-  <sentence name="PxWebMenuExplanationTimePeriod" value="&lt;B&gt;K&lt;/B&gt;= Kvartal, &lt;B&gt;M&lt;/B&gt; = Måned, &lt;B&gt;U&lt;/B&gt; = Uke" />
+  <sentence name="PxWebMenuExplanationTimePeriod" value="&lt;B&gt;K&lt;/B&gt; = Kvartal, &lt;B&gt;M&lt;/B&gt; = Måned, &lt;B&gt;U&lt;/B&gt; = Uke" />
   <sentence name="PxWebSelection" value="Valg" />
   <sentence name="PxWebInformation" value="Informasjon" />
   <sentence name="PxWebDetailedInformation" value="Detaljert informasjon" />
@@ -626,7 +626,6 @@
   <sentence name="PxWebTitleChart" value="PX-Web - Figur" />
   <sentence name="PxWebTitleDataSort" value="PX-Web - Sorter" />
   <sentence name="PxWebTitleErrorGeneral" value="PX-Web - Oooobs!" />
-  <sentence name="PxFootnotesPresentation" value="PX-Web - Fotnoter" />
   <sentence name="PxWebTitleFootnotesSelection" value="PX-Web - Fotnoter" />
   <sentence name="PxWebTitleInformationPresentation" value="PX-Web - Informasjon" />
   <sentence name="PxWebInformationSelection" value="PX-Web - Informasjon" />
@@ -652,6 +651,8 @@
   <sentence name="PxWebSkipToSelectionLinkText" value="Gå til første variabel" />
   <sentence name="PxWebSkipToSelectionLinkUserManualScreenReader" value="Nå har du kommet til skjermbildet for å velge hvilke variabler og verdier du vil ha frem i ditt resultat av tabellen. En variabel er en egenskap ved en statistisk enhet. Side er delt opp i flere bokser, en for hver variabel, hvor du kan velge verdier ved å markere en eller flere. Det starter alltid med statistikkvariabel som er hoved verdien som telles i tabellen. Trykk enter for å gå rett til valg av første variabel." />
   <sentence name="PxWebSelectionUserManualScreenReaderRegion" value="Bruksanvisning valgskjermbildets hovedside" />
+  <sentence name="PxWebTableListExplanationScreenReader" value="Du er nå på første hovedside av Statistikkbanken, som viser en oversikt over alle tilgjengelige tabeller innenfor det valgte statistikkområdet. Tabellene er gruppert i emner, med en overskrift for hver gruppe. Det er også en geografisk og periodisk forklaring i toppen av tabell-listen, når det finnes tabeller i listen som inneholder disse verdiene." />
+  <sentence name="PxWebTableListEmptyFolder" value="Denne mappen er midlertidlig tom" />
   <sentence name="PxWebAdminLogout" value="Logg ut" />
   <sentence name="PxWebAdminHeading" value="PX-Web - Administrasjon" />
   <sentence name="PxWebAdminHomePage" value="PX-Web - Hjem" />

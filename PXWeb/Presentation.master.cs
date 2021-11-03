@@ -68,7 +68,7 @@ namespace PXWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnfullscreen.Value = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("MasterPageFullscreen");
+             btnfullscreen.Value = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("MasterPageFullscreen");
             btnBurgerMenu.Value = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebMenuBurger");
             Page.MaintainScrollPositionOnPostBack = true;
 
@@ -87,6 +87,7 @@ namespace PXWeb
             }
 
             lblFullscreenTitle.Text = PaxiomManager.PaxiomModel.Meta.Title;
+            InitializeTableHeadings();
 
             if (!IsPostBack)
             {
@@ -94,7 +95,7 @@ namespace PXWeb
                 if (PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel != null)
                 {
                     Master.SetBreadcrumb(PCAxis.Web.Controls.Breadcrumb.BreadcrumbMode.Presentation);
-                    Master.SetH1TextMenuLevel();
+                    //Master.SetH1TextMenuLevel();
                     Master.SetNavigationFlowMode(PCAxis.Web.Controls.NavigationFlow.NavigationFlowMode.Third);
                     Master.SetNavigationFlowVisibility(PXWeb.Settings.Current.Navigation.ShowNavigationFlow);
                     InitializeCommandBar();
@@ -179,6 +180,23 @@ namespace PXWeb
             CommandBar1.SelectedPresentationView = presView;
         }
 
+        private void InitializeTableHeadings()
+        {
+            if (PXWeb.Settings.Current.General.Site.MainHeaderForTables == MainHeaderForTablesType.TableName)
+            {
+                PresentationTitleStuff.TitleTag = TableInformationCodebehind.TitleTags.H1;
+                PresentationTitleStuff.CssClass = "h1title";
+                lblSubHeader.Level = CustomControls.HeadingLabel.HeadingLevel.H2;
+                lblSubHeader.Visible = true;
+            }
+            else
+            {
+                PresentationTitleStuff.TitleTag = TableInformationCodebehind.TitleTags.H2;
+                PresentationTitleStuff.CssClass = "h2title";
+                lblSubHeader.Level = CustomControls.HeadingLabel.HeadingLevel.H3;
+                lblSubHeader.Visible = false;
+            }
+        }
 
         /// <summary>
         /// Initializes CommandBar
@@ -243,11 +261,14 @@ namespace PXWeb
             {
                 TableQueryInformation.DatabaseType = PCAxis.Web.Core.Enums.DatabaseType.CNMM;
             }
-
             TableQueryInformation.URLRoot = PXWeb.Settings.Current.Features.Api.UrlRoot;
-            TableQueryInformation.Database = db; 
-            TableQueryInformation.Path = PxUrlObject.Path;
-            TableQueryInformation.Table = PxUrlObject.Table;
+            TableQueryInformation.Database = "table"; //db;  maybe We could change back to db, but 
+                                                      //we would have to change the id in sqldb.config to "table"
+            TableQueryInformation.Path = PaxiomManager.PaxiomModel.Meta.TableID; // PxUrlObject.Path; contains the path from the menu table.
+            //was RouteInstance.RouteExtender.GetTableIdByName(PxUrlObj.Table);
+
+            TableQueryInformation.Table = ""; //PxUrlObject.Table;
+            //Path, not table, should perhaps be the empty one, but that yields a dobble slash: /v0/no/table//08880  
 
             TableQueryInformation.SaveApiQueryText = PXWeb.Settings.Current.Features.Api.SaveApiQueryText;
 

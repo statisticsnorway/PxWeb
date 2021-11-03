@@ -616,7 +616,6 @@
   <sentence name="PxWebTitleChart" value="PxWeb - Kaavio" />
   <sentence name="PxWebTitleDataSort" value="PxWeb - Järjestele" />
   <sentence name="PxWebTitleErrorGeneral" value="PxWeb - Hups!" />
-  <sentence name="PxWebTitleFootnotesPresentation" value="PxWeb - Lisätietoja" />
   <sentence name="PxWebTitleFootnotesSelection" value="PxWeb - Lisätietoja" />
   <sentence name="PxWebTitleInformationPresentation" value="PxWeb - Tietoja" />
   <sentence name="PxWebTitleInformationSelection" value="PxWeb - Tietoja" />
@@ -638,7 +637,7 @@
   <sentence name="PxWebMetadataNoValueMeta" value="Näille määrittelyille ei ole arvoja" />
   <sentence name="PxWebAdminLogout" value="Kirjaudu ulos" />
   <sentence name="PxWebAdminHeading" value="PxWeb-ylläpito" />
-  <sentence name="PxWebAdminVersion" value="PxWeb 2020 v1" />
+  <sentence name="PxWebAdminVersion" value="PxWeb 2021 v1" />
   <sentence name="PxWebAdminHomePage" value="PxWeb-kotisivu" />
   <sentence name="PxWebAdminSaveButton" value="Tallenna" />
   <sentence name="PxWebAdminGenerateButton" value="Luo" />

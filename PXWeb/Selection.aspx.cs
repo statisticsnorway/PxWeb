@@ -150,6 +150,7 @@ namespace PXWeb
             PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel = PXWeb.Management.PxContext.GetPaxiomForSelection(db, path, table, lang, clearModel);
            _linkManager = PXWeb.Settings.Current.Database[PxUrl.Database].Metadata.MetaLinkMethod;
             InitializeLayoutFormat();
+            InitializeTableHeadings();
 
             if (!IsPostBack)
             {
@@ -158,7 +159,7 @@ namespace PXWeb
                 //imgShowFootnotesExpander.ImageUrl = Page.ClientScript.GetWebResourceUrl(typeof(BreadcrumbCodebehind), "PCAxis.Web.Controls.spacer.gif");
                 //imgShowMetadataExpander.ImageUrl = Page.ClientScript.GetWebResourceUrl(typeof(BreadcrumbCodebehind), "PCAxis.Web.Controls.spacer.gif");
                 Master.SetBreadcrumb(PCAxis.Web.Controls.Breadcrumb.BreadcrumbMode.Selection);
-                Master.SetH1TextMenuLevel();
+                //Master.SetH1TextMenuLevel();
                 Master.SetNavigationFlowMode(PCAxis.Web.Controls.NavigationFlow.NavigationFlowMode.Second);
                 Master.SetNavigationFlowVisibility(PXWeb.Settings.Current.Navigation.ShowNavigationFlow);
                 InitializeVariableSelector();
@@ -213,11 +214,32 @@ namespace PXWeb
             VariableSelector1.PxActionEvent -= new PCAxis.Web.Controls.PxActionEventHandler(HandlePxAction);
         }
 
+        
+
+        private void InitializeTableHeadings()
+        {
+            if (PXWeb.Settings.Current.General.Site.MainHeaderForTables == MainHeaderForTablesType.TableName)
+            {
+                TableInformationSelect.TitleTag = TableInformationCodebehind.TitleTags.H1;
+                MenuTitle.Level = CustomControls.HeadingLabel.HeadingLevel.H1;
+                lblSubHeader.Level = CustomControls.HeadingLabel.HeadingLevel.H2;
+                lblSubHeader.Visible = true;
+            }
+            else
+            {
+                TableInformationSelect.TitleTag = TableInformationCodebehind.TitleTags.H2;
+                MenuTitle.Level = CustomControls.HeadingLabel.HeadingLevel.H2;
+                lblSubHeader.Level = CustomControls.HeadingLabel.HeadingLevel.H3;
+                lblSubHeader.Visible = false;
+            }
+        }
+
         /// <summary>
         /// Initialize the variable selector web control
         /// </summary>
         private void InitializeVariableSelector()
         {
+            VariableSelector1.SortVariableOrder = PXWeb.Settings.Current.Selection.SortVariableOrder;
             VariableSelector1.SelectedTotalCellsLimit = PXWeb.Settings.Current.Selection.CellLimitScreen;
             VariableSelector1.SelectedTotalCellsDownloadLimit = PXWeb.Settings.Current.General.FileFormats.CellLimitDownloads;
             VariableSelector1.ShowElimMark = PXWeb.Settings.Current.Selection.ShowMandatoryMark;
@@ -380,7 +402,6 @@ namespace PXWeb
             {
                 lnkInformation.NavigateUrl = PCAxis.Web.Core.Management.LinkManager.CreateLink("~/InformationSelection.aspx");
                 lnkInformation.Text = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebInformation");
-                lnkFootnotes.NavigateUrl = PCAxis.Web.Core.Management.LinkManager.CreateLink("~/FootnotesSelection.aspx");
                 lnkFootnotes.Text = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebFootnotes");
                 InitializeDetailedInformation(path);
                 InformationLinks.Visible = true;

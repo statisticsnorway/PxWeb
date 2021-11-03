@@ -597,7 +597,6 @@
   <sentence name="PxWebTitleChart" value="Titartagaq" />
   <sentence name="PxWebTitleDataSort" value="Immikkoortitikkit" />
   <sentence name="PxWebTitleErrorGeneral" value="Oooops!" />
-  <sentence name="PxWebTitleFootnotesPresentation" value="Fodnotit" />
   <sentence name="PxWebTitleFootnotesSelection" value="Fodnotit" />
   <sentence name="PxWebTitleInformationPresentation" value="Paasissutissat" />
   <sentence name="PxWebTitleInformationSelection" value="Paasissutissat" />
@@ -612,7 +611,7 @@
   <sentence name="PxWebReturnToStartpage" value="Quppernermut siullermut uterit" />
   <sentence name="PxWebAdminLogout" value="Log-ud" />
   <sentence name="PxWebAdminHeading" value="PxWeb Administration" />
-  <sentence name="PxWebAdminVersion" value="PxWeb 2020 v1" />
+  <sentence name="PxWebAdminVersion" value="PxWeb 2021 v1" />
   <sentence name="PxWebAdminHomePage" value="PxWeb Homepage" />
   <sentence name="PxWebAdminSaveButton" value="Save" />
   <sentence name="PxWebAdminGenerateButton" value="Generate" />

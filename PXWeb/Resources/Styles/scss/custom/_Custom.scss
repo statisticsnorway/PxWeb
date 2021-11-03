@@ -1,112 +1,113 @@
 ﻿@include file-header("custom/_Custom.scss");
 /* Add your overrides of the default styles in this style sheet */
 
+
+
 /* Login form */
 .login-form {
-    width: 400px;
-    border: solid 1px #c2c4c6;
-    padding: 15px;
-    margin: 40px 0;
+  width: 400px;
+  border: solid 1px #c2c4c6;
+  padding: 15px;
+  margin: 40px 0;
 }
 
-.login-form label {
+  .login-form label {
     display: block;
-}
+  }
 
 .login-form-failure {
-    color: #9b0014;
-    font-weight: bold;
+  color: #9b0014;
+  font-weight: bold;
 }
 
 .login-form-buttons {
-    text-align: right;
+  text-align: right;
 }
 
 .login-form div {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .commandbar_shortcut {
-    overflow: hidden;
-    width: auto;
-    display: inline;
+  overflow: hidden;
+  width: auto;
+  display: inline;
 }
 
 #pxwebcontent .variableselector_valuesselect_variabletitle::first-letter {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 #pxwebcontent .selectfromgroup-variable::first-letter {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 #pxwebcontent .hidden {
-    display: none;
+  display: none;
 }
 
 .ui-widget.ui-widget-content {
-    border: none;
+  border: none;
 }
 
 /*Temp fix before rewrite of presentation page*/
 
 #pxwebcontent .ui-tabs-tab.ui-corner-top.ui-state-default.ui-tab.ui-state-hover {
-    background: white !important;
+  background: white !important;
 }
 
 #pxwebcontent .ui-tabs-tab.ui-corner-top.ui-state-active.ui-tab.ui-state-hover {
-    background: #333333 !important;
+  background: #333333 !important;
 }
 
 #pxwebcontent .ui-tabs-active.ui-state-active a {
-    color: white !important;
+  color: white !important;
 }
 
 #pxwebcontent .savequery_functionbtn .savequery_cancel span {
-    color: white !important;
+  color: white !important;
 }
-
 #pxwebcontent .px_settings_buttons .px_settings_cancel span {
-    color: white !important;
+  color: white !important;
 }
 
-/*#header.header {
-    background-image: url("../../Images/SSB-top-banner.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}*/
+#header.header {
+  background-image: url("../../Images/SSB-top-banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-/*#pxwebcontent .imgSiteLogo {
+#pxwebcontent .imgSiteLogo {
   height: 60px;
   width: unset;
   vertical-align: middle;
   padding-top: 12px;
-}*/
+}
 
 /*#region override important! from forside.scss */
 #pxwebcontent .settings_panel a {
-    color: $pxweb-black-1 !important;
+  color: $pxweb-black-1 !important;
 }
 
 #pxwebcontent .information_definitionlist dd a {
-    color: #003892 !important;
+  color: #003892 !important;
 }
 
 #pxwebcontent .tablequery_moreinformation {
-    color: $pxweb-black-1 !important;
+  color: $pxweb-black-1 !important;
 }
 
 #pxwebcontent .footnotes_container a {
-    color: $pxweb-green-4 !important;
+  color: $pxweb-green-4 !important;
 
-    &:hover, &:focus {
-        color: $pxweb-white !important;
-    }
+  &:hover, &:focus {
+    color: $pxweb-white !important;
+  }
 }
 /*#endregion*/
 
 /*#region Dialog kompis */
-/*.kompis {
+.kompis {
 }
 
 .kompis_label {
@@ -149,7 +150,7 @@
 .kompis_close {
     float: right;
     font-weight: bold;
-}*/
+}
 /*#endregion*/
 
 .sitewrapper {
@@ -164,9 +165,17 @@
     }
 }
 
-/*.statistikkside-metaloft {
+/*stops x-scrollbar ( created by some min-width from cms)*/
+body {
+  min-width: unset;
+  overflow-x: auto
+}
+
+
+
+.statistikkside-metaloft {
     padding-left: 10px
-}*/
+}
 
 #footer {
     padding-left: 10px;
@@ -243,7 +252,7 @@ th.pxweb-subheader.collapsible:hover {
 }
 
 th.pxweb-subheader.collapsible:hover .expandMenuTableList {
-    background-image: linear-gradient(transparent, transparent), url('../Images/expand-plus-hover.gif');
+    background-image: linear-gradient(transparent, transparent), url('../../Images/expand-plus-hover.gif');
 }
 
 .pxweb-list-items th {
@@ -287,7 +296,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 }
 
 .expandMenuTableList {
-    background-image: linear-gradient(transparent, transparent), url('../Images/expand-plus.svg');
+    background-image: linear-gradient(transparent, transparent), url('../../Images/expand-plus.svg');
     background-size: 20px 20px;
     color: $pxweb-green-3;
     width: 20px;
@@ -297,7 +306,7 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 }
 
 .collapsedMenuTableList {
-    background-image: linear-gradient(transparent, transparent), url('../Images/expand-minus.svg');
+    background-image: linear-gradient(transparent, transparent), url('../../Images/expand-minus.svg');
     background-size: 20px 20px;
     color: #a53d7c;
     width: 20px;
@@ -310,3 +319,29 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
     padding-left: 0;
 }
 /*#endregion*/
+
+/*#region CMS _basic.scss makes button half when hover*/
+
+#pxwebcontent input[type="submit"]{
+  background-image:unset;
+}
+
+
+/*#endregion*/
+
+//To override scroll x from CMS
+#pxwebcontent .presentation-left table {
+  overflow: auto;
+}
+
+#pxwebcontent .table-class {
+  display: table;
+}
+
+#pxwebcontent .savequery_container a {
+  color: $pxweb-ink-main !important;
+}
+
+#pxwebcontent #px-we-need-to-look-at-this {
+  margin-left: 4px;
+}

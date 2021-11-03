@@ -1,13 +1,8 @@
 ﻿@include file-header("_PxWeb.scss");
 
-h1 {
-    @include pxweb-h1-title;
-}
-
 #pxwebcontent {
   background: $pxweb-background;
-/*  @include just-open-sans;*/  
-  @include roboto;
+  @include just-open-sans;
   line-height: 1.5;
   color: $pxweb-ink-main;
   font-size: 14px;
@@ -16,22 +11,18 @@ h1 {
   text-size-adjust: none;
 }
 
-#pxwebcontent select {
-    @include pxweb-input-list-font;
-}
-
 #pxwebcontent .pxbox.negative {
-    background-color: $pxbox-background;
-    border: solid 1px $pxbox-border;
-    color: $pxbox-ink;
+  background-color: $pxbox-background;
+  border: solid 1px $pxbox-border;
+  color: $pxbox-ink;
 }
 
 
-#pxwebcontent #wrap {
+  #pxwebcontent #wrap {
     margin: 0px auto;
     max-width: 1180px;
   }
-
+  
 @media (max-width: 1180px) {
   #pxwebcontent #wrap {
     margin: 0px 10px;
@@ -84,9 +75,9 @@ h1 {
   }
 
   #pxwebcontent #header span {
-    font-size: 3.0em;
-    font-weight: 700;
-    letter-spacing: -1px;
+    font-size: 3.8em;
+    font-weight: 100;
+    letter-spacing: -3px;
     padding: 12px 0 0 10px;
   }
 
@@ -130,7 +121,7 @@ h1 {
 
 
 #pxwebcontent .siteLogoText {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 #pxwebcontent .px-change-lang-div {
@@ -155,15 +146,12 @@ h1 {
   background-color: $tableAlternatingRow-grey;
 }
 
-#pxwebcontent .databaseList {
-    margin-left: 15px;
-}
 
 #pxwebcontent .search_searchresulttext {
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
 }
 
 #pxwebcontent .searchTopLeftContent {
@@ -211,19 +199,18 @@ h1 {
 }
 
 #pxwebcontent .panelshowlink {
-    width: auto;
-
-    background-color: $pxbox-background;
-    padding: 10px 0 10px 0;
-    margin-top: 5px;
-    display: inline-block;
-    border: 1px solid $pxbox-border;
-    cursor: pointer;
+  width: auto;
+  background-color: $pxweb-green-5;
+  padding: 10px 0 10px 0;
+  margin-top: 5px;
+  display: inline-block;
+  border: 1px solid $pxweb-dark-2;
+  cursor: pointer;
 }
 
-#pxwebcontent .panelshowlink.savequery {
-    background-color: $pxbox-background;
-}
+  #pxwebcontent .panelshowlink.savequery {
+    background-color: $pxweb-green-5;
+  }
 
 #pxwebcontent .px-settings-imagelink {
   vertical-align: middle;
@@ -252,9 +239,9 @@ h1 {
 }
 
 #pxwebcontent .px-settings {
-   @include open-sans;
+  @include open-sans;
   padding: 10px 10px 10px 10px;
-  border: solid 6px $pxweb-dark-2;
+  border: solid 6px $pxweb-green-4;
   width: max-content;
   overflow: auto;
   background-color: $pxweb-background;
@@ -407,22 +394,21 @@ h1 {
 }
 
 #pxwebcontent .errorMessage {
-  font-family: Verdana;
+  @include VerdanaErrorMessage;
   font-size: 0.9em;
   color: $another-errormessage;
   display: block;
 }
 
-
 #pxwebcontent .screenreader-only {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    color: black;
-    background-color: white;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: black;
+  background-color: white;
 }
 
 #pxwebcontent .screenreader-only:focus {
@@ -433,6 +419,10 @@ h1 {
 
 #pxwebcontent .presentation-main {
   max-width:100%;
+}
+
+#pxwebcontent .presentation-left .tools-header {
+    display: none;
 }
 
 #pxwebcontent .presentation-container {
@@ -507,58 +497,4 @@ h1 {
 }
 
 
-#pxwebcontent .officialStatisticsImage {
-    height: 18px;
-    width: 150px;
-    margin-left: 15px;
-    margin-bottom: 12px;
-}
 
-/* jQuery UI controls */
-#PageElements {
-    background: $pxweb-background;
-}
-
-.ui-draggable .ui-dialog-titlebar {
-    background: $pxweb-dark-5;
-    border: $pxweb-dark-5;
-}
-
-.ui-dialog-title {
-    @include pxweb-font;
-}
-
-.ui-widget-content {
-    @include pxweb-font;
-    background: $pxweb-background;
-}
-
-.footnote_heading {
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.footnote_valuenote_header {
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-.footnote_valuenote_key {
-    font-style: italic;
-    margin-top: 10px;
-}
-
-.footnote_note_value {
-    margin-top: 10px;
-}
-
-.footnote_varnote_key {
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-.footnote_cellnote_key {
-    font-weight: 700;
-    margin-top: 10px;
-}

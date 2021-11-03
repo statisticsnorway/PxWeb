@@ -67,7 +67,7 @@ Public Class VariableSelectorCodebehind
     Protected Sub VariableSelector_Load() Handles Me.Load
 
 
-        Dim haveSetCandidateMustSelect As Boolean = True
+        Dim haveSetCandidateMustSelect As Boolean = Marker.SortVariableOrder
         For Each var As Paxiom.Variable In Me.PaxiomModel.Meta.Variables
             If Not var.ExtendedProperties.ContainsKey("CandidateMustSelect") Then
                 haveSetCandidateMustSelect = False
@@ -219,7 +219,9 @@ Public Class VariableSelectorCodebehind
     ''' </summary>    
     Private Sub SetLocalizedTexts()
         ButtonViewTable.Text = GetLocalizedString("CtrlVariableSelectorContinueButton")
-        SelectionValidationSummary.HeaderText = "<span style='font-weight:bold'>" + GetLocalizedString("CtrlVariableSelectorValidationSummary") + "</span>"
+        'Note to mergers: Removed  style='font-weight:bold' from span below. The font is "roboto condensed" both in sv & no,  
+        'so bold has no effect, and we dont like use of the style attribute, do we ? :-) .  
+        SelectionValidationSummary.HeaderText = "<span>" + GetLocalizedString("CtrlVariableSelectorValidationSummary") + "</span>"
         If (Marker.LimitSelectionsBy = "RowsColumns") Then
             SelectionErrorlabelTextRows.Text = String.Format(Me.GetLocalizedString(ROW_SELECTION_LIMIT_EXCEEDED), DataFormatter.NumericToString(Marker.SelectedRowsLimit, 0, LocalizationManager.GetTwoLetterLanguageCode()))
             SelectionErrorlabelTextColumns.Text = String.Format(Me.GetLocalizedString(COL_SELECTION_LIMIT_EXCEEDED), DataFormatter.NumericToString(Marker.SelectedColumnsLimit, 0, LocalizationManager.GetTwoLetterLanguageCode()))
@@ -624,6 +626,7 @@ Public Class VariableSelectorCodebehind
                 valuesetsAndGroupingsCount += VariableSelect.Variable.Groupings.Count
             End If
 
+            'Was in UU: If (valuesetsAndGroupingsCount > 1) Then
             If (valuesetsAndGroupingsCount > 0) Then
 
 

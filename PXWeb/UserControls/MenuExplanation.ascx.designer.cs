@@ -7,18 +7,65 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PXWeb.UserControls {
-    
-    
-    public partial class MenuExplanation {
-        
+namespace PXWeb.UserControls
+{
+
+
+    public partial class MenuExplanation
+    {
+
         /// <summary>
-        /// explanationText control.
+        /// explanationRegion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label explanationText;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl explanationRegion;
+
+        /// <summary>
+        /// explanationTextRegionHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label explanationTextRegionHeader;
+
+        /// <summary>
+        /// explanationTextRegion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label explanationTextRegion;
+
+        /// <summary>
+        /// explanationTimePeriod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl explanationTimePeriod;
+
+        /// <summary>
+        /// explanationTextTimePeriodHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label explanationTextTimePeriodHeader;
+
+        /// <summary>
+        /// explanationTextTimePeriod control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label explanationTextTimePeriod;
     }
 }

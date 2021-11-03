@@ -213,7 +213,7 @@ public static class PCAxisRepository
                                 {
                                     TableLink tbl = (TableLink)item;
 
-                                    if (string.Compare(tbl.ID.Selection, nodeId, true) == 0)
+                                    if (string.Compare(tbl.ID.Selection, nodeId, false) == 0)
                                     {
                                         tblFix = tbl;
                                     }
@@ -235,6 +235,11 @@ public static class PCAxisRepository
                                 {
                                     item.SortCode = item.Text;
                                 }
+                            };
+                            m.Restriction = item =>
+                            {
+                                //jira SS-373. Opens up, to let the database take care of access controll. 
+                                return true;
                             };
                         });
 
@@ -298,8 +303,9 @@ public static class PCAxisRepository
                 }
                 else
                 {
-                    //The user as requested an non vaild selection
-                    return null;
+                    //The user has requested an non valid selection
+                    throw new HttpException(400,
+                        $"The request for variable '{variable.Code}' has an error. Please check your query.");
                 }
             }
 

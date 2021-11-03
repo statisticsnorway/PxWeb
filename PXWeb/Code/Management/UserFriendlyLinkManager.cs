@@ -160,7 +160,7 @@ namespace PXWeb
             {
                 if (page.Contains(".aspx"))
                 {
-                    if (page.Contains("InformationSelection.aspx") || page.Contains("FootnotesSelection.aspx") || page.Contains("MarkingTips.aspx"))
+                    if (page.Contains("InformationSelection.aspx") || page.Contains("MarkingTips.aspx"))
                     {
                         url.Append(GetSelectionView(page) + "/");
                     }
@@ -233,10 +233,6 @@ namespace PXWeb
             {
                 return PxUrl.VIEW_TIPS_IDENTIFIER;
             }
-            else if (page.Contains("FootnotesSelection.aspx"))
-            {
-                return PxUrl.VIEW_FOOTNOTES_IDENTIFIER;
-            }
             else if (page.Contains("InformationSelection.aspx"))
             {
                 return PxUrl.VIEW_INFORMATION_IDENTIFIER;
@@ -259,10 +255,6 @@ namespace PXWeb
             else if (page.Contains("Chart.aspx"))
             {
                 return PxUrl.VIEW_CHART_IDENTIFIER;
-            }
-            else if (page.Contains("FootnotesPresentation.aspx"))
-            {
-                return PxUrl.VIEW_FOOTNOTES_IDENTIFIER;
             }
             else if (page.Contains("InformationPresentation.aspx"))
             {
