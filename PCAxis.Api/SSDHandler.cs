@@ -239,12 +239,19 @@ namespace PCAxis.Api
             builder.BuildForSelection();
 
             // Process selections
-            var selections = PCAxisRepository.BuildSelections(builder, tableQuery);
+            List<PCAxis.Paxiom.Selection> selections;
 
-            if (selections == null)
+            try
             {
-                cacheResponse.ResponseData = context.Response.ContentEncoding.GetBytes(Error("Parameter error", false));
-                context.SendJSONError(cacheResponse, 404, true);
+                selections = PCAxisRepository.BuildSelections(builder, tableQuery);
+            }
+
+            catch (Exception ex)
+            {
+                var message = ex is HttpException ? ex.Message : "Parameter error";
+
+                cacheResponse.ResponseData = context.Response.ContentEncoding.GetBytes(Error(message, false));
+                context.SendJSONError(cacheResponse, 400, true);
                 // Logs usage
                 _usageLogger.Info(String.Format("url={0}, type=error, caller={1}, cached=false, message=Parameter error", context.Request.RawUrl, context.Request.UserHostAddress));
                 return;
@@ -580,7 +587,7 @@ namespace PCAxis.Api
                         }
                         else
                         {
-                            context.SendJSONError(Error("Parameter error", false), 404);
+                                context.SendJSONError(Error("Parameter error", false), 400);
                             // Logs usage
                             _logger.Info(String.Format("url={0}, type=error, caller={1}, cached=false, message=Parameter error", context.Request.RawUrl, context.Request.UserHostAddress));
                         }
@@ -621,7 +628,7 @@ namespace PCAxis.Api
 #endif
                     try
                     {
-                        context.SendJSONError(Error("Parameter error", false), 404);
+                        context.SendJSONError(Error("Parameter error", false), 400);
                     }
                     catch (Exception sendEx)
                     {
