@@ -587,7 +587,7 @@ namespace PCAxis.Api
                         }
                         else
                         {
-                            context.SendJSONError(Error("Parameter error", false), 400);
+                                context.SendJSONError(Error("Parameter error", false), 400);
                             // Logs usage
                             _logger.Info(String.Format("url={0}, type=error, caller={1}, cached=false, message=Parameter error", context.Request.RawUrl, context.Request.UserHostAddress));
                         }
