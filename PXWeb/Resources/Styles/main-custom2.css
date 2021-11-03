@@ -25,3 +25,7 @@
 #pxwebcontent #TableOfContent {
   padding-top: 16px;
 }
+
+ul > li > a span:hover {
+  color: black;
+}
