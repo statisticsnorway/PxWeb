@@ -155,8 +155,8 @@
     <Reference Include="PXWeb.SavedQuery.MsSql, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PXWeb.SavedQuery.MsSql.1.0.1\lib\netstandard2.0\PXWeb.SavedQuery.MsSql.dll</HintPath>
     </Reference>
-    <Reference Include="PXWeb.SavedQuery.Oracle, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PXWeb.SavedQuery.Oracle.1.0.2\lib\netstandard2.0\PXWeb.SavedQuery.Oracle.dll</HintPath>
+    <Reference Include="PXWeb.SavedQuery.Oracle, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PXWeb.SavedQuery.Oracle.1.0.3-rc.1\lib\netstandard2.0\PXWeb.SavedQuery.Oracle.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
