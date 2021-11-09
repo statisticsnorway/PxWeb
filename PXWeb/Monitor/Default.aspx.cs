@@ -26,7 +26,7 @@ namespace PxWeb.Monitor
         //string connectionStatus, connectionMessage;
         public string connectionMessage;
         public string connectionString;
-        const int minLuceneLimit = 5000;
+        const int minLuceneLimit = 2;
         string tableMetaQuery;
         string apiServerUrl;
         string databaseId;
