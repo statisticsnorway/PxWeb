@@ -14,6 +14,8 @@ using System.Data;
 using System.Data.Common;
 using PCAxis.Sql.DbClient; //For executing SQLs.
 using PCAxis.Sql.DbConfig; // ReadSqlDbConfig;
+
+
 using log4net; 
 namespace PxWeb.Monitor
 {
@@ -61,6 +63,7 @@ namespace PxWeb.Monitor
 
         protected void DatabaseConnectionTest()
         {
+
             string[] ConnectionResult = checkConnection();
             connection.CssClass = ConnectionResult[0];
             connectionMessage = ConnectionResult[1];
@@ -130,21 +133,21 @@ namespace PxWeb.Monitor
         public string[] checkConnection()
         {
             string[] myReturn = new string[3];
+            var monitorSQId = "20000006";
             try
             {
-                var dbConf = PCAxis.Sql.DbConfig.SqlDbConfigsStatic.DefaultDatabase;
-                var dbInfo = dbConf.GetInfoForDbConnection("", "");
+               
+                DbConnectionStringBuilder aux = new DbConnectionStringBuilder();
+                aux.ConnectionString = WebConfigurationManager.AppSettings["SavedQueryConnectionString"];
+                aux.Remove("Password");
+                string conString = aux.ToString();
 
-                using (var cmd = new PxSqlCommandForTempTables(dbInfo.DataBaseType, dbInfo.DataProvider, dbInfo.ConnectionString))
+               myReturn[2] = String.Format("Tester SQ:{0} mot connection {1}", monitorSQId, conString);
+
+                var sq = PCAxis.Query.SavedQueryManager.Current.Load(monitorSQId);
+                if (sq == null)
                 {
-                    var builder = cmd.connectionStringBuilder();
-                    builder.Remove("Password");
-                    //Object dsn;
-                    //builder.TryGetValue("DATA SOURCE", out dsn);
-                    //myReturn[2] = dsn.ToString();
-                    myReturn[2] = builder.ConnectionString;
-                    string sqlString = "select 1 from dual";
-                    cmd.ExecuteSelect(sqlString);
+                    throw new Exception("Cant load sq");
                 }
             }
             catch (Exception ex)
