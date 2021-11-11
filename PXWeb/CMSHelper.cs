@@ -60,7 +60,7 @@ namespace PXWeb
         //context frame not ready for XP
         if (string.IsNullOrEmpty(KortNavnWeb))
         {
-            templateHead = getGenericTemplatePart("head").ToString();
+            templateHead = getGenericTemplatePart("head").ToString(); 
             templateTop = getGenericTemplatePart("top").ToString();
             templateFoot = getGenericTemplatePart("foot").ToString();
         }
@@ -80,16 +80,23 @@ namespace PXWeb
     }
 
         private const string SeHovedTall = "<div class=\"col-md-12\">\r\n                  <a href=\"https://www.qa.ssb.no/system/\" class=\"ssb-link roboto-plain\">\r\n                    <span class=\"link-text\">Se hovedtall for denne statistikken</span>\r\n                  </a>\r\n                </div>";
-        private const string BreadSmuler = "<nav class=\"row mt-2\" aria-label=\"secondary\" data-reactroot=\"\"><div class=\"col-12\"><div class=\"ssb-breadcrumbs\"><div><a class=\"ssb-link\" href=\"https://www.qa.ssb.no/\"><span class=\"link-text\">Forsiden</span></a> / </div><span></span></div></div></nav>";
+        private const string SeHovedTall_en = "<div class=\"col-md-12\">\r\n                  <a href=\"https://www.qa.ssb.no/en/system/\" class=\"ssb-link roboto-plain\">\r\n                    <span class=\"link-text\">View primary data for this statistic</span>\r\n                  </a>\r\n                </div>";
 
-        
+        private const string BreadSmuler = "<nav class=\"row mt-2\" aria-label=\"secondary\" data-reactroot=\"\"><div class=\"col-12\"><div class=\"ssb-breadcrumbs\"><div><a class=\"ssb-link\" href=\"https://www.qa.ssb.no/\"><span class=\"link-text\">Forsiden</span></a> / </div><span></span></div></div></nav>";
+        private const string BreadSmuler_en = "<nav class=\"row mt-2\" aria-label=\"secondary\" data-reactroot=\"\"><div class=\"col-12\"><div class=\"ssb-breadcrumbs\"><div><a class=\"ssb-link\" href=\"https://www.qa.ssb.no/en\"><span class=\"link-text\">Home</span></a> / </div><span></span></div></div></nav>";
+
+
+
 
         private string LagNavBank(string templateTop)
         {
             string myOut =  templateTop.Replace(">Statistikkbanken<", ">Statistikkbanken NAV<");
             myOut = myOut.Replace(SeHovedTall, "");
+            myOut = myOut.Replace(SeHovedTall_en, "");
             myOut = myOut.Replace(BreadSmuler, "");
+            myOut = myOut.Replace(BreadSmuler_en, "");
             myOut = myOut.Replace(">Statistikkbankens forside<", ">Statistikkbanken NAVs forside<");
+            myOut = myOut.Replace(">Statbank main menu<", ">Statbank NAV main menu<");
             myOut = myOut.Replace("www.qa.ssb.no/statbank", "www.qa.ssb.no/navbank");
             myOut = myOut.Replace("breadcrumbs-","");  //To stop a javascript, from reintroducing BreadSmuler
 
@@ -457,6 +464,8 @@ namespace PXWeb
             //return backupCMSramme;
             //}
         }
+
+
 
         private string _cmsHost;
 
