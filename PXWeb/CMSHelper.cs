@@ -85,6 +85,12 @@ namespace PXWeb
         private const string BreadSmuler = "<nav class=\"row mt-2\" aria-label=\"secondary\" data-reactroot=\"\"><div class=\"col-12\"><div class=\"ssb-breadcrumbs\"><div><a class=\"ssb-link\" href=\"https://www.qa.ssb.no/\"><span class=\"link-text\">Forsiden</span></a> / </div><span></span></div></div></nav>";
         private const string BreadSmuler_en = "<nav class=\"row mt-2\" aria-label=\"secondary\" data-reactroot=\"\"><div class=\"col-12\"><div class=\"ssb-breadcrumbs\"><div><a class=\"ssb-link\" href=\"https://www.qa.ssb.no/en\"><span class=\"link-text\">Home</span></a> / </div><span></span></div></div></nav>";
 
+        private const string MainMenu_in_en = "<div class=\"col-md-12\">\r\n                  <a href=\"https://www.qa.ssb.no/statbank\" class=\"ssb-link roboto-plain\">\r\n                    <span class=\"link-text\">Statbank main menu</span>\r\n                  </a>\r\n                </div>";
+        private const string MainMenu_out_en = "<div class=\"col-md-12\">\r\n                  <a href=\"https://www.qa.ssb.no/navbank/pxweb/en/nav\" class=\"ssb-link roboto-plain\">\r\n                    <span class=\"link-text\">Statbank NAV main menu</span>\r\n                  </a>\r\n                </div>";
+        private const string MainMenu_in_no = "<div class=\"col-md-12\">\r\n                  <a href=\"https://www.qa.ssb.no/statbank\" class=\"ssb-link roboto-plain\">\r\n                    <span class=\"link-text\">Statistikkbankens forside</span>\r\n                  </a>\r\n                </div>";
+        private const string MainMenu_out_no = "<div class=\"col-md-12\">\r\n                  <a href=\"https://www.qa.ssb.no/navbank/pxweb/no/nav\" class=\"ssb-link roboto-plain\">\r\n                    <span class=\"link-text\">Statistikkbanken NAVs forside</span>\r\n                  </a>\r\n                </div>";
+
+
 
 
 
@@ -95,9 +101,8 @@ namespace PXWeb
             myOut = myOut.Replace(SeHovedTall_en, "");
             myOut = myOut.Replace(BreadSmuler, "");
             myOut = myOut.Replace(BreadSmuler_en, "");
-            myOut = myOut.Replace(">Statistikkbankens forside<", ">Statistikkbanken NAVs forside<");
-            myOut = myOut.Replace(">Statbank main menu<", ">Statbank NAV main menu<");
-            myOut = myOut.Replace("www.qa.ssb.no/statbank", "www.qa.ssb.no/navbank");
+            myOut = myOut.Replace(MainMenu_in_no, MainMenu_out_no);
+            myOut = myOut.Replace(MainMenu_in_en, MainMenu_out_en);
             myOut = myOut.Replace("breadcrumbs-","");  //To stop a javascript, from reintroducing BreadSmuler
 
             return myOut;
