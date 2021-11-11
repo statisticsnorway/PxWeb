@@ -74,8 +74,27 @@ namespace PXWeb
         templateTop = ReplaceLanguageLink(templateTop);
         templateTop = templateTop.Replace("class=\"mega-menu hidden-by-default\"", "class=\"mega-menu hidden-by-default\" style=\"display: none;\"");
         templateTop = templateTop.Replace("href=\"#content\"", "href=\"#pxcontent\"");
+
+        templateTop = LagNavBank(templateTop);
         
     }
+
+        private const string SeHovedTall = "<div class=\"col-md-12\">\r\n                  <a href=\"https://www.qa.ssb.no/system/\" class=\"ssb-link roboto-plain\">\r\n                    <span class=\"link-text\">Se hovedtall for denne statistikken</span>\r\n                  </a>\r\n                </div>";
+        private const string BreadSmuler = "<nav class=\"row mt-2\" aria-label=\"secondary\" data-reactroot=\"\"><div class=\"col-12\"><div class=\"ssb-breadcrumbs\"><div><a class=\"ssb-link\" href=\"https://www.qa.ssb.no/\"><span class=\"link-text\">Forsiden</span></a> / </div><span></span></div></div></nav>";
+
+        
+
+        private string LagNavBank(string templateTop)
+        {
+            string myOut =  templateTop.Replace(">Statistikkbanken<", ">Statistikkbanken NAV<");
+            myOut = myOut.Replace(SeHovedTall, "");
+            myOut = myOut.Replace(BreadSmuler, "");
+            myOut = myOut.Replace(">Statistikkbankens forside<", ">Statistikkbanken NAVs forside<");
+            myOut = myOut.Replace("www.qa.ssb.no/statbank", "www.qa.ssb.no/navbank");
+
+            return myOut;
+    }
+
 
         private const string _genericTemplateCacheId = "genericTemplateCachePage";
 
