@@ -91,7 +91,7 @@ namespace PXWeb
             myOut = myOut.Replace(BreadSmuler, "");
             myOut = myOut.Replace(">Statistikkbankens forside<", ">Statistikkbanken NAVs forside<");
             myOut = myOut.Replace("www.qa.ssb.no/statbank", "www.qa.ssb.no/navbank");
-            myOut = myOut.Replace("breadcrumbs-","");
+            myOut = myOut.Replace("breadcrumbs-","");  //To stop a javascript, from reintroducing BreadSmuler
 
             return myOut;
     }
