@@ -187,7 +187,7 @@ namespace PXWeb
             {
                 if (!(LocalizationManager.CurrentCulture.Name == urlLanguage))
                 {
-                    if (urlLanguage != null)
+                    if (PxUrlObj.Database != null)
                     {
                         DatabaseInfo dbi = null;
 

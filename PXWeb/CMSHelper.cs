@@ -175,10 +175,10 @@ namespace PXWeb
                 templatePart = _templateByIdSetOnRequestByPart[part];
             }
 
-            if (part == "top")
-            {
-                templatePart = insertChangeLanguage(templatePart);
-            }
+            //if (part == "top")
+            //{
+            //    templatePart = insertChangeLanguage(templatePart);
+            //}
 
             return templatePart;
         }
@@ -200,10 +200,10 @@ namespace PXWeb
                 templatePart = _genericTemplateByIdSetOnRequestByPart[part];
             }
 
-            if (part == "top")
-            {
-                templatePart = insertChangeLanguage(templatePart);
-            }
+            //if (part == "top")
+            //{
+            //    templatePart = insertChangeLanguage(templatePart);
+            //}
 
             templatePart = templatePart.Replace("href = \"/", string.Format("href = \"{0}", ConfigurationManager.AppSettings["HomeSitePage"]));
             templatePart = templatePart.Replace("src = \"/", string.Format("src = \"{0}", ConfigurationManager.AppSettings["HomeSitePage"]));
@@ -389,7 +389,7 @@ namespace PXWeb
             
 
             var currentUrl = Page_Request_Url_AbsoluteUri;
-            var changeLanguageUrl = Language == "no" ? currentUrl.Replace("/statbank/", "/en/statbank/") : currentUrl.Replace("/en/statbank/", "/statbank/");
+            var changeLanguageUrl = Language == "no" ? currentUrl.Replace("/pxweb/no/", "/pxweb/en/") : currentUrl.Replace("/pxweb/en/", "/pxweb/no/");
             var presentationUrlPartStartIndex = changeLanguageUrl.ToLower().IndexOf("tableview");
             if (presentationUrlPartStartIndex < 0)
             {
