@@ -175,7 +175,7 @@
 	 <sentence name="CtrlInformationOfficialStatisticsLabel" value="Official statistics"/>
 	 <sentence name="CtrlInformationUnitLabel" value="Unit"/>
 	 <sentence name="CtrlInformationContactLabel" value="Contact"/>
-	 <sentence name="CtrlInformationLastUpdatedLabel" value="Latest update"/>
+	 <sentence name="CtrlInformationLastUpdatedLabel" value="Updated"/>
 	 <sentence name="CtrlInformationRefPeriodLabel" value="Reference time"/>
 	 <sentence name="CtrlInformationStockFaLabel" value="Data type"/>
 	 <sentence name="CtrlInformationCFPricesLabel" value="Price type"/>
@@ -379,7 +379,7 @@
 
 	 <sentence name="CtrlTableOfContentSizeHeading" value="Size:"/>
 	 <sentence name="CtrlTableOfContentSizeKilobytes" value="Kb"/>
-	 <sentence name="CtrlTableOfContentModifiedHeading" value="Modified:"/>
+	 <sentence name="CtrlTableOfContentModifiedHeading" value="Updated:"/>
 	 <sentence name="CtrlTableOfContentUpdatedHeading" value="Updated:"/>
 	 <sentence name="CtrlTableOfContentActionButton" value="Javascript is disabled, click to load the whole tree"/>
 	 <sentence name="CtrlTableOfContentExternalLinkTooltip" value="Information"/>
@@ -644,7 +644,7 @@
 	 <sentence name="PxcErr208" value="ATTRIBUTES error"/>
 	 <sentence name="PxcErr300" value="VALUE-TEXT-OPTION error"/>
 	 <sentence name="PxcKeywordError" value="{0} error"/>
-	 <sentence name="PxcKeywordLastUpdated" value="Latest update"/>
+	 <sentence name="PxcKeywordLastUpdated" value="Updated"/>
 	 <sentence name="PxcKeywordSource" value="Source"/>
 	 <sentence name="PxcKeywordContact" value="Contact"/>
 	 <sentence name="PxcKeywordCopyright" value="Copyright"/>
