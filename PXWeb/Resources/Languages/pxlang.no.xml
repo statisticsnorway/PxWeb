@@ -513,7 +513,7 @@
   <sentence name="PxcPermil" value="per 1 000" />
   <sentence name="PxcPercentUnitVarExists" value="Kan ikke beregne prosent når måleenheten allerede eksisterer" />
   <sentence name="PxcPermilUnitVarExists" value="Kan ikke beregne rate per 1 000 når måleenheten allerede eksisterer" />
-  <sentence name="PxcKeywordLastUpdated" value="Siste oppdatering" />
+  <sentence name="PxcKeywordLastUpdated" value="Sist endret" />
   <sentence name="PxcKeywordSource" value="Kilde" />
   <sentence name="PxcKeywordContact" value="Kontakt" />
   <sentence name="PxcKeywordOfficialStatistics" value="Offisiell statistikk" />
