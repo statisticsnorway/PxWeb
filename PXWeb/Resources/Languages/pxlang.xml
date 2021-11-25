@@ -863,7 +863,7 @@
   <sentence name="PxWebLoggedIn" value="Logged in as"/>
   <sentence name="PxWebLoginMissingUserOrPassw" value="Userid and password must be filled in"/>
   <sentence name="PxWebLoggedOut" value="You where logged out"/>
-    <sentence name="PxWebSwitchToCompactView" value ="Expert view"/>
+    <sentence name="PxWebSwitchToCompactView" value ="Compact view"/>
   <sentence name="PxWebSwitchToListView" value ="List view"/>
 
 	 <sentence name="PxWebAdminSettingsDatabasesPxDatabases" value="PX Databases"/>
@@ -1072,7 +1072,10 @@
 	 <sentence name="PxWebAdminSettingsValidationMaximumValue" value="Maximum value is {0}"/>
 	 <sentence name="PxWebAdminSettingsValidationIllegalColorCode" value="Illegal color code (expected format is #AAAAAA)"/>
    <sentence name="PxWebAdminSettingsValidationIllegalTimeSeries" value="Illegal times (expected format is hh:mm,hh:mm)" />
-
+	 <sentence name="PxWebAdminSettingsSelectionDefaultViewMode" value="Default view" />
+	 <sentence name="PxWebAdminSettingsSelectionDefaultViewComapact" value="Compact view" />
+	 <sentence name="PxWebAdminSettingsSelectionDefaultViewSimple" value="List view" />
+	 <sentence name="PxWebAdminSettingsSelectionDefaultViewModeInfo" value="Controls default view. Compact view shows a compressed version of the variable boxes on the web page. List view shows the variable boxes below each other and each box uses available width." />
 
 	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderOperations" value="Operations"/>
 	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderOperationsInfo" value="The selected operations will be available to the PX-Web user"/>

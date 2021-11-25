@@ -116,5 +116,7 @@ namespace PXWeb
         /// Decides if variabels shall be sorted (mandatory first) or not on the selection page
         /// </summary>
         bool SortVariableOrder { get; }
+
+        LayoutFormat DefaultViewMode { get; }
     }
 }
