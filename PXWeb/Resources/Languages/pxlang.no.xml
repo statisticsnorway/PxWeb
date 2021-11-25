@@ -869,6 +869,10 @@
   <sentence name="PxWebAdminSettingsSelectionSearchButtonModeManyValues" value="Mange verdier" />
   <sentence name="PxWebAdminSettingsSelectionSearchButtonModeAlways" value="Alltid" />
   <sentence name="PxWebAdminSettingsSelectionSearchButtonModeInfo" value="Styrer når søk-knappen skal vises" />
+  <sentence name="PxWebAdminSettingsSelectionDefaultViewMode" value="Standard visning" />
+  <sentence name="PxWebAdminSettingsSelectionDefaultViewComapact" value="Kompaktvisning" />
+  <sentence name="PxWebAdminSettingsSelectionDefaultViewSimple" value="Listevisning" />
+  <sentence name="PxWebAdminSettingsSelectionDefaultViewModeInfo" value="Styrer hvilken visning som er standard. Kompakt visning viser en komprimert utgave av variabel-boksene på nettsiden. Listevisning viser variabel-boksene under hverandre, og en boks vises på hele skjermbredden." />	
   <sentence name="PxWebAdminSettingsValidationMandatorySetting" value="Obligatorisk felt" />
   <sentence name="PxWebAdminSettingsValidationNonexistentPath" value="Stien finnes ikke" />
   <sentence name="PxWebAdminSettingsValidationNonexistentImage" value="Bilde finnes ikke" />
