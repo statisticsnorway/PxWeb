@@ -814,6 +814,8 @@
   <sentence name="PxWebAdminSettingsMenuShowMenuExplanationInfo" value="Om menyforklaring skal vises eller ikke. Hvis det er satt til 'Ja' vil menyforklaring bli vist. Hvis det er satt til 'Nei' vil ikke menyforklaring vises. " />
   <sentence name="PxWebAdminSettingsMenuShowTextToMetadata" value="Om en forklaring skal vises ved siden av metadata" />
   <sentence name="PxWebAdminSettingsMenuShowTextToMetadataInfo" value="Vis en forklaringstekst relevant til tabellmetadata. For eksempel, hvis satt til 'Ja', blir teksten 'Endret' lagt til før endringsdato for tabellens metadata. Hvis satt til 'Nei' vises tabellens metadata, men ingen beskrivende tekst. " />
+  <sentence name="PxWebAdminSettingsMenuShowStartEndTime" value="Vis start- og sluttid" />
+  <sentence name="PxWebAdminSettingsMenuShowStartEndTimeInfo" value="Om start- og sluttid skal vises eller ikke" />
   <sentence name="PxWebAdminSettingsSelectionCellLimitScreen" value="Cellegrense skjerm" />
   <sentence name="PxWebAdminSettingsSelectionCellLimitScreenInfo" value="Maksimalt antall celler som kan vises på skjermen" />
   <sentence name="PxWebAdminSettingsSelectionShowMandatoryMark" value="Merk obligatoriske variabler" />

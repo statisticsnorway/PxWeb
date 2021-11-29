@@ -202,6 +202,16 @@
                 <asp:ImageButton ID="imgTree2ShowTextToMetadata" runat="server" onclick="ShowTextToMetadataInfo" Height="15px" Width="15px" ImageUrl="<%$ PxImage: questionmark.gif %>" />
             </div>   
         </asp:Panel>
+         <asp:Panel id="pnlShowStartEndTime"  runat="server" >
+            <div class="setting-field">
+                <asp:Label ID="lblShowStartEndTime" runat="server" Text="<%$ PxString: PxWebAdminSettingsMenuShowStartEndTime %>"></asp:Label>
+                <asp:DropDownList ID="cboShowStartEndTime" runat="server"  >
+                    <asp:ListItem Value="True" Text="<%$ PxString: PxWebAdminYes %>"></asp:ListItem>
+                    <asp:ListItem Value="False" Text="<%$ PxString: PxWebAdminNo %>"></asp:ListItem>
+                </asp:DropDownList>
+                <asp:ImageButton ID="imgShowStartEndTime" runat="server" onclick="ShowStartEndTimeInfo" Height="15px" Width="15px" ImageUrl="<%$ PxImage: questionmark.gif %>" />
+            </div>   
+        </asp:Panel>
     </asp:Panel>
     
 

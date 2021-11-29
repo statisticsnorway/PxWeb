@@ -287,6 +287,11 @@ namespace PXWeb.Database
                         tbl.SetAttribute("Var" + (i+1) + "Values", GetNames(meta.Variables[i]));
                         tbl.SetAttribute("Var" + (i + 1) + "NumberOfValues", meta.Variables[i].Values.Count.ToString());
                         cellCount *= meta.Variables[i].Values.Count;
+                        if (meta.Variables[i].IsTime)
+                        {
+                            tbl.StartTime = meta.Variables[i].Values[0].ToString();
+                            tbl.EndTime = meta.Variables[i].Values[meta.Variables[i].Values.Count()-1].ToString();
+                        }
                     }
 
                     System.IO.FileInfo info = new System.IO.FileInfo(path);

@@ -513,6 +513,13 @@ Public Class TableOfContentCodebehind
         Dim linkText As StringBuilder = New StringBuilder()
         linkText.Append(MenuItem.Text)
 
+        If Marker.ShowStartEndTime Then
+            linkText.Append(", ")
+            linkText.Append(DirectCast(MenuItem, TableLink).StartTime)
+            linkText.Append("-")
+            linkText.Append(DirectCast(MenuItem, TableLink).EndTime)
+        End If
+
         If TypeOf (MenuItem) Is PCAxis.Menu.Link Then
             Dim MenuLink As PCAxis.Menu.Link = CType(MenuItem, PCAxis.Menu.Link)
             

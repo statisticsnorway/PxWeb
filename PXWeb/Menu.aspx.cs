@@ -144,6 +144,7 @@ namespace PXWeb
                     TableOfContent1.ShowModified = PXWeb.Settings.Current.Menu.ShowModifiedDate;
                     TableOfContent1.MetadataAsIcons = PXWeb.Settings.Current.Menu.MetadataAsIcons;
                     TableOfContent1.ShowTextForMetadata = PXWeb.Settings.Current.Menu.ShowTextToMetadata;
+                    TableOfContent1.ShowStartEndTime = PXWeb.Settings.Current.Menu.ShowStartEndTime;
                     break;
                 case MenuModeType.TreeViewAndFiles:
                 //TreeViewAndFiles is not implemented in first version

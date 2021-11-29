@@ -79,6 +79,9 @@ namespace PXWeb
             xpath = "./showMenuExplanation";
             ShowMenuExplanation = SettingsHelper.GetSettingValue(xpath, menuNode, true);
 
+            xpath = "./showStartEndTime";
+            ShowStartEndTime = SettingsHelper.GetSettingValue(xpath, menuNode, true);
+
 
         }
 
@@ -141,6 +144,9 @@ namespace PXWeb
 
             xpath = "./showMenuExplanation";
             SettingsHelper.SetSettingValue(xpath, menuNode, ShowMenuExplanation.ToString());
+
+            xpath = "./showStartEndTime";
+            SettingsHelper.SetSettingValue(xpath, menuNode, ShowStartEndTime.ToString());
         }
 
         #endregion
@@ -164,6 +170,8 @@ namespace PXWeb
         public bool MetadataAsIcons { get; set; }
         public bool ShowTextToMetadata { get; set; }
         public bool ShowMenuExplanation { get; set; }
+
+        public bool ShowStartEndTime { get; set; }
         #endregion
 
     }

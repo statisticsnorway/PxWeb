@@ -65,7 +65,8 @@ namespace PXWeb.Admin
             cboTree2MetadataAsIcons.SelectedValue = PXWeb.Settings.Current.Menu.MetadataAsIcons.ToString();
             cboShowTextToMetadata.SelectedValue = PXWeb.Settings.Current.Menu.ShowTextToMetadata.ToString();
             cboShowMenuExplanation.SelectedValue = PXWeb.Settings.Current.Menu.ShowMenuExplanation.ToString();
-            
+            cboShowStartEndTime.SelectedValue = PXWeb.Settings.Current.Menu.ShowStartEndTime.ToString();
+
             if (PXWeb.Settings.Current.Menu.ViewLinkMode != MenuViewLinkModeType.DefaultValues)
             {
                 //lblListNumberOfValuesInDefaultView.Visible = false;
@@ -216,6 +217,7 @@ namespace PXWeb.Admin
                                 menu.MetadataAsIcons = bool.Parse(cboTree2MetadataAsIcons.SelectedValue);
                                 menu.ShowTextToMetadata = bool.Parse(cboShowTextToMetadata.SelectedValue);
                                 menu.ShowMenuExplanation = bool.Parse(cboShowMenuExplanation.SelectedValue);
+                                menu.ShowStartEndTime = bool.Parse(cboShowStartEndTime.SelectedValue);
                                 break;
                         }
 
@@ -418,6 +420,11 @@ namespace PXWeb.Admin
         protected void ShowTextToMetadataInfo(object sender, ImageClickEventArgs e)
         {
             Master.ShowInfoDialog("PxWebAdminSettingsMenuShowTextToMetadata", "PxWebAdminSettingsMenuShowTextToMetadataInfo");
+        }
+
+        protected void ShowStartEndTimeInfo(object sender, ImageClickEventArgs e)
+        {
+            Master.ShowInfoDialog("PxWebAdminSettingsMenuShowStartEndTime", "PxWebAdminSettingsMenuShowStartEndTimeInfo");
         }
 
         //protected void cboListViewLinkMode_SelectedIndexChanged(object sender, EventArgs e)

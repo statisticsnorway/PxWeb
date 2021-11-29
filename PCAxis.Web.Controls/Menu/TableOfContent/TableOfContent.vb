@@ -488,6 +488,22 @@ Public Partial Class TableOfContent
         End Set
     End Property
 
+    Private _showStartEndTime As Boolean
+    ''' <summary>
+    ''' If start and end time shall be displayed
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    <PropertyPersistState(PersistStateType.PerControlAndPage)>
+    Public Property ShowStartEndTime() As Boolean
+        Get
+            Return _showStartEndTime
+        End Get
+        Set(ByVal value As Boolean)
+            _showStartEndTime = value
+        End Set
+    End Property
 
 #End Region
 

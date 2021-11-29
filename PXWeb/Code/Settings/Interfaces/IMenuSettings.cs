@@ -95,5 +95,7 @@ namespace PXWeb
         /// </summary>
         bool ShowMenuExplanation { get; }
 
+        bool ShowStartEndTime { get; }
+
     }
 }

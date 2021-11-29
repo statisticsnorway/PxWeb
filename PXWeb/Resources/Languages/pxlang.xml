@@ -1000,7 +1000,9 @@
   <sentence name="PxWebAdminSettingsMenuShowMenuExplanationInfo" value="Choose if menu explanation will be shown. If set to 'Yes' menu explanation will be shown. If set to 'No' menu explanation will not be shown. " />
   <sentence name="PxWebAdminSettingsMenuShowTextToMetadata" value="If a explanation shall be displayd next to the metadata" />
   <sentence name="PxWebAdminSettingsMenuShowTextToMetadataInfo" value="Show a explanatory text relevant to table metadata. For example, if set to 'Yes' the text 'Modified' is inserted before the table metadata modified date, if set to 'No' the table metadata is shown but no describing text." />
-  <sentence name="PxWebAdminSettingsSelectionCellLimitScreen" value="Cell limit screen"/>
+  <sentence name="PxWebAdminSettingsMenuShowStartEndTime" value="Show start and end time" />
+  <sentence name="PxWebAdminSettingsMenuShowStartEndTimeInfo" value="Choose if start and end time will be displayed" />
+	<sentence name="PxWebAdminSettingsSelectionCellLimitScreen" value="Cell limit screen"/>
 	 <sentence name="PxWebAdminSettingsSelectionCellLimitScreenInfo" value="The maximum number of cells that can be displayed on screen"/>
 	 <sentence name="PxWebAdminSettingsSelectionShowMandatoryMark" value="Show mandatory mark"/>
 	 <sentence name="PxWebAdminSettingsSelectionShowMandatoryMarkInfo" value="If mandatory variables shall be marked or not"/>

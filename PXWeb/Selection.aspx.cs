@@ -298,7 +298,9 @@ namespace PXWeb
 
                 if (!String.IsNullOrEmpty(currentItem.Text))
                 {
-                    MenuTitle.Text = currentItem.Text;
+                    MenuTitle.Text = Settings.Current.Menu.ShowStartEndTime
+                        ? currentItem.Text + $", {((PCAxis.Menu.TableLink)currentItem).StartTime}-{((PCAxis.Menu.TableLink)currentItem).EndTime}"
+                        : currentItem.Text;
                 }
                 else
                 {
