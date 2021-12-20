@@ -162,7 +162,7 @@ namespace PXWeb
 
         //For row mouseover
         private int rowCounter = 0;
-        
+
         protected string CreateTableLinkText(object obj)
         {
             return "Konsumprisindeks for varer og tjenester, etter leveringssektor (2015=100)";
@@ -183,7 +183,7 @@ namespace PXWeb
             }
         }
 
-       
+
         private string GetLastNodeFromPath(string path)
         {
             var pathIndex = path.LastIndexOf(PathHandler.NODE_DIVIDER);
@@ -196,7 +196,7 @@ namespace PXWeb
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -235,7 +235,7 @@ namespace PXWeb
                 {
                     Master.HeadTitle = menu.CurrentItem.Text + ". " + siteTitle;
                 }
-                
+
                 var currentMenuitem = (PxMenuItem)menu.CurrentItem;
 
                 List<string> outList = new List<string>();
@@ -264,7 +264,7 @@ namespace PXWeb
 
         private bool IsRegionExplanation(List<string> outList )
         {
-            bool region=false;
+            bool region = false;
             foreach (string litString in outList)
             {
                 if (litString.Contains("(F)") ||
@@ -291,7 +291,7 @@ namespace PXWeb
             bool tmePeriod = false;
             // Matches 2010K4 2020M09 2020U42 2020Q09 2020W42
             Regex r = new Regex(@"\d\d\d\d[KUMQW]\d");
-            
+
             foreach (string litString in outList)
             {
                 if (r.Match(litString).Success)
@@ -303,7 +303,7 @@ namespace PXWeb
             return tmePeriod;
         }
 
-       
+
 
         private List<string> ReadDataSource(PxMenuItem menuItem, string path, List<string> belongsToAccordions, int accordionLevel)
         {
@@ -327,17 +327,17 @@ namespace PXWeb
                 {
                     myOut.Add(GetCloseTable(accordionClasses));
                     isInTableElement = false;
-                } 
+                }
                 else if (!isInTableElement && myType.Equals("TableLink"))
                 {
                     myOut.Add(GetStartTable(accordionClasses));
                     isInTableElement = true;
                 }
-                    
+
 
                 if (headLine != null)
                 {
-                    
+
                     myOut.Add(GetHeading(headLine.Text, accordionClasses));
                 }
                 else if (tableLink != null)
@@ -359,7 +359,7 @@ namespace PXWeb
                         List<string> tmpFolders = new List<string>();
                         tmpFolders.AddRange(belongsToAccordions);
                         tmpFolders.Add(childPath);
-                        var tempList =  ReadDataSource(childMenuItem, childPath, tmpFolders, (accordionLevel+1));
+                        var tempList =  ReadDataSource(childMenuItem, childPath, tmpFolders, (accordionLevel + 1));
                         myOut.AddRange(tempList);
                     } else
                     {
@@ -400,7 +400,7 @@ namespace PXWeb
             sbAccordion.Append("<span role = 'heading' aria-level='2' class='header-text'>"+headerText+"</span>");
             sbAccordion.Append("</button>");
             sbAccordion.Append("</div>");
-            sbAccordion.Append("</div>"); 
+            sbAccordion.Append("</div>");
 
             /* Removed "<div role='region' aria-label='" + headerText + "' 
                since there is a the role=heading with the same text.(Better ?) */
@@ -412,7 +412,7 @@ namespace PXWeb
         {
             return  WrapInFullRow("<div  class='pxweb-cell-accordion-end" + accordionClasses + "'></div>");
         }
- 
+
         /*Its not really a table, but.*/
         private string GetStartTable(string accordionClasses)
         {
@@ -448,12 +448,12 @@ namespace PXWeb
             var tableLinkItem = new TableLinkItem(tableLink, urlResolver);
 
             StringBuilder outText = new StringBuilder();
-            
+
             outText.Append(StartDiv(accordionClasses + forRowMouseover + " col1", tableLinkItem.LinkSpanContentHover));
             outText.Append(GetSpan(tableLinkItem.LinkTableId, "font-normal-text"));
             outText.Append("</div>");
             string ariaLabelText = Server.HtmlEncode(tableLinkItem.LinkSpanContent + " " + tableLinkItem.LinkSpanContentHover);
-            outText.Append(StartDiv(accordionClasses + forRowMouseover + " col2", tableLinkItem.LinkSpanContentHover) +"<a aria-label='" + ariaLabelText + "' class='pxweb-link' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
+            outText.Append(StartDiv(accordionClasses + forRowMouseover + " col2", tableLinkItem.LinkSpanContentHover) + "<a aria-label='" + ariaLabelText + "' class='pxweb-link' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
             outText.Append(GetSpan(tableLinkItem.LinkSpanContent, "font-normal-text"));
             outText.Append("</a></div>");
             outText.Append(StartDiv(accordionClasses + forRowMouseover + " col3", tableLinkItem.LinkSpanContentHover));
@@ -486,8 +486,8 @@ namespace PXWeb
 
 
         private string StartDiv(string classes, string titletext)
-        { 
-            
+        {
+
             return "<div  class='" + classes + "' title = '" + Server.HtmlEncode(titletext) + "'>";
         }
         private string StartDiv(string classes)
@@ -522,20 +522,41 @@ namespace PXWeb
         /// <summary>
         /// Gets the menu object
         /// </summary>
-        /// <returns>returns the menu object</returns>
-        private PxMenuBase GetMenu(string path)
+        /// <returns>returns the menu object</returns> 
+    private PxMenuBase GetMenu(string path)
         {
-            //Checks that the necessary parameters are present
+          //  Checks that the necessary parameters are present
             if (String.IsNullOrEmpty(PxUrlObj.Database))
             {
-                //if parameters is missing redirect to the start page
+            //    if parameters is missing redirect to the start page
                 Response.Redirect("Default.aspx", false);
             }
-            
+
             try
             {
-                PxMenuBase myOut = PXWeb.Management.PxContext.GetMenu(PxUrlObj.Database, path);
-                return myOut;
+                PxMenuBase menubase = null;
+                if (PXWeb.Management.PxContext.CacheService != null)
+                {
+                    string key = $"pxc_menu_{PxUrlObj.Database}_{LocalizationManager.CurrentCulture.Name}_{path}";
+                    menubase = PXWeb.Management.PxContext.CacheService.Get<PxMenuBase>(key);
+                    if (menubase != null)
+                    {
+                        return menubase;
+                    }
+                }
+
+                menubase = PXWeb.Management.PxContext.GetMenu(PxUrlObj.Database, path);
+
+                if (PXWeb.Management.PxContext.CacheService != null)
+                {
+                    string key = $"pxc_menu_{PxUrlObj.Database}_{LocalizationManager.CurrentCulture.Name}_{path}";
+
+                    if (menubase != null)
+                    {
+                        PXWeb.Management.PxContext.CacheService.Set(key, menubase);
+                    }
+                }
+                return menubase;
             }
             catch (Exception ex)
             {
