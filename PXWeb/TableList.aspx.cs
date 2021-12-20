@@ -525,7 +525,8 @@ namespace PXWeb
         /// <returns>returns the menu object</returns> 
     private PxMenuBase GetMenu(string path)
         {
-          //  Checks that the necessary parameters are present
+            var lang = LocalizationManager.CurrentCulture.Name;
+            //  Checks that the necessary parameters are present
             if (String.IsNullOrEmpty(PxUrlObj.Database))
             {
             //    if parameters is missing redirect to the start page
@@ -537,7 +538,7 @@ namespace PXWeb
                 PxMenuBase menubase = null;
                 if (PXWeb.Management.PxContext.CacheService != null)
                 {
-                    string key = $"pxc_menu_{PxUrlObj.Database}_{LocalizationManager.CurrentCulture.Name}_{path}";
+                    string key = $"pxc_menu_{PxUrlObj.Database}_{lang}_{path}";
                     menubase = PXWeb.Management.PxContext.CacheService.Get<PxMenuBase>(key);
                     if (menubase != null)
                     {
@@ -549,7 +550,7 @@ namespace PXWeb
 
                 if (PXWeb.Management.PxContext.CacheService != null)
                 {
-                    string key = $"pxc_menu_{PxUrlObj.Database}_{LocalizationManager.CurrentCulture.Name}_{path}";
+                    string key = $"pxc_menu_{PxUrlObj.Database}_{lang}_{path}";
 
                     if (menubase != null)
                     {
