@@ -189,4 +189,12 @@
         </asp:DropDownList>
         <asp:ImageButton ID="imgSortVariableOrder" runat="server" onclick="SortVariableOrderInfo" Height="15px" Width="15px" ImageUrl="<%$ PxImage: questionmark.gif %>" />
     </div>
+    <div class="setting-field">
+        <asp:Label ID="lblDefaultViewMode" runat="server" Text="<%$ PxString: PxWebAdminSettingsSelectionDefaultViewMode %>"></asp:Label>
+        <asp:DropDownList ID="cboDefaultViewMode" runat="server">
+            <asp:ListItem Value="compact" Text="<%$ PxString: PxWebAdminSettingsSelectionDefaultViewComapact %>"></asp:ListItem>
+            <asp:ListItem Value="simple" Text="<%$ PxString: PxWebAdminSettingsSelectionDefaultViewSimple %>"></asp:ListItem>
+        </asp:DropDownList>
+        <asp:ImageButton ID="imgDefaultViewMode" runat="server" onclick="DefaultViewModeInfo" Height="15px" Width="15px" ImageUrl="<%$ PxImage: questionmark.gif %>" />
+    </div>
 </asp:Content>

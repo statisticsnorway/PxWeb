@@ -131,6 +131,9 @@ namespace PXWeb
 
             xpath = "./sortVariableOrder";
             SortVariableOrder = SettingsHelper.GetSettingValue(xpath, selectionNode, true);
+
+            xpath = "./defaultViewMode";
+            DefaultViewMode = SettingsHelper.GetSettingValue(xpath, selectionNode, LayoutFormat.compact);
         }
 
         /// <summary>
@@ -209,6 +212,9 @@ namespace PXWeb
 
             xpath = "./sortVariableOrder";
             SettingsHelper.SetSettingValue(xpath, selectionNode, SortVariableOrder.ToString());
+
+            xpath = "./defaultViewMode";
+            SettingsHelper.SetSettingValue(xpath, selectionNode, DefaultViewMode.ToString());
         }
 
         #endregion
@@ -250,6 +256,8 @@ namespace PXWeb
         public bool ShowNoFootnoteForSelection { get; set; }
         public bool ClientSideValidation { get; set; }
         public bool SortVariableOrder { get; set; }
+
+        public LayoutFormat DefaultViewMode { get; set; }
 
         #endregion
 
