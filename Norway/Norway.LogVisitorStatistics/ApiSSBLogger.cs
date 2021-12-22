@@ -16,7 +16,7 @@ namespace Norway.LogVisitorStatistics
             if (type == "data")
             {
                 string cacheNumeric = cache == "true" ? "1" : "0";
-                log4net.LogicalThreadContext.Properties["system"] = System.Configuration.ConfigurationManager.AppSettings["system"];
+                log4net.LogicalThreadContext.Properties["system"] = System.Configuration.ConfigurationManager.AppSettings["system-api"];
                 log4net.LogicalThreadContext.Properties["type"] = type;
                 log4net.LogicalThreadContext.Properties["lang"] = lang;
                 log4net.LogicalThreadContext.Properties["database"] = db;
