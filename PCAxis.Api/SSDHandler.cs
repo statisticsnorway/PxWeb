@@ -399,7 +399,8 @@ namespace PCAxis.Api
                                 tableQuery.Response = new QueryResponse() { Format = _defaultResponseFormat };
                             }
 
-                            var matrixSize = 0; 
+                            var matrixSize = 0;
+
 
                             Norway.LogVisitorStatistics.ApiHelper.LoggStatistics(context.Request.RawUrl, context.Request.UserHostAddress, "data", language, db, routeParts.ToArray().Last(), tableQuery.Response.Format, matrixSize, "true");
                         }
