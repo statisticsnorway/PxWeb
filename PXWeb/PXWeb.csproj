@@ -359,6 +359,7 @@
     <Content Include="Resources\Styles\main-pxweb.css" />
     <Content Include="Resources\Styles\main-pxweb.min.css" />
     <Content Include="Resources\Styles\print.css" />
+    <Content Include="Resources\Styles\main-custom2.css" />
     <Content Include="Resources\Styles\scss\not_in_use\_AReadMe.txt" />
     <Content Include="Resources\Styles\scss\common\_nested-accordion.scss" />
     <Content Include="Resources\PX\Databases\Example\Misc\OfficialStatistics\officialstatistics.px" />
@@ -1551,6 +1552,6 @@
     <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>call "$(SolutionDir)GetConfig.bat"</PreBuildEvent>
+    <PreBuildEvent>rem call "$(SolutionDir)GetConfig.bat"</PreBuildEvent>
   </PropertyGroup>
 </Project>

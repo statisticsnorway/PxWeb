@@ -287,7 +287,8 @@ Public Class TableQueryCodebehind
 
             Dim apiQuery = txtQuery.Text
             Dim tableId = postUrl.Split({"/"c}).Last()
-            Dim jsonString = String.Concat("{""queryObj"":", apiQuery, ",""tableIdForQuery"":""", tableId, """}")
+            'SS-373, adding postUrl:
+            Dim jsonString = String.Concat("{""queryObj"":", apiQuery, ",""tableIdForQuery"":""", tableId, """,""postUrl"":""", postUrl, """}")
 
             Using stream = GenerateStreamFromString(jsonString)
                 Response.Clear()

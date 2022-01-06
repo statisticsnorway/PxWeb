@@ -112,7 +112,6 @@ namespace PXWeb.UserControls
                 {
                     LoginControl.FailureText = Server.HtmlEncode(GetLocalizedString("PxWebWrongLogin"));
                 }
-
             }
 
             catch (Exception ex)
