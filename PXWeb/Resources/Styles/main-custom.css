@@ -160,10 +160,6 @@ $scrollbar-color: #b0b0b0;
   .sitewrapper, .forside #content, .forside .precontent {
     padding: 0px; } }
 
-/*stops x-scrollbar ( created by some min-width from cms)*/
-body {
-  min-width: unset;
-  overflow-x: auto; }
 
 .statistikkside-metaloft {
   padding-left: 10px; }
