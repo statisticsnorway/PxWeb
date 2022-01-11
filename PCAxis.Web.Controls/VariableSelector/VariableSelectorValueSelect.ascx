@@ -4,7 +4,7 @@
 
 <div class="pxbox negative variableselector_valuesselect_box m-margin-top">
 
-<asp:Panel runat="server" ID="ValuesSelectContainerPanel" DefaultButton="SearchValuesButton" role="region">
+<asp:Panel runat="server" ID="ValuesSelectContainerPanel" role="region">
     <asp:Panel runat="server" ID="Panel1" CssClass="variableselector_valuesselect_variabletitle_panel">
             <div class="flex-row flex-wrap-reverse">
                 <asp:Panel runat="server" ID="MetadataPanel" class="metadata-container" Visible="False">
@@ -66,12 +66,12 @@
         <asp:Panel runat="server" ID="SearchPanel" CssClass="flex-row flex-wrap s-margin-top">
             <div class="pxweb-input search-panel">
                 <asp:Label runat="server" ID="SearchTip" CssClass="screenreader-only"></asp:Label>
-                <div class="input-wrapper">
+                <asp:Panel runat="server" CssClass="input-wrapper" DefaultButton="SearchValuesButton">
                     <asp:TextBox ID="SearchValuesTextbox" CssClass="with-icon" runat="server"></asp:TextBox>
                     <asp:LinkButton ID="SearchValuesButton" CssClass="icon-wrapper search-icon" runat="server">
                         <span class="hidden">wave temp fix..</span>
                     </asp:LinkButton>
-                </div>
+                </asp:Panel>
             </div>
             <asp:CheckBox runat="server" ID="SearchValuesBeginningOfWordCheckBox" CssClass="variableselector_valuesselect_search_textstart_checkbox pxweb-checkbox negative" />
         </asp:Panel>
