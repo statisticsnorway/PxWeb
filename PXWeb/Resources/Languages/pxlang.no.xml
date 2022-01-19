@@ -52,7 +52,7 @@
   <sentence name="CtrlPerPartSelectCellLabel" value="Velg cellen som skal brukes som basis:"/>
   <sentence name="CtrlPerPartCompleteButton" value="Fullfør" />
   <sentence name="CtrlCommandBarAccordionOperatationsTitle" value="Flere valg" />
-  <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Lagre data som..." />
+  <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Lagre data som" />
   <sentence name="CtrlCommandBarAccordionShowAsTitle" value="Endre visning" />
   <sentence name="CtrlCommandBarSaveAsButton" value="Lagre" />
   <sentence name="CtrlCommandBarShowAsButton" value="Vis" />

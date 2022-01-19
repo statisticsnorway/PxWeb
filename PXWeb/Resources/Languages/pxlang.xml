@@ -58,8 +58,8 @@
 	 <sentence name="CtrlPerPartSelectCellLabel" value="Select cell:"/>
    <sentence name="CtrlPerPartCompleteButton" value="Complete" />
    <sentence name="CtrlCommandBarAccordionOperatationsTitle" value="More options" />
-   <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Save result as..." />
-   <sentence name="CtrlCommandBarAccordionShowAsTitle" value="Change view..." />
+   <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Save result as" />
+   <sentence name="CtrlCommandBarAccordionShowAsTitle" value="Change view" />
    <sentence name="CtrlCommandBarSaveAsButton" value="Save" />
    <sentence name="CtrlCommandBarShowAsButton" value="Show" />
 	 <sentence name="CtrlCommandBarEditAndCalulateCaption" value="Edit and Calculate"/>
