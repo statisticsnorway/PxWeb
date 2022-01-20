@@ -1173,6 +1173,7 @@ $scrollbar-color: #b0b0b0;
 #pxwebcontent select option:checked {
   background: #00824d linear-gradient(0deg, #00824d 0%, #00824d 100%);
   -webkit-text-fill-color: #fff;
+  color: #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -3784,12 +3785,6 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent .icon-placement-symbol {
   background-position: 0px 1px;
-}
-
-/*Green background color inside valuelist*/
-#pxwebcontent .pxbox select[multiple] option:checked {
-  background: #00824d linear-gradient(0deg, #00824d 0%, #00824d 100%);
-  -webkit-text-fill-color: #fff;
 }
 
 #pxwebcontent .pxbox .variableselector_valuesselect_search_textstart_checkbox.pxweb-checkbox input[type=checkbox] {

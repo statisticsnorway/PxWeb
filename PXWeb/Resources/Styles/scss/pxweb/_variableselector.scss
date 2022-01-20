@@ -240,13 +240,6 @@
     background-position: 0px 1px;
 }
 
-/*Green background color inside valuelist*/
-#pxwebcontent .pxbox select[multiple] option:checked {
-  background: $pxweb-green-4 linear-gradient(0deg, $pxweb-green-4 0%, $pxweb-green-4 100%);
-  -webkit-text-fill-color: $pxweb-white;
-  //background for unselected values is always white from user agent style
-}
-
 #pxwebcontent .pxbox .variableselector_valuesselect_search_textstart_checkbox.pxweb-checkbox input[type=checkbox] {
   border-color: $pxbox-green-2;
 }
