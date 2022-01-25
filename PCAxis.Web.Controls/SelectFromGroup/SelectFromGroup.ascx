@@ -6,9 +6,7 @@
     </h2>
 
     <div id="pxcontent">
-      <asp:Panel ID="UserManualGroupingRegion" role="region" runat="server">
-        <asp:Panel ID="UserManualGrouping"  CssClass="screenreader-only" runat="server" />
-      </asp:Panel>
+        <asp:Literal ID="UserManualGroupingLiteral" runat="server" />
     </div>
 
     <asp:Panel ID="GroupingRegion" role="region" runat="server">

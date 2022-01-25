@@ -42,8 +42,8 @@ Public Class VariableSelectorCodebehind
     Protected WithEvents SelectValuesFromGroup As SelectFromGroup
     Private buttonClicked As Boolean = False 'If the Continue button is clicked or not
     Protected SelectionValidationSummary As ValidationSummary
-    Protected UserManualMainRegion As Panel
-    Protected UserManualMain As Panel
+    Protected UserManualVariableSelectorLiteral As Literal
+
 #End Region
 
 #Region " Properties "
@@ -229,9 +229,7 @@ Public Class VariableSelectorCodebehind
             SelectionErrorlabelTextCells.Text = String.Format(Me.GetLocalizedString(CELL_SELECTION_LIMIT_EXCEEDED), DataFormatter.NumericToString(Marker.SelectedTotalCellsDownloadLimit, 0, LocalizationManager.GetTwoLetterLanguageCode()))
         End If
 
-        UserManualMainRegion.Attributes.Add("aria-label", LocalizationManager.GetLocalizedString("PxWebSelectionUserManualScreenReaderRegion"))
-        UserManualMain.Attributes.Add("aria-label", LocalizationManager.GetLocalizedString("PxWebSkipToSelectionLinkUserManualScreenReader"))
-
+        UserManualVariableSelectorLiteral.Text = UserManualScreenReader.GetString(Server, LocalizationManager.GetLocalizedString("PxWebSelectionUserManualScreenReaderRegion"), LocalizationManager.GetLocalizedString("PxWebSkipToSelectionLinkUserManualScreenReader"))
     End Sub
 
     ''' <summary>

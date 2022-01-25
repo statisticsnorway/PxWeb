@@ -201,7 +201,6 @@ namespace PXWeb
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            TableListExplanation.Attributes.Add("aria-label", LocalizationManager.GetLocalizedString("PxWebTableListExplanationScreenReader"));
             PCAxis.Web.Core.Management.PaxiomManager.PaxiomModelBuilder = null;
             PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel = null;
             PCAxis.Web.Core.Management.PaxiomManager.QueryModel = null;
