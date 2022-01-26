@@ -2,11 +2,19 @@
 
 <%@ MasterType VirtualPath="~/PxWeb.Master" %>
 <%@ Register Src="~/UserControls/MenuExplanation.ascx" TagPrefix="uc1" TagName="MenuExplanation" %>
+
+<%@ Register TagPrefix="pxwebCC" Namespace="PXWeb.CustomControls" Assembly="PXWeb" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
-    <div id="pxcontent"></div>
-    <asp:Panel ID="TableListExplanation" runat="server" CssClass="screenreader-only"></asp:Panel>    
+    <div id="pxcontent">
+        <pxwebCC:UserManualScreenReader ID="UserManualMenu" manualFor="TableList"
+            headerCode="UserManualScreenReader_TableList_Header"
+            textCode="UserManualScreenReader_TableList_Text"
+            runat="server" ClientIDMode="Static"/>
+    </div>
+    
     <uc1:MenuExplanation runat="server" ID="MenuExplanation" class="tablelist_explanation" />
     <asp:Panel runat="server" class="menu-tablelist grid-container" ClientIDMode="Static" ID="MenuTableList" >
     </asp:Panel>

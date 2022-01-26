@@ -803,9 +803,12 @@
   <sentence name="PxWebSkipToSelectionLinkText" value="Go to first variable" />
   <sentence name="PxWebSkipToSelectionLinkScreenReader" value="Now you have come to the page, Choose variable. This page give you the oportunity to select which variables and values you want to display in your result of the table. A variable is a property of a statistical unit. The page is divided into several boxes, one for each variable, where you can select values by click to highlight one or more values. It always starts with the statistics variable which is the main value counted in the table." />
   <sentence name="PxWebRegionSelectionUserManualScreenReader" value="User manual for selection page" />
-  <sentence name="PxWebTableListExplanationScreenReader" value="You are now in the first main page of StatBank Norway, which shows an overview of all available tables within the selected statistical area. The tables are grouped into topics, with a heading for each group. There is also a geographical and periodic explanation at the top of the table list, when there are tables in the list that contain this value." />
   <sentence name="PxWebTableListEmptyFolder" value="This folder is temporarily empty" />
 
+  <!-- UserManualScreenReader -->
+  <sentence name="UserManualScreenReader_TableList_Header" value="User manual for this page" />
+  <sentence name="UserManualScreenReader_TableList_Text" value="You are now in the first main page of StatBank Norway, which shows an overview of all available tables within the selected statistical area. The tables are grouped into topics, with a heading for each group. There is also a geographical and periodic explanation at the top of the table list, when there are tables in the list that contain this value." />
+ 
 
   <!-- PX-Web Administration -->
 
