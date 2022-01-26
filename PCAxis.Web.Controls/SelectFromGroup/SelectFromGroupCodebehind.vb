@@ -14,8 +14,6 @@ Public Class SelectFromGroupCodebehind
     Inherits PaxiomControlBase(Of SelectFromGroupCodebehind, SelectFromGroup)
 
 #Region "Fields"
-    Protected UserManualGroupingLiteral As Literal
-
     Protected GroupingRegion As Panel
     Protected GroupRegion As Panel
     Protected ValuesRegion As Panel
@@ -99,8 +97,6 @@ Public Class SelectFromGroupCodebehind
     End Sub
 
     Protected Sub setWCAG()
-        UserManualGroupingLiteral.Text = UserManualScreenReader.GetString(Server, GetLocalizedString("CtrlSelectFromGroupSelectUserManualScreenReaderRegion"), GetLocalizedString("CtrlSelectFromGroupSelectUserManualScreenReader"))
-
         GroupingRegion.Attributes.Add("aria-label", GetLocalizedString("CtrlSelectFromGroupGroupingScreenReaderRegion"))
         GroupRegion.Attributes.Add("aria-label", GetLocalizedString("CtrlSelectFromGroupGroupScreenReaderRegion"))
         ValuesRegion.Attributes.Add("aria-label", GetLocalizedString("CtrlSelectFromGroupValuesScreenReaderRegion"))

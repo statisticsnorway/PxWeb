@@ -64,7 +64,7 @@ Public Class SearchValuesCodebehind
 
     'regions
 
-    Protected UserManualSearchValuesLiteral As Literal
+
 
 
     Protected SearchRegion As Panel
@@ -147,7 +147,6 @@ Public Class SearchValuesCodebehind
     Protected Sub setWCAG()
         SearchResults.Attributes.Add("aria-label", GetLocalizedString(LOC_SEARCH_RESULTS_LISTBOX_ARIA_LABEL))
         SelectedVariableValues.Attributes.Add("aria-label", GetLocalizedString(LOC_SEARCH_CHOOSEN_VALUES_LISTBOX_ARIA_LABEL))
-        UserManualSearchValuesLiteral.Text = UserManualScreenReader.GetString(Server, GetLocalizedString("CtrlSearchValuesUserManualScreenReaderRegion"), GetLocalizedString("CtrlSearchValuesUserManualScreenReader"))
 
         SearchRegion.Attributes.Add("aria-label", GetLocalizedString("CtrlSearchValuesSearchScreenReaderRegion"))
         SelectedValuesRegion.Attributes.Add("aria-label", GetLocalizedString("CtrlSearchValuesSelectedValuesScreenReaderRegion"))

@@ -42,7 +42,6 @@ Public Class VariableSelectorCodebehind
     Protected WithEvents SelectValuesFromGroup As SelectFromGroup
     Private buttonClicked As Boolean = False 'If the Continue button is clicked or not
     Protected SelectionValidationSummary As ValidationSummary
-    Protected UserManualVariableSelectorLiteral As Literal
 
 #End Region
 
@@ -228,8 +227,6 @@ Public Class VariableSelectorCodebehind
         Else
             SelectionErrorlabelTextCells.Text = String.Format(Me.GetLocalizedString(CELL_SELECTION_LIMIT_EXCEEDED), DataFormatter.NumericToString(Marker.SelectedTotalCellsDownloadLimit, 0, LocalizationManager.GetTwoLetterLanguageCode()))
         End If
-
-        UserManualVariableSelectorLiteral.Text = UserManualScreenReader.GetString(Server, LocalizationManager.GetLocalizedString("PxWebSelectionUserManualScreenReaderRegion"), LocalizationManager.GetLocalizedString("PxWebSkipToSelectionLinkUserManualScreenReader"))
     End Sub
 
     ''' <summary>
