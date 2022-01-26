@@ -160,13 +160,11 @@ $scrollbar-color: #b0b0b0;
 @media (max-width: 700px) {
   .sitewrapper, .forside #content, .forside .precontent {
     padding: 0px;
-    }
+  }
 }
-    
 .statistikkside-metaloft {
   padding-left: 10px;
 }
-
 
 /*#footer {
   padding-left: 10px; }
