@@ -154,15 +154,18 @@ $scrollbar-color: #b0b0b0;
 .sitewrapper {
   margin: 0 auto;
   max-width: 1180px;
-  width: 100%; }
+  width: 100%;
+}
 
 @media (max-width: 700px) {
   .sitewrapper, .forside #content, .forside .precontent {
-    padding: 0px; } }
-
-
+    padding: 0px;
+    }
+}
+    
 .statistikkside-metaloft {
-  padding-left: 10px; }
+  padding-left: 10px;
+}
 
 
 /*#footer {
