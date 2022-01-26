@@ -52,7 +52,7 @@
   <sentence name="CtrlPerPartSelectCellLabel" value="Velg cellen som skal brukes som basis:"/>
   <sentence name="CtrlPerPartCompleteButton" value="Fullfør" />
   <sentence name="CtrlCommandBarAccordionOperatationsTitle" value="Flere valg" />
-  <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Lagre data som..." />
+  <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Lagre data som" />
   <sentence name="CtrlCommandBarAccordionShowAsTitle" value="Endre visning" />
   <sentence name="CtrlCommandBarSaveAsButton" value="Lagre" />
   <sentence name="CtrlCommandBarShowAsButton" value="Vis" />
@@ -605,7 +605,7 @@
   <sentence name="PxWebTableCroppedHeading" value="Tabellen har blitt beskåret"/>
   <sentence name="PxWebPopupDialogClose" value="Lukke" />
   <sentence name="PxWebSelectVariable" value="Velg variabler" />
-  <sentence name="PxWebAboutTable" value="Informasjon om tabell" />
+  <sentence name="PxWebAboutTable" value="Informasjon om tabellen" />
   <sentence name="PxWebAboutTableContact" value="Kontakt og informasjon" />
   <sentence name="PxWebAboutTableFootnotes" value="Fotnoter" />
   <sentence name="PxWebAboutTableDefinitions" value="Definisjoner av variabler og verdier" />

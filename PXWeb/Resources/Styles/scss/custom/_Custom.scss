@@ -34,6 +34,10 @@
   display: inline;
 }
 
+#pxwebcontent .variableselector_valuesselect_variabletitle {
+    color: #ffffff;
+ }
+
 #pxwebcontent .variableselector_valuesselect_variabletitle::first-letter {
   text-transform: capitalize;
 }
@@ -165,25 +169,17 @@
     }
 }
 
-/*stops x-scrollbar ( created by some min-width from cms)*/
-body {
-  min-width: unset;
-  overflow-x: auto
-}
-
-
-
 .statistikkside-metaloft {
     padding-left: 10px
 }
 
-#footer {
+/*#footer {
     padding-left: 10px;
 }
 
 #header {
     padding-left: 10px;
-}
+}*/
 
 #navigation-path {
     padding-left: 10px;
@@ -326,6 +322,19 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
   background-image:unset;
 }
 
+/*budle.css sets margin to 0px. radiobutton looses space in front of text.*/
+#pxwebcontent input[type="radio"] {
+    margin: 3px 3px 0px 5px;
+}
+
+#pxwebcontent label {
+    display: inline;
+}
+/*override bundle.css to get correct size of boxes*/
+#pxwebcontent .commandbar-listbox-container {
+    box-sizing: content-box;
+}
+
 
 /*#endregion*/
 
@@ -344,4 +353,91 @@ th.pxweb-subheader.collapsible:hover .expandMenuTableList {
 
 #pxwebcontent #px-we-need-to-look-at-this {
   margin-left: 4px;
+}
+
+#pxwebcontent .variableselector_valuesselect_statistics_panel {
+    border-top-style: solid;
+    border-top-color: #b6e8b8;
+    border-top-width: 2px;
+    padding-top: 7px;
+}
+
+/*#pxwebcontent .variableselector_valuesselect_variabletitle:first-letter {
+    text-transform: capitalize;
+}*/
+#pxwebcontent .variableselector_valuesselect_mandatory_text:after {
+    content: "*";
+    font-size: 28px;
+}
+
+#pxwebcontent #place-holder-title h2 {
+    font-family: Roboto Condensed, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    display: block;
+    color: #333;
+}
+
+.h1title {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    /*font-family: "Oswald", "Calibri", "Arial", "DejaVu Sans", sans-serif !important*/
+}
+
+#pxwebcontent .top-link {
+    max-height: none;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 80px;
+    font-family: Roboto Condensed,sans-serif !important;
+    font-stretch: condensed;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+
+.statbank-title {
+    color: black;
+    font-family: 'Roboto Condensed'
+}
+
+#pxwebcontent .footnotes_container h3, #pxwebcontent .footnotes_container h4, #pxwebcontent .footnotes_container .accordion-header, #pxwebcontent .footnotes_container .obs-notes {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+
+/* backup if cms is not available*/
+
+.px-messages-backupcms {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 21px;
+        margin-left: 10px;
+    }
+
+    .col {
+        padding-left: 0px;
+        padding-right: 0px
+    }
+
+    .xp-region {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    #pxwebcontent .top-link {
+        box-sizing: content-box;
+    }
 }
