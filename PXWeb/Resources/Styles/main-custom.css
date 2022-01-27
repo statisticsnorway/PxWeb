@@ -482,10 +482,6 @@ h1 {
 #pxwebcontent .menu-tablelist.grid-container .accordion-cell.closed_level_3 {
   display: none;
 }
-#pxwebcontent .menu-tablelist.grid-container .table-hover {
-  background-color: #f2f0ff;
-}
-
 @media screen and (max-width: 768px) {
   #pxwebcontent .menu-tablelist.grid-container {
     grid-template-columns: 80px auto 100px;
