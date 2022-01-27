@@ -16,7 +16,7 @@
     </div>
     
     <uc1:MenuExplanation runat="server" ID="MenuExplanation" class="tablelist_explanation" />
-    <asp:Panel runat="server" class="menu-tablelist grid-container" ClientIDMode="Static" ID="MenuTableList" >
+    <asp:Panel runat="server" class="menu-tablelist" ClientIDMode="Static" ID="MenuTableList" >
     </asp:Panel>
    <script>
        function cellAccordionToggle(panel, button, accordionclass, closeClass) {

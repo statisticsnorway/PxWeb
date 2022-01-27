@@ -419,15 +419,19 @@ namespace PXWeb
 
             if (PxUrlObj.Language.Equals("en"))
             {
+                outText.Append("<div class='menu-tablelist grid-container'>");
                 outText.Append(StartDiv(accordionClasses + " colhead col1") + "Table no</div>");
                 outText.Append(StartDiv(accordionClasses + " colhead col2") + "Title</div>");
                 outText.Append(StartDiv(accordionClasses + " colhead col3") + "Time period:</div>");
+                outText.Append("</div>");
             }
             else
             {
+                outText.Append("<div class='menu-tablelist grid-container'>");
                 outText.Append(StartDiv(accordionClasses + " colhead col1") + "Tabellnr.</div>");
                 outText.Append(StartDiv(accordionClasses + " colhead col2") + "Tittel</div>");
                 outText.Append(StartDiv(accordionClasses + " colhead col3") + "Tidsperiode:</div>");
+                outText.Append("</div>");
             }
 
             return outText.ToString();
@@ -448,16 +452,20 @@ namespace PXWeb
 
             StringBuilder outText = new StringBuilder();
 
+            outText.Append("<a aria-label='" + "FRA YTRE A" + "' class='pxweb-link menu-tablelist grid-container' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
             outText.Append(StartDiv(accordionClasses + forRowMouseover + " col1", tableLinkItem.LinkSpanContentHover));
             outText.Append(GetSpan(tableLinkItem.LinkTableId, "font-normal-text"));
             outText.Append("</div>");
             string ariaLabelText = Server.HtmlEncode(tableLinkItem.LinkSpanContent + " " + tableLinkItem.LinkSpanContentHover);
-            outText.Append(StartDiv(accordionClasses + forRowMouseover + " col2", tableLinkItem.LinkSpanContentHover) + "<a aria-label='" + ariaLabelText + "' class='pxweb-link' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
+            //outText.Append(StartDiv(accordionClasses + forRowMouseover + " col2", tableLinkItem.LinkSpanContentHover) + "<a aria-label='" + ariaLabelText + "' class='pxweb-link' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
+            outText.Append(StartDiv(accordionClasses + forRowMouseover + " col2", tableLinkItem.LinkSpanContentHover) );
             outText.Append(GetSpan(tableLinkItem.LinkSpanContent, "font-normal-text"));
-            outText.Append("</a></div>");
+            //outText.Append("</a></div>");
+            outText.Append("</div>");
             outText.Append(StartDiv(accordionClasses + forRowMouseover + " col3", tableLinkItem.LinkSpanContentHover));
             outText.Append(GetSpan(tableLinkItem.LinkSpanPeriod, "font-normal-text"));
             outText.Append("</div>");
+            outText.Append("</a>");
 
             return outText.ToString();
         }
