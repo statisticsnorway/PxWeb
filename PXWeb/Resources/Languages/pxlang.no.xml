@@ -52,7 +52,7 @@
   <sentence name="CtrlPerPartSelectCellLabel" value="Velg cellen som skal brukes som basis:"/>
   <sentence name="CtrlPerPartCompleteButton" value="Fullfør" />
   <sentence name="CtrlCommandBarAccordionOperatationsTitle" value="Flere valg" />
-  <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Lagre data som..." />
+  <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Lagre data som" />
   <sentence name="CtrlCommandBarAccordionShowAsTitle" value="Endre visning" />
   <sentence name="CtrlCommandBarSaveAsButton" value="Lagre" />
   <sentence name="CtrlCommandBarShowAsButton" value="Vis" />
@@ -605,7 +605,7 @@
   <sentence name="PxWebTableCroppedHeading" value="Tabellen har blitt beskåret"/>
   <sentence name="PxWebPopupDialogClose" value="Lukke" />
   <sentence name="PxWebSelectVariable" value="Velg variabler" />
-  <sentence name="PxWebAboutTable" value="Informasjon om tabell" />
+  <sentence name="PxWebAboutTable" value="Informasjon om tabellen" />
   <sentence name="PxWebAboutTableContact" value="Kontakt og informasjon" />
   <sentence name="PxWebAboutTableFootnotes" value="Fotnoter" />
   <sentence name="PxWebAboutTableDefinitions" value="Definisjoner av variabler og verdier" />
@@ -649,10 +649,11 @@
   <sentence name="PxWebSkipToMainContentLinkText" value="Hopp til hovedinnhold" />
   <sentence name="PxWebSkipToMainContentLinkScreenReader" value="Trykk enter for å gå rett til hovedinnhold" />
   <sentence name="PxWebSkipToSelectionLinkText" value="Gå til første variabel" />
-  <sentence name="PxWebSkipToSelectionLinkUserManualScreenReader" value="Nå har du kommet til skjermbildet for å velge hvilke variabler og verdier du vil ha frem i ditt resultat av tabellen. En variabel er en egenskap ved en statistisk enhet. Side er delt opp i flere bokser, en for hver variabel, hvor du kan velge verdier ved å markere en eller flere. Det starter alltid med statistikkvariabel som er hoved verdien som telles i tabellen. Trykk enter for å gå rett til valg av første variabel." />
-  <sentence name="PxWebSelectionUserManualScreenReaderRegion" value="Bruksanvisning valgskjermbildets hovedside" />
-  <sentence name="PxWebTableListExplanationScreenReader" value="Du er nå på første hovedside av Statistikkbanken, som viser en oversikt over alle tilgjengelige tabeller innenfor det valgte statistikkområdet. Tabellene er gruppert i emner, med en overskrift for hver gruppe. Det er også en geografisk og periodisk forklaring i toppen av tabell-listen, når det finnes tabeller i listen som inneholder disse verdiene." />
+  <sentence name="PxWebSkipToSelectionLinkScreenReader" value="Nå har du kommet til skjermbildet for å velge hvilke variabler og verdier du vil ha frem i ditt resultat av tabellen. En variabel er en egenskap ved en statistisk enhet. Side er delt opp i flere bokser, en for hver variabel, hvor du kan velge verdier ved å markere en eller flere. Det starter alltid med statistikkvariabel som er hoved verdien som telles i tabellen. Trykk enter for å gå rett til valg av første variabel." />
+  <sentence name="PxWebRegionSelectionUserManualScreenReader" value="Bruksanvisning valgskjermbildets hovedside" />
   <sentence name="PxWebTableListEmptyFolder" value="Denne mappen er midlertidlig tom" />
+  <sentence name="UserManualScreenReader_TableList_Header" value="Bruksanvisning for denne siden." />
+  <sentence name="UserManualScreenReader_TableList_Text" value="Du er nå på første hovedside av Statistikkbanken, som viser en oversikt over alle tilgjengelige tabeller innenfor det valgte statistikkområdet. Tabellene er gruppert i emner, med en overskrift for hver gruppe. Det er også en geografisk og periodisk forklaring i toppen av tabell-listen, når det finnes tabeller i listen som inneholder disse verdiene." />  
   <sentence name="PxWebAdminLogout" value="Logg ut" />
   <sentence name="PxWebAdminHeading" value="PX-Web - Administrasjon" />
   <sentence name="PxWebAdminHomePage" value="PX-Web - Hjem" />
