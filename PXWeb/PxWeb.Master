@@ -83,8 +83,9 @@
             
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
                 </asp:ContentPlaceHolder>
+            <%-- 
             </main>
-            
+             --%>
             <footer id="pxfooter">
                 <div class="footerleft">
                     <asp:Label runat="server" EnableViewState="false" ID="lblFooterText" />
@@ -95,6 +96,7 @@
                 </div>
                 <div style="clear: both;"> </div>               
             </footer>
+                
         </div>
     </form>
     
