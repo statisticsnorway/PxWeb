@@ -38,7 +38,7 @@
         <div id="wrap">
             <header id="header" class="header flex-row flex-wrap justify-space-between">
                 <asp:HyperLink runat="server" ID="SkipToMain" CssClass="screenreader-only pxweb-link"></asp:HyperLink>
-                <div class="headerleft flex-row" role="banner">
+                <div class="headerleft flex-row">
                         <img id="imgSiteLogo"  enableviewstate="false" runat="server" src="" alt="" class="imgSiteLogo" />
                         <span class="siteLogoText"><asp:Literal ID="litAppName" EnableViewState="false" runat="server" /></span>
                 </div>
@@ -48,6 +48,8 @@
                     </div>
                 </div>
             </header>
+            <main id="place-holder">
+
             <% if (PXWeb.Settings.Current.General.Modules.ShowLogin)
                 { %>
                 <div id="loginBanner" class="login">
@@ -69,7 +71,7 @@
                 </div>
             </div>
            
-            <main id="place-holder">
+            
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
                 </asp:ContentPlaceHolder>
             </main>
