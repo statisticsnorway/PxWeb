@@ -452,11 +452,28 @@ namespace PXWeb
 
             StringBuilder outText = new StringBuilder();
 
-            outText.Append("<a aria-label='" + "FRA YTRE A" + "' class='pxweb-link menu-tablelist grid-container' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
+            string txttabellnr;
+            string txttimespan;
+            string timespan;
+            if (PxUrlObj.Language.Equals("en"))
+            {
+                txttabellnr = "tablenumber";
+                txttimespan = "timespan";
+                timespan = "from " + tableLinkItem.LinkSpanPeriod.Replace("-", " to ");
+            }
+            else
+            { 
+                txttabellnr = "tabellnummer";
+                txttimespan = "tidsperiode";
+                timespan = "fra " + tableLinkItem.LinkSpanPeriod.Replace("-", " til ");
+            }
+
+            string ariaLabelText = Server.HtmlEncode(txttabellnr + " " + tableLinkItem.LinkTableId + "," + tableLinkItem.LinkSpanContent + "," + txttimespan + " " + timespan + "," + tableLinkItem.LinkSpanContentHover);
+            outText.Append("<a aria-label='" + ariaLabelText  + "' class='pxweb-link menu-tablelist grid-container' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
             outText.Append(StartDiv(accordionClasses + forRowMouseover + " col1", tableLinkItem.LinkSpanContentHover));
             outText.Append(GetSpan(tableLinkItem.LinkTableId, "font-normal-text"));
             outText.Append("</div>");
-            string ariaLabelText = Server.HtmlEncode(tableLinkItem.LinkSpanContent + " " + tableLinkItem.LinkSpanContentHover);
+            //string ariaLabelText = Server.HtmlEncode(tableLinkItem.LinkTableId + "," + tableLinkItem.LinkSpanContent + "," + tableLinkItem.LinkSpanContentHover);
             //outText.Append(StartDiv(accordionClasses + forRowMouseover + " col2", tableLinkItem.LinkSpanContentHover) + "<a aria-label='" + ariaLabelText + "' class='pxweb-link' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
             outText.Append(StartDiv(accordionClasses + forRowMouseover + " col2", tableLinkItem.LinkSpanContentHover) );
             outText.Append(GetSpan(tableLinkItem.LinkSpanContent, "font-normal-text"));
