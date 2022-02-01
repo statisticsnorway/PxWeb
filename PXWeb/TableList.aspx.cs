@@ -395,7 +395,7 @@ namespace PXWeb
 
             sbAccordion.Append("<div class='grid-row-1-3" + accordionClasses + "'>");
             sbAccordion.Append("<div class='pxweb-accordion without-borders'>");
-            sbAccordion.Append("<button type = 'button' class='accordion-header closed' onclick='cellAccordionToggle(MenuTableList, this, \"Accordion_"+ accordionId+"\",\"closed_level_"+(accordionLevel +1)+ "\"  )'>");
+            sbAccordion.Append("<button type = 'button' class='accordion-header closed' aria-expanded='false' onclick='cellAccordionToggle(MenuTableList, this, \"Accordion_"+ accordionId+"\",\"closed_level_"+(accordionLevel +1)+ "\"  )'>");
             sbAccordion.Append("<span role = 'heading' aria-level='2' class='header-text'>"+headerText+"</span>");
             sbAccordion.Append("</button>");
             sbAccordion.Append("</div>");
