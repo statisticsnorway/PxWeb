@@ -2,36 +2,46 @@
 /* Add your overrides of the default styles in this style sheet */
 /*HEI*/
 #pxwebcontent .menu-tablelist {
- 
-  &.grid-container{
-    margin-top:0px;
-	display: grid;
-	grid-template-columns: 80px auto 160px; 
-	border-bottom: 0px;
-	
-    & .grid-row-1-3{
-	  grid-column-start:1;
-      grid-column-end: span 3;
-    }
+
+	&.grid-container {
+		margin-top: 0px;
+		display: grid;
+		grid-template-columns: 80px auto 160px;
+		border-bottom: 0px;
+
+		& .grid-row-1-3 {
+			grid-column-start: 1;
+			grid-column-end: span 3;
+		}
 
 
-    & .accordion-cell.closed_level_1{
-      display: none;
-    }
-	
-	& .accordion-cell.closed_level_2{
-      display: none;
-    }
-	
-	//Dont think we can have 3 levels, but
-	& .accordion-cell.closed_level_3{
-      display: none;
-    }
-	
-	& .table-hover {
+		& .accordion-cell.closed_level_1 {
+			display: none;
+		}
 
+		& .accordion-cell.closed_level_2 {
+			display: none;
+		}
+		//Dont think we can have 3 levels, but
+		& .accordion-cell.closed_level_3 {
+			display: none;
+		}
+
+		&.accordion-cell.closed_level_1 {
+			display: none;
+		}
+
+		&.accordion-cell.closed_level_2 {
+			display: none;
+		}
+		//Dont think we can have 3 levels, but
+		&.accordion-cell.closed_level_3 {
+			display: none;
+		}
+
+		& .table-hover {
+		}
 	}
-  }
 }
 
 @media screen and (max-width: $tablet-screen) {

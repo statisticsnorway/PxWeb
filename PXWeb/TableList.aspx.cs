@@ -469,7 +469,7 @@ namespace PXWeb
             }
 
             string ariaLabelText = Server.HtmlEncode(txttabellnr + " " + tableLinkItem.LinkTableId + ", " + tableLinkItem.LinkSpanContent + ", " + txttimespan + " " + timespan + ", " + tableLinkItem.LinkSpanContentHover);
-            outText.Append("<a aria-label='" + ariaLabelText  + "' class='pxweb-link menu-tablelist grid-container' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
+            outText.Append("<a aria-label='" + ariaLabelText  + "' class='pxweb-link menu-tablelist grid-container " + accordionClasses + "' href = '" + Server.HtmlEncode(tableLinkItem.Link) + "'>");
             outText.Append(StartDiv(accordionClasses + forRowMouseover + " col1", tableLinkItem.LinkSpanContentHover));
             outText.Append(GetSpan(tableLinkItem.LinkTableId, "font-normal-text"));
             outText.Append("</div>");
