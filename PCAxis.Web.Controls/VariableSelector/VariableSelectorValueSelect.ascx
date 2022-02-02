@@ -64,6 +64,7 @@
             </div>
         </div>
         <asp:Panel runat="server" ID="SearchPanel" CssClass="flex-row flex-wrap s-margin-top">
+            <asp:CheckBox runat="server" ID="SearchValuesBeginningOfWordCheckBox" CssClass="variableselector_valuesselect_search_textstart_checkbox pxweb-checkbox negative" />
             <div class="pxweb-input search-panel">
                 <asp:Label runat="server" ID="SearchTip" CssClass="screenreader-only"></asp:Label>
                 <asp:Panel runat="server" CssClass="input-wrapper" DefaultButton="SearchValuesButton">
@@ -71,9 +72,8 @@
                     <asp:LinkButton ID="SearchValuesButton" CssClass="icon-wrapper search-icon" runat="server">
                         <span class="hidden">wave temp fix..</span>
                     </asp:LinkButton>
-                </asp:Panel>
-            </div>
-            <asp:CheckBox runat="server" ID="SearchValuesBeginningOfWordCheckBox" CssClass="variableselector_valuesselect_search_textstart_checkbox pxweb-checkbox negative" />
+                </asp:Panel> 
+                </div>
         </asp:Panel>
     </asp:Panel>
     <asp:Panel ID="HiddenEventButtons" runat="server" Visible="false" CssClass="variableselector_valuesselect_hiddeneventbutton_panel">

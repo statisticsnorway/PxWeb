@@ -294,7 +294,8 @@
    <sentence name="CtrlVariableSelectorSelectDropdownGroupingLabel" value="Dropdown menu for groupings of values" />
    <sentence name="CtrlVariableSelectorMetadataImformationTooltip" value="Definitions for variables and values"/>
 	 <sentence name="CtrlVariableSelectorHierarchicalTooltip" value="Select hierarcically"/>
-	 <sentence name="CtrlVariableSelectorSearchValuesTooltip" value="Search"/>
+	<sentence name="CtrlVariableSelectorSearchguide" value="This checkbox is connected to the following searchfield. Check this box if you only want those values which begins with the search criteria." />
+	<sentence name="CtrlVariableSelectorSearchValuesTooltip" value="Search"/>
    <sentence name="CtrlVariableSelectorSummarySelectedLabel" value="Selected"/>
    <sentence name="CtrlVariableSelectorSummaryTotalLabel" value="of total"/>
    <sentence name="CtrlVariableSelectorOptionalVariableText" value="Optional variable" />
