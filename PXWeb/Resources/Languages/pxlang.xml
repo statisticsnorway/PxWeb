@@ -815,6 +815,13 @@
   <sentence name="PxWebTableListEmptyFolder" value="This folder is temporarily empty" />
 
   <!-- UserManualScreenReader -->
+
+  <sentence name="UserManualScreenReader_Databases_Header" value="User manual for this page" />
+  <sentence name="UserManualScreenReader_Databases_Text" value="This page is for selecting the database where your want to seach for a table." />
+  <sentence name="UserManualScreenReader_Menu_Header" value="User manual for this page" />
+  <sentence name="UserManualScreenReader_Menu_Text" value="You are now in the first main page of PxWeb, where the goal is to select a table. You may find your table by seach or by drilling down in the menu three." />
+  <sentence name="UserManualScreenReader_Result_Header" value="User manual for this page" />
+  <sentence name="UserManualScreenReader_Result_Text" value="This page shows the results of the figures you selected on the variable-page in StatBank Norway. On this result-page you can download the numbers in another format, pivot or edit them. You can also save them as a saved query, which can be sent to others or used as a link the next time you want to see these numbers with new time periods." />
   <sentence name="UserManualScreenReader_TableList_Header" value="User manual for this page" />
   <sentence name="UserManualScreenReader_TableList_Text" value="You are now in the first main page of StatBank Norway, which shows an overview of all available tables within the selected statistical area. The tables are grouped into topics, with a heading for each group. There is also a geographical and periodic explanation at the top of the table list, when there are tables in the list that contain this value." />
  
@@ -875,8 +882,10 @@
   <sentence name="PxWebLoggedIn" value="Logged in as"/>
   <sentence name="PxWebLoginMissingUserOrPassw" value="Userid and password must be filled in"/>
   <sentence name="PxWebLoggedOut" value="You where logged out"/>
-    <sentence name="PxWebSwitchToCompactView" value ="Compact view"/>
+  <sentence name="PxWebSwitchToCompactView" value ="Compact view"/>
   <sentence name="PxWebSwitchToListView" value ="List view"/>
+  <sentence name="PxWebSwitchToCompactViewScreenReader" value="Changes visual layout. In the list view a single variable box utilizes the entire screen width. In the compact view there are many boxes per line. Now displaying list view." />
+  <sentence name="PxWebSwitchToListViewScreenReader" value="Changes visual layout. In the list view a single variable box utilizes the entire screen width. In the compact view there are many boxes per line. Now displaying compact view."/>	
 
 	 <sentence name="PxWebAdminSettingsDatabasesPxDatabases" value="PX Databases"/>
 	 <sentence name="PxWebAdminSettingsDatabasesPxDatabasesInfo" value="Selected PX Databases will be displayed in PX-Web"/>
