@@ -990,6 +990,9 @@ Public Class VariableSelectorValueSelectCodebehind
                 ActionButton.Visible = False
             End If
 
+            'Retain focus on dropdownlist after selected index changed
+            GroupingDropDown.Focus()
+
         End If
     End Sub
 
