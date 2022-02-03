@@ -1214,8 +1214,13 @@ Public Class VariableSelectorValueSelectCodebehind
         Dim itm As RepeaterItem = e.Item
         Dim currentItem As MetaItem = TryCast(e.Item.DataItem, MetaItem)
 
-        Dim lbl As Label = TryCast(itm.FindControl("lblVariableValueName"),Label)
-        lbl.Text = currentItem.Name
+        Dim lbl As Label = TryCast(itm.FindControl("lblVariableValueName"), Label)
+        If String.IsNullOrWhiteSpace(currentItem.Name) Then
+            lbl.Visible = False
+        Else
+            lbl.Text = currentItem.Name
+        End If
+
 
         Dim rep As Repeater = TryCast(itm.FindControl("VariableValueLinksRepeater"), Repeater)
         rep.DataSource = currentItem.Links
@@ -1243,13 +1248,13 @@ Public Class VariableSelectorValueSelectCodebehind
     Private Function GetVariableLinks() As List(Of MetaItem)
         Dim lst = New List(Of MetaItem)
         Dim itm = New MetaItem()
-        itm.Name = Marker.Variable.Name
+        itm.Name = "" ' Marker.Variable.Name
 
-        If Not String.IsNullOrWhiteSpace(Marker.Variable.MetaId)
+        If Not String.IsNullOrWhiteSpace(Marker.Variable.MetaId) Then
             itm.Links = Marker.MetaLinkProvider.GetVariableLinks(Marker.Variable.MetaId, LocalizationManager.CurrentCulture.Name).ToList()
         End If
-        
-        If itm.Links IsNot Nothing
+
+        If itm.Links IsNot Nothing Then
             lst.Add(itm)
         End If
 
@@ -1257,20 +1262,25 @@ Public Class VariableSelectorValueSelectCodebehind
     End Function
 
     Private Function GetValueLinks() As List(Of MetaItem)
-        Dim links = New List(Of MetaItem)
+        Dim myOut = New List(Of MetaItem)
         For Each value As Value In Marker.Variable.Values
-            If Not String.IsNullOrWhiteSpace(value.MetaId)
-                Dim itm = new MetaItem()
+            If Not String.IsNullOrWhiteSpace(value.MetaId) Then
+                Dim itm = New MetaItem()
                 itm.Name = value.Text
-                itm.Links = Marker.MetaLinkProvider.GetValueLinks(value.MetaId,LocalizationManager.CurrentCulture.Name).ToList()
+                itm.Links = Marker.MetaLinkProvider.GetValueLinks(value.MetaId, LocalizationManager.CurrentCulture.Name).ToList()
                 ' Only display value if it has metadata links
-                If itm.Links.Count > 0Then
-                    links.Add(itm)
+                If itm.Links.Count > 0 Then
+                    If itm.Links.Count = 1 Then
+                        'Moves the value.Text from the "link heading" to the link text
+                        itm.Links(0).LinkText = value.Text + ", " + itm.Links(0).LinkText
+                        itm.Name = ""
+                    End If
+                    myOut.Add(itm)
                 End If
             End If
-        Next  
+        Next
 
-        Return links
+        Return myOut
     End Function
 
     Private Sub FillMetaData()
