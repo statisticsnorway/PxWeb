@@ -106,14 +106,13 @@
     ControlToValidate="ValuesListBox" ClientValidationFunction="ValidateListBox" SetFocusOnError="false" 
     OnServerValidate="ValidateListBox_ServerValidate" ForeColor=""  
     ValidateEmptyText="True"  ValidationGroup="ChangeStatus" EnableClientScript="true"  Display="Dynamic"  Enabled="false" ></asp:CustomValidator>--%>
-
-
-             <asp:CustomValidator ID="MustSelectCustom" runat="server" ErrorMessage="" Role="alert" CssClass="flex-row pxweb-input-error negative"
-    ControlToValidate="ValuesListBox" SetFocusOnError="false"  Display="Dynamic"
-    OnServerValidate="ValidateListBox_ServerValidate" ClientValidationFunction="ValidateListBox"  ForeColor=""  
-    ValidateEmptyText="True"></asp:CustomValidator>
-
-
+    
+    <div role="region" id="errornotifyscreenreader" aria-live="assertive" aria-atomic="true">
+        <asp:CustomValidator ID="MustSelectCustom" runat="server" ErrorMessage="" Role="alert" CssClass="flex-row pxweb-input-error negative"
+        ControlToValidate="ValuesListBox" SetFocusOnError="false"  Display="Dynamic"
+        OnServerValidate="ValidateListBox_ServerValidate" ClientValidationFunction="ValidateListBox"  ForeColor=""  
+        ValidateEmptyText="True"></asp:CustomValidator>
+    </div>
 </asp:Panel>
 
 
