@@ -80,12 +80,14 @@
     </asp:Panel>
     <!--<hr class="pxweb-divider type-light with-margin"/>-->
     <asp:Panel runat="server" ID="SelectedStatistics" CssClass="variableselector_valuesselect_statistics_panel">
-        <p>
-        <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesSelectedTitel" /></span>
-        <asp:Label runat="server" id="NumberValuesSelected" CssClass="variableselector_valuesselect_statistics"/>
-        <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesTotalTitel" /></span>
-        <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesTotal"  /></span>
-        </p>
+        <div role="region" id="SelectedStatisticsynotifyscreenreader" aria-live="polite" aria-atomic="true">
+            <p>
+                <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesSelectedTitel" /></span>
+                <asp:Label runat="server" id="NumberValuesSelected" CssClass="variableselector_valuesselect_statistics"/>
+                <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesTotalTitel" /></span>
+                <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesTotal"  /></span>
+            </p>
+        </div>
     </asp:Panel>
     <asp:Panel ID="OptionalVariablePanel" runat="server" CssClass="optional-variable-panel flex-row align-center">
         <div class="optional-variable-icon-panel">
