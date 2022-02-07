@@ -55,7 +55,7 @@ Public Class VariableSelectorValueSelectCodebehind
 #End Region
 
 #Region "Localized strings"
-
+    Public AriaLabelMetadata As String
 #End Region
 
 #Region "Controls"
@@ -524,6 +524,7 @@ Public Class VariableSelectorValueSelectCodebehind
     ''' Render language strings.
     ''' </summary>
     Private Sub SetLocalizedText()
+        AriaLabelMetadata = String.Format(GetLocalizedString("CtrlVariableSelectorMetadataAriaLabel"), Marker.Variable.Name)
 
         ' --- Search values link button
         SearchButton.Text = String.Format("<span class='link-text'>{0}</span>", GetLocalizedString("CtrlVariableSelectorSearchLabel"))
@@ -1213,8 +1214,7 @@ Public Class VariableSelectorValueSelectCodebehind
 
         Dim itm As RepeaterItem = e.Item
         Dim currentItem As MetaItem = TryCast(e.Item.DataItem, MetaItem)
-
-        Dim lbl As Label = TryCast(itm.FindControl("lblVariableValueName"), Label)
+        Dim lbl As Label = TryCast(itm.FindControl("lblVariableValueName"),Label)
         If String.IsNullOrWhiteSpace(currentItem.Name) Then
             lbl.Visible = False
         Else
@@ -1272,7 +1272,7 @@ Public Class VariableSelectorValueSelectCodebehind
                 If itm.Links.Count > 0 Then
                     If itm.Links.Count = 1 Then
                         'Moves the value.Text from the "link heading" to the link text
-                        itm.Links(0).LinkText = value.Text + ", " + itm.Links(0).LinkText
+                        itm.Links(0).LinkText = itm.Links(0).LinkText + " " + value.Text
                         itm.Name = ""
                     End If
                     myOut.Add(itm)
