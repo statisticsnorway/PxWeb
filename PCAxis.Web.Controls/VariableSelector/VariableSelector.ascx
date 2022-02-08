@@ -32,11 +32,13 @@
     <div class ="flex-row justify-center">
      <pxc:VariableSelectorSelectionInformation runat="server" ID="VariableSelectorSelectionInformation" />
     </div>
-    <div class="flex-row justify-center">
-        <asp:Label ID="SelectionErrorlabel" runat="server" visible="true" CssClass="variableselector_selectionerror_label"/>
-        <asp:Label ID="SelectionErrorlabelTextCells" runat="server" CssClass="variableselector_selectionerror_label_text" />
-        <asp:Label ID="SelectionErrorlabelTextColumns" runat="server" CssClass="variableselector_selectionerror_label_text" />
-        <asp:Label ID="SelectionErrorlabelTextRows" runat="server" CssClass="variableselector_selectionerror_label_text" />
+    <div role="region" id="selectionerrornotifyscreenreader" aria-live="assertive" aria-atomic="true"
+        <div class="flex-row justify-center">
+            <asp:Label ID="SelectionErrorlabel" runat="server" visible="true" CssClass="variableselector_selectionerror_label"/>
+            <asp:Label ID="SelectionErrorlabelTextCells" runat="server" CssClass="variableselector_selectionerror_label_text" />
+            <asp:Label ID="SelectionErrorlabelTextColumns" runat="server" CssClass="variableselector_selectionerror_label_text" />
+            <asp:Label ID="SelectionErrorlabelTextRows" runat="server" CssClass="variableselector_selectionerror_label_text" />
+        </div>
     </div>
 </asp:Panel>
 
