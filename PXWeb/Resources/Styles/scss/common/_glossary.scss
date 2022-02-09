@@ -46,7 +46,7 @@
         @include open-sans;
         animation: fadein .2s;
         display: none;
-        font-size: 14px;
+        font-size: 1.4rem;
         left: 50%;
         margin-left: -135px;
         opacity: 0;
@@ -87,7 +87,7 @@
                 .icon {
                     color: $pxweb-dark-5;
                     fill: $pxweb-green-2;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                 }
 
                 span {
@@ -98,7 +98,7 @@
 
             .info-text {
                 color: $pxweb-white;
-                font-size: 14px;
+                font-size: 1.4rem;
             }
         }
     }

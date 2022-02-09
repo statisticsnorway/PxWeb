@@ -56,7 +56,7 @@ $max-readable-width: 580px;
 
 @mixin font-normal-text {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 @mixin pxweb-input-list-font {
@@ -78,13 +78,13 @@ $max-readable-width: 580px;
 
 @mixin pxweb-h1-title {
     @include pxweb-heading-title;
-    font-size: 30px;
+    font-size: 3rem;
     margin-bottom: 32px;
 }
 
 @mixin pxweb-h2-title {
     @include pxweb-heading-title;
-    font-size: 28px;
+    font-size: 2.8rem;
     margin-bottom: 22px;
 }
 @mixin pxweb-h3-title {
@@ -95,7 +95,7 @@ $max-readable-width: 580px;
 
 @mixin pxweb-table-title {
     @include pxweb-heading-title;
-/*    font-size: 28px;*/    
+/*    font-size: 2.8rem;*/    
     margin-bottom: 12px;
 }
 

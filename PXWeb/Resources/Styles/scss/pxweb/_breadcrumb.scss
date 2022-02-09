@@ -8,7 +8,7 @@
     color: $breadcrumb-text;
     /*font-family: Verdana;*/
     @include pxweb-font;
-    font-size: 14px;
+    font-size: 1.4rem;
     display: inline-block;
     background-image: none !important;
     transition: none;
@@ -18,7 +18,7 @@
     color: $breadcrumb-text;
     /*font-family: Verdana;*/
     @include pxweb-font;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 #pxwebcontent .breadcrumb_text:focus {
@@ -30,7 +30,7 @@
     color: $breadcrumb-text-nolink;
     /*font-family: Verdana;*/
     @include pxweb-font;
-    font-size: 14px;
+    font-size: 1.4rem;
     display: inline-block;
 }
 
@@ -39,14 +39,14 @@
     /*font-family: Verdana;*/
     @include pxweb-font;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 #pxwebcontent .breadcrumb_sep {
     color: $breadcrumb-text;
     font-family: Verdana;
     @include pxweb-font;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 #pxwebcontent .breadcrumb_homebutton {

@@ -1,5 +1,8 @@
 ﻿@include file-header("_PxWeb.scss");
 
+html {
+    font-size: 62.5%;
+}
 
 #pxwebcontent {
   background: $pxweb-background;
@@ -7,7 +10,7 @@
   @include roboto;
   line-height: 1.5;
   color: $pxweb-ink-main;
-  font-size: 14px;
+  font-size: 1.4rem;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
@@ -140,7 +143,7 @@
 }
 
 #pxwebcontent #header .link-text.px-change-lang, #pxwebcontent #header .link-text.px-external-search {
-    font-size: 12px;
+    font-size: 1.2rem;
     letter-spacing: normal;
     padding-top: 0px;
     padding-right: 1px;
@@ -262,7 +265,7 @@
     background-color: $pxweb-background;
     position: relative;
     z-index: 2;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 #pxwebcontent .px_setting_validator {
@@ -449,7 +452,7 @@
 
 #pxwebcontent .px-message-text {
   @include open-sans;
-  font-size: 16px;
+  font-size: 1.6rem;
   padding-left: 16px;
   padding-right: 16px;
 
@@ -543,7 +546,7 @@
 
 .footnote_heading {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 

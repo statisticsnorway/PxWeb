@@ -37,7 +37,7 @@
     margin-top: 1em !important;
     margin-bottom: 1em !important;
     font-family: 'Roboto Condensed', sans-serif !important;
-    font-size: 20px;
+    font-size: 2rem;
 }
 
     #pxwebcontent .variableselector_error_summary ul {
@@ -45,7 +45,7 @@
     }
 
     #pxwebcontent .variableselector_error_summary li {
-        font-size: 16px;
+        font-size: 1.6rem;
         list-style-type: disc;
         list-style-position: inside;
         color: black
@@ -55,7 +55,7 @@
 #pxwebcontent .variableselector_continue_button {
     height: 86px;
     width: 294px;
-    font-size: 28px;
+    font-size: 2.8rem;
 }
 
 #pxwebcontent .variableselector_valuesselect_box {
@@ -93,7 +93,7 @@
 
 #pxwebcontent .variableselector_valuesselect_variabletitle {
     @include roboto-condenced;
-    font-size: 21px;
+    font-size: 2.1rem;
     display: inline-block;
     padding-right: 40px;
     overflow-wrap: break-word;
@@ -102,7 +102,7 @@
 #pxwebcontent .variableselector_valuesselect_aggregations {
     width: 100%;
     @include roboto;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: $pxbox-dark-6;
     cursor: pointer;
 }
@@ -173,7 +173,7 @@
     border: none;
     display: inline;
     @include open-sans;
-    font-size: 14px;
+    font-size: 1.4rem;
     color: $pxbox-ink;
 }
 
@@ -262,17 +262,17 @@
 }
 
 #pxwebcontent .variableselector_valuesselect_mandatory_text {
-        font-size: 12px;
+        font-size: 1.2rem;
 /*    font-weight: 400;*/
 
 }
 #pxwebcontent .variableselector_valuesselect_mandatory_text:after {
     content: "*";
-    font-size: 28px;
+    font-size: 2.8rem;
 }
 
 /*#pxwebcontent .variableselector_valuesselect_mandatory_star {
-    font-size: 28px;
+    font-size: 2.8rem;
 }*/
 
 
@@ -294,7 +294,7 @@
 #pxwebcontent .optional-variable-text {
   color: $pxbox-black-1;
   padding-left: 5px;
-  font-size: 14px;
+  font-size: 1.4rem;
   @include roboto-condenced;
 }
 
