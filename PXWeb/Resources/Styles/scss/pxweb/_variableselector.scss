@@ -53,8 +53,8 @@
 /*TO DO - end*/
 
 #pxwebcontent .variableselector_continue_button {
-    height: 86px;
-    width: 294px;
+    height: 8.6rem;
+    width: 29.4rem;
     font-size: 2.8rem;
 }
 
@@ -165,7 +165,7 @@
 
 #pxwebcontent .search-panel {
     margin-bottom: 5px;
-    flex: 1 0 250px;
+    flex: 1 0 25rem;
     padding-right: 20px;
 }
 
@@ -302,9 +302,14 @@
 #pxwebcontent .optional-variable-icon-panel {
     background-color: $pxbox-blue-3;
     box-sizing: border-box;
-    width: 22px;
-    height: 21px;
+    width: 2.2rem;
+    height: 2.1rem;
     border: solid $pxbox-blue-3 2px;
+
+    .icon {
+        width: 1.8rem;
+        height: 1.8rem;
+    } 
 }
 
 

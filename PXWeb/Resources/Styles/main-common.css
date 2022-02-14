@@ -620,7 +620,7 @@ h3 {
   cursor: text;
   display: flex;
   flex-direction: column;
-  max-width: 205px;
+  max-width: 20.5rem;
   position: relative;
   width: 100%;
 }
@@ -771,6 +771,11 @@ h3 {
   color: #fff;
 }
 
+@media screen and (max-width: 767px) {
+  #pxwebcontent .pxweb-input {
+    max-width: 205px;
+  }
+}
 #pxwebcontent .pxweb-input-error {
   font-family: "Roboto", sans-serif !important;
   font-stretch: normal;

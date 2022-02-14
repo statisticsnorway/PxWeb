@@ -557,7 +557,7 @@ html {
 
 #pxwebcontent .presentation-container {
   display: grid;
-  grid-template-columns: minmax(215px, 23%) minmax(0px, 75%);
+  grid-template-columns: minmax(18.5rem, 23%) minmax(0rem, 75%);
   grid-column-gap: 2%;
 }
 
@@ -589,6 +589,10 @@ html {
 
   #pxwebcontent .px-settings {
     width: auto;
+  }
+
+  #pxwebcontent #header span {
+    font-size: 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1251,14 +1255,14 @@ html {
   /*float: left;*/
   display: flex;
   overflow: auto;
-  width: 620px;
+  width: 62rem;
   position: relative;
   z-index: 2;
   background-color: #fff;
 }
 
 #pxwebcontent .commandbar_container > div {
-  width: 620px;
+  width: 62rem;
 }
 
 #pxwebcontent .container_titletext {
@@ -2453,11 +2457,11 @@ html {
   }
 
   #pxwebcontent span.nav-step.passive, #pxwebcontent span.nav-step.future {
-    font-size: 1.6rem;
+    font-size: 16px;
   }
 
   #pxwebcontent span.nav-step.active {
-    font-size: 1.8rem;
+    font-size: 18px;
   }
 }
 /*#endregion*/
@@ -3865,8 +3869,8 @@ span.AspNet-TreeView-Collapse::before {
 
 /*TO DO - end*/
 #pxwebcontent .variableselector_continue_button {
-  height: 86px;
-  width: 294px;
+  height: 8.6rem;
+  width: 29.4rem;
   font-size: 2.8rem;
 }
 
@@ -3981,7 +3985,7 @@ span.AspNet-TreeView-Collapse::before {
 
 #pxwebcontent .search-panel {
   margin-bottom: 5px;
-  flex: 1 0 250px;
+  flex: 1 0 25rem;
   padding-right: 20px;
 }
 
@@ -4118,9 +4122,13 @@ span.AspNet-TreeView-Collapse::before {
 #pxwebcontent .optional-variable-icon-panel {
   background-color: #3396d2;
   box-sizing: border-box;
-  width: 22px;
-  height: 21px;
+  width: 2.2rem;
+  height: 2.1rem;
   border: solid #3396d2 2px;
+}
+#pxwebcontent .optional-variable-icon-panel .icon {
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 /* **********************************  _fullscreen.scss *********************************** */

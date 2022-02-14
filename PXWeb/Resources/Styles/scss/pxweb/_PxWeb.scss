@@ -446,7 +446,7 @@ html {
 
 #pxwebcontent .presentation-container {
   display: grid;
-  grid-template-columns: minmax(215px, 23%) minmax(0px, 75%);
+  grid-template-columns: minmax(18.5rem, 23%) minmax(0rem, 75%);
   grid-column-gap: 2%;
 }
 
@@ -478,6 +478,11 @@ html {
   #pxwebcontent .px-settings {
     width: auto;
   }
+
+  #pxwebcontent #header span {
+    font-size: 30px;
+  }
+
 }
 @media #{$tablet} {
     #pxwebcontent #btnBurgerMenu {

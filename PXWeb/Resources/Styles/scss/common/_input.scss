@@ -5,7 +5,7 @@
     cursor: text;
     display: flex;
     flex-direction: column;
-    max-width: 205px;
+    max-width: 20.5rem;
     position: relative;
     width: 100%;
 
@@ -203,3 +203,9 @@
         }
     }
 }
+
+@media #{$mobile} {
+    #{$selector_prefix}-input {
+        max-width: 205px;
+        }
+    }
