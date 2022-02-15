@@ -10,8 +10,8 @@
     </div>
     <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  />    
     <div role="region" id="validationsummarynotifyscreenreader" aria-live="assertive" aria-atomic="true">
-    <asp:ValidationSummary ID="SelectionValidationSummary" runat="server" DisplayMode="BulletList" role="alert" ShowValidationErrors="true" ShowMessageBox="false" ShowSummary="true" CssClass="variableselector_error_summary" ForeColor="" />   
-</div>
+       <asp:ValidationSummary ID="SelectionValidationSummary" runat="server" DisplayMode="BulletList" role="alert" ShowValidationErrors="true" ShowMessageBox="false" ShowSummary="true" CssClass="variableselector_error_summary" ForeColor="" />   
+    </div>
 <asp:Repeater ID="VariableSelectorValueSelectRepeater" runat="server" EnableViewState="true">      
         <HeaderTemplate>
             <div class="variableselector_variable_box_container">
@@ -32,7 +32,7 @@
     <div class ="flex-row justify-center">
      <pxc:VariableSelectorSelectionInformation runat="server" ID="VariableSelectorSelectionInformation" />
     </div>
-    <div role="region" id="selectionerrornotifyscreenreader" aria-live="assertive" aria-atomic="true"
+    <div role="region" id="selectionerrornotifyscreenreader" aria-live="assertive" aria-atomic="true">
         <div class="flex-row justify-center">
             <asp:Label ID="SelectionErrorlabel" runat="server" visible="true" CssClass="variableselector_selectionerror_label"/>
             <asp:Label ID="SelectionErrorlabelTextCells" runat="server" CssClass="variableselector_selectionerror_label_text" />

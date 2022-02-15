@@ -73,7 +73,7 @@
                         <span class="hidden">wave temp fix..</span>
                     </asp:LinkButton>
                 </asp:Panel> 
-                </div>
+            </div>
         </asp:Panel>
     </asp:Panel>
     <asp:Panel ID="HiddenEventButtons" runat="server" Visible="false" CssClass="variableselector_valuesselect_hiddeneventbutton_panel">
@@ -108,7 +108,7 @@
     ControlToValidate="ValuesListBox" ClientValidationFunction="ValidateListBox" SetFocusOnError="false" 
     OnServerValidate="ValidateListBox_ServerValidate" ForeColor=""  
     ValidateEmptyText="True"  ValidationGroup="ChangeStatus" EnableClientScript="true"  Display="Dynamic"  Enabled="false" ></asp:CustomValidator>--%>
-    
+
     <div role="region" id="errornotifyscreenreader" aria-live="assertive" aria-atomic="true">
         <asp:CustomValidator ID="MustSelectCustom" runat="server" ErrorMessage="" Role="alert" CssClass="flex-row pxweb-input-error negative"
         ControlToValidate="ValuesListBox" SetFocusOnError="false"  Display="Dynamic"
