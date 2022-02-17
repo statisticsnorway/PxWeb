@@ -8,7 +8,7 @@
     @include focus-marker;
     @include reset-button;
     @include roboto-condenced;
-    font-size: 20px;
+    font-size: 2rem;
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: center;
@@ -82,7 +82,7 @@
   .accordion-body {
     @include roboto;
     color: $pxweb-dark-6;
-    font-size: 16px;
+    font-size: 1.6rem;
     padding: $global-padding-size 20px $global-padding-size 0;
 
     &.closed {

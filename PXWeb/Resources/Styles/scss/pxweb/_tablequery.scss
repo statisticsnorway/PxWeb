@@ -22,7 +22,7 @@
   display: block;
   width: 95%;
   @include SourceCodeProTablequery_url;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 #pxwebcontent .tablequery_querycaption {
@@ -36,7 +36,7 @@
   width: 95%;
   margin-bottom: 10px;
   @include SourceCodeProTablequery_url;
-  font-size: 14px; 
+  font-size: 1.4rem; 
 
   &:focus {
     @include focus-ring;

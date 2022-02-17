@@ -13,7 +13,7 @@
 #pxwebcontent .footnote_heading {
   @include just-open-sans;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 #pxwebcontent dl.footnote_definitionlist dt {
@@ -58,11 +58,11 @@
     @include just-open-sans;
     display: block;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 
   & .obs-notes .the_long_text {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   & .pxweb-accordion {
@@ -75,7 +75,7 @@
 
   & h3, h4, .accordion-header, .obs-notes {
     @include font-title;
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 
   & .notetype_valuenote_key, .notetype_valuenote_value {
@@ -107,7 +107,7 @@
   color: $pxweb-green-4;
   cursor: pointer;
   display: inline-flex;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.25;
   margin-top: -3px;
   margin-bottom: -2px;
