@@ -66,7 +66,6 @@
     }
 
     .checkbox-label {
-        align-items: center;
         cursor: pointer;
         display: flex;
         margin-bottom: 12px;
@@ -79,9 +78,9 @@
             box-sizing: border-box;
             content: '';
             display: block;
-            height: 20px;
+            height: 2rem;
             margin-right: 12px;
-            width: 20px;
+            width: 2rem;
         }
     }
 }
