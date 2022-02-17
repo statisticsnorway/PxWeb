@@ -59,9 +59,6 @@
                           <asp:Literal ID="ChangeLanguageLiteral" EnableViewState="false" runat="server" />
                     </div>
                 </div>
-            </header>
-            <main id="place-holder">
-
             <% if (PXWeb.Settings.Current.General.Modules.ShowLogin)
                 { %>
                 <div id="loginBanner" class="login">
@@ -72,6 +69,9 @@
            
 
             <pxc:Breadcrumb ID="breadcrumb1" runat="server"/>
+            </header>
+            <main id="place-holder">
+            
             <pxwebCustomControl:HeadingLabel ID="lblH1Title" runat="server" Text="" CssClass="h1title"></pxwebCustomControl:HeadingLabel>
 
              
