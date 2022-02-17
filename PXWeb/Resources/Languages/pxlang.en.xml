@@ -1,16 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <language xmlns="http://www.pc-axis.scb.se/" name="en">
-  <sentence name="CtrlVariableSelectorSearchValuesTooltip" value="Search" />
   <sentence name="FileTypeCsvWithoutHeadingAndTabulator" value="Tab delimited without heading (csv) &#xD;&#xA;" />
   <sentence name="FileTypeCsvWithHeadingAndSemiColon" value="Semicolon delimited with heading (csv) &#xD;&#xA;" />
   <sentence name="FileTypeRelational" value="Relational file (txt) &#xD;&#xA;" />
   <sentence name="FileTypeChartPng" value="Chart (png)" />
-   <sentence name="CtrlNavigationFlowStep2" value="Choose variables" />
+  <sentence name="CtrlNavigationFlowStep2" value="Choose variables" />
   <sentence name="CtrlSaveQueryAsCaption" value="Save the result as:" />
-  <sentence name="PxWebTableCropped" value="Maximum of {0} rows and {1} columns can be displayed on screen." />
   <sentence name="PxWebSelectVariable" value="Choose variables" />
   <sentence name="PxWebChangeToThisLanguage" value="English version" />
   <sentence name="PxWebApplicationTitle" value="PX-Web" />
   <sentence name="PxWebApplicationName" value=" " />
   <sentence name="PxWebLogoAlt" value="PX-Web" />
+  <sentence name="CtrlPresentationViewTableLayout1" value="Table - Layout 1"/>  
+  <sentence name="CtrlTableQueryInformationText" value="Send (POST) the following JSON query to the URL below or copy to the API Console." />
+  <sentence name="CtrlTableQueryMoreInformation" value="More information about the Statbank API" />  
+  <sentence name="CtrlSaveQueryHelpPage" value="https://www.ssb.no/en/informasjon/om-statistikkbanken/how-to-use-statbank-norway" />  
+  <sentence name="PxWebTitleDefault" value ="PX-Web - Select database"/>  
+  <sentence name="PxWebTitleApiHelp" value ="PX-Web - API help"/>  
+  <sentence name="PxWebTitleChart" value ="PX-Web - Chart"/>  
+  <sentence name="PxWebTitleDataSort" value ="PX-Web - Sort"/>  
+  <sentence name="PxWebTitleErrorGeneral" value ="PX-Web - Oooops!"/>  
+  <sentence name="PxWebTitleFootnotesSelection" value ="PX-Web - Footnotes"/>  
+  <sentence name="PxWebTitleInformationPresentation" value ="PX-Web - Information"/>  
+  <sentence name="PxWebInformationSelection" value ="PX-Web - Information"/>  
+  <sentence name="PxWebTitleMarkingTips" value ="PX-Web - Tips"/>  
+  <sentence name="PxWebTitleMenu" value ="PX-Web - Select table"/>  
+  <sentence name="PxWebTitleSearch" value ="PX-Web - Search"/>  
+  <sentence name="PxWebTitleSelection" value ="PX-Web - Select variable and values"/>	 
+  <sentence name="PxWebTitleTable" value ="PX-Web - Table"/>	 
+  <sentence name="PxWebSavedQueryUnsafeMessageHeading" value ="The table contains customized text"/>  
+  <sentence name="PxWebSavedQueryUnsafeMessage" value ="Text was added manually, which did not exist in the original table."/>  
+  <sentence name="PxWebAdminHeading" value="PX-Web Administration"/>  
+  <sentence name="PxWebAdminVersion" value="PX-Web 2017 v1"/>	 
+  <sentence name="PxWebAdminHomePage" value="PX-Web Homepage"/>  
+  <sentence name="PxWebPxLogin" value="PX-Web Login"/>  
+  <sentence name="PxWebChangeToThisLanguage" value="Error, PxWebChangeToThisLanguage not tranlated" />
+  <sentence name="PxWebAdminSettingsDatabasesPxDatabasesInfo" value="Selected PX Databases will be displayed in PX-Web"/> 
+  <sentence name="PxWebAdminSettingsMenuShowModifiedDateInfo" value="Defines if information about when the PX-file was last updated in the file system shall be displayed in PX-Web or not."/>
+  <sentence name="PxWebAdminSettingsMenuShowLastUpdatedInfo" value="Defines if LAST-UPDATED in the PX-files shall be displayed in PX-Web or not"/> 
+  <sentence name="PxWebAdminSettingsSelectionOutputFormatsInfo" value="Selected output formats (presentation views and file formats) will be available for selection in PX-Web"/> 
+  <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderOperationsInfo" value="The selected operations will be available to the PX-Web user"/> 
+  <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderFileformatsInfo" value="The selected file formats will be available to the PX-Web user"/> 
+  <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderButtonInfo" value="The selected operations will be available to the PX-Web user"/> 
+  <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderPresentationViewsInfo" value="The selected presentation views will be available to the PX-Web user"/> 
+  <sentence name="PxWebAdminSettingsPresentationTableTitleVisibleInfo" value="If the table title shall be displayed within the table-html-element or not"/> 
+  <sentence name="PxWebAdminSortOrderTitle" value="Title"/> 
+  <sentence name="PxWebAdminToolsResetAllInfo" value="Reset all static lists in PX-Web" /> 
+  <sentence name="PxWebAdminFeaturesGeneralFeatureInfo" value="Selected features will be available in the administration tool and in PX-Web" />  
+  <sentence name="PxWebAdminFeaturesApiGeneralLimiterRequestsInfo" value="Maximum number of requests (works togheter with Limiter timespan)" />  
+  <sentence name="PxWebAdminFeaturesApiGeneralLimiterTimespanInfo" value="Timespan for how many request can be made (see LimiterRequests)" />  
+  <sentence name="PxWebAdminSettingsGeneralSiteApplicationNameInfo" value="Name of the PX-Web installation"/>	 
+  <sentence name="PxWebAdminSettingsLanguageDefaultLanguageInfo" value="The default language for the PX-Web site"/> 
+  <sentence name="PxWebAdminSettingsLanguageSiteLanguagesInfo" value="Selected languages will be available on the PX-Web site."/> 
+  <sentence name="PxWebAdminSettingsImplementedInComingVersions" value="This feature will be implemented in a coming version of PX-Web"/> 
+  <sentence name="PxWebAdminSettingsDatabasesCnmmDatabasesInfo" value="Selected CNMM Databases will be displayed in PX-Web"/>	 
 </language>

@@ -38,7 +38,7 @@
             <div class="flex-row justify-space-between">
                 <ucAccordianAboutTable:AccordianAboutTable runat="server" ID="UcAccordianAboutTable" />
                 <div id="switchLayoutContainer" class="switch-layout-container m-margin-left">
-                    <asp:Button runat="server" ID="SwitchLayout"  OnClick="SwitchLayout_Click" Text="Bytt visningsformat"/>
+                    <asp:Button runat="server" ID="SwitchLayout"  OnClick="SwitchLayout_Click" UseSubmitBehavior="false" Text="Bytt visningsformat"/>
                 </div>
             </div>
             

@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Norway.LogVisitorStatistics
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Norway.PXWeb.SSBIndexer", "Norway\PXWeb.SSBIndexer\Norway.PXWeb.SSBIndexer.csproj", "{A9111F7C-2950-400A-A864-B0BE86DCEBAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PXAxis.Routing.SSB", "PXAxis.Routing.SSB\PXAxis.Routing.SSB.csproj", "{263430E6-8444-4D95-B072-E265FCD1F610}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -122,6 +124,10 @@ Global
 		{A9111F7C-2950-400A-A864-B0BE86DCEBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9111F7C-2950-400A-A864-B0BE86DCEBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9111F7C-2950-400A-A864-B0BE86DCEBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263430E6-8444-4D95-B072-E265FCD1F610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263430E6-8444-4D95-B072-E265FCD1F610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263430E6-8444-4D95-B072-E265FCD1F610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263430E6-8444-4D95-B072-E265FCD1F610}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

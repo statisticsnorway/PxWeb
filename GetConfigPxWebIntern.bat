@@ -9,8 +9,6 @@ cd Resources\PX\Databases\
 mkdir utv_24v_intern
 copy C:\git_adm.ssb.no\configRepos\px-web-intern\localhost\MetaId\database.config utv_24v_intern\.
 copy C:\git_adm.ssb.no\configRepos\px-web-intern\localhost\MetaId\metadata.config utv_24v_intern\.
-
-
 echo "Done."
 pause
 

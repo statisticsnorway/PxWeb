@@ -4,7 +4,7 @@
 
 <div class="pxbox negative variableselector_valuesselect_box m-margin-top">
 
-<asp:Panel runat="server" ID="ValuesSelectContainerPanel" DefaultButton="SearchValuesButton" role="region">
+<asp:Panel runat="server" ID="ValuesSelectContainerPanel" role="region">
     <asp:Panel runat="server" ID="Panel1" CssClass="variableselector_valuesselect_variabletitle_panel">
             <div class="flex-row flex-wrap-reverse">
                 <asp:Panel runat="server" ID="MetadataPanel" class="metadata-container" Visible="False">
@@ -64,15 +64,15 @@
             </div>
         </div>
         <asp:Panel runat="server" ID="SearchPanel" CssClass="flex-row flex-wrap s-margin-top">
-          <asp:CheckBox runat="server" ID="SearchValuesBeginningOfWordCheckBox" CssClass="variableselector_valuesselect_search_textstart_checkbox pxweb-checkbox negative" />
+            <asp:CheckBox runat="server" ID="SearchValuesBeginningOfWordCheckBox" CssClass="variableselector_valuesselect_search_textstart_checkbox pxweb-checkbox negative" />
             <div class="pxweb-input search-panel">
                 <asp:Label runat="server" ID="SearchTip" CssClass="screenreader-only"></asp:Label>
-                <div class="input-wrapper">
+                <asp:Panel runat="server" CssClass="input-wrapper" DefaultButton="SearchValuesButton">
                     <asp:TextBox ID="SearchValuesTextbox" CssClass="with-icon" runat="server"></asp:TextBox>
                     <asp:LinkButton ID="SearchValuesButton" CssClass="icon-wrapper search-icon" runat="server">
                         <span class="hidden">wave temp fix..</span>
                     </asp:LinkButton>
-                </div>
+                </asp:Panel> 
             </div>
         </asp:Panel>
     </asp:Panel>
@@ -82,10 +82,10 @@
     <asp:Panel runat="server" ID="SelectedStatistics" CssClass="variableselector_valuesselect_statistics_panel">
         <div runat="server" role="region" id="SelectedStatisticsnotifyscreenreader" aria-live="polite" aria-atomic="true">
             <p>
-            <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesSelectedTitel" /></span>
-            <asp:Label runat="server" id="NumberValuesSelected" CssClass="variableselector_valuesselect_statistics"/>
-            <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesTotalTitel" /></span>
-            <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesTotal"  /></span>
+                <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesSelectedTitel" /></span>
+                <asp:Label runat="server" id="NumberValuesSelected" CssClass="variableselector_valuesselect_statistics"/>
+                <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesTotalTitel" /></span>
+                <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesTotal"  /></span>
             </p>
         </div>
     </asp:Panel>
@@ -115,7 +115,6 @@
         OnServerValidate="ValidateListBox_ServerValidate" ClientValidationFunction="ValidateListBox"  ForeColor=""  
         ValidateEmptyText="True"></asp:CustomValidator>
     </div>
-
 </asp:Panel>
 
 

@@ -70,6 +70,7 @@
                     Text="*" ErrorMessage="*" ValidateEmptyText="True" CssClass="px_setting_validator" Display="Dynamic" >
                 </asp:CustomValidator>
             </div>
+
             <div role="region" id="validationsummarychartnotifyscreenreader" aria-live="assertive" aria-atomic="true">
                 <asp:ValidationSummary ID="ValidationSummary" DisplayMode="BulletList" role="alert" CssClass="px_setting_validation_summary variableselector_error_summary flex-column" runat="server" />
              </div>

@@ -1218,13 +1218,13 @@ Public Class VariableSelectorValueSelectCodebehind
 
         Dim itm As RepeaterItem = e.Item
         Dim currentItem As MetaItem = TryCast(e.Item.DataItem, MetaItem)
-
         Dim lbl As Label = TryCast(itm.FindControl("lblVariableValueName"),Label)
         If String.IsNullOrWhiteSpace(currentItem.Name) Then
             lbl.Visible = False
         Else
             lbl.Text = currentItem.Name
         End If
+
 
         Dim rep As Repeater = TryCast(itm.FindControl("VariableValueLinksRepeater"), Repeater)
         rep.DataSource = currentItem.Links

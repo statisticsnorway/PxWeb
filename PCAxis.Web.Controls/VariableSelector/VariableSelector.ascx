@@ -9,9 +9,9 @@
             runat="server" ClientIDMode="Static"/>
     </div>
     <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  />    
-     <div role="region" id="validationsummarynotifyscreenreader" aria-live="assertive" aria-atomic="true">
+    <div role="region" id="validationsummarynotifyscreenreader" aria-live="assertive" aria-atomic="true">
        <asp:ValidationSummary ID="SelectionValidationSummary" runat="server" DisplayMode="BulletList" role="alert" ShowValidationErrors="true" ShowMessageBox="false" ShowSummary="true" CssClass="variableselector_error_summary" ForeColor="" />   
-     </div>
+    </div>
 <asp:Repeater ID="VariableSelectorValueSelectRepeater" runat="server" EnableViewState="true">      
         <HeaderTemplate>
             <div class="variableselector_variable_box_container">

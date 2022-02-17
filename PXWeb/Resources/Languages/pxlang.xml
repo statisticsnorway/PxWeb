@@ -326,8 +326,9 @@
 	 <sentence name="CtrlVariableSelectorOutputFormatsOutputScreen" value="Show table on screen" />
 	 <sentence name="CtrlVariableSelectorSearchValuesHeading" value="Search" />
    <sentence name="CtrlVariableSelectorSearchValuesBeginningOfTextCheckBox" value="Beginning of row" />
-	 <sentence name="CtrlVariableSelectorSearchValuesInsideTextCheckBox" value="Only search from beginning of text" />
-   <sentence name="CtrlVariableSelectorSearchValuesBeginningOfWordCheckBox" value="Beginning of word" />
+
+	 <sentence name="CtrlVariableSelectorSearchValuesInsideTextCheckBox" value="Inside word" />
+   <sentence name="CtrlVariableSelectorSearchValuesBeginningOfWordCheckBox" value="Only search from beginning of text" />
    <sentence name="CtrlVariableSelectorSearchValuesTextbox" value="Search" />
    <sentence name="CtrlVariableSelectorSearchValuesTextboxScreenReader" value="Field for searching for a specific value in the list box. This is examples of values you can search for." />
    <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="List box of selectable values for a variabel. Click to mark one or more values." />
@@ -790,8 +791,7 @@
   <sentence name="PxWebTitleChart" value ="PX-Web - Chart"/>
   <sentence name="PxWebTitleDataSort" value ="PX-Web - Sort"/>
   <sentence name="PxWebTitleErrorGeneral" value ="PX-Web - Oooops!"/>
-  <sentence name="PxFootnotesPresentation" value ="PX-Web - Footnotes"/>
-  <sentence name="PxWebTitleFootnotesSelection" value ="PX-Web - Footnotes"/>
+   <sentence name="PxWebTitleFootnotesSelection" value ="PX-Web - Footnotes"/>
   <sentence name="PxWebTitleInformationPresentation" value ="PX-Web - Information"/>
   <sentence name="PxWebInformationSelection" value ="PX-Web - Information"/>
   <sentence name="PxWebTitleMarkingTips" value ="PX-Web - Tips"/>
