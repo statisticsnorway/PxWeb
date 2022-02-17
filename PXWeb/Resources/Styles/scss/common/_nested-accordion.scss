@@ -29,13 +29,13 @@
 
     .expand-icon {
       color: $pxweb-green-4;
-      font-size: 16px;
+      font-size: 1.6rem;
     }
 
     .header-text {
       @include roboto;
       color: $pxweb-dark-6;
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: bold;
       line-height: 1.25;
       padding-left: 30px;
@@ -59,7 +59,7 @@
   .nested-accordion-body {
     @include open-sans;
     color: $pxweb-dark-6;
-    font-size: 16px;
+    font-size: 1.6rem;
     padding: 10px 10px 10px 30px;
 
     &.closed {

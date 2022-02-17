@@ -1,16 +1,16 @@
 @include file-header("common/_checkbox.scss");
 
 #{$selector_prefix}-checkbox {
-    @include roboto;
-    /*color: $pxweb-dark-6;*/
-    cursor: pointer;
-    display: block;
-    font-size: 14px;
-    margin-right: 10px;
-    outline: none;
-    position: relative;
-    text-align: left;
-    user-select: none;
+  @include roboto;
+  /*color: $pxweb-dark-6;*/
+  cursor: pointer;
+  display: block;
+  font-size: 1.4rem;
+  margin-right: 10px;
+  outline: none;
+  position: relative;
+  text-align: left;
+  user-select: none;
 
     &:hover, &:focus {
 

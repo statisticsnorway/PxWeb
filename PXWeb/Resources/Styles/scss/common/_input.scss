@@ -5,7 +5,7 @@
     cursor: text;
     display: flex;
     flex-direction: column;
-    max-width: 205px;
+    max-width: 20.5rem;
     position: relative;
     width: 100%;
 
@@ -41,7 +41,7 @@
     label {
         color: $pxweb-dark-6;
         cursor: text;
-        font-size: 14px;
+        font-size: 1.4rem;
         margin-bottom: 4px;
         user-select: none;
     }
@@ -52,7 +52,7 @@
         border: 1px solid $pxweb-dark-5;
         box-sizing: border-box;
         color: $pxweb-dark-4;
-        font-size: 14px;
+        font-size: 1.4rem;
         height: 34px;
         padding: 12px 12px;
         text-overflow: ellipsis;
@@ -179,7 +179,7 @@
         @include reset-button;
         align-items: center;
         display: flex;
-        font-size: 18px;
+        font-size: 1.8rem;
         height: 34px;
         justify-content: center;
         margin-left: -$input-field-height;
@@ -203,3 +203,9 @@
         }
     }
 }
+
+@media #{$mobile} {
+    #{$selector_prefix}-input {
+        max-width: 205px;
+        }
+    }

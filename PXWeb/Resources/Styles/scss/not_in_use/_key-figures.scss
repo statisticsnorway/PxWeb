@@ -27,11 +27,11 @@ $small-size: 108px;
 
     .changes-text {
       font-weight: bold;
-      font-size: 20px;
+      font-size: 2rem;
     }
 
     .changes-period {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
   }
 
@@ -103,13 +103,13 @@ $small-size: 108px;
 
   .kf-time {
     @include open-sans;
-    font-size: 16px;
+    font-size: 1.6rem;
     margin-top: 4px;
   }
 
   .kf-title {
     @include roboto;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
     line-height: normal;
     margin: 0;
@@ -122,7 +122,7 @@ $small-size: 108px;
   .no-number {
     @include roboto;
     color: $pxweb-dark-3;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
   }
 
