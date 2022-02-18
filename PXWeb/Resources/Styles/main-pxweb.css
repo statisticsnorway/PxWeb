@@ -1,5 +1,4 @@
-﻿@charset "UTF-8";
-/*#region  Active colors */
+﻿/*#region  Active colors */
 /*#endregion*/
 /*#region  Active colors inside pxbox*/
 /*#endregion*/
@@ -255,11 +254,7 @@ html {
 }
 
 #pxwebcontent #header .link-text.px-change-lang, #pxwebcontent #header .link-text.px-external-search {
-<<<<<<< HEAD
-  font-size: 12px;
-=======
   font-size: 1.2rem;
->>>>>>> remotes/origin/masterForNorway
   letter-spacing: normal;
   padding-top: 0px;
   padding-right: 1px;
@@ -3759,8 +3754,7 @@ span.AspNet-TreeView-ClickableNonLink {
   font-family: "Roboto Condensed", sans-serif !important;
   font-stretch: condensed;
   font-weight: bold;
-  /*går ned noen px, med vilje? */
-  font-size: 2.1rem;
+  font-size: 2.8rem;
   display: inline-block;
   padding-right: 40px;
   overflow-wrap: break-word;
@@ -3831,10 +3825,6 @@ span.AspNet-TreeView-ClickableNonLink {
 
 #pxwebcontent .search-panel {
   margin-bottom: 5px;
-<<<<<<< HEAD
-  flex: 1 0 250px;
-=======
->>>>>>> remotes/origin/masterForNorway
   padding-right: 20px;
 }
 

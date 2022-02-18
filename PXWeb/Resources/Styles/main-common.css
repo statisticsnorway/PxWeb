@@ -400,12 +400,7 @@ $scrollbar-color: #b0b0b0;
   /*color: $pxweb-dark-6;*/
   cursor: pointer;
   display: block;
-<<<<<<< HEAD
-  font-size: 14px;
-  /*min-width: 200px;*/
-=======
   font-size: 1.4rem;
->>>>>>> remotes/origin/masterForNorway
   margin-right: 10px;
   outline: none;
   position: relative;
