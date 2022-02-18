@@ -114,7 +114,6 @@ Public Class VariableSelectorValueSelectCodebehind
     Protected SearchTip As Label
     Protected Searchguide As HtmlGenericControl
 
-
     Protected ActionButton As Button
 
     Protected WithEvents VariableValueLinksRepeater As Repeater
