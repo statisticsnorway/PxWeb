@@ -40,6 +40,7 @@
     width: 100%;
     background-image: get-icon( 'envelope', $px-envelope-icon);
     background-position-y: center;
+    word-break: break-word;
 }
 
 #pxwebcontent .Information-warning-box-icon {

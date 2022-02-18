@@ -83,7 +83,7 @@
     @include roboto;
     color: $pxweb-dark-6;
     font-size: 1.6rem;
-    padding: $global-padding-size 20px $global-padding-size 0;
+    padding: $global-padding-size 16px $global-padding-size 0;
 
     &.closed {
       display: none;
