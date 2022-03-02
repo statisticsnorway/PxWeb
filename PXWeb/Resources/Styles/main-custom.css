@@ -473,6 +473,9 @@ h1 {
   grid-column-start: 1;
   grid-column-end: span 3;
 }
+#pxwebcontent .menu-tablelist.grid-container.pxweb-link {
+  padding: 5px 1px 8px 1px;
+}
 #pxwebcontent .menu-tablelist.grid-container .accordion-cell.closed_level_1 {
   display: none;
 }
