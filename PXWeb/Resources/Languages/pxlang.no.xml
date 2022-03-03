@@ -605,6 +605,7 @@
   <sentence name="PxWebChartTooManyValues" value="For mange verdier valgt" />
   <sentence name="PxWebChartTooManyValuesInformation" value="Du har valgt for mange verdier" />
   <sentence name="PxWebChartUserSettingsLargeValue" value="Maksimal verdi er {0}" />
+  <sentence name="PxWebChartErrorSummary" value="Følgende feil må rettes:" />
   <sentence name="PxWebChartLeftScale" value="(venstre akse)" />
   <sentence name="PxWebChartRightScale" value="(høyre akse)" />
   <sentence name="PxWebDataSort" value="Sorter data" />
