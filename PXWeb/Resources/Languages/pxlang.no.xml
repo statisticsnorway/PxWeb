@@ -271,7 +271,7 @@
   <sentence name="CtrlVariableSelectorSelectDropdownGroupingLabel" value="Nedtrekksmeny for grupperinger av kodelisten" />
   <sentence name="CtrlVariableSelectorMetadataImformationTooltip" value="Definisjoner av variabler og verdier" />
   <sentence name="CtrlVariableSelectorHierarchicalTooltip" value="Velg hierarkisk" />
-  <sentence name="CtrlVariableSelectorSearchguide" value="Denne sjekkboksen er knyttet til påfølgende søkefelt. Hak av dersom du kun ønsker de verdien som begynner på søkekriteriet, hvis du ikke haker av vil det søkes i hele verdien" />
+  <sentence name="CtrlVariableSelectorSearchguide" value="Søk kun i starten av tekst. Denne sjekkboksen er knyttet til påfølgende søkefelt. Hak av dersom du kun ønsker de verdien som begynner på søkekriteriet, hvis du ikke haker av vil det søkes i hele verdien" />
   <sentence name="CtrlVariableSelectorSearchValuesTooltip" value="Søk" />
   <sentence name="CtrlVariableSelectorSummarySelectedLabel" value="Valgt" />
   <sentence name="CtrlVariableSelectorSummaryTotalLabel" value="av totalt" />
@@ -421,7 +421,7 @@
   <sentence name="CtrlTableQueryMoreInformation" value="Mer Informasjon om API mot Statistikkbanken" />
   <sentence name="CtrlTableQuerySaveQuery" value="Lagre API-spørring (json)" />
   <sentence name="CtrlNavigationFlowSectionScreenReader" value="Oversikt over de tre stegene i prosessen med å få data."/>
-  <sentence name="CtrlNavigationFlowExplainScreenReader" value="De 3 stegene er Velg tabell,  Choose table, Velg variabler og Vis resultat. Du er nå på "/>
+  <sentence name="CtrlNavigationFlowExplainScreenReader" value="De 3 stegene er Velg tabell, Velg variabler og Vis resultat. Du er nå på "/>
   <sentence name="CtrlNavigationFlowStep1" value="Velg tabell" />
   <sentence name="CtrlNavigationFlowStep1ScreenReader" value="Tilbake til Velg tabell" />
   <sentence name="CtrlNavigationFlowStep2" value="Velg variabler" />
