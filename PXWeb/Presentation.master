@@ -10,10 +10,13 @@
 </asp:Content>
 
 <asp:Content runat="server" ID="ContentTitle" ContentPlaceHolderID="TitlePlaceHolder">
-        <% if ( PXWeb.Settings.Current.Presentation.NewTitleLayout)
-           { %>
-            <pxc:TableInformation runat="server" ID="PresentationTitleStuff" Type="PresentationView" TableTitleCssClass="hierarchical_tableinformation_title" TableDescriptionCssClass="hierarchical_tableinformation_description"  EnableViewState="true" Visible="true" ShowSourceDescription="true" />
-        <% } %>
+    <div  id="pxcontent"> 
+        <pxwebCustomControl:UserManualScreenReader ID="UserManualResult" manualFor="Result" runat="server" ClientIDMode="Static"/>
+    </div>
+    <% if ( PXWeb.Settings.Current.Presentation.NewTitleLayout)
+        { %>
+        <pxc:TableInformation runat="server" ID="PresentationTitleStuff" Type="PresentationView" TableTitleCssClass="hierarchical_tableinformation_title" TableDescriptionCssClass="hierarchical_tableinformation_description"  EnableViewState="true" Visible="true" ShowSourceDescription="true" />
+    <% } %>
 </asp:Content>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
@@ -82,11 +85,8 @@
                             <asp:Label ID="lblFullscreenTitle" Text="" runat="server" ClientIDMode="Static" CssClass="hierarchical_tableinformation_title"></asp:Label>
                         </h1>
                     </div>
-                    <div  id="pxcontent"> 
-                        <pxwebCustomControl:UserManualScreenReader ID="UserManualResult" manualFor="Result" runat="server" ClientIDMode="Static"/>
-                        <asp:ContentPlaceHolder ID="cphMain" runat="server">
-                        </asp:ContentPlaceHolder>
-                    </div>
+                    <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                    </asp:ContentPlaceHolder>
                     <% if (ShowSavedQueryInfo)
                        { %>
                         <div style="padding-top:2px" class="saved_query_info_text">
