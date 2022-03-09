@@ -58,19 +58,12 @@ Public Class NavigationFlowCodebehind
 
     Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
+
             SectionAriaLabel = GetLocalizedString("CtrlNavigationFlowSectionScreenReader")
 
             firstStepLabel.Text = GetLocalizedString(LABEL_FIRSTSTEP)
-            firstStepLink.Attributes.Add("aria-label", GetLocalizedString(SCREENREADERTEXT_FIRSTSTEP))
-
-            'firstStepImage.AlternateText = "" ' GetLocalizedString(SCREENREADERTEXT_FIRSTSTEP)
-
             secondStepLabel.Text = GetLocalizedString(LABEL_SECONDSTEP)
-            secondStepLink.Attributes.Add("aria-label", GetLocalizedString(SCREENREADERTEXT_SECONDSTEP))
-            'secondStepImage.AlternateText = GetLocalizedString(SCREENREADERTEXT_SECONDSTEP)
-
             thirdStepLabel.Text = GetLocalizedString(LABEL_THIRDSTEP)
-            'thirdStepImage.AlternateText = GetLocalizedString(SCREENREADERTEXT_THIRDSTEP)
 
             'In case somebody needs to set very spesific margins
             Dim lang As String = LocalizationManager.GetTwoLetterLanguageCode()
@@ -146,19 +139,20 @@ Public Class NavigationFlowCodebehind
             Case NavigationFlow.NavigationFlowMode.Second
                 SetStateOnStep(PASSIVE, ACTIVE, FUTURE)
                 SetNavigationLink(mode)
+                firstStepLink.Attributes.Add("aria-label", GetLocalizedString(SCREENREADERTEXT_FIRSTSTEP))
                 secondStepLink.Attributes.Add("aria-hidden", "true")
                 outExplain += GetLocalizedString(LABEL_SECONDSTEP)
             Case NavigationFlow.NavigationFlowMode.Third
                 SetStateOnStep(PASSIVE, PASSIVE, ACTIVE)
                 SetNavigationLink(mode)
+                firstStepLink.Attributes.Add("aria-label", GetLocalizedString(SCREENREADERTEXT_FIRSTSTEP))
+                secondStepLink.Attributes.Add("aria-label", GetLocalizedString(SCREENREADERTEXT_SECONDSTEP))
                 outExplain += GetLocalizedString(LABEL_THIRDSTEP)
             Case Else
         End Select
 
         ExplainAriaLabel.Attributes.Add("class", "screenreader-only")
         ExplainAriaLabel.Text = outExplain
-
-
 
         thirdStepLink.Attributes.Add("aria-hidden", "true")
 
