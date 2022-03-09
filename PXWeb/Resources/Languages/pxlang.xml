@@ -752,6 +752,7 @@
 	 <sentence name="PxWebChartTooManyValues" value="Too many values selected" />
 	 <sentence name="PxWebChartTooManyValuesInformation" value="You have selected too many values." />
 	 <sentence name="PxWebChartUserSettingsLargeValue" value="Maximum value is {0}" />
+	 <sentence name="PxWebChartErrorSummary" value="Following errors must be corrected:" />
 	 <sentence name="PxWebChartLeftScale" value="(left scale)" />
 	 <sentence name="PxWebChartRightScale" value="(right scale)" />
 	 <sentence name="PxWebChartPercent" value="%" />
