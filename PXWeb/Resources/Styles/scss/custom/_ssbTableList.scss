@@ -64,9 +64,9 @@
   #pxwebcontent .pxweb-cell-accordion-end {
     border-bottom: 1px solid #c3dcdc;
     height: 2px;
-    padding-top: 8px;
-	margin-bottom: -1px;
-    }
+    /*padding-top: 8px;*/
+	  margin-bottom: -1px;
+   }
 	
 
 
@@ -112,10 +112,11 @@
   border-bottom: 0;
 }
 
-#pxwebcontent .menu-tablelist h2, #pxwebcontent .menu-tablelist .accordion-header .header-text{
-  @include roboto-condenced;
-  font-size: 18px;
-  margin-top: 10px;
+#pxwebcontent .menu-tablelist h2, #pxwebcontent .menu-tablelist .accordion-header .header-text {
+	@include roboto-condenced;
+	font-size: 18px;
+	padding-top: 11px;
+	padding-bottom: 11px;
 }
 
 #pxwebcontent .menu-tablelist .accordion-header{

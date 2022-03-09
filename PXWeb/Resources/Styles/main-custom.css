@@ -508,7 +508,7 @@ h1 {
 #pxwebcontent .pxweb-cell-accordion-end {
   border-bottom: 1px solid #c3dcdc;
   height: 2px;
-  padding-top: 8px;
+  /*padding-top: 8px;*/
   margin-bottom: -1px;
 }
 
@@ -552,7 +552,8 @@ h1 {
   font-stretch: condensed;
   font-weight: bold;
   font-size: 18px;
-  margin-top: 10px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 #pxwebcontent .menu-tablelist .accordion-header {
