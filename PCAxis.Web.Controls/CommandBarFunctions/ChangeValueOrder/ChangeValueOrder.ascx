@@ -8,12 +8,12 @@
         </asp:RadioButtonList>
     </asp:Panel>
     <asp:Panel ID="ChangeOrderPanel" CssClass="flex-colunm commandbar_changevalueorder_container" runat="server" Visible="false" >
-        <div class="commandbar_changevalueorder_instructions">
+        <div id="changevalueorder_instructions" class="commandbar_changevalueorder_instructions">
             <asp:Literal ID="Instructions" runat="server"></asp:Literal>
         </div>
         <div class="flex-column commandbar-listbox-container">
             <asp:Label runat="server" ID="ListBoxLabel" CssClass="font-heading" AssociatedControlID="ValuesOrder"></asp:Label>
-            <asp:ListBox ID="ValuesOrder" runat="server" CssClass="commandbar_changevalueorder_listbox" ></asp:ListBox>
+            <asp:ListBox aria-describedby="changevalueorder_instructions" ID="ValuesOrder" runat="server" CssClass="commandbar_changevalueorder_listbox" ></asp:ListBox>
             <div class="flex-row justify-center ">
                 <asp:Button id="MoveUpButton" runat="server" alternatetext="move up" CssClass="pxweb-btn icon-placement pxweb-buttons arrow-up" />
                 <asp:Button id="MoveDownButton" runat="server" alternatetext="move down" CssClass="pxweb-btn icon-placement pxweb-buttons arrow-down no-margin-right" />
