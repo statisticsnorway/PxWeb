@@ -306,7 +306,7 @@
   <sentence name="CtrlVariableSelectorSearchValuesBeginningOfWordCheckBox" value="Søk kun i starten av tekst" />
   <sentence name="CtrlVariableSelectorSearchValuesTextbox" value="Søk" />
   <sentence name="CtrlVariableSelectorSearchValuesTextboxScreenReader" value="Søkefelt for å finne ønsket verdi i kodelisten til denne variabelen. Dette er eksempler på verdier i listen. " />
-  <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="Total verdiliste det er mulig å velge verdi fra, for denne variabelen." />
+  <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="Liste med valgbare verdier for variabel {0}.  Totalt antall verdier i lista er {1}." />
   <sentence name="CtrlVariableSelectorSearchResultSearchWordScreenReader" value="Søkeordet, " />
   <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader1" value=", resulterte i , " />
   <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader2" value=", treff, " />

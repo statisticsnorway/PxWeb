@@ -331,7 +331,7 @@
    <sentence name="CtrlVariableSelectorSearchValuesBeginningOfWordCheckBox" value="Beginning of word" />
    <sentence name="CtrlVariableSelectorSearchValuesTextbox" value="Search" />
    <sentence name="CtrlVariableSelectorSearchValuesTextboxScreenReader" value="Field for searching for a specific value in the list box. This is examples of values you can search for." />
-   <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="List box of selectable values for a variabel. Click to mark one or more values." />
+   <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="Listbox of selectable values for variabel {0}. Total number of values are {1}" />
    <sentence name="CtrlVariableSelectorSearchResultSearchWordScreenReader" value="Search for , " />
    <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader1" value=", resulted in , " />
    <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader2" value=", hits, " />
