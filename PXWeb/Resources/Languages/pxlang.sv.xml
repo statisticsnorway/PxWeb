@@ -269,6 +269,13 @@
   <sentence name="CtrlVariableSelectorSearchValuesInsideTextCheckBox" value="Inuti ord" />
   <sentence name="CtrlVariableSelectorSearchValuesBeginningOfWordCheckBox" value="Början av ord" />
   <sentence name="CtrlVariableSelectorSearchValuesTextbox" value="Sök här" />
+  <sentence name="CtrlVariableSelectorSearchValuesTextboxScreenReader" value="Sökfält för att markera värden i listan" />
+  <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="Lista med valbara värden för variabel {0}, Totalt antall värden är {1}.." />
+  <sentence name="CtrlVariableSelectorSearchResultSearchWordScreenReader" value="Sök på," />
+  <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader1" value=", resulterade i," />
+  <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader2" value=", träffar," />
+  <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader3" value=", Resultat" />
+  <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader4" value=", värde," />
   <sentence name="CtrlVariableSelectorManyValues" value="Det finns fler än {0} värden och därför visas de inte automatiskt. Använd sökfunktionen för att välja värden." />
   <sentence name="CtrlVariableSelectorLargeValueset" value="(Stor värdemängd)" />
   <sentence name="CtrlVariableSelectorActionButton" value="Skicka" />

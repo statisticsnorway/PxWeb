@@ -27,11 +27,11 @@
             <pxwebCustomControl:HeadingLabel ID="lblSubHeader" runat="server" Text="<%$ PxString: PxWebSubHeaderResult%>"></pxwebCustomControl:HeadingLabel>
         </div>
         <div class="tools-menu-item">
-           <input id="btnBurgerMenu" runat="server" ClientIDMode="Static" type="button"   onclick="ToggleBurgerMenu()" class="pxweb-buttons pxweb-btn burger_menu-icon icon-placement"/>
+           <input id="btnBurgerMenu" runat="server" ClientIDMode="Static" type="button" aria-expanded="false" onclick="ToggleBurgerMenu()" class="pxweb-buttons pxweb-btn burger_menu-icon icon-placement"/>
         </div>
 
         <div id="Presentation" class="s-margin-top presentation-container">
-            <div id="PresentationLeft" class="presentation-left mobilemenu mobilemenuhidden tools">
+            <div role="region" id="PresentationLeft" aria-label="<%= Master.GetLocalizedString("PxWebToolsRegion") %>" class="presentation-left mobilemenu mobilemenuhidden tools">
                 <div class="tools-header">
                     <h2><%= Master.GetLocalizedString("PxWebTools") %></h2>
                     <button onclick="ToggleBurgerMenu()" class="button-tertiar"><%= Master.GetLocalizedString("PxWebToolsClose") %></button>
@@ -77,7 +77,9 @@
                 </div>
                 <div id="Fullscreen">
                     <div class="flex-row justify-space-between">
-                        <asp:Panel runat="server" ID="CommandBarShortCuts" CssClass="commandbar-shortcuts mobilemenu mobilemenuhidden" ClientIDMode="Static"> </asp:Panel>
+                        <div role="region" aria-label="<%= Master.GetLocalizedString("PxWebToolsShortRegion") %>">
+                            <asp:Panel runat="server" ID="CommandBarShortCuts" CssClass="commandbar-shortcuts mobilemenu mobilemenuhidden" ClientIDMode="Static"> </asp:Panel>
+                        </div>
                         <input type ="button" id="btnfullscreen" runat="server" ClientIDMode="Static"  value="" class="pxweb-btn primary-btn pxweb-buttons maximize-icon with-icon" onclick="ToggleFullscreen();"/>
                     </div>
                     <div id="fullscreentitel">
@@ -238,6 +240,11 @@
         y = document.getElementById("btnBurgerMenu");
         y.classList.toggle("burger_menu-icon");
         y.classList.toggle("burger_menu_open-icon");
+        if (isExpanded) {
+            y.setAttribute("aria-expanded","true")
+        } else {
+            y.setAttribute("aria-expanded", "false")
+        }
         y.blur();
 }
 
@@ -245,7 +252,7 @@
             if (typeof sessionStorage !== 'undefined') {
                 sessionStorage.setItem("burgermenuIsExpanded",isExpanded);
             }
-                }
+         }
         function    InitBurgerMenu() {
             var x = document.getElementsByClassName("mobilemenu");
             var y = document.getElementById("btnBurgerMenu");
@@ -256,6 +263,7 @@
                     }
                     y.classList.add("burger_menu_open-icon");
                     y.classList.remove("burger_menu-icon");
+                    y.setAttribute("aria-expanded", "true")
                 }
 
             }

@@ -3826,10 +3826,11 @@ span.AspNet-TreeView-ClickableNonLink {
   outline-offset: 2px;
 }
 
+/*
 #pxwebcontent .variableselector_valuesselect_valueslistbox option {
   padding: 13px 0 12px 0;
 }
-
+*/
 #pxwebcontent .search-panel {
   margin-bottom: 5px;
   padding-right: 20px;
