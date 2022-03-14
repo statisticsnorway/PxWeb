@@ -702,6 +702,8 @@
    <sentence name="PxWebTools" value="Tools" />
    <sentence name="PxWebToolsClose" value="Close" />
    <sentence name="PxWebMenu" value="Menu"/>
+	<sentence name="PxWebToolsRegion" value="Table toolsmenu" />
+	<sentence name="PxWebToolsShortRegion" value="Table toolsmenu shortcut" />	
    <sentence name="PxWebMenuExplanation" value="(C)=county, (M)=municipality, (BU)=Basic statistical unit, (UD)=urban district, (US)=urban settlement. Character in brackets shows the lowest regional level." />
    <sentence name="PxWebSelection" value="Selection"/>
 	 <sentence name="PxWebInformation" value="Information"/>

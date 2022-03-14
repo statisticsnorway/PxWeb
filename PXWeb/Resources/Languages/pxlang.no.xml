@@ -552,6 +552,8 @@
   <sentence name="PxWebChangeToThisLanguage" value="Norsk versjon" />
   <sentence name="PxWebMenuBurger" value="Meny" />
   <sentence name="PxWebMenu" value="Meny" />
+  <sentence name="PxWebToolsRegion" value="Verktøymeny for tabell" />
+  <sentence name="PxWebToolsShortRegion" value="Verktøymeny for tabell, hurtigknapper" />
   <sentence name="PxWebMenuExplanationRegionHeader" value="Bokstavkode etter tabelltittel viser laveste regionsnivå:" />
   <sentence name="PxWebMenuExplanationRegion" value="(F) = fylke, (K) = kommune, (G) = grunnkrets, (B) = bydel, (T) = tettsted" />
   <sentence name="PxWebMenuExplanationTimePeriodHeader" value="Forklaring på tidsperiode:" />
