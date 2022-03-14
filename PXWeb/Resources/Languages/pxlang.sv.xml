@@ -296,7 +296,7 @@
   <sentence name="CtrlVariableSelectorSearchValuesBeginningOfWordCheckBox" value="Början av ord" />
   <sentence name="CtrlVariableSelectorSearchValuesTextbox" value="Sök här" />
   <sentence name="CtrlVariableSelectorSearchValuesTextboxScreenReader" value="Sökfält för att markera värden i listan" />
-  <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="Lista med valbara värden för en variabel, Klicka för att markera en eller flera värden." />
+  <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="Lista med valbara värden för variabel {0}, Totalt antall värden är {1}.." />
   <sentence name="CtrlVariableSelectorSearchResultSearchWordScreenReader" value="Sök på," />
   <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader1" value=", resulterade i," />
   <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader2" value=", träffar," />
