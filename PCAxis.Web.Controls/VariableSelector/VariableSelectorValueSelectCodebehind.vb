@@ -557,7 +557,7 @@ Public Class VariableSelectorValueSelectCodebehind
         SearchValuesTextbox.Attributes.Add("aria-labelledby", SearchTip.ClientID)
 
 
-        ValuesListBox.Attributes.Add("aria-label", GetLocalizedString("CtrlVariableSelectorSelectValuesListboxScreenReader"))
+        ValuesListBox.Attributes.Add("aria-label", String.Format(GetLocalizedString("CtrlVariableSelectorSelectValuesListboxScreenReader"), Marker.Variable.Name, Marker.Variable.Values.Count.ToString()))
 
         SearchValuesTextbox.Attributes.Add("placeholder", GetLocalizedString("CtrlVariableSelectorSearchValuesTextbox"))
 
