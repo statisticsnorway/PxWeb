@@ -38,8 +38,8 @@
             </svg><asp:Literal ID="ToTheTopButtonLiteralText" runat="server"/>
         </asp:LinkButton>
         <div id="wrap">
-            <header id="header">
-              <div class="header flex-row flex-wrap justify-space-between">
+            <header>
+              <div id="header" class="header flex-row flex-wrap justify-space-between">
                 <asp:HyperLink runat="server" ID="SkipToMain" CssClass="screenreader-only pxweb-link"></asp:HyperLink>
                 <div class="headerleft flex-row">
                     <asp:HyperLink runat="server" ID="LogoLink">
