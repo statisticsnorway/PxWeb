@@ -47,9 +47,9 @@
 
                    var rowClass = "";
 
-                   var classList = $(this).attr('class').trim();
+                   var classList = jQuery(this).attr('class').trim();
                    var classArr = classList.split(/\s+/);
-                   $.each(classArr, function (index, value) {
+                   jQuery.each(classArr, function (index, value) {
                        if (value.includes("row_number_")) {
                            rowClass = value;
                            return false; //exit loop
@@ -61,7 +61,7 @@
                    var rowMembers = [jQuery(this)];
 
                    if (jQuery(this).prev() && jQuery(this).prev().hasClass(rowClass)) {
-                       rowMembers.push($(this).prev());
+                       rowMembers.push(jQuery(this).prev());
                        if (jQuery(this).prev().prev() && jQuery(this).prev().prev().hasClass(rowClass)) {
                            rowMembers.push(jQuery(this).prev().prev());
                        }
