@@ -257,8 +257,8 @@
   <sentence name="CtrlTableCellInformationAttributes" value="Attributter" />
   <sentence name="CtrlTableCellInformationNotes" value="Notater" />
   <sentence name="CtrlTableInformationTableLabel" value="Tabell:" />
-  <sentence name="CtrlVariableSelectorInstructionLabel" value="Marker dine valg og trykk på 'Fortsett'" />
-  <sentence name="CtrlVariableSelectorMarkingTipsLink" value="Markeringstips" />
+  <sentence name="CtrlVariableSelectorInstructionLabel" value="" />
+  <sentence name="CtrlVariableSelectorMarkingTipsLink" value="Gå til: Hvordan bruke statistikkbanken og velge variabler, med hjelpemidler" />
   <sentence name="CtrlVariableSelectorEliminationTooltip" value="Velg minst en verdi" />
   <sentence name="CtrlVariableSelectorSelectScreenReaderRegion" value="Variabel, " />
   <sentence name="CtrlVariableSelectorSelectValues" value="--- Velg inndeling ---" />

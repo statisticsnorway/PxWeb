@@ -8,7 +8,8 @@
             textCode="PxWebSkipToSelectionLinkScreenReader"
             runat="server" ClientIDMode="Static"/>
     </div>
-    <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  />    
+ <%--   <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  />    --%>
+        <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  CssClass="screenreader-only" />    
      <div role="alert" id="validationsummarynotifyscreenreader" >
        <asp:ValidationSummary ID="SelectionValidationSummary" runat="server" DisplayMode="BulletList"  ShowValidationErrors="true" ShowMessageBox="false" ShowSummary="true" CssClass="variableselector_error_summary" ForeColor="" />   
     </div>

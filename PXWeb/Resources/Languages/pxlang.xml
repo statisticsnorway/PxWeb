@@ -281,8 +281,8 @@
 	 <sentence name="CtrlTableCellInformationAttributes" value="Attributes"/>
 	 <sentence name="CtrlTableCellInformationNotes" value="Notes"/>
 	 <sentence name="CtrlTableInformationTableLabel" value="Table: "/>
-	 <sentence name="CtrlVariableSelectorInstructionLabel" value="Mark your selections and choose between table on screen and file format"/>
-	 <sentence name="CtrlVariableSelectorMarkingTipsLink" value="Marking tips"/>
+	 <sentence name="CtrlVariableSelectorInstructionLabel" value=""/>
+	 <sentence name="CtrlVariableSelectorMarkingTipsLink" value="Go to: Instructions for using Statbank, and how to choose variables"/>
 	 <sentence name="CtrlVariableSelectorEliminationTooltip" value="Select at least one value"/>
    <sentence name="CtrlVariableSelectorSelectScreenReaderRegion" value="Variable, " />
 	 <sentence name="CtrlVariableSelectorSelectValues" value="--- Select classification ---"/>
