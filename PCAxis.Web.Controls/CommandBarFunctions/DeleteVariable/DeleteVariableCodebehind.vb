@@ -106,7 +106,8 @@ Public Class DeleteVariableCodebehind
             'Radiobutton with text and attributes
             Dim VariableNameRadio As RadioButton = DirectCast(item.FindControl("VariableNameRadio"), RadioButton)
             VariableNameRadio.Text = var.Name
-            VariableNameRadio.Attributes.Add("VariableCode", var.Code)
+            'W3C validator complained about attribute name "VariableCode"
+            VariableNameRadio.Attributes.Add("data-variable-code", var.Code)
             VariableNameRadio.Attributes.Add("onclick", "SetUniqueRadioButton('VariableSelectorValueSelectRepeater.*VariableSelectionGroup',this)")
 
             'Listbox with variablevalues
@@ -151,7 +152,8 @@ Public Class DeleteVariableCodebehind
             'Find the selected variable
             VariableNameRadio = DirectCast(itm.FindControl("VariableNameRadio"), RadioButton)
             If VariableNameRadio.Checked Then
-                Dim variableCode As String = VariableNameRadio.Attributes.Item("VariableCode")
+                'Must reanme attribute
+                Dim variableCode As String = VariableNameRadio.Attributes.Item("data-variable-code")
                 If Not String.IsNullOrEmpty(variableCode) Then
                     ValuesListBox = DirectCast(itm.FindControl("ValuesListBox"), ListBox)
                     Dim variableValue As String = ValuesListBox.SelectedValue
@@ -170,7 +172,7 @@ Public Class DeleteVariableCodebehind
                 Dim model As PXModel = paxiomOperation.Execute(Me.PaxiomModel, deleteDescription)
                 UpdateOperationsTracker(deleteDescription)
                 Me.OnFinished(New CommandBarPluginFinishedEventArgs(model))
-                LogFeatureUsage(OperationConstants.DELETE_VARIABLE, Me.PaxiomModel.Meta.TableID)
+                LogFeatureUsage(OperationConstants.DELETE_VARIABLE, Me.PaxiomModel.Meta)
             Catch ex As PXOperationException
                 Me.ErrorMessagePanel.Visible = True
                 Me.ErrorMessageLabel.Text = ex.Message

@@ -28,6 +28,8 @@ namespace PXWeb
         private String _lastModified = String.Empty;
         private String _switchToCompactTxt;
         private String _switchToListTxt;
+        private String _switchToCompactTxtScreenReader;
+        private String _switchToListTxtScreenReader;
 
         private PCAxis.Metadata.IMetaIdProvider _linkManager;
 
@@ -115,7 +117,9 @@ namespace PXWeb
 
             _switchToCompactTxt = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebSwitchToCompactView");
             _switchToListTxt = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebSwitchToListView");
-            
+            _switchToCompactTxtScreenReader = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebSwitchToCompactViewScreenReader");
+            _switchToListTxtScreenReader = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebSwitchToListViewScreenReader");
+
             //Check if the queryStrings contains partTable 
             if (QuerystringManager.GetQuerystringParameter("partTable") != null)
             {
@@ -689,12 +693,14 @@ namespace PXWeb
             {
                 SwitchLayout.Text = _switchToListTxt;
                 SwitchLayout.CssClass = "variableselector-list-view  pxweb-btn icon-placement variableselector-buttons";
+                SwitchLayout.Attributes.Add("aria-label", _switchToListTxtScreenReader);
                 //ucVariableOverview.Visible = false;
             }
             else
             {
                 SwitchLayout.Text = _switchToCompactTxt; ;
                 SwitchLayout.CssClass = "variableselector-compact-view  pxweb-btn icon-placement variableselector-buttons";
+                SwitchLayout.Attributes.Add("aria-label", _switchToCompactTxtScreenReader);
                 //ucVariableOverview.Visible = true;
             }
 
@@ -708,6 +714,7 @@ namespace PXWeb
                 myLayoutCookie.Value = LayoutFormat.compact.ToString();
                 SwitchLayout.Text = _switchToListTxt;
                 SwitchLayout.CssClass = "variableselector-list-view  pxweb-btn icon-placement variableselector-buttons";
+                SwitchLayout.Attributes.Add("aria-label", _switchToListTxtScreenReader);
                 //ucVariableOverview.Visible = false;
             }
             else
@@ -715,6 +722,7 @@ namespace PXWeb
                 myLayoutCookie.Value = LayoutFormat.simple.ToString();             
                 SwitchLayout.Text = _switchToCompactTxt;
                 SwitchLayout.CssClass = "variableselector-compact-view  pxweb-btn icon-placement variableselector-buttons";
+                SwitchLayout.Attributes.Add("aria-label", _switchToCompactTxtScreenReader);
                 //ucVariableOverview.Visible = true;
             }
             myLayoutCookie.Expires = DateTime.Now.AddDays(370);

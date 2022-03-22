@@ -36,18 +36,31 @@
             </svg><asp:Literal ID="ToTheTopButtonLiteralText" runat="server"/>
         </asp:LinkButton>
         <div id="wrap">
-            <header id="header" class="header flex-row flex-wrap justify-space-between">
+            <header>
+              <div id="header" class="header flex-row flex-wrap justify-space-between">
                 <asp:HyperLink runat="server" ID="SkipToMain" CssClass="screenreader-only pxweb-link"></asp:HyperLink>
-                <div class="headerleft flex-row" role="banner">
+                <div class="headerleft flex-row">
+                    <asp:HyperLink runat="server" ID="LogoLink">
                         <img id="imgSiteLogo"  enableviewstate="false" runat="server" src="" alt="" class="imgSiteLogo" />
-                        <span class="siteLogoText"><asp:Literal ID="litAppName" EnableViewState="false" runat="server" /></span>
+                    </asp:HyperLink>
+                    <span class="siteLogoText"><asp:Literal ID="litAppName" EnableViewState="false" runat="server" /></span>
                 </div>
                 <div class="headerright">
+                <% if (PXWeb.Settings.Current.General.Site.ShowExternalSearchLink)
+                { %>                    
+                    <div class="px-external-search-div flex-column">
+                        <div class="pxweb-link">
+                            <a href="<% =GetLocalizedString("PxWebExternalSearchURL") %>" class="px-external-search">
+                                <span class="link-text px-external-search"><% =GetLocalizedString("PxWebExternalSearchText") %></span>
+                            </a>
+                        </div>
+                    </div>
+                <%  } %>
                     <div class="px-change-lang-div flex-column">
                           <asp:Literal ID="ChangeLanguageLiteral" EnableViewState="false" runat="server" />
                     </div>
                 </div>
-            </header>
+              </div>
             <% if (PXWeb.Settings.Current.General.Modules.ShowLogin)
                 { %>
                 <div id="loginBanner" class="login">
@@ -56,8 +69,11 @@
                 </div>
             <%  } %>
            
-
+            
+            </header>
             <pxc:Breadcrumb ID="breadcrumb1" runat="server"/>
+            <main id="place-holder">
+            
             <pxwebCustomControl:HeadingLabel ID="lblH1Title" runat="server" Text="" CssClass="h1title"></pxwebCustomControl:HeadingLabel>
 
              
@@ -69,7 +85,7 @@
                 </div>
             </div>
            
-            <main id="place-holder">
+            
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
                 </asp:ContentPlaceHolder>
             </main>

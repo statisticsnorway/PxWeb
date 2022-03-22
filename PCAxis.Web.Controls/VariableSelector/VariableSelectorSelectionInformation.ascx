@@ -17,15 +17,17 @@
     </div>
     <div class="flex-column justify-center s-margin-top">
         <asp:PlaceHolder runat="server" ID="CellSelectionInformationPlaceHolder">
-            <div class="flex-row justify-center">
-            <asp:Label runat="server" ID="SelectedCellsLabel"/>
-            <asp:Label runat="server" ID="SelectedCellsNumberLabel" CssClass="font-bold xs-margin-left"/>                
-            </div>
-            <div class="flex-row justify-center">
-                <asp:Label runat="server" ID="SelectedCellsLimitLabel"/>
-            </div>
+            <div id="selectioninfo" aria-live="polite" aria-atomic="true">
+                <div class="flex-row justify-center" >
+                <asp:Label runat="server" ID="SelectedCellsLabel"/>
+                <asp:Label runat="server" ID="SelectedCellsNumberLabel" CssClass="font-bold xs-margin-left"/>                
+                </div>
+                <div class="flex-row justify-center">
+                    <asp:Label runat="server" ID="SelectedCellsLimitLabel"/>
+                </div>
+        </div>
         </asp:PlaceHolder>
-    </div>
+  </div>
 </asp:PlaceHolder>
 <asp:PlaceHolder ID="SelectionLimitsInformationPlaceHolder" runat="server">
      <p><asp:Label runat="server" ID="SelectionLimitationLabel"/></p>
@@ -40,10 +42,12 @@
     var _toManySelectedCellsText;
     var _toManySelectedRowsText;
     var _toManySelectedColumnsText;
-
-    jQuery(document).ready(function() {
-        GetListboxSelections("ValuesListBox");
-    });
+    //jQuery(document).ready(function () {
+    //    el = document.getElementById("selectioninfo");
+    //    el.ariaBusy = "true";
+    //    GetListboxSelections("ValuesListBox");
+    //    el.ariaBusy = "false";
+    //});
 
 
     //Get listbox with name matching [nameregex]. Checks the Stub/Heading alignment and limitSelectionBy setting in the parameters for its onchange-event

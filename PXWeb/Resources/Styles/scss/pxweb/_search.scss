@@ -8,9 +8,10 @@
 }
 
 #pxwebcontent .search_label {
-  font-family: Verdana;
-  font-size: 0.9em;
-  display: block;
+    @include roboto-condenced;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    display: block;
 }
 
 #pxwebcontent .search_textbox {
