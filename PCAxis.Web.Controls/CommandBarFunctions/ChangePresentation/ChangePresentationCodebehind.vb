@@ -237,8 +237,7 @@ Public Class ChangePresentationCodebehind
         'End If
 
         Me.OnFinished(New CommandBarPluginFinishedEventArgs(Me.PaxiomModel))
-
-        LogFeatureUsage(OperationConstants.CHANGE_TEXT_CODE_PRESENTATION, Me.PaxiomModel.Meta)
+        LogFeatureUsage(OperationConstants.CHANGE_TEXT_CODE_PRESENTATION, Me.PaxiomModel.Meta.TableID)
 
     End Sub
 

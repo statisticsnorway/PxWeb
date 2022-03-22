@@ -1,8 +1,8 @@
 @include file-header("common/_link.scss");
 
-$default-font-size: 1.6rem;
-$profiled-font-size: 1.8rem;
-$header-font-size: 2rem;
+$default-font-size: 16px;
+$profiled-font-size: 18px;
+$header-font-size: 20px;
 $icon-padding: 8px;
 
 #{$selector_prefix}-link a:hover {
@@ -63,7 +63,7 @@ $icon-padding: 8px;
     border-bottom: none;
 
     i {
-      font-size: 1.6rem;
+      font-size: 16px;
     }
 
     .link-text {

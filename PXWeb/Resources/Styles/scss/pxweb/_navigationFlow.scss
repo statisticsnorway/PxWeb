@@ -63,14 +63,14 @@
   @include more-roboto-condenced;
   text-decoration: none;
   border-bottom: none;
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: bold;
   margin-top: 5px
 }
 
 #pxwebcontent span.nav-step.active {
   color: $pxweb-black-3;
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -80,7 +80,7 @@
   }
 
   #pxwebcontent span.nav-step.passive {
-    font-size: 1.8rem;
+    font-size: 18px;
     border-bottom-style: solid;
   }
 

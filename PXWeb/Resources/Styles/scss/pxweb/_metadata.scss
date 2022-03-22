@@ -63,7 +63,7 @@
   @include open-sans; 
   animation: fadein .2s;
   display: none;
-  font-size: 1.4rem;
+  font-size: 14px;
   opacity: 0;
   transition: opacity .18s;
   border: 1.5px solid $pxbox-green-2;
@@ -138,7 +138,7 @@
 }
 
 #pxwebcontent .pxbox .metadata-links .link-text {
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 

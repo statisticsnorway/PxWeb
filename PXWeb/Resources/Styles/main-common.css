@@ -71,12 +71,12 @@ $scrollbar-color: #b0b0b0;
 
 #pxwebcontent select {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 #pxwebcontent input {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 #pxwebcontent input:focus {
@@ -207,7 +207,7 @@ $scrollbar-color: #b0b0b0;
   font-family: "Roboto Condensed", sans-serif !important;
   font-stretch: condensed;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 20px;
   background-repeat: no-repeat;
   background-position-x: left;
   background-position-y: center;
@@ -264,7 +264,7 @@ $scrollbar-color: #b0b0b0;
   font-stretch: normal;
   font-weight: normal;
   color: #162327;
-  font-size: 1.6rem;
+  font-size: 16px;
   padding: 8px 20px 8px 0;
 }
 #pxwebcontent .pxweb-accordion .accordion-body.closed {
@@ -292,7 +292,7 @@ $scrollbar-color: #b0b0b0;
   border-radius: 2px;
   color: #00824d;
   display: flex;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: bold;
   height: fit-content;
   line-height: 1.25;
@@ -364,7 +364,7 @@ $scrollbar-color: #b0b0b0;
 }
 #pxwebcontent .pxweb-btn .sb-icon {
   display: inline-flex;
-  font-size: 1.8rem;
+  font-size: 18px;
   margin-right: 5px;
 }
 
@@ -400,8 +400,8 @@ $scrollbar-color: #b0b0b0;
   /*color: $pxweb-dark-6;*/
   cursor: pointer;
   display: block;
-  font-size: 1.4rem;
-  margin-right: 10px;
+  font-size: 14px;
+  min-width: 200px;
   outline: none;
   position: relative;
   text-align: left;
@@ -442,6 +442,7 @@ $scrollbar-color: #b0b0b0;
   border: 1px solid #c3dcdc;
 }
 #pxwebcontent .pxweb-checkbox .checkbox-label {
+  align-items: center;
   cursor: pointer;
   display: flex;
   margin-bottom: 12px;
@@ -454,9 +455,9 @@ $scrollbar-color: #b0b0b0;
   box-sizing: border-box;
   content: "";
   display: block;
-  height: 2rem;
+  height: 20px;
   margin-right: 12px;
-  width: 2rem;
+  width: 20px;
 }
 
 /* **********************************  common/_checkbox-pxbox.scss *********************************** */
@@ -499,12 +500,12 @@ $scrollbar-color: #b0b0b0;
   border-width: 0 2px 2px 0;
   content: "";
   display: block;
-  height: 1rem;
-  left: 0.6rem;
+  height: 10px;
+  left: 6px;
   position: absolute;
-  top: 0.2rem;
+  top: 2px;
   transform: rotate(45deg);
-  width: 0.6rem;
+  width: 6px;
 }
 
 #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:hover + .checkbox-label:before {
@@ -517,12 +518,12 @@ $scrollbar-color: #b0b0b0;
   border-width: 0 2px 2px 0;
   content: "";
   display: block;
-  height: 1rem;
-  left: 0.6rem;
+  height: 10px;
+  left: 6px;
   position: absolute;
-  top: 0.2rem;
+  top: 2px;
   transform: rotate(45deg);
-  width: 0.6rem;
+  width: 6px;
 }
 
 #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:checked:focus + .checkbox-label:after {
@@ -530,12 +531,12 @@ $scrollbar-color: #b0b0b0;
   border-width: 0 2px 2px 0;
   content: "";
   display: block;
-  height: 1rem;
-  left: 0.6rem;
+  height: 10px;
+  left: 6px;
   position: absolute;
-  top: 0.2rem;
+  top: 2px;
   transform: rotate(45deg);
-  width: 0.6rem;
+  width: 6px;
 }
 
 #pxwebcontent .pxbox .pxweb-checkbox input[type=checkbox]:focus + .checkbox-label:before {
@@ -582,7 +583,7 @@ $scrollbar-color: #b0b0b0;
   cursor: text;
   display: flex;
   flex-direction: column;
-  max-width: 20.5rem;
+  max-width: 205px;
   position: relative;
   width: 100%;
 }
@@ -609,7 +610,7 @@ $scrollbar-color: #b0b0b0;
 #pxwebcontent .pxweb-input label {
   color: #162327;
   cursor: text;
-  font-size: 1.4rem;
+  font-size: 14px;
   margin-bottom: 4px;
   user-select: none;
 }
@@ -621,7 +622,7 @@ $scrollbar-color: #b0b0b0;
   border: 1px solid #274247;
   box-sizing: border-box;
   color: #2d6975;
-  font-size: 1.4rem;
+  font-size: 14px;
   height: 34px;
   padding: 12px 12px;
   text-overflow: ellipsis;
@@ -709,7 +710,7 @@ $scrollbar-color: #b0b0b0;
   text-align: left;
   align-items: center;
   display: flex;
-  font-size: 1.8rem;
+  font-size: 18px;
   height: 34px;
   justify-content: center;
   margin-left: -44px;
@@ -733,11 +734,6 @@ $scrollbar-color: #b0b0b0;
   color: #fff;
 }
 
-@media screen and (max-width: 767px) {
-  #pxwebcontent .pxweb-input {
-    max-width: 205px;
-  }
-}
 #pxwebcontent .pxweb-input-error {
   font-family: "Roboto", sans-serif !important;
   font-stretch: normal;
@@ -745,7 +741,7 @@ $scrollbar-color: #b0b0b0;
   background: #ed5935;
   color: #fff;
   display: flex;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: bold;
   justify-content: center;
   line-height: normal;
@@ -882,7 +878,7 @@ $scrollbar-color: #b0b0b0;
   color: #00824d;
   cursor: pointer;
   display: inline-flex;
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1.25;
   margin-top: -3px;
   margin-bottom: -2px;
@@ -900,7 +896,7 @@ $scrollbar-color: #b0b0b0;
   font-stretch: normal;
   font-weight: normal;
   border-bottom-width: 2px;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
 }
 #pxwebcontent .pxweb-link.header .link-text {
@@ -922,7 +918,7 @@ $scrollbar-color: #b0b0b0;
   border-bottom: none;
 }
 #pxwebcontent .pxweb-link.with-icon i {
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 #pxwebcontent .pxweb-link.with-icon .link-text {
   color: #00824d;
@@ -1015,14 +1011,14 @@ $scrollbar-color: #b0b0b0;
 }
 #pxwebcontent .pxweb-nested-accordion .nested-accordion-header .expand-icon {
   color: #00824d;
-  font-size: 1.6rem;
+  font-size: 16px;
 }
 #pxwebcontent .pxweb-nested-accordion .nested-accordion-header .header-text {
   font-family: "Roboto", sans-serif !important;
   font-stretch: normal;
   font-weight: normal;
   color: #162327;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: bold;
   line-height: 1.25;
   padding-left: 30px;
@@ -1038,7 +1034,7 @@ $scrollbar-color: #b0b0b0;
   font-stretch: normal;
   font-weight: normal;
   color: #162327;
-  font-size: 1.6rem;
+  font-size: 16px;
   padding: 10px 10px 10px 30px;
 }
 #pxwebcontent .pxweb-nested-accordion .nested-accordion-body.closed {
@@ -1058,7 +1054,7 @@ $scrollbar-color: #b0b0b0;
   font-family: "Roboto Condensed", sans-serif !important;
   font-stretch: condensed;
   font-weight: bold;
-  font-size: 5.6rem;
+  font-size: 56px;
   font-weight: bold;
   line-height: 80px;
 }
@@ -1067,7 +1063,7 @@ $scrollbar-color: #b0b0b0;
   font-family: "Roboto Condensed", sans-serif !important;
   font-stretch: condensed;
   font-weight: bold;
-  font-size: 2.8rem;
+  font-size: 28px;
   font-weight: bold;
   line-height: 40px;
 }
@@ -1076,7 +1072,7 @@ $scrollbar-color: #b0b0b0;
   font-family: "Roboto", sans-serif !important;
   font-stretch: normal;
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
   line-height: 32px;
 }
@@ -1085,7 +1081,7 @@ $scrollbar-color: #b0b0b0;
   font-family: "Roboto", sans-serif !important;
   font-stretch: normal;
   font-weight: normal;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: bold;
   line-height: 28px;
 }
@@ -1094,7 +1090,7 @@ $scrollbar-color: #b0b0b0;
   font-family: "Roboto", sans-serif !important;
   font-stretch: normal;
   font-weight: normal;
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: bold;
   line-height: 1.7;
 }
@@ -1103,19 +1099,19 @@ $scrollbar-color: #b0b0b0;
   font-family: "Roboto", sans-serif !important;
   font-stretch: normal;
   font-weight: normal;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: bold;
   line-height: 1.7;
 }
 
 @media screen and (max-width: 767px) {
   #pxwebcontent h1 .pxweb-title {
-    font-size: 4.4rem;
+    font-size: 44px;
     line-height: 56px;
   }
 
   #pxwebcontent h2 .pxweb-title {
-    font-size: 2.8rem;
+    font-size: 28px;
     line-height: 36px;
   }
 }

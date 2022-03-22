@@ -24,11 +24,11 @@
             <pxwebCustomControl:HeadingLabel ID="lblSubHeader" runat="server" Text="<%$ PxString: PxWebSubHeaderResult%>"></pxwebCustomControl:HeadingLabel>
         </div>
         <div class="tools-menu-item">
-           <input id="btnBurgerMenu" runat="server" ClientIDMode="Static" type="button" aria-expanded="false" onclick="ToggleBurgerMenu()" class="pxweb-buttons pxweb-btn burger_menu-icon icon-placement"/>
+           <input id="btnBurgerMenu" runat="server" ClientIDMode="Static" type="button"   onclick="ToggleBurgerMenu()" class="pxweb-buttons pxweb-btn burger_menu-icon icon-placement"/>
         </div>
 
         <div id="Presentation" class="s-margin-top presentation-container">
-            <div role="region" id="PresentationLeft" aria-label="<%= Master.GetLocalizedString("PxWebToolsRegion") %>" class="presentation-left mobilemenu mobilemenuhidden tools">
+            <div id="PresentationLeft" class="presentation-left mobilemenu mobilemenuhidden tools">
                 <div class="tools-header">
                     <h2><%= Master.GetLocalizedString("PxWebTools") %></h2>
                     <button onclick="ToggleBurgerMenu()" class="button-tertiar"><%= Master.GetLocalizedString("PxWebToolsClose") %></button>
@@ -38,24 +38,20 @@
                 </div>
                 <pxc:commandbar id="CommandBar1" runat="server"  />
                 <asp:panel class="pxweb-accordion" id="SaveQueryPanel" runat="server">
-                    <button type="button" class="accordion-header closed" id="SaveQueryHeader" aria-expanded="false" onclick="accordionToggle(<%=SaveQueryPanel.ClientID %>, this)" >
+                    <button type="button" class="accordion-header closed" id="SaveQueryHeader" onclick="accordionToggle(<%=SaveQueryPanel.ClientID %>, this)" >
                         <span class="header-text"><asp:Label ID="SaveQueryLabel"  runat="server"></asp:Label></span>
                     </button>
-                    <div>
-                        <div class="accordion-body closed" id="SaveQueryBody">
-                            <ucSaveQuery:SaveQuery runat="server" id="SavedQueryFeature" />
-                        </div>
+                    <div class="accordion-body closed" id="SaveQueryBody">
+                        <ucSaveQuery:SaveQuery runat="server" id="SavedQueryFeature" />
                     </div>
                 </asp:panel>
 
                 <asp:panel class="pxweb-accordion" ClientIDMode="Static" id="SettingsAccordionPanel" runat="server">
                         <asp:ContentPlaceHolder ID="cphSettingsLabel" runat="server">
                         </asp:ContentPlaceHolder>
-                    <div>
-                        <div class="accordion-body closed" id="SettingsBody">
-                            <asp:ContentPlaceHolder ID="cphSettings" runat="server">
-                            </asp:ContentPlaceHolder>
-                        </div>
+                    <div class="accordion-body closed" id="SettingsBody">
+                        <asp:ContentPlaceHolder ID="cphSettings" runat="server">
+                        </asp:ContentPlaceHolder>
                     </div>
                 </asp:panel>
             </div>
@@ -74,9 +70,7 @@
                 </div>
                 <div id="Fullscreen">
                     <div class="flex-row justify-space-between">
-                        <div role="region" aria-label="<%= Master.GetLocalizedString("PxWebToolsShortRegion") %>">
-                            <asp:Panel runat="server" ID="CommandBarShortCuts" CssClass="commandbar-shortcuts mobilemenu mobilemenuhidden" ClientIDMode="Static"> </asp:Panel>
-                        </div>
+                        <asp:Panel runat="server" ID="CommandBarShortCuts" CssClass="commandbar-shortcuts mobilemenu mobilemenuhidden" ClientIDMode="Static"> </asp:Panel>
                         <input type ="button" id="btnfullscreen" runat="server" ClientIDMode="Static"  value="" class="pxweb-btn primary-btn pxweb-buttons maximize-icon with-icon" onclick="ToggleFullscreen();"/>
                     </div>
                     <div id="fullscreentitel">
@@ -85,7 +79,6 @@
                         </h1>
                     </div>
                     <div  id="pxcontent"> 
-                        <pxwebCustomControl:UserManualScreenReader ID="UserManualResult" manualFor="Result" runat="server" ClientIDMode="Static"/>
                         <asp:ContentPlaceHolder ID="cphMain" runat="server">
                         </asp:ContentPlaceHolder>
                     </div>
@@ -240,11 +233,6 @@
         y = document.getElementById("btnBurgerMenu");
         y.classList.toggle("burger_menu-icon");
         y.classList.toggle("burger_menu_open-icon");
-        if (isExpanded) {
-            y.setAttribute("aria-expanded","true")
-        } else {
-            y.setAttribute("aria-expanded", "false")
-        }
         y.blur();
 }
 
@@ -252,7 +240,7 @@
             if (typeof sessionStorage !== 'undefined') {
                 sessionStorage.setItem("burgermenuIsExpanded",isExpanded);
             }
-         }
+                }
         function    InitBurgerMenu() {
             var x = document.getElementsByClassName("mobilemenu");
             var y = document.getElementById("btnBurgerMenu");
@@ -263,7 +251,6 @@
                     }
                     y.classList.add("burger_menu_open-icon");
                     y.classList.remove("burger_menu-icon");
-                    y.setAttribute("aria-expanded", "true")
                 }
 
             }

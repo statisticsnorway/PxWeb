@@ -37,7 +37,7 @@
     margin-top: 1em !important;
     margin-bottom: 1em !important;
     font-family: 'Roboto Condensed', sans-serif !important;
-    font-size: 2rem;
+    font-size: 20px;
 }
 
     #pxwebcontent .variableselector_error_summary ul {
@@ -45,7 +45,7 @@
     }
 
     #pxwebcontent .variableselector_error_summary li {
-        font-size: 1.6rem;
+        font-size: 16px;
         list-style-type: disc;
         list-style-position: inside;
         color: black
@@ -53,9 +53,9 @@
 /*TO DO - end*/
 
 #pxwebcontent .variableselector_continue_button {
-    height: 8.6rem;
-    width: 29.4rem;
-    font-size: 2.8rem;
+    height: 86px;
+    width: 294px;
+    font-size: 28px;
 }
 
 #pxwebcontent .variableselector_valuesselect_box {
@@ -93,8 +93,7 @@
 
 #pxwebcontent .variableselector_valuesselect_variabletitle {
     @include roboto-condenced;
-    /*går ned noen px, med vilje? */
-    font-size: 2.1rem;
+    font-size: 28px;
     display: inline-block;
     padding-right: 40px;
     overflow-wrap: break-word;
@@ -103,7 +102,7 @@
 #pxwebcontent .variableselector_valuesselect_aggregations {
     width: 100%;
     @include roboto;
-    font-size: 1.6rem;
+    font-size: 16px;
     color: $pxbox-dark-6;
     cursor: pointer;
 }
@@ -159,14 +158,8 @@
         @include focus-ring;
     }
 
-/*
-#pxwebcontent .variableselector_valuesselect_valueslistbox option {
-  padding: 13px 0 12px 0;
-}
-*/
-
 #pxwebcontent .search-panel {
-    margin-bottom: 5px;
+    flex: 1 0 250px;
     padding-right: 20px;
 }
 
@@ -175,7 +168,7 @@
     border: none;
     display: inline;
     @include open-sans;
-    font-size: 1.4rem;
+    font-size: 14px;
     color: $pxbox-ink;
 }
 
@@ -257,19 +250,12 @@
 }
 
 #pxwebcontent .variableselector_valuesselect_mandatory_text {
-        font-size: 1.2rem;
+        font-size: 12px;
 }
-
-/* Star in html or css*/
-/* #pxwebcontent .variableselector_valuesselect_mandatory_text:after {
-    content: "*";
-    font-size: 2.8rem;
-}*/
 
 #pxwebcontent .variableselector_valuesselect_mandatory_star {
-    font-size: 2.8rem;
+    font-size: 28px;
 }
-
 
 
 #pxwebcontent .link-buttons-container {
@@ -290,21 +276,16 @@
 #pxwebcontent .optional-variable-text {
   color: $pxbox-black-1;
   padding-left: 5px;
-  font-size: 1.4rem;
+  font-size: 14px;
   @include roboto-condenced;
 }
 
 #pxwebcontent .optional-variable-icon-panel {
     background-color: $pxbox-blue-3;
     box-sizing: border-box;
-    width: 2.2rem;
-    height: 2.1rem;
+    width: 22px;
+    height: 21px;
     border: solid $pxbox-blue-3 2px;
-
-    .icon {
-        width: 1.8rem;
-        height: 1.8rem;
-    } 
 }
 
 

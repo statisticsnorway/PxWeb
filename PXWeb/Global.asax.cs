@@ -428,7 +428,6 @@ namespace PXWeb
                                            "~/DataSort.aspx");
             
             RouteTable.Routes.MapHttpRoute(name: "CacheApi", routeTemplate: "api/admin/v1/{controller}");
-            RouteTable.Routes.MapHttpRoute(name: "MenuApi", routeTemplate: "api/admin/v1/{controller}/{database}");
 
         }
 

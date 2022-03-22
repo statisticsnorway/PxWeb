@@ -145,8 +145,6 @@ namespace PXWeb
 
             if (!IsPostBack)
             {
-                InitializeLogoLink();
-
                 if (!DoNotUseBreadCrumb())
                 {
                     InitializeBreadcrumb();
@@ -311,7 +309,7 @@ namespace PXWeb
             string langUrl = PCAxis.Web.Core.Management.LinkManager.CreateLink(Request.AppRelativeCurrentExecutionFilePath, false, linkItems.ToArray());
 
             string langText = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebChangeToThisLanguage", new CultureInfo(langName));
-            return String.Format("<div class=\"pxweb-link\"> <a class=\"px-change-lang\" href=\"{0}\"> <span lang=\"{2}\" class=\"link-text px-change-lang\">{1}</span></a> </div> ", langUrl, Server.HtmlEncode(langText), langName);
+            return String.Format("<div class=\"pxweb-link\"> <a class=\"px-change-lang\" href=\"{0}\"> <span class=\"link-text px-change-lang\">{1}</span></a> </div> ", langUrl, Server.HtmlEncode(langText));
         }
 
          /// <summary>
@@ -449,45 +447,7 @@ namespace PXWeb
                 navigationFlowControl.Table = url.Table;
             }
         }
-
-        private void InitializeLogoLink()
-        {
-            IPxUrl url = RouteInstance.PxUrlProvider.Create(null);
-
-            if (!string.IsNullOrEmpty(url.Database))
-            {
-                try
-                {
-                    IHomepageSettings homepage = PXWeb.Settings.Current.Database[url.Database].Homepages.GetHomepage(url.Language);
-
-                    if (string.IsNullOrWhiteSpace(homepage.Url))
-                    {
-                        return;
-                    }
-
-                    if (homepage.IsExternal)
-                    {
-                        LogoLink.NavigateUrl = homepage.Url;
-                    }
-                    else
-                    {
-                        LogoLink.NavigateUrl = LinkManager.CreateLink(homepage.Url);
-                    }
-                }
-                catch (Exception e)
-                {
-                    log.Debug("url.Database = " + url.Database + ", url.Language = " + url.Language);
-                    log.Error("The error.", e);
-                    throw e;
-                }
-            }
-            else
-            {
-                LogoLink.NavigateUrl = LinkManager.CreateLink("Default.aspx");
-            }
-        }
-
-        private void InitializeBreadcrumb()
+         private void InitializeBreadcrumb()
          {
             IPxUrl url = RouteInstance.PxUrlProvider.Create(null);
             DatabaseInfo dbi = null;

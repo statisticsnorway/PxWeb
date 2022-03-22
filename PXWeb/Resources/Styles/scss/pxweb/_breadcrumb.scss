@@ -5,37 +5,10 @@
     font-size: 14px;
 }
 
-/*
-#pxwebcontent .breadcrumb_container {
-  background: $breadcrumb-background;
-}
-#pxwebcontent .breadcrumb_text {
-    color: $breadcrumb-text;
-    @include pxweb-font;
-    font-size: 1.4rem;
-    display: inline-block;
-    background-image: none !important;
-    transition: none;
-}
-
-#pxwebcontent .breadcrumb_text:hover {
-    color: $breadcrumb-text;
-    @include pxweb-font;
-    font-size: 1.4rem;
-}
-
-#pxwebcontent .breadcrumb_text:focus {
-    color: $breadcrumb-text;
-    @include focus-ring;
-}
-*/
-
-
 #pxwebcontent .breadcrumb_text_nolink {
     color: $breadcrumb-text-nolink;
     @include just-open-sans;
-    /*   @include pxweb-font;*/
-    font-size: 1.4rem;
+    font-size: 14px;
     display: inline-block;
 }
 
@@ -43,17 +16,13 @@
     color: $breadcrumb-text-nolink;
     text-decoration: none;
     @include just-open-sans;
-    font-size: 1.4rem;
+    font-size: 14px;
 }
 
 #pxwebcontent .breadcrumb_sep {
     color: $breadcrumb-text;
     @include just-open-sans;
-/*
-    font-family: Verdana;
-    @include pxweb-font;
-*/
-    font-size: 1.4rem;
+    font-size: 14px;
 }
 
 #pxwebcontent .breadcrumb_homebutton {

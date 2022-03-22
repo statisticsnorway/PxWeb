@@ -4,10 +4,7 @@
 <div class="delete_variable_rootdiv">
     <h3 class="container_titletext"><asp:Label runat="server" ID="TitleLabel" /></h3>
     <asp:Panel runat="server" ID="DeleteValuePanel" Visible="true">
-        <fieldset>
-           <legend>
-              <asp:Label runat="server" ID="DeleteVariableTextLabel" CssClass="commandbar_deletevariable_deletevariabletitle font-normal-text" />
-           </legend>
+        <asp:Label runat="server" ID="DeleteVariableTextLabel" CssClass="commandbar_deletevariable_deletevariabletitle font-normal-text" />
         <asp:CheckBox runat="server" ID="AddToTitleCheckbox" Checked="true" TextAlign="Left" CssClass="font-normal-text"/>
         <asp:Repeater ID="VariableSelectorValueSelectRepeater" runat="server">      
             <HeaderTemplate>
@@ -35,7 +32,6 @@
             <asp:Button ID="CancelButton" runat="server" CssClass="container_cancelbutton pxweb-btn" />
             <asp:Button ID="ContinueButton" runat="server" CssClass="container_continuebutton pxweb-btn primary-btn" />
         </div>
-      </fieldset>
     </asp:Panel>
     <script>
         jQuery(document).ready(function() {
