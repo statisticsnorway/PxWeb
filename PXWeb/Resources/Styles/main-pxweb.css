@@ -138,6 +138,10 @@ html {
   text-size-adjust: none;
 }
 
+#pxwebcontent .hidden {
+  display: none;
+}
+
 #pxwebcontent .pxbox.negative {
   background-color: #274247;
   border: solid 1px #000;
@@ -368,9 +372,7 @@ html {
   font-stretch: normal;
   font-weight: normal;
   padding: 10px 10px 10px 10px;
-  border: solid 6px #00824d;
   width: max-content;
-  overflow: auto;
   background-color: #fff;
   position: relative;
   z-index: 2;
@@ -659,6 +661,38 @@ html {
     margin-top: 10px;
 }
 */
+#pxwebcontent .dialog.visible {
+  display: flex;
+  overflow: auto;
+  position: relative;
+  border: solid 6px #00824d;
+  padding: 10px;
+  height: fit-content;
+  background: #FFF;
+  z-index: 20;
+}
+#pxwebcontent .dialog.visible:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  z-index: -2;
+}
+#pxwebcontent .dialog.visible:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+}
+
 /* **********************************  _PxWebButtons.scss *********************************** */
 #pxwebcontent .pxweb-buttons {
   background-repeat: no-repeat;

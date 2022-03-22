@@ -816,8 +816,8 @@ namespace PXWeb
             }
             else
             {
-                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "openAccordion",
-                    "jQuery(document).ready(function(){openAccordion('SettingsHeader', 'SettingsBody')});", true);
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "openAccordionDialog",
+                   "jQuery(document).ready(function(){openAccordionDialog('SettingsHeader', 'SettingsBody', 'SettingsBody')});", true);
             }
         }
 

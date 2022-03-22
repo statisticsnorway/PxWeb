@@ -165,8 +165,8 @@ namespace PXWeb.UserControls
                 lblFormatError.Style.Add("visibility", "visible");
                 pnl2_SaveQuerySelection.Style.Add("display", "inline-block");
                 //Keeps accordion open
-                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "openAccordion",
-                    "jQuery(document).ready(function(){openAccordion('SaveQueryHeader', 'SaveQueryBody')});", true);
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "openAccordionDialog",
+                    "jQuery(document).ready(function(){openAccordionDialog('SaveQueryHeader', 'SaveQueryBody', 'SaveQueryContainer')});", true);
                 return;
             }
 
@@ -283,6 +283,20 @@ namespace PXWeb.UserControls
                 //Hide and show the right panels
                 pnl2_SaveQuerySelection.Style.Add("display", "none");
                 pnl3_ShowSaveQueryUrl.Style.Add("display", "inline-block");
+
+                txtSaveQueryUrl.CssClass = "savequery_url s-margin-top";
+                btnCancelSaveQueryEnd.CssClass = "pxweb-btn";
+                btnCopyToClipboard.CssClass = "pxweb-btn";
+                btnMailSaveQuery.CssClass = "pxweb-btn no-margin-right";
+
+                rblTimePeriod.CssClass = "savequery_rblist hidden";
+                ddlOutputFormats.CssClass = "commandbar_saveas_dropdownlist saveas_dropdownlist xs-margin-top hidden";
+                btnCancelSaveQuery.CssClass = "pxweb-btn hidden";
+                btnCreateSaveQuery.CssClass = "pxweb-btn primary-btn container_continuebutton hidden";
+
+                //Set "hidden" class for input elements of radiobuttonslist after they are rendered. Used for focus trap.
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "hideInuputRadio",
+                    "jQuery(document).ready(function(){hideInuputRadio()});", true);
             }
             catch (Exception ex)
             {
@@ -291,8 +305,8 @@ namespace PXWeb.UserControls
             finally
             {
                 //Keeps accordion open
-                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "openAccordion",
-                    "jQuery(document).ready(function(){openAccordion('SaveQueryHeader', 'SaveQueryBody')});", true);
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "openAccordionDialog",
+                    "jQuery(document).ready(function(){openAccordionDialog('SaveQueryHeader', 'SaveQueryBody', 'SaveQueryContainer')});", true);
             }
         }
         

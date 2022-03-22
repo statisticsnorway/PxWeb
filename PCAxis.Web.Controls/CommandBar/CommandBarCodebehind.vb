@@ -661,6 +661,8 @@ Namespace CommandBar
                 .Controls.Add(pluginControl)
                 .Focus()
             End With
+
+            Page.ClientScript.RegisterClientScriptBlock(GetType(Page), "trapFocus", "jQuery(document).ready(function(){trapFocus('" & PluginControlHolder.ClientID & "')});", True)
         End Sub
 
         Private Sub ShowAsBtn_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ShowAsBtn.Click
