@@ -16,6 +16,10 @@ html {
   text-size-adjust: none;
 }
 
+#pxwebcontent .hidden {
+    display: none;
+}
+
 #pxwebcontent .pxbox.negative {
   background-color: $pxbox-background;
   border: solid 1px $pxbox-border;
@@ -251,9 +255,7 @@ html {
 #pxwebcontent .px-settings {
     @include open-sans;
     padding: 10px 10px 10px 10px;
-    border: solid 6px $pxweb-green-4;
     width: max-content;
-    overflow: auto;
     background-color: $pxweb-background;
     position: relative;
     z-index: 2;
@@ -553,4 +555,38 @@ html {
     margin-top: 10px;
 }
 */
+
+#pxwebcontent .dialog.visible {
+    display: flex;
+    overflow: auto;
+    position: relative;
+    border: solid 6px $pxweb-green-4;
+    padding: 10px;
+    height: fit-content;
+    background: #FFF;
+    z-index: 20;
+
+    &:after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0,0,0,0.1);
+        backdrop-filter: blur(3px);
+        z-index: -2;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #FFF;
+        z-index: -1;
+    }
+}
 
