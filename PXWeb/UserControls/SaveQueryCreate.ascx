@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SaveQueryCreate.ascx.cs" Inherits="PXWeb.UserControls.SaveQueryCreate" %>
 
-<div class="savequery_container" >
+<div id="SaveQueryContainer" class="savequery_container" >
 
     <a id="tableSavequerycontrol"></a>         
         <asp:Panel ID="pnl2_SaveQuerySelection"  CssClass="settingpanel savequery" runat="server">            
@@ -42,12 +42,12 @@
                     </div>
                 </div>
                 <asp:Label ID="lblWithdrawInformation" runat="server" Text="<%$ PxString: CtrlSaveQueryURLInfo %>" CssClass="font-heading"></asp:Label>                        
-                <asp:TextBox runat="server" ID="txtSaveQueryUrl" aria-label="<%$ PxString: CtrlSaveQueryUrlScreenReader %>" cssclass="savequery_url s-margin-top" ReadOnly="true"  ></asp:TextBox> 
+                <asp:TextBox runat="server" ID="txtSaveQueryUrl" aria-label="<%$ PxString: CtrlSaveQueryUrlScreenReader %>" cssclass="savequery_url s-margin-top hidden" ReadOnly="true"  ></asp:TextBox> 
                 <div class="container_exit_buttons_row">
-                    <asp:Button ID="btnCancelSaveQueryEnd" runat="server" CssClass="pxweb-btn" Text="<%$ PxString: CtrlSaveQueryCancelSaveQuery %>" OnClientClick="cancelSavequeryEnd(); return false;" />
-                    <asp:Button ID="btnbookMark" cssclass="pxweb-btn savequery_novisibility" onclientclick="Bookmark(); return false;" text="<%$ PxString: CtrlSaveQueryBookmark%>"  runat="server" />
-                    <asp:Button ID="btnCopyToClipboard" cssclass="pxweb-btn savequery_novisibility" text="<%$ PxString: CtrlSaveQueryCopyLink %>" OnClientClick="CopyToClipboard();return false" CausesValidation="false"  runat="server" />           
-                    <asp:Button ID="btnMailSaveQuery" CssClass="pxweb-btn no-margin-right savequery_novisibility" text="<%$ PxString: CtrlSaveQueryMailQuery %>"  OnClientClick="document.location = sendMail(); return false;" runat="server"   /> 
+                    <asp:Button ID="btnCancelSaveQueryEnd" runat="server" CssClass="pxweb-btn hidden" Text="<%$ PxString: CtrlSaveQueryCancelSaveQuery %>" OnClientClick="cancelSavequeryEnd(); return false;" />
+                    <asp:Button ID="btnbookMark" cssclass="pxweb-btn hidden" onclientclick="Bookmark(); return false;" text="<%$ PxString: CtrlSaveQueryBookmark%>"  runat="server" />
+                    <asp:Button ID="btnCopyToClipboard" cssclass="pxweb-btn hidden" text="<%$ PxString: CtrlSaveQueryCopyLink %>" OnClientClick="CopyToClipboard();return false" CausesValidation="false"  runat="server" />           
+                    <asp:Button ID="btnMailSaveQuery" CssClass="pxweb-btn no-margin-right hidden" text="<%$ PxString: CtrlSaveQueryMailQuery %>"  OnClientClick="document.location = sendMail(); return false;" runat="server"   /> 
                 </div>
             </asp:Panel>
              
@@ -92,9 +92,25 @@
 
     function cancelSavequeryEnd() {
         jQuery('#<%=lblFormatError.ClientID %>').hide(0);
-        closeAccordion('SaveQueryHeader', 'SaveQueryBody');
         jQuery('[id$=pnl2_SaveQuerySelection]').show(0);
         jQuery('[id$=pnl3_ShowSaveQueryUrl]').hide(0);
+
+        //add & remove 'hidden' class used to determine elements for focus trap
+        jQuery('[id$=txtSaveQueryUrl]').addClass('hidden');
+        jQuery('[id$=btnCancelSaveQueryEnd]').addClass('hidden');
+        jQuery('[id$=btnCopyToClipboard]').addClass('hidden');
+        jQuery('[id$=btnMailSaveQuery]').addClass('hidden');
+
+        jQuery('[id$=rblTimePeriod]').removeClass('hidden');
+        jQuery('[id$=ddlOutputFormats]').removeClass('hidden');
+        jQuery('[id$=btnCancelSaveQuery]').removeClass('hidden');
+        jQuery('[id$=btnCreateSaveQuery]').removeClass('hidden');
+
+        jQuery('.savequery_rblist input:radio').each(function () {
+            jQuery(this).removeClass("hidden");
+        });
+
+        closeAccordion('SaveQueryHeader', 'SaveQueryBody');
     }
     
     function sendMail() {
@@ -136,5 +152,10 @@
 
     }
 
+    function hideInuputRadio() {
+        jQuery('.savequery_rblist.hidden input:radio').each(function () {
+            jQuery(this).addClass("hidden");
+        });
+    }
 
 </script>   

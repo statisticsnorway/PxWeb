@@ -649,6 +649,8 @@ function closeAccordion(buttonId, bodyId) {
     accordionButton.classList.add('closed');
     accordionButton.setAttribute('aria-expanded', 'false');
     accordionBody.classList.add('closed');
+
+    accordionButton.focus();
 }
 
 //Set text for button with text from selected radio on load
@@ -672,4 +674,45 @@ function setUpdatedRadioLabelForButton(selectedRadioOption, button, ariaLabelBas
 function setFocusOnElement(elementId) {
     var element = jQuery('#' + elementId);
     element.focus();
+}
+
+//trap focus inside dialog box
+function trapFocus(elementId) {
+    var element = document.getElementById(elementId);
+    var focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]):not(.hidden), input[type="radio"]:not([disabled]):not(.hidden), input[type="checkbox"]:not([disabled]), input[type="submit"]:not([disabled]):not(.hidden), select:not([disabled]):not(.hidden)');
+    var firstFocusableEl = focusableEls[0];
+    var lastFocusableEl = focusableEls[focusableEls.length - 1];
+    var KEYCODE_TAB = 9;
+
+    firstFocusableEl.focus();
+
+    element.addEventListener('keydown', function (e) {
+        var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+
+        if (!isTabPressed) {
+            return;
+        }
+
+        if (e.shiftKey) /* shift + tab */ {
+            if (document.activeElement === firstFocusableEl) {
+                lastFocusableEl.focus();
+                e.preventDefault();
+            }
+        } else /* tab */ {
+            if (document.activeElement === lastFocusableEl) {
+                firstFocusableEl.focus();
+                e.preventDefault();
+            }
+        }
+    });
+}
+
+function accordionToggleDialog(panel, button, dialogDiv) {
+    accordionToggle(panel, button);
+    trapFocus(dialogDiv);
+}
+
+function openAccordionDialog(buttonId, bodyId, dialogDiv) {
+    openAccordion(buttonId, bodyId);
+    trapFocus(dialogDiv);
 }

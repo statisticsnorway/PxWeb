@@ -40,11 +40,11 @@
                 </div>
                 <pxc:commandbar id="CommandBar1" runat="server"  />
                 <asp:panel class="pxweb-accordion" id="SaveQueryPanel" runat="server">
-                    <button type="button" class="accordion-header closed" id="SaveQueryHeader" aria-expanded="false" onclick="accordionToggle(<%=SaveQueryPanel.ClientID %>, this)" >
+                    <button type="button" class="accordion-header closed" id="SaveQueryHeader" aria-expanded="false" onclick="accordionToggleDialog(<%=SaveQueryPanel.ClientID %>, this, 'SaveQueryContainer')" >
                         <span class="header-text"><asp:Label ID="SaveQueryLabel"  runat="server"></asp:Label></span>
                     </button>
                     <div>
-                        <div class="accordion-body closed" id="SaveQueryBody">
+                        <div class="accordion-body closed dialog visible savequery" aria-modal="true" role="dialog" id="SaveQueryBody">
                             <ucSaveQuery:SaveQuery runat="server" id="SavedQueryFeature" />
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                         <asp:ContentPlaceHolder ID="cphSettingsLabel" runat="server">
                         </asp:ContentPlaceHolder>
                     <div>
-                        <div class="accordion-body closed" id="SettingsBody">
+                        <div class="accordion-body closed dialog visible" aria-modal="true" role="dialog" id="SettingsBody">
                             <asp:ContentPlaceHolder ID="cphSettings" runat="server">
                             </asp:ContentPlaceHolder>
                         </div>
