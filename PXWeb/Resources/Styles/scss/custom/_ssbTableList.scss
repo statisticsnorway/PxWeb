@@ -3,85 +3,83 @@
 /*HEI*/
 #pxwebcontent .menu-tablelist {
 
-	&.grid-container {
-		margin-top: 0px;
-		display: grid;
-		grid-template-columns: 80px auto 160px;
-		border-bottom: 0px;
+  &.grid-container {
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 80px auto 160px;
+    border-bottom: 0px;
 
-		& .grid-row-1-3 {
-			grid-column-start: 1;
-			grid-column-end: span 3;
-		}
+    & .grid-row-1-3 {
+      grid-column-start: 1;
+      grid-column-end: span 3;
+    }
 
-		&.pxweb-link {
-			padding: 5px 1px 8px 1px;
-		}
+    &.pxweb-link {
+      padding: 5px 1px 8px 1px;
+    }
 
-		& .accordion-cell.closed_level_1 {
-			display: none;
-		}
+    & .table-hover {
+    }
+  }
 
-		& .accordion-cell.closed_level_2 {
-			display: none;
-		}
-		//Dont think we can have 3 levels, but
-		& .accordion-cell.closed_level_3 {
-			display: none;
-		}
+  & .accordion-cell.closed_level_1 {
+    display: none;
+  }
 
-		&.accordion-cell.closed_level_1 {
-			display: none;
-		}
+  & .accordion-cell.closed_level_2 {
+    display: none;
+  }
+  //Dont think we can have 3 levels, but
+  & .accordion-cell.closed_level_3 {
+    display: none;
+  }
 
-		&.accordion-cell.closed_level_2 {
-			display: none;
-		}
-		//Dont think we can have 3 levels, but
-		&.accordion-cell.closed_level_3 {
-			display: none;
-		}
+  &.accordion-cell.closed_level_1 {
+    display: none;
+  }
 
-		& .table-hover {
-		}
-	}
+  &.accordion-cell.closed_level_2 {
+    display: none;
+  }
+  //Dont think we can have 3 levels, but
+  &.accordion-cell.closed_level_3 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: $tablet-screen) {
-#pxwebcontent .menu-tablelist.grid-container{
-	grid-template-columns: 80px auto 100px; 
+  #pxwebcontent .menu-tablelist.grid-container {
+    grid-template-columns: 80px auto 100px;
   }
 }
 
 
-  #pxwebcontent .pxweb-cell-accordion-start {
-    
-    border-top: 1px solid #c3dcdc;
-    height: 2px;
-    padding-bottom: 8px;
-   }
-	
-  #pxwebcontent .pxweb-cell-accordion-end {
-    border-bottom: 1px solid #c3dcdc;
-    height: 2px;
-    /*padding-top: 8px;*/
-	  margin-bottom: -1px;
-   }
-	
+#pxwebcontent .pxweb-cell-accordion-start {
+  border-top: 1px solid #c3dcdc;
+  height: 2px;
+  padding-bottom: 8px;
+}
+
+#pxwebcontent .pxweb-cell-accordion-end {
+  border-bottom: 1px solid #c3dcdc;
+  height: 2px;
+  /*padding-top: 8px;*/
+  margin-bottom: -1px;
+}
 
 
-#pxwebcontent .menu-tablelist  {
 
+#pxwebcontent .menu-tablelist {
   width: auto;
 
   & .col1 {
     padding: 5px 0px 6px 0px;
   }
-  
+
   & .col2 {
     padding: 5px 28px 6px 0px;
   }
-  
+
   & .col3 {
     padding: 5px 0px 6px 0px;
   }
@@ -89,39 +87,36 @@
 
 
 #pxwebcontent .menu-tablelist {
-  
-	background-color: white;
-	& .colhead {
-	 font-family: 'Open Sans';
-	 font-weight: 600; 
-	 font-size:13px;
-	}
-	
-	& td {
-	@include font-normal-text;
-	/*font-weight:normal;*/
-	}
-	
+  background-color: white;
+
+  & .colhead {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  & td {
+    @include font-normal-text;
+    /*font-weight:normal;*/
+  }
 }
 
 #pxwebcontent .pxweb-table-end {
-   margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-#pxwebcontent .menu-tablelist.grid-container .pxweb-link{
+#pxwebcontent .menu-tablelist.grid-container .pxweb-link {
   border-bottom: 0;
 }
 
 #pxwebcontent .menu-tablelist h2, #pxwebcontent .menu-tablelist .accordion-header .header-text {
-	@include roboto-condenced;
-	font-size: 18px;
-	padding-top: 11px;
-	padding-bottom: 11px;
+  @include roboto-condenced;
+  font-size: 18px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
-#pxwebcontent .menu-tablelist .accordion-header{
+#pxwebcontent .menu-tablelist .accordion-header {
   /*width stop focus-frame from getting cut. Check if needed after new CMS is in place*/
   width: 99%
 }
-
-

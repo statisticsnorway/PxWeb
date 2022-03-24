@@ -379,11 +379,11 @@ namespace PXWeb
 
         private string GetEmptyFolderWarning(string accordionClasses)
         {
-            return WrapInFullRow(StartDiv("menu-tablelist grid-container " + accordionClasses) + GetSpan(LocalizationManager.GetLocalizedString("PxWebTableListEmptyFolder")) + "</div>");
+            return WrapInFullRow(StartDiv("menu-tablelist " + accordionClasses) + GetSpan(LocalizationManager.GetLocalizedString("PxWebTableListEmptyFolder")) + "</div>");
         }
 
         private string GetHeading(string headerText, string accordionClasses) {
-            return WrapInFullRow(StartDiv("menu-tablelist grid-container " + accordionClasses) + "<h2>" + headerText + "</h2></div>");
+            return WrapInFullRow(StartDiv("menu-tablelist " + accordionClasses) + "<h2>" + headerText + "</h2></div>");
         }
 
         private string GetAccordionStart(string path, PxMenuItem menuItem, string accordionClasses, string accordionId, int accordionLevel)

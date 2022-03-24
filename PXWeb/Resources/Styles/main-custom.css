@@ -476,24 +476,25 @@ h1 {
 #pxwebcontent .menu-tablelist.grid-container.pxweb-link {
   padding: 5px 1px 8px 1px;
 }
-#pxwebcontent .menu-tablelist.grid-container .accordion-cell.closed_level_1 {
+#pxwebcontent .menu-tablelist .accordion-cell.closed_level_1 {
   display: none;
 }
-#pxwebcontent .menu-tablelist.grid-container .accordion-cell.closed_level_2 {
+#pxwebcontent .menu-tablelist .accordion-cell.closed_level_2 {
   display: none;
 }
-#pxwebcontent .menu-tablelist.grid-container .accordion-cell.closed_level_3 {
+#pxwebcontent .menu-tablelist .accordion-cell.closed_level_3 {
   display: none;
 }
-#pxwebcontent .menu-tablelist.grid-container.accordion-cell.closed_level_1 {
+#pxwebcontent .menu-tablelist.accordion-cell.closed_level_1 {
   display: none;
 }
-#pxwebcontent .menu-tablelist.grid-container.accordion-cell.closed_level_2 {
+#pxwebcontent .menu-tablelist.accordion-cell.closed_level_2 {
   display: none;
 }
-#pxwebcontent .menu-tablelist.grid-container.accordion-cell.closed_level_3 {
+#pxwebcontent .menu-tablelist.accordion-cell.closed_level_3 {
   display: none;
 }
+
 @media screen and (max-width: 768px) {
   #pxwebcontent .menu-tablelist.grid-container {
     grid-template-columns: 80px auto 100px;
