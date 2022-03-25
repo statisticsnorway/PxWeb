@@ -7,6 +7,10 @@
             headerCode="PxWebRegionSelectionUserManualScreenReader"
             textCode="PxWebSkipToSelectionLinkScreenReader"
             runat="server" ClientIDMode="Static"/>
+         <pxc:UserManualScreenReader ID="MarkingTipsScreenReader"
+            headerCode="PxWebMarkingTipsHeaderScreenReader"
+            textCode="PxWebMarkingTipsTextScreenReader"
+            runat="server" ClientIDMode="Static"/>
     </div>
     <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  />    
      <div role="alert" id="validationsummarynotifyscreenreader" >
