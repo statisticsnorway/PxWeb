@@ -7,9 +7,12 @@
             headerCode="PxWebRegionSelectionUserManualScreenReader"
             textCode="PxWebSkipToSelectionLinkScreenReader"
             runat="server" ClientIDMode="Static"/>
+         <pxc:UserManualScreenReader ID="MarkingTipsScreenReader"
+            headerCode="PxWebMarkingTipsHeaderScreenReader"
+            textCode="PxWebMarkingTipsTextScreenReader"
+            runat="server" ClientIDMode="Static"/>
     </div>
- <%--   <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  />    --%>
-        <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  CssClass="screenreader-only" />    
+    <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  />    
      <div role="alert" id="validationsummarynotifyscreenreader" >
        <asp:ValidationSummary ID="SelectionValidationSummary" runat="server" DisplayMode="BulletList"  ShowValidationErrors="true" ShowMessageBox="false" ShowSummary="true" CssClass="variableselector_error_summary" ForeColor="" />   
     </div>

@@ -257,8 +257,8 @@
   <sentence name="CtrlTableCellInformationAttributes" value="Attributter" />
   <sentence name="CtrlTableCellInformationNotes" value="Notater" />
   <sentence name="CtrlTableInformationTableLabel" value="Tabell:" />
-  <sentence name="CtrlVariableSelectorInstructionLabel" value="" />
-  <sentence name="CtrlVariableSelectorMarkingTipsLink" value="Gå til: Hvordan bruke statistikkbanken og velge variabler, med hjelpemidler" />
+  <sentence name="CtrlVariableSelectorInstructionLabel" value="Marker dine valg og trykk på 'Fortsett'"/>
+  <sentence name="CtrlVariableSelectorMarkingTipsLink" value="Markeringstips" />
   <sentence name="CtrlVariableSelectorEliminationTooltip" value="Velg minst en verdi" />
   <sentence name="CtrlVariableSelectorSelectScreenReaderRegion" value="Variabel, " />
   <sentence name="CtrlVariableSelectorSelectValues" value="--- Velg inndeling ---" />
@@ -565,6 +565,8 @@
   <sentence name="PxWebMarkingTips" value="Markeringstips" />
   <sentence name="PxWebMarkingTipsHeader" value="Tips for hvordan markere i en listeboks" />
   <sentence name="PxWebMarkingTipsText" value="Du kan markere flere verdier fra en variabel. Dette kan gjøres på ulike måter:&#xD;&#xA;&#xD;&#xA;Flere enkeltverdier:&#xD;&#xA;Hold Ctrl-tasten inne samtidig som du klikker på verdiene du ønsker.&#xD;&#xA;&#xD;&#xA;Flere sammenhengende linjer:&#xD;&#xA;Klikk først på én verdi, og deretter en annen verdi samtidig som du holder Shift-tasten inne.&#xD;&#xA;Eller – klikk på en verdi og hold venstre museknapp inne mens du trekker musepekeren opp/ned.&#xD;&#xA;&#xD;&#xA;Fjerne valgte:&#xD;&#xA;Dersom du har valgt flere verdier, og du ønsker å fjerne en av de valgte, kan du holde Ctrl-tasten inne samtidig som du klikker på de(n) du vil fjerne. " />
+  <sentence name="PxWebMarkingTipsHeaderScreenReader" value="Tips for hvordan markere i en listeboks" />
+  <sentence name="PxWebMarkingTipsTextScreenReader" value="Navigering med tastatur og skjermleser. Velg flere objekter etter hverandre. SHIFT+pil ned/opp. For å velge enkelte verdier i listen: Windows:Hold inn Ctrl + pil ned. Deretter slipp Ctrl og trykk på mellomromstasten. Gjenta. Mac:CMD+pil ned/opp. Deretter slipp CMD og trykk på mellomromstasten. Gjenta. (Fungerer kun i Chrome, ikke i Safari). For å komme ut av listen med de markerte valgene, trykk TAB-tast." />
   <sentence name="PxWebPresentation" value="Presentasjon" />
   <sentence name="PxWebTable" value="Tabell" />
   <sentence name="PxWebTableUserSettingsShow" value="Skjul tomme rader" />
