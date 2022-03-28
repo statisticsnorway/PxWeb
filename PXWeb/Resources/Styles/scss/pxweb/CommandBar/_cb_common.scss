@@ -1,8 +1,6 @@
 @include file-header("CommandBar/_cb_common.scss");
 
 #pxwebcontent .commandbar_container {
-  border: solid 6px $pxweb-btn-color;
-  padding: 10px 10px 10px 10px;
   clear: both;
   /*float: left;*/
   display: flex;
