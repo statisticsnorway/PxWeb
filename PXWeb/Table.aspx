@@ -32,7 +32,7 @@
     <script>
         function cancelTableSettings() {
             jQuery('#<%=rblZeroOption.ClientID %>').find("input[value='ShowAll']").prop('checked', true);
-            closeAccordion('SettingsHeader', 'SettingsBody');
+            closeAccordionDialog('SettingsHeader', 'SettingsBody', 'settingsModalBackground');
         }
     </script>
 </asp:Content>
