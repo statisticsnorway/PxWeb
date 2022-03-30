@@ -555,7 +555,7 @@ html {
 }
 */
 
-#pxwebcontent .dialog.visible {
+/*#pxwebcontent .dialog.visible {
     display: flex;
     overflow: auto;
     position: relative;
@@ -585,5 +585,28 @@ html {
         background: #FFF;
         z-index: -1;
     }
+}*/
+
+#pxwebcontent .modal-background.active {
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    display: flex;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 30;
+}
+
+#pxwebcontent .dialog.content-modal {
+    background: #FFF;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    overflow: auto;
+    height: fit-content;
+    z-index: 40;
+    max-height: 90vh;
 }
 
