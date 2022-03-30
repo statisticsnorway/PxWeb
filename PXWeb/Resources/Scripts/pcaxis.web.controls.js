@@ -679,9 +679,15 @@ function setFocusOnElement(elementId) {
 //trap focus inside dialog box
 function trapFocus(elementId) {
     var element = document.getElementById(elementId);
-    var focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]):not(.hidden), input[type="radio"]:not([disabled]):not(.hidden), input[type="checkbox"]:not([disabled]), input[type="submit"]:not([disabled]):not(.hidden), select:not([disabled]):not(.hidden)');
-    var firstFocusableEl = focusableEls[0];
-    var lastFocusableEl = focusableEls[focusableEls.length - 1];
+    var focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), input[type="submit"]:not([disabled]), select:not([disabled])');
+
+    let visibleElements = Array.prototype.slice.call(focusableEls).filter(function (item, index) {
+        return item.offsetParent !== null;
+    }
+    );
+
+    var firstFocusableEl = visibleElements[0];
+    var lastFocusableEl = visibleElements[visibleElements.length - 1];
     var KEYCODE_TAB = 9;
 
     firstFocusableEl.focus();
@@ -708,11 +714,20 @@ function trapFocus(elementId) {
 }
 
 function accordionToggleDialog(panel, button, dialogDiv) {
+    var modalBackground = panel.querySelector('.modal-background');
+    modalBackground.classList.toggle("active");
+
     accordionToggle(panel, button);
     trapFocus(dialogDiv);
 }
 
 function openAccordionDialog(buttonId, bodyId, dialogDiv) {
     openAccordion(buttonId, bodyId);
+    jQuery('#' + bodyId).parent().addClass("active");
     trapFocus(dialogDiv);
+}
+
+function closeAccordionDialog(buttonId, bodyId, dialogBackground) {
+    jQuery('#' + dialogBackground).removeClass('active');
+    closeAccordion(buttonId, bodyId);
 }
