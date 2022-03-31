@@ -42,12 +42,12 @@
     var _toManySelectedCellsText;
     var _toManySelectedRowsText;
     var _toManySelectedColumnsText;
-    //jQuery(document).ready(function () {
-    //    el = document.getElementById("selectioninfo");
-    //    el.ariaBusy = "true";
-    //    GetListboxSelections("ValuesListBox");
-    //    el.ariaBusy = "false";
-    //});
+    jQuery(document).ready(function () {
+        //el = document.getElementById("selectioninfo");
+        //el.ariaBusy = "true";  
+        GetListboxSelections("ValuesListBox");
+        //el.ariaBusy = "false";
+    });
 
 
     //Get listbox with name matching [nameregex]. Checks the Stub/Heading alignment and limitSelectionBy setting in the parameters for its onchange-event
