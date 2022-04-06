@@ -376,6 +376,9 @@ html {
   z-index: 2;
   font-size: 1.4rem;
 }
+#pxwebcontent .px-settings legend {
+  float: none;
+}
 
 #pxwebcontent .px_setting_validator {
   color: #ed5935;
