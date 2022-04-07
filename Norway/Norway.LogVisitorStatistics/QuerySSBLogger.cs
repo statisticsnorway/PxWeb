@@ -41,8 +41,12 @@ namespace Norway.LogVisitorStatistics
                     return "p11";
                 case "FileTypeExcelXDoubleColumn":
                     return "p14";
+                case "FileTypeJson":
+                    return "p06";
                 case "FileTypeJsonStat":
                     return "p07";
+                case "FileTypeJsonStat2":
+                    return "p08";
                 case "FileTypeRelational":
                     return "p30";
                 case "FileTypeHtml":
