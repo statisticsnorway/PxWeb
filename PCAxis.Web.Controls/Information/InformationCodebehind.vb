@@ -86,12 +86,15 @@ Public Class InformationCodebehind
     Private Sub SetNestedAccordionStart(ByVal e As RepeaterItemEventArgs, ByVal literalId As String, ByVal text As String, informationType As InformationType)
         Dim literal As Literal = DirectCast(e.Item.FindControl(literalId), Literal)
         Dim sbAccordion As New StringBuilder()
+        Dim accordionState As String = String.Empty
+        Dim ariaExpandedValue As String = String.Empty
+        SetNestedAccordionStatus(informationType, accordionState, ariaExpandedValue)
         sbAccordion.Append($"<div class='pxweb-nested-accordion' id='div{informationType}'>")
         sbAccordion.Append(
-            $"<button type='button' class='nested-accordion-header closed' id='btn{informationType _
-                              }' aria-expanded='false' onclick='nestedAccordionToggle(div{informationType}, this)'>")
+            $"<button type='button' class='nested-accordion-header {accordionState}' id='btn{informationType _
+                              }' aria-expanded='{ariaExpandedValue}' onclick='nestedAccordionToggle(div{informationType}, this)'>")
         sbAccordion.Append($"<span class='header-text'><span>{text}</span></span></button>")
-        sbAccordion.Append("<div class='nested-accordion-body closed flex-column' >")
+        sbAccordion.Append($"<div class='nested-accordion-body {accordionState} flex-column' >")
         literal.Text = sbAccordion.ToString()
     End Sub
 
@@ -149,6 +152,16 @@ Public Class InformationCodebehind
                 End If
                 SetNestedAccordionEnd(e, "NestedAccordionEnd")
         End Select
+    End Sub
+
+    Private Sub SetNestedAccordionStatus (infoType As InformationType, ByRef accordionState As String, ByRef ariaExpanded As String )
+        If (infoType = InformationType.Contact Or infoType = InformationType.LastUpdated) Then
+            accordionState = "open"
+            ariaExpanded = "true"
+            Return
+        End If
+        accordionState = "closed"
+        ariaExpanded = "false"
     End Sub
 
 End Class
