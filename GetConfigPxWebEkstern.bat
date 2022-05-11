@@ -12,5 +12,6 @@ mkdir utv_24v_ekstern
 copy C:\git_adm.ssb.no\configRepos\px-web-ekstern\localhost\konfigfiler\database.config utv_24v_ekstern\.
 copy C:\git_adm.ssb.no\configRepos\px-web-ekstern\localhost\konfigfiler\metadata.config utv_24v_ekstern\.
 echo "Done."
+pause
 
 
