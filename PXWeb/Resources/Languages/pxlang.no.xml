@@ -257,7 +257,7 @@
   <sentence name="CtrlTableCellInformationAttributes" value="Attributter" />
   <sentence name="CtrlTableCellInformationNotes" value="Notater" />
   <sentence name="CtrlTableInformationTableLabel" value="Tabell:" />
-  <sentence name="CtrlVariableSelectorInstructionLabel" value="Marker dine valg og trykk på 'Fortsett'" />
+  <sentence name="CtrlVariableSelectorInstructionLabel" value="Marker dine valg og trykk på 'Fortsett'"/>
   <sentence name="CtrlVariableSelectorMarkingTipsLink" value="Markeringstips" />
   <sentence name="CtrlVariableSelectorEliminationTooltip" value="Velg minst en verdi" />
   <sentence name="CtrlVariableSelectorSelectScreenReaderRegion" value="Variabel, " />
@@ -271,7 +271,7 @@
   <sentence name="CtrlVariableSelectorSelectDropdownGroupingLabel" value="Nedtrekksmeny for grupperinger av kodelisten" />
   <sentence name="CtrlVariableSelectorMetadataImformationTooltip" value="Definisjoner av variabler og verdier" />
   <sentence name="CtrlVariableSelectorHierarchicalTooltip" value="Velg hierarkisk" />
-  <sentence name="CtrlVariableSelectorSearchguide" value="Denne sjekkboksen er knyttet til påfølgende søkefelt. Hak av dersom du kun ønsker de verdien som begynner på søkekriteriet, hvis du ikke haker av vil det søkes i hele verdien" />
+  <sentence name="CtrlVariableSelectorSearchguide" value="Søk kun i starten av tekst. Denne sjekkboksen er knyttet til påfølgende søkefelt. Hak av dersom du kun ønsker de verdien som begynner på søkekriteriet, hvis du ikke haker av vil det søkes i hele verdien" />
   <sentence name="CtrlVariableSelectorSearchValuesTooltip" value="Søk" />
   <sentence name="CtrlVariableSelectorSummarySelectedLabel" value="Valgt" />
   <sentence name="CtrlVariableSelectorSummaryTotalLabel" value="av totalt" />
@@ -306,7 +306,7 @@
   <sentence name="CtrlVariableSelectorSearchValuesBeginningOfWordCheckBox" value="Søk kun i starten av tekst" />
   <sentence name="CtrlVariableSelectorSearchValuesTextbox" value="Søk" />
   <sentence name="CtrlVariableSelectorSearchValuesTextboxScreenReader" value="Søkefelt for å finne ønsket verdi i kodelisten til denne variabelen. Dette er eksempler på verdier i listen. " />
-  <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="Total verdiliste det er mulig å velge verdi fra, for denne variabelen." />
+  <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="Liste med valgbare verdier for variabel {0}.  Totalt antall verdier i lista er {1}." />
   <sentence name="CtrlVariableSelectorSearchResultSearchWordScreenReader" value="Søkeordet, " />
   <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader1" value=", resulterte i , " />
   <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader2" value=", treff, " />
@@ -421,7 +421,7 @@
   <sentence name="CtrlTableQueryMoreInformation" value="Mer Informasjon om API mot Statistikkbanken" />
   <sentence name="CtrlTableQuerySaveQuery" value="Lagre API-spørring (json)" />
   <sentence name="CtrlNavigationFlowSectionScreenReader" value="Oversikt over de tre stegene i prosessen med å få data."/>
-  <sentence name="CtrlNavigationFlowExplainScreenReader" value="De 3 stegene er Velg tabell,  Choose table, Velg variabler og Vis resultat. Du er nå på "/>
+  <sentence name="CtrlNavigationFlowExplainScreenReader" value="De 3 stegene er Velg tabell, Velg variabler og Vis resultat. Du er nå på "/>
   <sentence name="CtrlNavigationFlowStep1" value="Velg tabell" />
   <sentence name="CtrlNavigationFlowStep1ScreenReader" value="Tilbake til Velg tabell" />
   <sentence name="CtrlNavigationFlowStep2" value="Velg variabler" />
@@ -552,6 +552,8 @@
   <sentence name="PxWebChangeToThisLanguage" value="Norsk versjon" />
   <sentence name="PxWebMenuBurger" value="Meny" />
   <sentence name="PxWebMenu" value="Meny" />
+  <sentence name="PxWebToolsRegion" value="Verktøymeny for tabell" />
+  <sentence name="PxWebToolsShortRegion" value="Verktøymeny for tabell, hurtigknapper" />
   <sentence name="PxWebMenuExplanationRegionHeader" value="Bokstavkode etter tabelltittel viser laveste regionsnivå:" />
   <sentence name="PxWebMenuExplanationRegion" value="(F) = fylke, (K) = kommune, (G) = grunnkrets, (B) = bydel, (T) = tettsted" />
   <sentence name="PxWebMenuExplanationTimePeriodHeader" value="Forklaring på tidsperiode:" />
@@ -563,6 +565,8 @@
   <sentence name="PxWebMarkingTips" value="Markeringstips" />
   <sentence name="PxWebMarkingTipsHeader" value="Tips for hvordan markere i en listeboks" />
   <sentence name="PxWebMarkingTipsText" value="Du kan markere flere verdier fra en variabel. Dette kan gjøres på ulike måter:&#xD;&#xA;&#xD;&#xA;Flere enkeltverdier:&#xD;&#xA;Hold Ctrl-tasten inne samtidig som du klikker på verdiene du ønsker.&#xD;&#xA;&#xD;&#xA;Flere sammenhengende linjer:&#xD;&#xA;Klikk først på én verdi, og deretter en annen verdi samtidig som du holder Shift-tasten inne.&#xD;&#xA;Eller – klikk på en verdi og hold venstre museknapp inne mens du trekker musepekeren opp/ned.&#xD;&#xA;&#xD;&#xA;Fjerne valgte:&#xD;&#xA;Dersom du har valgt flere verdier, og du ønsker å fjerne en av de valgte, kan du holde Ctrl-tasten inne samtidig som du klikker på de(n) du vil fjerne. " />
+  <sentence name="PxWebMarkingTipsHeaderScreenReader" value="Tips for hvordan markere i en listeboks" />
+  <sentence name="PxWebMarkingTipsTextScreenReader" value="Navigering med tastatur og skjermleser. Velg flere objekter etter hverandre. SHIFT+pil ned/opp. For å velge enkelte verdier i listen: Windows:Hold inn Ctrl + pil ned. Deretter slipp Ctrl og trykk på mellomromstasten. Gjenta. Mac:CMD+pil ned/opp. Deretter slipp CMD og trykk på mellomromstasten. Gjenta. (Fungerer kun i Chrome, ikke i Safari). For å komme ut av listen med de markerte valgene, trykk TAB-tast." />
   <sentence name="PxWebPresentation" value="Presentasjon" />
   <sentence name="PxWebTable" value="Tabell" />
   <sentence name="PxWebTableUserSettingsShow" value="Skjul tomme rader" />
@@ -605,6 +609,7 @@
   <sentence name="PxWebChartTooManyValues" value="For mange verdier valgt" />
   <sentence name="PxWebChartTooManyValuesInformation" value="Du har valgt for mange verdier" />
   <sentence name="PxWebChartUserSettingsLargeValue" value="Maksimal verdi er {0}" />
+  <sentence name="PxWebChartErrorSummary" value="Følgende feil må rettes:" />
   <sentence name="PxWebChartLeftScale" value="(venstre akse)" />
   <sentence name="PxWebChartRightScale" value="(høyre akse)" />
   <sentence name="PxWebDataSort" value="Sorter data" />
@@ -634,7 +639,6 @@
   <sentence name="PxWebTitleChart" value="PX-Web - Figur" />
   <sentence name="PxWebTitleDataSort" value="PX-Web - Sorter" />
   <sentence name="PxWebTitleErrorGeneral" value="PX-Web - Oooobs!" />
-  <sentence name="PxWebTitleFootnotesSelection" value="PX-Web - Fotnoter" />
   <sentence name="PxWebTitleInformationPresentation" value="PX-Web - Informasjon" />
   <sentence name="PxWebInformationSelection" value="PX-Web - Informasjon" />
   <sentence name="PxWebTitleMenu" value="PX-Web - Velg tabell" />

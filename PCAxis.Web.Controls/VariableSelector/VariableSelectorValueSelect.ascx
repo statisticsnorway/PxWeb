@@ -40,9 +40,10 @@
                 </asp:Panel>
                 <asp:Panel runat="server" ID="VariableTitlePanel" CssClass="variableselector_valuesselect_variabletitle">
                     <asp:Label runat="server" ID="VariableTitle" AssociatedControlID="ValuesListBox" />
-                    <asp:Label runat="server" ID="MandatoryText" CssClass="variableselector_valuesselect_mandatory_text" Visible="False"></asp:Label>
-                    <!--<asp:Label runat="server" ID="MandatoryStar" CssClass="variableselector_valuesselect_mandatory_star" Visible="False"></asp:Label>-->
                 </asp:Panel>
+                <div class="mandatory_container">
+                    <asp:Label runat="server" ID="MandatoryText" CssClass="variableselector_valuesselect_mandatory_text" Visible="False"></asp:Label>
+                 </div>
             </div>
             <asp:DropDownList runat="server" ID="GroupingDropDown" Visible="false" AutoPostBack="true" CssClass="variableselector_valuesselect_aggregations s-margin-top" onchange="Remove_BlockSubmit()" />
             <asp:button id="ActionButton" runat="server" Visible="false" cssclass="variableselector_valuesselect_action" /> 
@@ -79,7 +80,7 @@
     </asp:Panel>
     <!--<hr class="pxweb-divider type-light with-margin"/>-->
     <asp:Panel runat="server" ID="SelectedStatistics" CssClass="variableselector_valuesselect_statistics_panel">
-        <div role="region" id="SelectedStatisticsynotifyscreenreader" aria-live="polite" aria-atomic="true">
+        <div runat="server"  id="SelectedStatisticsnotifyscreenreader" aria-live="polite" aria-atomic="true">
             <p>
             <span class="variableselector_valuesselect_statistics"><asp:Literal runat="server" ID="NumberValuesSelectedTitel" /></span>
             <asp:Label runat="server" id="NumberValuesSelected" CssClass="variableselector_valuesselect_statistics"/>
@@ -108,12 +109,12 @@
     OnServerValidate="ValidateListBox_ServerValidate" ForeColor=""  
     ValidateEmptyText="True"  ValidationGroup="ChangeStatus" EnableClientScript="true"  Display="Dynamic"  Enabled="false" ></asp:CustomValidator>--%>
 
-    <div role="region" id="errornotifyscreenreader" aria-live="assertive" aria-atomic="true">
-        <asp:CustomValidator ID="MustSelectCustom" runat="server" ErrorMessage="" Role="alert" CssClass="flex-row pxweb-input-error negative"
-        ControlToValidate="ValuesListBox" SetFocusOnError="false"  Display="Dynamic"
+   <div role="alert" runat="server" id="errornotifyscreenreader">
+        <asp:CustomValidator ID="MustSelectCustom" runat="server" ErrorMessage="" CssClass="flex-row pxweb-input-error negative"
+        ControlToValidate="ValuesListBox" SetFocusOnError="true"  Display="Dynamic"
         OnServerValidate="ValidateListBox_ServerValidate" ClientValidationFunction="ValidateListBox"  ForeColor=""  
         ValidateEmptyText="True"></asp:CustomValidator>
-    </div>
+ </div>
 
 </asp:Panel>
 

@@ -102,13 +102,16 @@ namespace PXWeb.UserControls
                     Response.Cookies.Add(loggedIn);
 
                     string currentUrl = Request.RawUrl;
-                    Response.Redirect(currentUrl, true);    
+                    Response.Redirect(currentUrl, false);
+                    //Used to be Response.Redirect(currentUrl, true);
+                    //,but then we get "Failed to Login. Username Last312Error:Thread was being aborted."
+                    // in the log, from the catch a few lines down.
+                    // so: OBS: the execution continues here, even after the redirect 
                 }
                 else
                 {
                     LoginControl.FailureText = Server.HtmlEncode(GetLocalizedString("PxWebWrongLogin"));
                 }
-
             }
 
             catch (Exception ex)

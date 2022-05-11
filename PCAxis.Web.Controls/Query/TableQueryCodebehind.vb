@@ -281,12 +281,14 @@ Public Class TableQueryCodebehind
             Dim postUrl = txtUrl.Text.Trim()
 
             If (postUrl.EndsWith("/")) Then
+                'Will we ever get here?
                 postUrl = postUrl.Remove(postUrl.Length - 1)
             End If
 
             Dim apiQuery = txtQuery.Text
             Dim tableId = postUrl.Split({"/"c}).Last()
-            Dim jsonString = String.Concat("{""queryObj"":", apiQuery, ",""tableIdForQuery"":""", tableId, """}")
+            'SS-373, adding postUrl:
+            Dim jsonString = String.Concat("{""queryObj"":", apiQuery, ",""tableIdForQuery"":""", tableId, """,""postUrl"":""", postUrl, """}")
 
             Using stream = GenerateStreamFromString(jsonString)
                 Response.Clear()

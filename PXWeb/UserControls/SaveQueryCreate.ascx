@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SaveQueryCreate.ascx.cs" Inherits="PXWeb.UserControls.SaveQueryCreate" %>
 
-<div class="savequery_container" >
+<div id="SaveQueryContainer" class="savequery_container" >
 
     <a id="tableSavequerycontrol"></a>         
         <asp:Panel ID="pnl2_SaveQuerySelection"  CssClass="settingpanel savequery" runat="server">            
@@ -20,12 +20,12 @@
                     <asp:Label ID="lblResultAs" runat="server" AssociatedControlID="ddlOutputFormats" Text="Result as" CssClass="font-heading"></asp:Label>
                     <asp:dropdownlist id="ddlOutputFormats" runat="server" CssClass="commandbar_saveas_dropdownlist saveas_dropdownlist xs-margin-top">
                     </asp:dropdownlist>
-                    <asp:Label ID="lblFormatError"  runat="server" cssClass="savequery_error"></asp:Label>
+                    <asp:Label ID="lblFormatError" role="alert" runat="server" cssClass="savequery_error"></asp:Label>
                 </div>
                 <div class="container_exit_buttons_row">
                     <asp:Button ID="btnCancelSaveQuery" runat="server" CssClass="pxweb-btn" Text="<%$ PxString: CtrlSaveQueryCancelSaveQuery %>" OnClientClick="cancelSavequery(); return false;" />
                     <asp:Button ID="btnCreateSaveQuery" runat="server" CssClass="pxweb-btn primary-btn container_continuebutton " Text="<%$ PxString: CtrlSaveQuerybtnCreateQuery %>"  OnClick="CreateSavedQueryUrl"   />                
-                    <asp:Label ID="lblError"  runat="server"  cssClass="savequery_error" Text="<%$ PxString: CtrlSaveQueryFailedSave %>" Visible="false"></asp:Label>
+                    <asp:Label ID="lblError"  runat="server" role="alert" cssClass="savequery_error" Text="<%$ PxString: CtrlSaveQueryFailedSave %>" Visible="false"></asp:Label>
                 </div>
             </asp:Panel>
         </asp:Panel>
@@ -46,8 +46,8 @@
                 <div class="container_exit_buttons_row">
                     <asp:Button ID="btnCancelSaveQueryEnd" runat="server" CssClass="pxweb-btn" Text="<%$ PxString: CtrlSaveQueryCancelSaveQuery %>" OnClientClick="cancelSavequeryEnd(); return false;" />
                     <asp:Button ID="btnbookMark" cssclass="pxweb-btn savequery_novisibility" onclientclick="Bookmark(); return false;" text="<%$ PxString: CtrlSaveQueryBookmark%>"  runat="server" />
-                    <asp:Button ID="btnCopyToClipboard" cssclass="pxweb-btn savequery_novisibility" text="<%$ PxString: CtrlSaveQueryCopyLink %>" OnClientClick="CopyToClipboard();return false" CausesValidation="false"  runat="server" />           
-                    <asp:Button ID="btnMailSaveQuery" CssClass="pxweb-btn no-margin-right savequery_novisibility" text="<%$ PxString: CtrlSaveQueryMailQuery %>"  OnClientClick="document.location = sendMail(); return false;" runat="server"   /> 
+                    <asp:Button ID="btnCopyToClipboard" cssclass="pxweb-btn" text="<%$ PxString: CtrlSaveQueryCopyLink %>" OnClientClick="CopyToClipboard();return false" CausesValidation="false"  runat="server" />           
+                    <asp:Button ID="btnMailSaveQuery" CssClass="pxweb-btn no-margin-right " text="<%$ PxString: CtrlSaveQueryMailQuery %>"  OnClientClick="document.location = sendMail(); return false;" runat="server"   /> 
                 </div>
             </asp:Panel>
              
@@ -87,14 +87,15 @@
 
     function cancelSavequery() {
         jQuery('#<%=lblFormatError.ClientID %>').hide(0);
-        closeAccordion('SaveQueryHeader', 'SaveQueryBody');
+        closeAccordionDialog('SaveQueryHeader', 'SaveQueryBody', 'sqModalBackground');
     }
 
     function cancelSavequeryEnd() {
         jQuery('#<%=lblFormatError.ClientID %>').hide(0);
-        closeAccordion('SaveQueryHeader', 'SaveQueryBody');
         jQuery('[id$=pnl2_SaveQuerySelection]').show(0);
         jQuery('[id$=pnl3_ShowSaveQueryUrl]').hide(0);
+
+        closeAccordionDialog('SaveQueryHeader', 'SaveQueryBody', 'sqModalBackground');
     }
     
     function sendMail() {
@@ -135,6 +136,5 @@
         jQuery('[id$=pnl1_SaveQueryInformationHidden]').hide(0);
 
     }
-
 
 </script>   

@@ -76,6 +76,18 @@ namespace PXWeb
             set;
         }
 
+        private void CheckIfLoggedOut()
+        {
+            if (Request.Cookies["wasLoggedInPxWeb"] != null && Session["PXUSER"] == null && Session["PXPASSWORD"] == null)
+            {
+                Response.Cookies["wasLoggedInPxWeb"].Expires = DateTime.Now.AddDays(-1);
+                FormsAuthentication.SignOut();
+                Session.Clear();
+                Session["wasLoggedOutPxWeb"] = true;
+                Response.Redirect("~/" + PxUrl.PX_START + "/" + PxUrlObj.Language + "/?sessionExpired=true");
+            }
+        }
+
         protected void Page_Init(object sender, EventArgs e)
         {
             if (!PXWeb.Settings.Current.Selection.StandardApplicationHeadTitle)
@@ -83,6 +95,8 @@ namespace PXWeb
                 HeadTitle = Server.HtmlEncode(GetLocalizedString("PxWebApplicationTitle"));
             }
 
+            CheckIfLoggedOut();
+            
             if (DoNotUseBreadCrumb())
             {
                 Page.Controls.Remove(this.breadcrumb1);
@@ -148,7 +162,7 @@ namespace PXWeb
                 breadcrumb1.GetMenu = GetMenu;
             }
             
-            //navigationFlowControl.GetMenu = GetMenu;
+            //kommentert ut ved cashning?navigationFlowControl.GetMenu = GetMenu;
         }
 
         private bool DoNotUseBreadCrumb()
@@ -641,6 +655,43 @@ namespace PXWeb
             }
         }
 
+        //private void checkLoggedOn()
+        //{
+        //    if (HttpContext.Current.Session["PXUSER"] == null)
+        //    {
+        //        logginn.Text = "Logg på";
+        //        LoggUt.Visible = false;
+        //    }
+        //    else
+        //    {
+        //        logginn.Text = "Logget på som " + HttpContext.Current.Session["PXUSER"].ToString() + "|";
+        //        LoggUt.Visible = true;
+        //    }
 
+        //}
+        //public void LoggUt_Click(Object sender, EventArgs e)
+        //{
+        //    HttpContext.Current.Session["PXUSER"] = null;
+        //    LoggUt.Visible = false;
+        //    checkLoggedOn();
+        //}       
+        protected void LogIn(object sender, AuthenticateEventArgs e)
+         {
+             //Membership.g
+             //var user = Membership.CreateUser("admin", "Password!", "x@y.com");
+             ////Roles.CreateRole("admin");
+             //Roles.AddUserToRole(LoginControl.UserName, "admin");                        
+
+             //if (Membership.ValidateUser(LoginControl.UserName, LoginControl.Password))
+             //{
+             //    //Login.Visible = false;
+             //  //  FormsAuthentication.RedirectFromLoginPage(LoginControl.UserName, false);
+             ////}
+             //else
+             //{
+             //    e.Authenticated = false;
+             //}
+         }
+          
     }
 }

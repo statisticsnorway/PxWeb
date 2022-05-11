@@ -3,7 +3,7 @@
     background: $pxweb-red-3;
     color: $pxweb-white;
     display: flex;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: bold;
     justify-content: center;
     line-height: normal;
@@ -11,9 +11,9 @@
     padding: 4px 8px;
     position: relative;
 
-/*    &.negative {
+    &.negative {
         color: $pxweb-dark-5;
-    }*/
+    }
 
     &:before {
         border-color: transparent transparent $pxweb-red-3 transparent;

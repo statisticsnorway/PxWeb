@@ -536,13 +536,13 @@ Public Class VariableSelectorValueSelectCodebehind
         SelectAllButton.ToolTip = GetLocalizedString("CtrlVariableSelectorSelectAllTooltip")
         SelectAllButton.Text = GetLocalizedString("CtrlVariableSelectorSelectAllButton")
         SelectAllButton.Attributes.Add("aria-label", SelectAllButton.ToolTip)
-        SelectAllButton.Attributes.Add("aria-description", "")
+        SelectAllButton.Attributes.Add("aria-description", SelectAllButton.ToolTip)
 
         ' --- Deselect all button
         DeselectAllButton.ToolTip = GetLocalizedString("CtrlVariableSelectorDeSelectAllTooltip")
         DeselectAllButton.Text = GetLocalizedString("CtrlVariableSelectorDeSelectAllButton")
         DeselectAllButton.Attributes.Add("aria-label", DeselectAllButton.ToolTip)
-        DeselectAllButton.Attributes.Add("aria-description", "")
+        DeselectAllButton.Attributes.Add("aria-description", DeselectAllButton.ToolTip)
 
 
         ' --- Select from groups link button
@@ -557,7 +557,7 @@ Public Class VariableSelectorValueSelectCodebehind
         SearchValuesTextbox.Attributes.Add("aria-labelledby", SearchTip.ClientID)
 
 
-        ValuesListBox.Attributes.Add("aria-label", GetLocalizedString("CtrlVariableSelectorSelectValuesListboxScreenReader"))
+        ValuesListBox.Attributes.Add("aria-label", String.Format(GetLocalizedString("CtrlVariableSelectorSelectValuesListboxScreenReader"), Marker.Variable.Name, Marker.Variable.Values.Count.ToString()))
 
         SearchValuesTextbox.Attributes.Add("placeholder", GetLocalizedString("CtrlVariableSelectorSearchValuesTextbox"))
 

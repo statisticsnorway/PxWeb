@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,18 +14,34 @@ namespace PXWeb.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            explanationText.Text = Server.HtmlEncode(GetLocalizedString("PxWebMenuExplanation"));
+            Localize();
+        }
+        private void Localize()
+        {
+            explanationTextRegionHeader.Text = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebMenuExplanationRegionHeader");
+            explanationTextRegion.Text =  PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebMenuExplanationRegion");
+            explanationTextTimePeriodHeader.Text = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebMenuExplanationTimePeriodHeader");
+            explanationTextTimePeriod.Text = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebMenuExplanationTimePeriod");
         }
 
-        /// <summary>
-        /// Get text in the currently selected language
-        /// </summary>
-        /// <param name="key">Key identifying the string in the language file</param>
-        /// <returns>Localized string</returns>
-        public string GetLocalizedString(string key)
+
+        private void SetExplanationRegionVisible(bool regionVisible )
         {
-            string lang = LocalizationManager.CurrentCulture.Name;
-            return PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString(key, new CultureInfo(lang));
+            explanationRegion.Visible = regionVisible;
+        }
+
+        private void SetExplanationTimePeriodVisible(bool timePeriodVisible)
+        {
+            explanationTimePeriod.Visible = timePeriodVisible;
+        }
+
+        public void SetExplanationRegionTimePeriodVisible(bool regionVisible, bool timePeriodVisible)
+        {
+            SetExplanationRegionVisible(regionVisible);
+            SetExplanationTimePeriodVisible(timePeriodVisible);
+            Visible = Settings.Current.Menu.ShowMenuExplanation;
+            if (!(regionVisible || timePeriodVisible))
+                Visible = false;
         }
     }
 }

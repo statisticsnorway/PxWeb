@@ -529,9 +529,9 @@ namespace PXWeb
                         break;
                 }
             }
-            
 
-            
+            ValidationSummary.HeaderText = "<span>" + Master.GetLocalizedString("PxWebChartErrorSummary") + "</span>";
+
             //btnApply.Text = Master.GetLocalizedString("PxWebChartUserSettingsApply");
         }
 
@@ -645,7 +645,7 @@ namespace PXWeb
 
             if (InputValidation.ValidateNoIllegalCharcters(source, args, out errorKey) == false)
             {
-                SetValidationError(val, args, errorKey);
+                SetValidationError(val, args, "PxWebChartUserSettingsTitle", errorKey);
                 return;
             }
         }
@@ -662,13 +662,13 @@ namespace PXWeb
 
             if (InputValidation.ValidateMandatoryPositiveInteger(source, args, out errorKey) == false)
             {
-                SetValidationError(val, args, errorKey);
+                SetValidationError(val, args, "PxWebChartUserSettingsHeight", errorKey);
                 return;
             }
 
             if (int.Parse(txtHeight.Text) > PXWeb.Settings.Current.Features.Charts.MaxHeight)
             {
-                SetValidationError(val, args, "PxWebChartUserSettingsLargeValue", PXWeb.Settings.Current.Features.Charts.MaxHeight.ToString());
+                SetValidationError(val, args, "PxWebChartUserSettingsHeight", "PxWebChartUserSettingsLargeValue", PXWeb.Settings.Current.Features.Charts.MaxHeight.ToString());
                 return;
             }
 
@@ -686,13 +686,13 @@ namespace PXWeb
 
             if (InputValidation.ValidateMandatoryPositiveInteger(source, args, out errorKey) == false)
             {
-                SetValidationError(val, args, errorKey);
+                SetValidationError(val, args, "PxWebChartUserSettingsWidth", errorKey);
                 return;
             }
 
             if (int.Parse(txtWidth.Text) > PXWeb.Settings.Current.Features.Charts.MaxWidth)
             {
-                SetValidationError(val, args, "PxWebChartUserSettingsLargeValue", PXWeb.Settings.Current.Features.Charts.MaxWidth.ToString());
+                SetValidationError(val, args, "PxWebChartUserSettingsWidth", "PxWebChartUserSettingsLargeValue", PXWeb.Settings.Current.Features.Charts.MaxWidth.ToString());
                 return;
             }
         }
@@ -709,13 +709,13 @@ namespace PXWeb
 
             if (InputValidation.ValidateMandatoryPositiveInteger(source, args, out errorKey) == false)
             {
-                SetValidationError(val, args, errorKey);
+                SetValidationError(val, args, "PxWebChartUserSettingsLineThickness", errorKey);
                 return;
             }
 
             if (int.Parse(txtLineThickness.Text) > PXWeb.Settings.Current.Features.Charts.MaxLineThickness)
             {
-                SetValidationError(val, args, "PxWebChartUserSettingsLargeValue", PXWeb.Settings.Current.Features.Charts.MaxLineThickness.ToString());
+                SetValidationError(val, args, "PxWebChartUserSettingsLineThickness", "PxWebChartUserSettingsLargeValue", PXWeb.Settings.Current.Features.Charts.MaxLineThickness.ToString());
                 return;
             }
         }
@@ -732,7 +732,7 @@ namespace PXWeb
 
             if (InputValidation.ValidateMandatoryPositiveInteger(source, args, out errorKey) == false)
             {
-                SetValidationError(val, args, errorKey);
+                SetValidationError(val, args, "PxWebChartUserSettingsLegendHeight", errorKey);
                 return;
             }
         }
@@ -744,17 +744,17 @@ namespace PXWeb
         /// <param name="args">Validator arguments</param>
         /// <param name="errorKey">Key for error message</param>
         /// <param name="parameters">Eventual parameters to the localized string</param>
-        private void SetValidationError(CustomValidator val, System.Web.UI.WebControls.ServerValidateEventArgs args, string errorKey, params string[] parameters)
+        private void SetValidationError(CustomValidator val, System.Web.UI.WebControls.ServerValidateEventArgs args, string controlTitleKey, string errorKey, params string[] parameters)
         {
             args.IsValid = false;
             val.Text = GetErrorText();
             if (parameters.Length > 0)
             {
-                val.ErrorMessage = GetErrorText() + string.Format(Master.GetLocalizedString(errorKey), parameters);
+                val.ErrorMessage = GetErrorText() + Master.GetLocalizedString(controlTitleKey) + " " + string.Format(Master.GetLocalizedString(errorKey), parameters);
             }
             else
             {
-                val.ErrorMessage = GetErrorText() + Master.GetLocalizedString(errorKey);
+                val.ErrorMessage = GetErrorText() + Master.GetLocalizedString(controlTitleKey) + " " + Master.GetLocalizedString(errorKey);
             }
             IncrementErrorNumber();
         }
@@ -813,6 +813,11 @@ namespace PXWeb
                 txtTitle.Text = title;
                 UpdateSettings();
                 CreateChart();
+            }
+            else
+            {
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "openAccordionDialog",
+                   "jQuery(document).ready(function(){openAccordionDialog('SettingsHeader', 'SettingsBody', 'SettingsBody')});", true);
             }
         }
 

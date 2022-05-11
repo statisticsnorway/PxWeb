@@ -74,6 +74,7 @@ Namespace CommandBar
         Protected lblLegendSave As Label
         Protected PluginButtonUsed As HiddenField
         Protected AccordionState As HiddenField
+        Protected ModalBackground As Panel
 #End Region
 
 #Region " Properties "
@@ -661,6 +662,10 @@ Namespace CommandBar
                 .Controls.Add(pluginControl)
                 .Focus()
             End With
+
+            ModalBackground.CssClass = "modal-background active"
+
+            Page.ClientScript.RegisterClientScriptBlock(GetType(Page), "trapFocus", "jQuery(document).ready(function(){trapFocus('" & PluginControlHolder.ClientID & "')});", True)
         End Sub
 
         Private Sub ShowAsBtn_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ShowAsBtn.Click
@@ -865,6 +870,8 @@ Namespace CommandBar
                 .Controls.Clear()
                 .Visible = False
             End With
+            
+            ModalBackground.CssClass = ""
             HandleFocus()
         End Sub
 

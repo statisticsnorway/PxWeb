@@ -252,6 +252,10 @@
     <Content Include="DbScript\SQL\Create_SavedQueryMeta.sql" />
     <Content Include="Login.aspx" />
     <Content Include="DbScript\SQL\regsql_mrp.sql" />
+    <Content Include="Monitor\accept.png" />
+    <Content Include="Monitor\Default.aspx" />
+    <Content Include="Monitor\exclamation.png" />
+    <Content Include="Monitor\IndexStatus.aspx" />
     <Content Include="Ping\Default.aspx" />
     <Content Include="Resources\Images\alert-16.gif" />
     <Content Include="Resources\Images\arrow-down-10.gif" />
@@ -294,6 +298,8 @@
     <Content Include="Resources\Images\small_button_select_by_group.gif" />
     <Content Include="Resources\Images\small_button_txt.png" />
     <Content Include="Resources\Images\small_button_xlsx.png" />
+    <Content Include="Resources\Images\SSB-top-banner.png" />
+    <Content Include="Resources\Images\SSB_logo.png" />
     <Content Include="Resources\Images\svg\arrow-down-hover.svg" />
     <Content Include="Resources\Images\svg\arrow-down.svg" />
     <Content Include="Resources\Images\svg\arrow-up-hover.svg" />
@@ -329,7 +335,7 @@
     <Content Include="Resources\PX\Databases\Example\Menu.xml" />
     <Content Include="Resources\Scripts\format.20110630-1100.min.js" />
     <Content Include="Resources\Scripts\jquery-3.5.1.min.js" />
-    <Content Include="Resources\Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Resources\Scripts\jquery-ui-1.13.1.min.js" />
     <Content Include="Resources\Styles\jQuery\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
     <Content Include="Resources\Styles\jQuery\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
     <Content Include="Resources\Styles\jQuery\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
@@ -353,9 +359,21 @@
     <Content Include="Resources\Styles\main-pxweb.css" />
     <Content Include="Resources\Styles\main-pxweb.min.css" />
     <Content Include="Resources\Styles\print.css" />
+    <Content Include="Resources\Styles\main-custom2.css" />
     <Content Include="Resources\Styles\scss\not_in_use\_AReadMe.txt" />
     <Content Include="Resources\Styles\scss\common\_nested-accordion.scss" />
     <Content Include="Resources\PX\Databases\Example\Misc\OfficialStatistics\officialstatistics.px" />
+    <Content Include="Monitor\web.config" />
+    <None Include="Monitor\Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="Monitor\Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <Content Include="Resources\Styles\scss\custom\_ssbTableList.scss" />
+    <Content Include="Resources\Styles\scss\pxweb\CommandBar\_cb_common.scss" />
+    <Content Include="Resources\Styles\scss\pxweb\CommandBar\_changepresentation.scss" />
+    <Content Include="Resources\Styles\scss\pxweb\CommandBar\_perpart.scss" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <None Include="Scripts\jquery-3.5.1.js" />
     <None Include="Scripts\jquery-3.5.1.min.js" />
@@ -592,6 +610,7 @@
     <Compile Include="Code\Database\Builders\MenuBuilder.cs" />
     <Compile Include="Code\Database\CnmmDatabaseBuilder.cs" />
     <Compile Include="Code\Database\DatabaseSpider.cs" />
+    <Compile Include="Code\Database\FormsDbStringProvider.cs" />
     <Compile Include="Code\Database\Handlers\AliasFileHandler.cs" />
     <Compile Include="Code\Database\Handlers\LinkFileHandler.cs" />
     <Compile Include="Code\Database\Handlers\MenuSortFileHandler.cs" />
@@ -610,6 +629,7 @@
     <Compile Include="Code\Management\GotoRouteHandler.cs" />
     <Compile Include="Code\Management\IPxUrl.cs" />
     <Compile Include="Code\Management\IRouteExtender.cs" />
+    <Compile Include="Code\Management\Norway\LogFlusher.cs" />
     <Compile Include="Code\Management\PartTableHelper.cs" />
     <Compile Include="Code\Management\PxContext.cs" />
     <Compile Include="Code\Management\PxImageExpressionBuilder.cs" />
@@ -624,6 +644,7 @@
     <Compile Include="Code\Modules\PXWebHttpModule.cs" />
     <Compile Include="Code\Modules\SecurityHttpModule.cs" />
     <Compile Include="Code\Search\SearchHelper.cs" />
+    <Compile Include="Code\Security\CNMMMembershipProvider.cs" />
     <Compile Include="Code\Security\DefaultAuthorization.cs" />
     <Compile Include="Code\Security\PXWebDefaultMembershipProvider.cs" />
     <Compile Include="Code\Security\PXWebLicenseMembershipProvider.cs" />
@@ -781,6 +802,22 @@
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Monitor\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\IndexStatus.aspx.cs">
+      <DependentUpon>IndexStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monitor\IndexStatus.aspx.designer.cs">
+      <DependentUpon>IndexStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\JsonTableQuery.cs" />
+    <Compile Include="Monitor\JsonTableResult.cs" />
     <Compile Include="Ping\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -889,6 +926,14 @@
       <Project>{1439911B-BE4E-48A0-9208-927321992C67}</Project>
       <Name>CSSFriendly</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Norway\Norway.LogVisitorStatistics\Norway.LogVisitorStatistics.csproj">
+      <Project>{b8a6d94a-89b3-42a6-a058-bedea9965f78}</Project>
+      <Name>Norway.LogVisitorStatistics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Norway\PCAxis.Metadata\Norway.PCAxis.Metadata.csproj">
+      <Project>{eb39cded-f208-450b-bead-c66ea8c423d6}</Project>
+      <Name>Norway.PCAxis.Metadata</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PCAxis.Api\PCAxis.Api.csproj">
       <Project>{8eb90826-a01b-494d-a596-e5c5f9815c3b}</Project>
       <Name>PCAxis.Api</Name>
@@ -901,6 +946,22 @@
       <Project>{DF9DA2F6-7942-4834-8B51-8F6358DE8DB8}</Project>
       <Name>PCAxis.Chart</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PCAxis.Excel.Web.Controls\PCAxis.Excel.Web.Controls.csproj">
+      <Project>{30d1fc66-e47b-4417-8bd5-1693f09e028b}</Project>
+      <Name>PCAxis.Excel.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCAxis.Html5Table.Web.Controls\PCAxis.Html5Table.Web.Controls.csproj">
+      <Project>{c21f6414-06b0-406c-9864-b6c72d2009bb}</Project>
+      <Name>PCAxis.Html5Table.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCAxis.JsonStat.Web.Controls\PCAxis.JsonStat.Web.Controls.csproj">
+      <Project>{6c558014-e4db-4399-a759-12e916f0ba4e}</Project>
+      <Name>PCAxis.JsonStat.Web.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PCAxis.JsonStat2.Web.Controls\PCAxis.JsonStat2.Web.Controls.csproj">
+      <Project>{6e74c29d-772b-40b8-868f-dc74711e052d}</Project>
+      <Name>PCAxis.JsonStat2.Web.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PCAxis.Search\PCAxis.Search.csproj">
       <Project>{dd41bc03-2b7a-4d76-af3c-39830ae8e75d}</Project>
       <Name>PCAxis.Search</Name>
@@ -912,6 +973,10 @@
     <ProjectReference Include="..\PCAxis.Web.Core\PCAxis.Web.Core.vbproj">
       <Project>{BC004D40-DDC6-446E-A3DF-5D4BA0AE92B8}</Project>
       <Name>PCAxis.Web.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PX.Json.Web.Controls\PX.Json.Web.Controls.csproj">
+      <Project>{cd8b2dc6-72c2-4459-9bc8-eb5291877316}</Project>
+      <Name>PX.Json.Web.Controls</Name>
     </ProjectReference>
     <ProjectReference Include="..\PX.Security\PX.Security.csproj">
       <Project>{dcb50c42-c3d0-48f9-9c1f-8d5af99ddb95}</Project>
@@ -1493,6 +1558,6 @@
     <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>call "$(SolutionDir)GetConfig.bat"</PreBuildEvent>
+    <PreBuildEvent>rem call "$(SolutionDir)GetConfig.bat"</PreBuildEvent>
   </PropertyGroup>
 </Project>

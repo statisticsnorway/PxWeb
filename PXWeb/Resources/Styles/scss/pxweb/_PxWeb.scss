@@ -1,34 +1,37 @@
 ﻿@include file-header("_PxWeb.scss");
 
+html {
+    /*Just to aid the conversion job from px to rem, making 1px = 0.1 rem. */
+    font-size: 62.5%;
+}
 
 #pxwebcontent {
   background: $pxweb-background;
-/*  @include just-open-sans;*/  
-  @include roboto;
+  @include just-open-sans;
   line-height: 1.5;
   color: $pxweb-ink-main;
-  font-size: 14px;
+  font-size: 1.4rem;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
 }
 
-#pxwebcontent select {
-    @include pxweb-input-list-font;
+#pxwebcontent .hidden {
+    display: none;
 }
 
 #pxwebcontent .pxbox.negative {
-    background-color: $pxbox-background;
-    border: solid 1px $pxbox-border;
-    color: $pxbox-ink;
+  background-color: $pxbox-background;
+  border: solid 1px $pxbox-border;
+  color: $pxbox-ink;
 }
 
 
-#pxwebcontent #wrap {
+  #pxwebcontent #wrap {
     margin: 0px auto;
     max-width: 1180px;
   }
-
+  
 @media (max-width: 1180px) {
   #pxwebcontent #wrap {
     margin: 0px 10px;
@@ -81,9 +84,9 @@
   }
 
   #pxwebcontent #header span {
-    font-size: 3.0em;
-    font-weight: 700;
-    letter-spacing: -1px;
+    font-size: 3.8em;
+    font-weight: 100;
+    letter-spacing: -3px;
     padding: 12px 0 0 10px;
   }
 
@@ -127,7 +130,7 @@
 
 
 #pxwebcontent .siteLogoText {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 #pxwebcontent #header .px-change-lang-div, #pxwebcontent #header .px-external-search-div {
@@ -140,7 +143,7 @@
 }
 
 #pxwebcontent #header .link-text.px-change-lang, #pxwebcontent #header .link-text.px-external-search {
-    font-size: 12px;
+    font-size: 1.2rem;
     letter-spacing: normal;
     padding-top: 0px;
     padding-right: 1px;
@@ -157,15 +160,12 @@
   background-color: $tableAlternatingRow-grey;
 }
 
-#pxwebcontent .databaseList {
-    /*margin-left: 15px;*/
-}
 
 #pxwebcontent .search_searchresulttext {
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
 }
 
 #pxwebcontent .searchTopLeftContent {
@@ -213,19 +213,18 @@
 }
 
 #pxwebcontent .panelshowlink {
-    width: auto;
-
-    background-color: $pxbox-background;
-    padding: 10px 0 10px 0;
-    margin-top: 5px;
-    display: inline-block;
-    border: 1px solid $pxbox-border;
-    cursor: pointer;
+  width: auto;
+  background-color: $pxweb-green-5;
+  padding: 10px 0 10px 0;
+  margin-top: 5px;
+  display: inline-block;
+  border: 1px solid $pxweb-dark-2;
+  cursor: pointer;
 }
 
-#pxwebcontent .panelshowlink.savequery {
-    background-color: $pxbox-background;
-}
+  #pxwebcontent .panelshowlink.savequery {
+    background-color: $pxweb-green-5;
+  }
 
 #pxwebcontent .px-settings-imagelink {
   vertical-align: middle;
@@ -255,14 +254,11 @@
 
 #pxwebcontent .px-settings {
     @include open-sans;
-    padding: 10px 10px 10px 10px;
-    border: solid 6px $pxweb-green-4;
     width: max-content;
-    overflow: auto;
     background-color: $pxweb-background;
     position: relative;
     z-index: 2;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 #pxwebcontent .px_setting_validator {
@@ -409,22 +405,21 @@
 }
 
 #pxwebcontent .errorMessage {
-  font-family: Verdana;
+  @include VerdanaErrorMessage;
   font-size: 0.9em;
   color: $another-errormessage;
   display: block;
 }
 
-
 #pxwebcontent .screenreader-only {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    color: black;
-    background-color: white;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: black;
+  background-color: white;
 }
 
 #pxwebcontent .screenreader-only:focus {
@@ -443,13 +438,13 @@
 
 #pxwebcontent .presentation-container {
   display: grid;
-  grid-template-columns: minmax(215px, 23%) minmax(0px, 75%);
+  grid-template-columns: minmax(18.5rem, 23%) minmax(0rem, 75%);
   grid-column-gap: 2%;
 }
 
 #pxwebcontent .px-message-text {
   @include open-sans;
-  font-size: 16px;
+  font-size: 1.6rem;
   padding-left: 16px;
   padding-right: 16px;
 
@@ -475,6 +470,11 @@
   #pxwebcontent .px-settings {
     width: auto;
   }
+
+  #pxwebcontent #header span {
+    font-size: 30px;
+  }
+
 }
 @media #{$tablet} {
     #pxwebcontent #btnBurgerMenu {
@@ -512,7 +512,7 @@
     /* don't hide on non-mobile devices */
 }
 
-
+/* New (2022 02 17) stuff below this line*/
 #pxwebcontent .officialStatisticsImage {
     height: 24px;
     width: 200px;
@@ -523,10 +523,7 @@
 }
 
 /* jQuery UI controls */
-/*#PageElements {
-    background: $pxweb-background;
-}
-*/
+/*
 .ui-draggable .ui-dialog-titlebar {
     background: $pxweb-dark-5;
     border: $pxweb-dark-5;
@@ -543,7 +540,7 @@
 
 .footnote_heading {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -556,17 +553,60 @@
     font-style: italic;
     margin-top: 10px;
 }
+*/
 
-.footnote_note_value {
-    margin-top: 10px;
+/*#pxwebcontent .dialog.visible {
+    display: flex;
+    overflow: auto;
+    position: relative;
+    padding: 20px;
+    height: fit-content;
+    background: #FFF;
+    z-index: 20;
+
+    &:after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: -2;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #FFF;
+        z-index: -1;
+    }
+}*/
+
+#pxwebcontent .modal-background.active {
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    display: flex;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 30;
 }
 
-.footnote_varnote_key {
-    font-weight: 700;
-    margin-top: 10px;
+#pxwebcontent .dialog.content-modal {
+    background: #FFF;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    overflow: auto;
+    height: fit-content;
+    z-index: 40;
+    max-height: 90vh;
 }
 
-.footnote_cellnote_key {
-    font-weight: 700;
-    margin-top: 10px;
-}

@@ -55,6 +55,7 @@ namespace PXWeb.Admin
             cboPreSelectFirstContentAndTime.SelectedValue = PXWeb.Settings.Current.Selection.PreSelectFirstContentAndTime.ToString();
             cboShowNoFootnoteForSelection.SelectedValue = PXWeb.Settings.Current.Selection.ShowNoFootnoteForSelection.ToString();
             cboSortVariableOrder.SelectedValue = PXWeb.Settings.Current.Selection.SortVariableOrder.ToString();
+            cboDefaultViewMode.SelectedValue = PXWeb.Settings.Current.Selection.DefaultViewMode.ToString();
 
             if (PXWeb.Settings.Current.Selection.SearchButtonMode != PCAxis.Web.Controls.VariableSelectorSearchButtonViewMode.ManyValues)
             {
@@ -108,6 +109,7 @@ namespace PXWeb.Admin
                         sel.PreSelectFirstContentAndTime = bool.Parse(cboPreSelectFirstContentAndTime.SelectedValue);
                         sel.ShowNoFootnoteForSelection = bool.Parse(cboShowNoFootnoteForSelection.SelectedValue);
                         sel.SortVariableOrder = bool.Parse(cboSortVariableOrder.SelectedValue);
+                        sel.DefaultViewMode = (LayoutFormat)Enum.Parse(typeof(LayoutFormat), cboDefaultViewMode.SelectedValue.ToString());
 
                         PXWeb.Settings.Save();
                     }
@@ -302,6 +304,11 @@ namespace PXWeb.Admin
         protected void SortVariableOrderInfo(object sender, ImageClickEventArgs e)
         {
             Master.ShowInfoDialog("PxWebAdminSettingsSelectionSortVariableOrder", "PxWebAdminSettingsSelectionSortVariableOrderInfo");
+        }
+
+        protected void DefaultViewModeInfo(object sender, ImageClickEventArgs e)
+        {
+            Master.ShowInfoDialog("PxWebAdminSettingsSelectionDefaultViewMode", "PxWebAdminSettingsSelectionDefaultViewModeInfo");
         }
     }
 }

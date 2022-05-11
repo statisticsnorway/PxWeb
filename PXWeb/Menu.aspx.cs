@@ -39,7 +39,7 @@ namespace PXWeb
                 Master.SetBreadcrumb(PCAxis.Web.Controls.Breadcrumb.BreadcrumbMode.Menu);
                 Master.SetNavigationFlowMode(PCAxis.Web.Controls.NavigationFlow.NavigationFlowMode.First); 
                 Master.SetNavigationFlowVisibility(PXWeb.Settings.Current.Navigation.ShowNavigationFlow);
-                Master.SetH1TextDatabase();
+                //Do to. Master.SetH1TextDatabase();
 
                 string msg = QuerystringManager.GetQuerystringParameter("msg");
                 if (!string.IsNullOrWhiteSpace(msg))

@@ -25,8 +25,10 @@
             </button>
             <asp:panel runat="server" class="accordion-body closed" ClientIDMode="Static" id="OptionsBody">
                 <asp:panel cssclass="operations-container flex-column" id="OperationsButtonsPanel" ClientIDMode="Static" runat="server"></asp:panel>
-            </asp:panel>        
-            <asp:panel id="PluginControlHolder" cssclass="commandbar_container" runat="server" visible="false"></asp:panel>
+            </asp:panel>
+            <asp:Panel runat="server" ID="ModalBackground">
+                <asp:panel id="PluginControlHolder" cssclass="commandbar_container dialog content-modal" aria-modal="true" role="dialog" runat="server" visible="false"></asp:panel>
+            </asp:Panel>
         </asp:Panel>
         <asp:panel class="pxweb-accordion"  ClientIDMode="Static" id="SaveAsPanel" runat="server">
             <button type="button"  runat="server" class="accordion-header closed" ClientIDMode="Static" id="SaveAsHeaderButton" aria-expanded="false" onclick="accordionToggle(SaveAsPanel, this)" >

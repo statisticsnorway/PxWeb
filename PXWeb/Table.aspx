@@ -6,7 +6,7 @@
 </asp:Content>
 
 <asp:Content runat="server" ID="ContentSettingsLabel" ContentPlaceHolderID="cphSettingsLabel">
-    <button type="button" class="accordion-header closed" id="SettingsHeader" aria-expanded="false" onclick="accordionToggle(SettingsAccordionPanel, this)" >
+    <button type="button" class="accordion-header closed" id="SettingsHeader" aria-expanded="false" onclick="accordionToggleDialog(SettingsAccordionPanel, this, 'SettingsBody')" >
         <span class="header-text"><asp:Label ID="SettingsLabel"  runat="server"></asp:Label></span>
     </button>
 </asp:Content>                       
@@ -32,7 +32,7 @@
     <script>
         function cancelTableSettings() {
             jQuery('#<%=rblZeroOption.ClientID %>').find("input[value='ShowAll']").prop('checked', true);
-            closeAccordion('SettingsHeader', 'SettingsBody');
+            closeAccordionDialog('SettingsHeader', 'SettingsBody', 'settingsModalBackground');
         }
     </script>
 </asp:Content>

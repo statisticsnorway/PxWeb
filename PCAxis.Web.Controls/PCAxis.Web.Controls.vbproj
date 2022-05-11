@@ -354,6 +354,7 @@
     <Compile Include="Managment\VisitorStatistics\ActionContext.vb" />
     <Compile Include="Managment\VisitorStatistics\IActionLogger.vb" />
     <Compile Include="Managment\VisitorStatistics\PxDefaultLogger.vb" />
+    <Compile Include="Managment\VisitorStatistics\PxSSBLogger.vb" />
     <Compile Include="Managment\VisitorStatistics\VisitorStatisticsHelper.vb" />
     <Compile Include="Menu\MenuHelper.vb" />
     <Compile Include="Menu\TableList\DownloadLinkVisibility.vb" />

@@ -7,11 +7,15 @@
             headerCode="PxWebRegionSelectionUserManualScreenReader"
             textCode="PxWebSkipToSelectionLinkScreenReader"
             runat="server" ClientIDMode="Static"/>
+         <pxc:UserManualScreenReader ID="MarkingTipsScreenReader"
+            headerCode="PxWebMarkingTipsHeaderScreenReader"
+            textCode="PxWebMarkingTipsTextScreenReader"
+            runat="server" ClientIDMode="Static"/>
     </div>
     <pxc:VariableSelectorMarkingTips runat="server" ID="VariableSelectorMarkingTips"  />    
-     <div role="region" id="validationsummarynotifyscreenreader" aria-live="assertive" aria-atomic="true">
-       <asp:ValidationSummary ID="SelectionValidationSummary" runat="server" DisplayMode="BulletList" role="alert" ShowValidationErrors="true" ShowMessageBox="false" ShowSummary="true" CssClass="variableselector_error_summary" ForeColor="" />   
-     </div>
+     <div role="alert" id="validationsummarynotifyscreenreader" >
+       <asp:ValidationSummary ID="SelectionValidationSummary" runat="server" DisplayMode="BulletList"  ShowValidationErrors="true" ShowMessageBox="false" ShowSummary="true" CssClass="variableselector_error_summary" ForeColor="" />   
+    </div>
 <asp:Repeater ID="VariableSelectorValueSelectRepeater" runat="server" EnableViewState="true">      
         <HeaderTemplate>
             <div class="variableselector_variable_box_container">
@@ -32,14 +36,14 @@
     <div class ="flex-row justify-center">
      <pxc:VariableSelectorSelectionInformation runat="server" ID="VariableSelectorSelectionInformation" />
     </div>
-    <div role="region" id="selectionerrornotifyscreenreader" aria-live="assertive" aria-atomic="true">
-        <div class="flex-row justify-center">
+   <%-- <div role="region" id="selectionerrornotifyscreenreader" aria-atomic="true" aria-live="polite">--%>
+        <div class="flex-row justify-center" aria-atomic="true" aria-live="polite">
             <asp:Label ID="SelectionErrorlabel" runat="server" visible="true" CssClass="variableselector_selectionerror_label"/>
             <asp:Label ID="SelectionErrorlabelTextCells" runat="server" CssClass="variableselector_selectionerror_label_text" />
             <asp:Label ID="SelectionErrorlabelTextColumns" runat="server" CssClass="variableselector_selectionerror_label_text" />
             <asp:Label ID="SelectionErrorlabelTextRows" runat="server" CssClass="variableselector_selectionerror_label_text" />
         </div>
-    </div>
+    <%--</div>--%>
 </asp:Panel>
 
 <asp:Panel ID="SearchVariableValuesPanel" runat="server" Visible="false">

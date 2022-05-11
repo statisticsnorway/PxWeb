@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <language xmlns="http://www.pc-axis.scb.se/" name="Default">
-   <sentence name="SiteTitle" value="PxWeb"/>
-
+   <sentence name="SiteTitle" value="Statbank Norway"/>
    <sentence name="CtrlChooseVariable" value="Select a variablel:"/>
-  
 	 <sentence name="CtrlCommandBarFunctionChangeTextPresentation" value="Change texts"/>
 	 <sentence name="CtrlChangeTextsHeading" value="Change texts"/>
 	 <sentence name="CtrlChangeTextsText" value="Make your text changes and press 'Continue'"/>
@@ -60,8 +58,8 @@
 	 <sentence name="CtrlPerPartSelectCellLabel" value="Select cell:"/>
    <sentence name="CtrlPerPartCompleteButton" value="Complete" />
    <sentence name="CtrlCommandBarAccordionOperatationsTitle" value="More options" />
-   <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Save result as..." />
-   <sentence name="CtrlCommandBarAccordionShowAsTitle" value="Show result as..." />
+   <sentence name="CtrlCommandBarAccordionSaveAsTitle" value="Save result as" />
+   <sentence name="CtrlCommandBarAccordionShowAsTitle" value="Change view" />
    <sentence name="CtrlCommandBarSaveAsButton" value="Save" />
    <sentence name="CtrlCommandBarSaveAsButtonScreenReader" value="Save result as " />
    <sentence name="CtrlCommandBarSaveAsLegend" value="Available format for downloading data. " />
@@ -136,7 +134,7 @@
 	 <sentence name="CtrlCommandBarFileTypeHtmlAlt" value="Save as Html"/>
 	 <sentence name="CtrlCommandBarFileTypeRelationalTitle" value="Save as Relational file"/>
 	 <sentence name="CtrlCommandBarFileTypeRelationallAlt" value="Save as Relational file"/>
-	 <sentence name="CtrlPresentationViewTableLayout1" value="Show table"/>
+	 <sentence name="CtrlPresentationViewTableLayout1" value="Table - Layout 1"/>
 	 <sentence name="CtrlPresentationViewTableLayout2" value="Table - Layout 2"/>
 	 <sentence name="CtrlPresentationViewTableSorted" value="Sortable table"/>
 	 <sentence name="CtrlPresentationViewChartColumn" value="Chart - Bar"/>
@@ -170,6 +168,7 @@
   	 <sentence name="CtrlFootnoteObsnoteLabel" value="Obs:"/>
 	 <sentence name="CtrlFootnoteFootnoteLabel" value="Footnotes"/>
 	 <sentence name="CtrlFootnoteNoFootnotesLabel" value="There are no footnotes"/>
+	
 	 <sentence name="CtrlHierarchicalVariableSelectAllButton" value="Select all" />
 	 <sentence name="CtrlHierarchicalVariableUnselectAllButton" value="Clear all" />
 	 <sentence name="CtrlHierarchicalVariableOpenAllNodesButton" value="Open all" />
@@ -180,7 +179,7 @@
 	 <sentence name="CtrlInformationOfficialStatisticsLabel" value="Official statistics"/>
 	 <sentence name="CtrlInformationUnitLabel" value="Unit"/>
 	 <sentence name="CtrlInformationContactLabel" value="Contact"/>
-	 <sentence name="CtrlInformationLastUpdatedLabel" value="Latest update"/>
+	 <sentence name="CtrlInformationLastUpdatedLabel" value="Updated"/>
 	 <sentence name="CtrlInformationRefPeriodLabel" value="Reference time"/>
 	 <sentence name="CtrlInformationStockFaLabel" value="Data type"/>
 	 <sentence name="CtrlInformationCFPricesLabel" value="Price type"/>
@@ -223,7 +222,7 @@
 	 <sentence name="CtrlChangeValueOrderToOrder" value="To order"/>
 
 	 <sentence name="CtrlPivotCompleteButton" value="Complete"/>
-   <sentence name="CtrlPivotCancelButton" value="Cancel"/>
+     <sentence name="CtrlPivotCancelButton" value="Cancel"/>
 
 	 <sentence name="CtrlPivotStubLabel" value="Rows"/>
 	 <sentence name="CtrlPivotHeadingLabel" value="Columns"/>
@@ -331,7 +330,7 @@
    <sentence name="CtrlVariableSelectorSearchValuesBeginningOfWordCheckBox" value="Beginning of word" />
    <sentence name="CtrlVariableSelectorSearchValuesTextbox" value="Search" />
    <sentence name="CtrlVariableSelectorSearchValuesTextboxScreenReader" value="Field for searching for a specific value in the list box. This is examples of values you can search for." />
-   <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="List box of selectable values for a variabel. Click to mark one or more values." />
+   <sentence name="CtrlVariableSelectorSelectValuesListboxScreenReader" value="Listbox of selectable values for variabel {0}. Total number of values are {1}" />
    <sentence name="CtrlVariableSelectorSearchResultSearchWordScreenReader" value="Search for , " />
    <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader1" value=", resulted in , " />
    <sentence name="CtrlVariableSelectorSearchResultHitsScreenReader2" value=", hits, " />
@@ -387,7 +386,7 @@
 
 	 <sentence name="CtrlTableOfContentSizeHeading" value="Size:"/>
 	 <sentence name="CtrlTableOfContentSizeKilobytes" value="Kb"/>
-	 <sentence name="CtrlTableOfContentModifiedHeading" value="Modified:"/>
+	 <sentence name="CtrlTableOfContentModifiedHeading" value="Updated:"/>
 	 <sentence name="CtrlTableOfContentUpdatedHeading" value="Updated:"/>
 	 <sentence name="CtrlTableOfContentActionButton" value="Javascript is disabled, click to load the whole tree"/>
 	 <sentence name="CtrlTableOfContentExternalLinkTooltip" value="Information"/>
@@ -432,17 +431,17 @@
 	 <sentence name="FileTypeCsvWithoutHeadingAndSpace" value="Space delimited without heading" />
 	 <sentence name="FileTypeCsvWithHeadingAndSemiColon" value="Semicolon delimited with heading" />
 	 <sentence name="FileTypeCsvWithoutHeadingAndSemiColon" value="Semicolon delimited without heading" />
-	 <sentence name="FileTypeText" value="Text file (txt)" />  
-  <sentence name="FileTypeHtml5Table" value="Html5 table (htm)" />
-  <sentence name="FileTypeHtml" value="Html file (htm)" />
-	 <sentence name="FileTypeRelational" value="Relational file (txt)" />
+	 <sentence name="FileTypeText" value="Text file (txt)" />
+	<sentence name="FileTypeHtml5Table" value="Html5 table (htm)" />
+	 <sentence name="FileTypeHtml" value="Html file (htm)" />
+	 <sentence name="FileTypeRelational" value="Relational file (scb)" />
     <sentence name="FileTypeChartPng" value="Chart as PNG (png)" />
     <sentence name="FileTypeChartGif" value="Chart as Gif (gif)" />
     <sentence name="FileTypeChartJpeg" value="Chart as JPEG (jpg)" />
 	 <sentence name="FileTypeExcelX" value="Excel (xlsx)" />
-  <sentence name="FileTypeExcelXDoubleColumn" value="Excel (xlsx) with code and text column" />
+    <sentence name="FileTypeExcelXDoubleColumn" value="Excel (xlsx) with code and text column" />
   <sentence name="FileTypeSDMX" value="SDMX (sdmx) file" />
-
+	
   <sentence name="CtrlSearchVariableValuesAddButton" value="Add" />
 	 <sentence name="CtrlSearchVariableValuesSearchHeader" value="Search" />
 	 <sentence name="CtrlSearchVariableValuesSearchForCode" value="Search code:" />
@@ -486,11 +485,11 @@
 	 <sentence name="CtrlTableQueryShowInformation" value="API query for this table" />
 	 <sentence name="CtrlTableQueryShowInformationTooltip" value="Get information about how you can connect to this table from your application" />
 	 <sentence name="CtrlTableQueryHideInformation" value="Hide" />
-	 <sentence name="CtrlTableQueryInformationText" value="POST the following JSON query to the URL below to access this table from your application." />
+	 <sentence name="CtrlTableQueryInformationText" value="Send (POST) the following JSON query to the URL below or copy to the API Console." />
 	 <sentence name="CtrlTableQueryUrlCaption" value="URL:" />
 	 <sentence name="CtrlTableQueryQueryCaption" value="JSON query:" />
-	 <sentence name="CtrlTableQueryMoreInformation" value="More information" />
-    <sentence name="CtrlTableQuerySaveQuery" value="Save API query (json)" />
+	 <sentence name="CtrlTableQueryMoreInformation" value="More information about the Statbank API" />
+   <sentence name="CtrlTableQuerySaveQuery" value="Save API query (json)" />
     
    <sentence name="CtrlNavigationFlowSectionScreenReader" value="Overview of the three steps in the process to get the data."/>
    <sentence name="CtrlNavigationFlowExplainScreenReader" value="The 3 steps are Choose table, Choose variable and Show result. You are currently at "/>
@@ -507,7 +506,7 @@
    <sentence name="CtrlSaveQueryNoTimeValWarning" value="It is not possible to update the query since there is no defined time variable in this table." />
    <sentence name="CtrlSaveQuerylnkSaveQuery" value="Save your query" />
    <sentence name="CtrlSaveQueryAsCaption" value="Save the result as (mandatory):" />
-   <sentence name="CtrlSaveQueryHelpPage" value="Change me!! https://www.ssb.no/en/informasjon/om-statistikkbanken/how-to-use-statbank-norway" />
+   <sentence name="CtrlSaveQueryHelpPage" value="https://www.ssb.no/en/informasjon/om-statistikkbanken/how-to-use-statbank-norway" />
    <sentence name="CtrlSaveQueryForScreen" value="Same as shown on screen" />
    <sentence name="CtrlSaveQueryCancelSaveQuery" value="Cancel" />
    <sentence name="CtrlSaveQuerybtnCreateQuery" value="Finish" />
@@ -655,7 +654,7 @@
 	 <sentence name="PxcErr208" value="ATTRIBUTES error"/>
 	 <sentence name="PxcErr300" value="VALUE-TEXT-OPTION error"/>
 	 <sentence name="PxcKeywordError" value="{0} error"/>
-	 <sentence name="PxcKeywordLastUpdated" value="Latest update"/>
+	 <sentence name="PxcKeywordLastUpdated" value="Updated"/>
 	 <sentence name="PxcKeywordSource" value="Source"/>
 	 <sentence name="PxcKeywordContact" value="Contact"/>
 	 <sentence name="PxcKeywordCopyright" value="Copyright"/>
@@ -686,6 +685,7 @@
 	
 	 <sentence name="CancelButton" value="Cancel"/>
 
+
 	 <!-- PxWeb -->
 	 <sentence name="PxWebApplicationTitle" value="PxWeb 2021 v1"/>
 	 <sentence name="PxWebApplicationName" value="PxWeb 2021 v1"/>
@@ -698,19 +698,27 @@
    <sentence name="PxWebSubHeaderChooseVariables" value="Choose variables"/>
    <sentence name="PxWebSubHeaderResult" value="Result"/>
    <sentence name="PxWebOfficialStatisticsLogo" value="Logotype for official statistics"/>
+
    <sentence name="PxWebMenuBurger" value="Menu" />
    <sentence name="PxWebTools" value="Tools" />
    <sentence name="PxWebToolsClose" value="Close" />
    <sentence name="PxWebMenu" value="Menu"/>
-   <sentence name="PxWebMenuExplanation" value="(C)=county, (M)=municipality, (BU)=Basic statistical unit, (UD)=urban district, (US)=urban settlement. Character in brackets shows the lowest regional level." />
+   <sentence name="PxWebMenuExplanationRegionHeader" value="Letter code after table title shows lowest regional level:" />
+	<sentence name="PxWebToolsRegion" value="Table toolsmenu" />
+	<sentence name="PxWebToolsShortRegion" value="Table toolsmenu shortcut" />	
+   <sentence name="PxWebMenuExplanationRegion" value="(C) = county, (M) = municipality, (BU) = Basic statistical unit, (UD) = urban district, (US) = urban settlement" />
+  <sentence name="PxWebMenuExplanationTimePeriodHeader" value="Explanation of time period: " />
+   <sentence name="PxWebMenuExplanationTimePeriod" value="&lt;B&gt;Q&lt;/B&gt; = Quarter, &lt;B&gt;M&lt;/B&gt; = Monthly, &lt;B&gt;W&lt;/B&gt; = Week" />
    <sentence name="PxWebSelection" value="Selection"/>
 	 <sentence name="PxWebInformation" value="Information"/>
 	 <sentence name="PxWebDetailedInformation" value="Detailed information"/>
 	 <sentence name="PxWebFootnotes" value="Footnotes"/>
 	 <sentence name="PxWebMarkingTips" value="Marking tips"/>
 	 <sentence name="PxWebMarkingTipsHeader" value="Tip on how to mark in a list box"/>
-	 <sentence name="PxWebMarkingTipsText" value="At least one indication in every list box has to be made to show a result for each variable. When you wish to &#xD;&#xA;see one or a few variables, mark these only. N.B. To undo a mark, press the button CTRL and click the mouse &#xD;&#xA;button on the text.&#xD;&#xA;&#xD;&#xA;To select all lines in a list box:&#xD;&#xA;- Mark the first line in the list box. Then press the buttons SHIFT and END simultaneously.&#xD;&#xA;&#xD;&#xA;To select/undo a marked line in a list box:&#xD;&#xA;- Press the button CTRL and click the left mouse button on the selected line simultaneously.&#xD;&#xA;&#xD;&#xA;To select more than one line in a list box:&#xD;&#xA;- Mark lines in a row by pressing the left mouse button and slip it over the requested lines. Or, mark the first &#xD;&#xA;line on your list and then press the button SHIFT at the same time as you press the up or down arrows on the keyboard. &#xD;&#xA;- Mark lines, not in a row, by pressing the button CTRL at the same time as you click the left mouse button on the requested lines. &#xD;&#xA;&#xD;&#xA;To search for a specific value in the list box:&#xD;&#xA;- Mark the first line in the list box. Then type the first letter in the line requested. If you fail in getting the right line, &#xD;&#xA;try the typing again until you find the right value. Or use the up or down arrows or the mouse button to look further. " />
-	 <sentence name="PxWebPresentation" value="Presentation"/>
+	 <sentence name="PxWebMarkingTipsText" value="At least one indication in every list box has to be made to show a result for each variable. When you wish to &#xD;&#xA;see one or a few variables, mark these only. N.B. To undo a mark, press the button CTRL and click the mouse &#xD;&#xA;button on the text.&#xD;&#xA;&#xD;&#xA;To select all lines in a list box:&#xD;&#xA;- Mark the first line in the list box. Then press the buttons SHIFT and END simultaneously.&#xD;&#xA;&#xD;&#xA;To select/undo a marked line in a list box:&#xD;&#xA;- Press the button CTRL and click the left mouse button on the selected line simultaneously.&#xD;&#xA;&#xD;&#xA;To select more than one line in a list box:&#xD;&#xA;- Mark lines in a row by pressing the left mouse button and slip it over the requested lines. Or, mark the first &#xD;&#xA;line on your list and then press the button SHIFT at the same time as you press the up or down arrows on the keyboard. &#xD;&#xA;- Mark lines, not in a row, by pressing the button CTRL at the same time as you click the left mouse button on the requested lines. &#xD;&#xA;&#xD;&#xA;To search for a specific value in the list box:&#xD;&#xA;- Mark the first line in the list box. Then type the first letter in the line requested. If you fail in getting the right line, &#xD;&#xA;try the typing again until you find the right value. Or use the up or down arrows or the mouse button to look further. "/>
+	<sentence name="PxWebMarkingTipsHeaderScreenReader" value="Tip on how to mark in a list box"/>
+	<sentence name="PxWebMarkingTipsTextScreenReader" value="Navigating with keyboard and screenreader. Select multiple object in row:	 SHIFT+arrow down/up. To select a single value in the listbox: Windows:Hold Ctrl + arrow down. Then release Ctrl and press space. Repeat. Mac:CMD+arrow down/up. Then release CMD and press spacebar. Repeat. (Works only in Chrome, not in  Safari). To exit listbox with values selected, press TAB-key."  /> 
+	<sentence name="PxWebPresentation" value="Presentation"/>
    <sentence name="PxWebTable" value="Table" />
    <sentence name="PxWebTableUserSettingsShow" value="Hide empty rows" />
    <sentence name="PxWebTableUserSettingsLegend" value="Which rows are to be displayed?" />
@@ -752,12 +760,13 @@
 	 <sentence name="PxWebChartTooManyValues" value="Too many values selected" />
 	 <sentence name="PxWebChartTooManyValuesInformation" value="You have selected too many values." />
 	 <sentence name="PxWebChartUserSettingsLargeValue" value="Maximum value is {0}" />
+	 <sentence name="PxWebChartErrorSummary" value="Following errors must be corrected:" />
 	 <sentence name="PxWebChartLeftScale" value="(left scale)" />
 	 <sentence name="PxWebChartRightScale" value="(right scale)" />
 	 <sentence name="PxWebChartPercent" value="%" />
 
 	 <sentence name="PxWebDataSort" value="Sort data"/>
-	 <sentence name="PxWebSelectDb" value="Select database"/>
+	 <sentence name="PxWebSelectDb" value="Select database:"/>
 	 <sentence name="PxWebTableCropped" value="Maximum of {0} rows and {1} columns can be displayed on screen."/>
    <sentence name="PxWebTableCroppedHeading" value="The table has been cropped"/>
 
@@ -781,21 +790,20 @@
   <sentence name="PxWebSearchResultText" value ="Searchresult: ({0} hits)"/>
   <sentence name="PxWebSearchResultColumnTable" value ="Table"/>
   <sentence name="PxWebSearchResultColumnPublished" value ="Published"/>
-  <sentence name="PxWebTitleDefault" value ="PxWeb - Select database"/>
-  <sentence name="PxWebTitleApiHelp" value ="PxWeb - API help"/>
-  <sentence name="PxWebTitleChart" value ="PxWeb - Chart"/>
-  <sentence name="PxWebTitleDataSort" value ="PxWeb - Sort"/>
-  <sentence name="PxWebTitleErrorGeneral" value ="PxWeb - Oooops!"/>
-   <sentence name="PxWebTitleFootnotesSelection" value ="PxWeb - Footnotes"/>
-  <sentence name="PxWebTitleInformationPresentation" value ="PxWeb - Information"/>
-  <sentence name="PxWebTitleInformationSelection" value ="PxWeb - Information"/>
-  <sentence name="PxWebTitleMarkingTips" value ="PxWeb - Tips"/>
-  <sentence name="PxWebTitleMenu" value ="PxWeb - Select table"/>
-  <sentence name="PxWebTitleSearch" value ="PxWeb - Search"/>
-  <sentence name="PxWebTitleSelection" value ="PxWeb - Select variable and values"/>
-  <sentence name="PxWebTitleTable" value ="PxWeb - Table"/>
-<sentence name="PxWebSavedQueryUnsafeMessageHeading" value ="Text has been changed"/>
-  <sentence name="PxWebSavedQueryUnsafeMessage" value ="The text in the table differs from the original in the database, because it has been changed manually"/>
+  <sentence name="PxWebTitleDefault" value ="PX-Web - Select database"/>
+  <sentence name="PxWebTitleApiHelp" value ="PX-Web - API help"/>
+  <sentence name="PxWebTitleChart" value ="PX-Web - Chart"/>
+  <sentence name="PxWebTitleDataSort" value ="PX-Web - Sort"/>
+  <sentence name="PxWebTitleErrorGeneral" value ="PX-Web - Oooops!"/>
+   <sentence name="PxWebTitleInformationPresentation" value ="PX-Web - Information"/>
+  <sentence name="PxWebInformationSelection" value ="PX-Web - Information"/>
+  <sentence name="PxWebTitleMarkingTips" value ="PX-Web - Tips"/>
+  <sentence name="PxWebTitleMenu" value ="PX-Web - Select table"/>
+  <sentence name="PxWebTitleSearch" value ="PX-Web - Search"/>
+  <sentence name="PxWebTitleSelection" value ="PX-Web - Select variable and values"/>
+  <sentence name="PxWebTitleTable" value ="PX-Web - Table"/>
+  <sentence name="PxWebSavedQueryUnsafeMessageHeading" value ="The table contains customized text"/>
+  <sentence name="PxWebSavedQueryUnsafeMessage" value ="Text was added manually, which did not exist in the original table."/>
   <sentence name="PxWebGeneralErrorMessage" value ="An error has occurred. The error has been registered"/>
   <sentence name="PxWebSavedQueryExecuteErrorMessage" value ="Your saved query can not be found. The table can have been moved or removed."/>
   <sentence name="PxWebReturnToStartpage" value ="Return to start page"/>
@@ -812,25 +820,27 @@
   <sentence name="PxWebSkipToSelectionLinkText" value="Go to first variable" />
   <sentence name="PxWebSkipToSelectionLinkScreenReader" value="Now you have come to the page, Choose variable. This page give you the oportunity to select which variables and values you want to display in your result of the table. A variable is a property of a statistical unit. The page is divided into several boxes, one for each variable, where you can select values by click to highlight one or more values. It always starts with the statistics variable which is the main value counted in the table." />
   <sentence name="PxWebRegionSelectionUserManualScreenReader" value="User manual for selection page" />
+  <sentence name="PxWebTableListEmptyFolder" value="This folder is temporarily empty" />
 
   <!-- UserManualScreenReader -->
 
   <sentence name="UserManualScreenReader_Databases_Header" value="User manual for this page" />
   <sentence name="UserManualScreenReader_Databases_Text" value="This page is for selecting the database where your want to seach for a table." />
- 
   <sentence name="UserManualScreenReader_Menu_Header" value="User manual for this page" />
   <sentence name="UserManualScreenReader_Menu_Text" value="You are now in the first main page of PxWeb, where the goal is to select a table. You may find your table by seach or by drilling down in the menu three." />
   <sentence name="UserManualScreenReader_Result_Header" value="User manual for this page" />
-  <sentence name="UserManualScreenReader_Result_Text" value="This page shows the results of the figures you selected on the variable-page in PxWeb. On this result-page you can download the numbers in another format, pivot or edit them. You can also save them as a saved query, which can be sent to others or used as a link the next time you want to see these numbers with new time periods." />
+  <sentence name="UserManualScreenReader_Result_Text" value="This page shows the results of the figures you selected on the variable-page in StatBank Norway. On this result-page you can download the numbers in another format, pivot or edit them. You can also save them as a saved query, which can be sent to others or used as a link the next time you want to see these numbers with new time periods." />
+  <sentence name="UserManualScreenReader_TableList_Header" value="User manual for this page" />
+  <sentence name="UserManualScreenReader_TableList_Text" value="You are now in the first main page of StatBank Norway, which shows an overview of all available tables within the selected statistical area. The tables are grouped into topics, with a heading for each group. There is also a geographical and periodic explanation at the top of the table list, when there are tables in the list that contain this value." />
  
-  
-  
-   <!-- PX-Web Administration -->
+
+  <!-- PX-Web Administration -->
 
 	 <sentence name="PxWebAdminLogout" value="Log out"/>
 	 <sentence name="PxWebAdminHeading" value="PxWeb Administration"/>
 	 <sentence name="PxWebAdminVersion" value="PxWeb 2021 v1"/>
 	 <sentence name="PxWebAdminHomePage" value="PxWeb Homepage"/>
+
 	 <sentence name="PxWebAdminSaveButton" value="Save"/>
 	 <sentence name="PxWebAdminGenerateButton" value="Generate"/>
 	 <sentence name="PxWebAdminMenuHome" value="Home"/>
@@ -871,7 +881,7 @@
   <sentence name="PxWebAdminMenuFeaturesSearchGeneral" value="General"/>
   <sentence name="PxWebAdminMenuFeaturesBackgroundWorker" value="Background worker process"/>
   <sentence name="PxWebAdminMenuFeaturesBackgroundWorkerGeneral" value="General"/>
-  <sentence name="PxWebPxLogin" value="PxWeb Login"/>
+  <sentence name="PxWebPxLogin" value="PX-Web Login"/>
 	 <sentence name="PxWebLogin" value="Login"/>
   <sentence name="PxWebLogout" value="Logout"/>
 	 <sentence name="PxWebUsername" value="Username"/>
@@ -886,9 +896,9 @@
   <sentence name="PxWebSwitchToListViewScreenReader" value="Changes visual layout. In the list view a single variable box utilizes the entire screen width. In the compact view there are many boxes per line. Now displaying compact view."/>	
 
 	 <sentence name="PxWebAdminSettingsDatabasesPxDatabases" value="PX Databases"/>
-	 <sentence name="PxWebAdminSettingsDatabasesPxDatabasesInfo" value="Selected PX Databases will be displayed in PxWeb"/>
+	 <sentence name="PxWebAdminSettingsDatabasesPxDatabasesInfo" value="Selected PX Databases will be displayed in PX-Web"/>
 	 <sentence name="PxWebAdminSettingsDatabasesCnmmDatabases" value="CNMM (Common Nordic Meta Model) Databases"/>
-  <sentence name="PxWebAdminSettingsDatabasesCnmmDatabasesInfo" value="Selected CNMM Databases will be displayed in PxWeb"/>
+  <sentence name="PxWebAdminSettingsDatabasesCnmmDatabasesInfo" value="Selected CNMM Databases will be displayed in PX-Web"/>
   <sentence name="PxWebAdminSettingsDatabasesEnabled" value="Enabled"/>
   <sentence name="PxWebAdminSettingsDatabasesDbCreated" value="Db created"/>
   <sentence name="PxWebAdminSettingsDatabasesIndexStatus" value="Index status"/>
@@ -907,12 +917,12 @@
 
 	 <sentence name="PxWebAdminSettingsFileFormatsCellLimitDownload" value="Cell limit download"/>
 	 <sentence name="PxWebAdminSettingsFileFormatsCellLimitDownloadInfo" value="Max number of downloadable cells in resulting table"/>
-   <sentence name="PxWebAdminSettingsFileBaseName" value="Get filename from"/>
-   <sentence name="PxWebAdminSettingsFileBaseNameTableId" value="Table id"/>
-   <sentence name="PxWebAdminSettingsFileBaseNameMatrix" value="Matrix"/>
-   <sentence name="PxWebAdminSettingsFileFormatsFileBaseName" value="Filename" />
-   <sentence name="PxWebAdminSettingsFileFormatsFileBaseNameInfo" value="Get filename from matrix or table id when a file is downloaded, for exemple to Excel, csv. To create a unique file name, the file name is concatenated with date and time." />
-   <sentence name="PxWebAdminSettingsFileFormatsExcel" value="Excel"/>
+	<sentence name="PxWebAdminSettingsFileBaseName" value="Get filename from"/>
+	<sentence name="PxWebAdminSettingsFileBaseNameTableId" value="Table id"/>
+	<sentence name="PxWebAdminSettingsFileBaseNameMatrix" value="Matrix"/>
+	<sentence name="PxWebAdminSettingsFileFormatsFileBaseName" value="Filename" />
+	<sentence name="PxWebAdminSettingsFileFormatsFileBaseNameInfo" value="Get filename from matrix or table id when a file is downloaded, for exemple to Excel, csv. To create a unique file name, the file name is concatenated with date and time." />
+	<sentence name="PxWebAdminSettingsFileFormatsExcel" value="Excel"/>
 	 <sentence name="PxWebAdminSettingsFileFormatsExcelInformationLevel" value="Information level"/>
 	 <sentence name="PxWebAdminSettingsFileFormatsExcelInformationLevelInfo" value="Controls which information that are displayed in the Excel file"/>
 	 <sentence name="PxWebAdminSettingsFileFormatsExcelInformationLevelNone" value="None"/>
@@ -1002,9 +1012,9 @@
 	 <sentence name="PxWebAdminSettingsMenuNumberOfValuesInDefaultView" value="Number of default values"/>
 	 <sentence name="PxWebAdminSettingsMenuNumberOfValuesInDefaultViewInfo" value="Maximum number of values that are selected when Viewlink mode = 'Default values'. Values are preselected rather than allowing the users to select variables and values by themselves."/>
 	 <sentence name="PxWebAdminSettingsMenuShowModifiedDate" value="Show modified date"/>
-	 <sentence name="PxWebAdminSettingsMenuShowModifiedDateInfo" value="Defines if information about when the PX-file was last updated in the file system shall be displayed in PxWeb or not."/>
+	 <sentence name="PxWebAdminSettingsMenuShowModifiedDateInfo" value="Defines if information about when the PX-file was last updated in the file system shall be displayed in PX-Web or not."/>
 	 <sentence name="PxWebAdminSettingsMenuShowLastUpdated" value="Show last updated"/>
-	 <sentence name="PxWebAdminSettingsMenuShowLastUpdatedInfo" value="Defines if LAST-UPDATED in the PX-files shall be displayed in PxWeb or not"/>
+	 <sentence name="PxWebAdminSettingsMenuShowLastUpdatedInfo" value="Defines if LAST-UPDATED in the PX-files shall be displayed in PX-Web or not"/>
   <sentence name="PxWebAdminSettingsMenuShowFileSize" value="Show file size"/>
   <sentence name="PxWebAdminSettingsMenuShowFileSizeInfo" value="If information about the filesize shall be displayed or not"/>
   <sentence name="PxWebAdminSettingsMenuShowTableCategory" value="Show table category"/>
@@ -1042,7 +1052,7 @@
 	 <sentence name="PxWebAdminSettingsSelectionShowSelectionLimits" value="Show selection limits"/>
 	 <sentence name="PxWebAdminSettingsSelectionShowSelectionLimitsInfo" value="If information about selection limits shall be displayed or not"/>
 	 <sentence name="PxWebAdminSettingsSelectionOutputFormats" value="Output formats"/>
-	 <sentence name="PxWebAdminSettingsSelectionOutputFormatsInfo" value="Selected output formats (presentation views and file formats) will be available for selection in PxWeb"/>
+	 <sentence name="PxWebAdminSettingsSelectionOutputFormatsInfo" value="Selected output formats (presentation views and file formats) will be available for selection in PX-Web"/>
 	 <sentence name="PxWebAdminSettingsSelectionPresentationViews" value="Presentation views:"/>
 	 <sentence name="PxWebAdminSettingsSelectionFileFormats" value="File formats:"/>
 	 <sentence name="PxWebAdminSettingsSelectionValuesetMustBeSelectedFirst" value="Valueset must be selected"/>
@@ -1091,18 +1101,21 @@
 	 <sentence name="PxWebAdminSettingsValidationMaximumValue" value="Maximum value is {0}"/>
 	 <sentence name="PxWebAdminSettingsValidationIllegalColorCode" value="Illegal color code (expected format is #AAAAAA)"/>
    <sentence name="PxWebAdminSettingsValidationIllegalTimeSeries" value="Illegal times (expected format is hh:mm,hh:mm)" />
-
+	 <sentence name="PxWebAdminSettingsSelectionDefaultViewMode" value="Default view" />
+	 <sentence name="PxWebAdminSettingsSelectionDefaultViewComapact" value="Compact view" />
+	 <sentence name="PxWebAdminSettingsSelectionDefaultViewSimple" value="List view" />
+	 <sentence name="PxWebAdminSettingsSelectionDefaultViewModeInfo" value="Controls default view. Compact view shows a compressed version of the variable boxes on the web page. List view shows the variable boxes below each other and each box uses available width." />
 
 	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderOperations" value="Operations"/>
-	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderOperationsInfo" value="The selected operations will be available to the PxWeb user"/>
+	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderOperationsInfo" value="The selected operations will be available to the PX-Web user"/>
 	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderFileformats" value="File formats"/>
-	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderFileformatsInfo" value="The selected file formats will be available to the PxWeb user"/>
+	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderFileformatsInfo" value="The selected file formats will be available to the PX-Web user"/>
 	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderButton" value="Button"/>
-	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderButtonInfo" value="The selected operations will be available to the PxWeb user"/>
+	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderButtonInfo" value="The selected operations will be available to the PX-Web user"/>
 	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderShortcut" value="Shortcut"/>
 	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderShortcutInfo" value="About shortcut"/>
 	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderPresentationViews" value="Presentation views"/>
-	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderPresentationViewsInfo" value="The selected presentation views will be available to the PxWeb user"/>
+	 <sentence name="PxWebAdminSettingsPresentationCommandBarHeaderPresentationViewsInfo" value="The selected presentation views will be available to the PX-Web user"/>
 
 
 	 <sentence name="PxWebAdminSettingsPresentationCommandBarViewModeText" value="View mode"/>
@@ -1139,9 +1152,9 @@
 	 <sentence name="PxWebAdminSettingsPresentationTableMaxRowsInfo" value="The maximum number of rows that will be displayed within the table on screen. If the underlying data table contains more rows than what is specified in this setting, the table on screen will be cropped."/>
 	 <sentence name="PxWebAdminSettingsPresentationTableMaxColumns" value="Max columns"/>
 	 <sentence name="PxWebAdminSettingsPresentationTableMaxColumnsInfo" value="The maximum number of columns that will be displayed within the table on screen. If the underlying data table contains more columns than what is specified in this setting, the table on screen will be cropped."/>
-	 <sentence name="PxWebAdminSettingsPresentationTableTitleVisible" value="Show title"/>
-	 <sentence name="PxWebAdminSettingsPresentationTableTitleVisibleInfo" value="If the table title shall be displayed within the table or not"/>
-	 <sentence name="PxWebAdminSettingsPresentationTableDisplayAttributes" value="Display cell information"/>
+	<sentence name="PxWebAdminSettingsPresentationTableTitleVisible" value="Show title"/>
+	<sentence name="PxWebAdminSettingsPresentationTableTitleVisibleInfo" value="If the table title shall be displayed within the table-html-element or not"/>
+	<sentence name="PxWebAdminSettingsPresentationTableDisplayAttributes" value="Display cell information"/>
 	 <sentence name="PxWebAdminSettingsPresentationTableDisplayAttributesInfo" value="If cell information shall be displayed in the table or not. Information displayed is attributes and notes at cell level."/>
 	 <sentence name="PxWebAdminSettingsPresentationTableDisplayDefaultAttributes" value="Display default attributes"/>
 	 <sentence name="PxWebAdminSettingsPresentationTableDisplayDefaultAttributesInfo" value="If the default values of the attributes of the table shall be displayed beneath the table or not"/>
@@ -1155,7 +1168,7 @@
   <sentence name="PxWebAdminToolsGenerateDbSortOrder" value="Sort order"/>
   <sentence name="PxWebAdminSortOrderFileName" value="File name"/>
   <sentence name="PxWebAdminSortOrderMatrix" value="Matrix"/>
-  <sentence name="PxWebAdminSortOrderTitle" value="Description/Title"/>
+  <sentence name="PxWebAdminSortOrderTitle" value="Title"/>
   <sentence name="PxWebAdminToolsGenerateDbSortOrderInfo" value="Select the key that will be used to create the sort order for the tables."/>
   <sentence name="PxWebAdminToolsGenerateDbCreateIndex" value="Create search index"/>
   <sentence name="PxWebAdminToolsGenerateDbCreateIndexInfo" value="If selected, search index creation will be automatically initiated after the database has been generated."/>
@@ -1169,16 +1182,16 @@
 	 <sentence name="PxWebAdminToolsLanguageManagerLanguage" value="Language" />
 
 	 <sentence name="PxWebAdminToolsResetAll" value="Reset all" />
-	 <sentence name="PxWebAdminToolsResetAllInfo" value="Reset all static lists in PxWeb" />
+	 <sentence name="PxWebAdminToolsResetAllInfo" value="Reset all static lists in PX-Web" />
 	 <sentence name="PxWebAdminToolsResetLanguage" value="Reset language" />
 	 <sentence name="PxWebAdminToolsResetLanguageInfo" value="Reset language list in the language system" />
 	 <sentence name="PxWebAdminToolsResetAggregation" value="Reset aggregations" />
 	 <sentence name="PxWebAdminToolsResetAggregationInfo" value="Releases aggregations list that is loaded into memory" />
 	 <sentence name="PxWebAdminToolsResetDatabases" value="Reset databases"/>
 	 <sentence name="PxWebAdminToolsResetDatabasesInfo" value="Reset the cached px databases structure"/>
-   <sentence name="PxWebAdminToolsResetClearCaches" value="Clear caches" />
-   <sentence name="PxWebAdminToolsResetClearCachesInfo" value="Clear all PxWeb caches" />
-   <sentence name="PxWebAdminToolsChangePasswordOld" value="Old password" />
+	<sentence name="PxWebAdminToolsResetClearCaches" value="Clear caches" />
+	<sentence name="PxWebAdminToolsResetClearCachesInfo" value="Clear all PxWeb caches" />
+	<sentence name="PxWebAdminToolsChangePasswordOld" value="Old password" />
 	 <sentence name="PxWebAdminToolsChangePasswordNew" value="New password" />
 	 <sentence name="PxWebAdminToolsChangePasswordVerify" value="Verify new password" />
 	 <sentence name="PxWebAdminToolsChangePasswordChange" value="Change!" />
@@ -1187,7 +1200,7 @@
 	 <sentence name="PxWebAdminToolsChangePasswordSuccess" value="Password has been changed" />
 
 	 <sentence name="PxWebAdminFeaturesGeneralFeature" value="Feature" />
-	 <sentence name="PxWebAdminFeaturesGeneralFeatureInfo" value="Selected features will be available in the administration tool and in PxWeb" />
+	 <sentence name="PxWebAdminFeaturesGeneralFeatureInfo" value="Selected features will be available in the administration tool and in PX-Web" />
 	 <sentence name="PxWebAdminFeaturesGeneralFeatureCharts" value="Charts" />
 	 <sentence name="PxWebAdminFeaturesGeneralFeatureApi" value="API" />
    <sentence name="PxWebAdminFeaturesGeneralFeatureSavedQuery" value="Saved Query" />
@@ -1272,9 +1285,9 @@
 	 <sentence name="PxWebAdminFeaturesApiGeneralMaxValuesReturned" value="Max values returned" />
 	 <sentence name="PxWebAdminFeaturesApiGeneralMaxValuesReturnedInfo" value="Maximum number of values returned from request" />
 	 <sentence name="PxWebAdminFeaturesApiGeneralLimiterRequests" value="Limiter requests" />
-	 <sentence name="PxWebAdminFeaturesApiGeneralLimiterRequestsInfo" value="Maximum number of requests from a specific IP-address (works togheter with Limiter timespan)" />
+	 <sentence name="PxWebAdminFeaturesApiGeneralLimiterRequestsInfo" value="Maximum number of requests (works togheter with Limiter timespan)" />
 	 <sentence name="PxWebAdminFeaturesApiGeneralLimiterTimespan" value="Limiter timespan" />
-	 <sentence name="PxWebAdminFeaturesApiGeneralLimiterTimespanInfo" value="Timespan for how many request can be made from a specific IP-address (see LimiterRequests)" />
+	 <sentence name="PxWebAdminFeaturesApiGeneralLimiterTimespanInfo" value="Timespan for how many request can be made (see LimiterRequests)" />
 	 <sentence name="PxWebAdminFeaturesApiGeneralEnableCORS" value="Enable CORS" />
 	 <sentence name="PxWebAdminFeaturesApiGeneralEnableCORSInfo" value="Is Cross-Origin-Resource-Sharing allowed?" />
 	 <sentence name="PxWebAdminFeaturesApiGeneralEnableCache" value="Enable cache" />
@@ -1305,14 +1318,14 @@
    <sentence name="PxWebAdminFeaturesSavedQueryGeneralEnableCORSInfo" value="Is Cross-Origin-Resource-Sharing allowed?" />
    <sentence name="PxWebAdminFeaturesSavedQueryGeneralShowPeriodAndId" value="Show period and id" />
    <sentence name="PxWebAdminFeaturesSavedQueryGeneralShowPeriodAndIdInfo" value="Should the user see the period and id for the loaded saved query?" />
-   <sentence name="PxWebAdminFeaturesSavedQueryGeneralEnableLimitRequest" value="Enable request limit" />
-   <sentence name="PxWebAdminFeaturesSavedQueryGeneralEnableLimitRequestInfo" value="Enable request limit for saved queries from a specific IP-address." />
-   <sentence name="PxWebAdminFeaturesSavedQueryGeneralLimiterRequests" value="Limiter requests" />
-   <sentence name="PxWebAdminFeaturesSavedQueryGeneralLimiterRequestsInfo" value="Maximum number of requests to saved queries that can be made from a specific IP-address (works togheter with Limiter timespan)" />
-   <sentence name="PxWebAdminFeaturesSavedQueryGeneralLimiterTimespan" value="Limiter timespan" />
-   <sentence name="PxWebAdminFeaturesSavedQueryGeneralLimiterTimespanInfo" value="Timespan for how many request to saved queries can be made from a specific IP-address (see LimiterRequests)" />  
+	<sentence name="PxWebAdminFeaturesSavedQueryGeneralEnableLimitRequest" value="Enable request limit" />
+	<sentence name="PxWebAdminFeaturesSavedQueryGeneralEnableLimitRequestInfo" value="Enable request limit for saved queries from a specific IP-address." />
+	<sentence name="PxWebAdminFeaturesSavedQueryGeneralLimiterRequests" value="Limiter requests" />
+	<sentence name="PxWebAdminFeaturesSavedQueryGeneralLimiterRequestsInfo" value="Maximum number of requests to saved queries that can be made from a specific IP-address (works togheter with Limiter timespan)" />
+	<sentence name="PxWebAdminFeaturesSavedQueryGeneralLimiterTimespan" value="Limiter timespan" />
+	<sentence name="PxWebAdminFeaturesSavedQueryGeneralLimiterTimespanInfo" value="Timespan for how many request to saved queries can be made from a specific IP-address (see LimiterRequests)" />
 
-   <sentence name="PxWebAdminFeaturesSaveQueryGeneralSaveQueryPxDatabases" value="PX databases" />
+	<sentence name="PxWebAdminFeaturesSaveQueryGeneralSaveQueryPxDatabases" value="PX databases" />
    <sentence name="PxWebAdminFeaturesSaveQueryGeneralSaveQueryPxDatabasesInfo" value="Defines which PX databases that will have the saved query function available" />
    <sentence name="PxWebAdminFeaturesSaveQueryGeneralSaveQueryCnmmDatabases" value="CNMM databases" />
    <sentence name="PxWebAdminFeaturesSaveQueryGeneralSaveQueryCnmmDatabasesInfo" value="Defines which CNMM databases that will have the saved query function available" />
@@ -1343,8 +1356,9 @@
 
 
   <sentence name="PxWebAdminSettingsGeneralSiteApplicationName" value="Application name"/>
-	 <sentence name="PxWebAdminSettingsGeneralSiteApplicationNameInfo" value="Name of the PxWeb installation"/>
+	 <sentence name="PxWebAdminSettingsGeneralSiteApplicationNameInfo" value="Name of the PX-Web installation"/>
 	 <sentence name="PxWebAdminSettingsGeneralSiteLogoPath" value="Logo path"/>
+
    <sentence name="PxWebAdminSettingsGeneralSiteLogoPathInfo" value="Name of the image file"/>
    <sentence name="PxWebAdminSettingsMainHeaderForTables" value="Main header for table pages"/>
    <sentence name="PxWebAdminSettingsMainHeaderForTablesTableName" value="Table name"/> 
@@ -1354,8 +1368,9 @@
    <sentence name="PxWebAdminSettingsShowExternalSearchLinkInfo" value="If link to external search page shall be displayed or not. This is typically the big search on your website. Edit the PxWebExternalSearchURL sentence in the language file to match the URL of your search page."/>
    <sentence name="PxWebAdminSettingsLanguageDefaultLanguage" value="Default language"/>
 	 <sentence name="PxWebAdminSettingsLanguageDefaultLanguageInfo" value="The default language for the PxWeb site"/>
+
 	 <sentence name="PxWebAdminSettingsLanguageSiteLanguages" value="Language"/>
-	 <sentence name="PxWebAdminSettingsLanguageSiteLanguagesInfo" value="Selected languages will be available on the PxWeb site."/>
+	 <sentence name="PxWebAdminSettingsLanguageSiteLanguagesInfo" value="Selected languages will be available on the PX-Web site."/>
 	 <sentence name="PxWebAdminSettingsLanguageDecimalSeparator" value="Decimal separator"/>
 	 <sentence name="PxWebAdminSettingsLanguageDecimalSeparatorInfo" value="Character to use as decimal separator"/>
 	 <sentence name="PxWebAdminSettingsLanguageDecimalSeparatorPoint" value="Point"/>
@@ -1375,7 +1390,7 @@
 	 <sentence name="PxWebAdminConfirmSaveSettings" value="Do you want to save the settings?"/>
 	 <sentence name="PxWebAdminConfirmGenerateDb" value="Do you want to generate a new database?"/>
 
-	 <sentence name="PxWebAdminSettingsImplementedInComingVersions" value="This feature will be implemented in a coming version of PxWeb"/>
+	 <sentence name="PxWebAdminSettingsImplementedInComingVersions" value="This feature will be implemented in a coming version of PX-Web"/>
 
   <sentence name="UnauthorizedTableMessage" value="You are not authorized to view this table!"/>
   <sentence name="UnauthorizedTableTitle" value="Unauthorized"/>
