@@ -135,8 +135,7 @@ public static class PCAxisRepository
                     string menu = nodePath.Length > 1 ? nodePath[nodePath.Length-2]:"START";
 
                     if (tid.Contains("'") || menu.Contains("'")) throw new ArgumentException("Possible SQL injection");
-                    var tmpCnmmMenu = GetCnmmMenu(db, language, tid, menu);
-                    menuObj = MenuObject.Create(tmpCnmmMenu);
+                    menuObj = MenuObject.Create(GetCnmmMenu(db, language, tid, menu));
                 }
 
                 // Request object to be stored in cache

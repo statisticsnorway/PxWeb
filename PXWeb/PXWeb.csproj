@@ -249,6 +249,8 @@
     <Content Include="Admin\Settings-Navigation.aspx" />
     <Content Include="Admin\Users-General.aspx" />
     <Content Include="ApiHelp.aspx" />
+    <Content Include="App_Data\BackupCms\BackupCmsFrameEn.html" />
+    <Content Include="App_Data\BackupCms\BackupCmsFrame.html" />
     <Content Include="DbScript\SQL\Create_SavedQueryMeta.sql" />
     <Content Include="Login.aspx" />
     <Content Include="DbScript\SQL\regsql_mrp.sql" />
@@ -256,6 +258,7 @@
     <Content Include="Monitor\Default.aspx" />
     <Content Include="Monitor\exclamation.png" />
     <Content Include="Monitor\IndexStatus.aspx" />
+    <Content Include="NoData.aspx" />
     <Content Include="Ping\Default.aspx" />
     <Content Include="Resources\Images\alert-16.gif" />
     <Content Include="Resources\Images\arrow-down-10.gif" />
@@ -323,10 +326,14 @@
     <Content Include="Resources\Images\svg\NavigationFlow\Step2_passive.svg" />
     <Content Include="Resources\Images\svg\NavigationFlow\Step3_active.svg" />
     <Content Include="Resources\Images\svg\NavigationFlow\Step3_future.svg" />
+    <Content Include="Resources\Images\svg\OhNoData_en.svg" />
+    <Content Include="Resources\Images\svg\OhNoData_no.svg" />
     <Content Include="Resources\Images\svg\select-all-hover.svg" />
     <Content Include="Resources\Images\svg\select-all.svg" />
+    <Content Include="Resources\Images\svg\SSB_logo_black.svg" />
     <Content Include="Resources\Images\svg\x-square-hover.svg" />
     <Content Include="Resources\Images\svg\x-square.svg" />
+    <Content Include="Resources\Languages\pxlang.en.xml" />
     <Content Include="Resources\Languages\pxlang.kl.xml" />
     <Content Include="Resources\PX\Databases\Example\alias\Alias.txt" />
     <Content Include="Resources\PX\Databases\Example\alias\Alias_en.txt" />
@@ -335,6 +342,7 @@
     <Content Include="Resources\PX\Databases\Example\Menu.xml" />
     <Content Include="Resources\Scripts\format.20110630-1100.min.js" />
     <Content Include="Resources\Scripts\jquery-3.5.1.min.js" />
+    <Content Include="Resources\Styles\bundlebackup.css" />
     <Content Include="Resources\Scripts\jquery-ui-1.13.1.min.js" />
     <Content Include="Resources\Styles\jQuery\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
     <Content Include="Resources\Styles\jQuery\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
@@ -380,6 +388,7 @@
     <None Include="Scripts\jquery-3.5.1.slim.js" />
     <None Include="Scripts\jquery-3.5.1.slim.min.js" />
     <Content Include="Search.aspx" />
+    <Content Include="TableList.aspx" />
     <Content Include="UserControls\AccordianAboutTableControl.ascx" />
     <Content Include="UserControls\Login.ascx" />
     <Content Include="UserControls\MenuExplanation.ascx" />
@@ -818,6 +827,13 @@
     </Compile>
     <Compile Include="Monitor\JsonTableQuery.cs" />
     <Compile Include="Monitor\JsonTableResult.cs" />
+    <Compile Include="NoData.aspx.cs">
+      <DependentUpon>NoData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoData.aspx.designer.cs">
+      <DependentUpon>NoData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Ping\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -870,6 +886,12 @@
     </Compile>
     <Compile Include="Table.aspx.designer.cs">
       <DependentUpon>Table.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TableList.aspx.cs">
+      <DependentUpon>TableList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TableList.aspx.designer.cs">
+      <DependentUpon>TableList.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AccordianAboutTableControl.ascx.cs">
       <DependentUpon>AccordianAboutTableControl.ascx</DependentUpon>
