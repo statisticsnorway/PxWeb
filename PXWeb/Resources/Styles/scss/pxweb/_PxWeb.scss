@@ -259,6 +259,10 @@ html {
     position: relative;
     z-index: 2;
     font-size: 1.4rem;
+
+    legend {
+        float: none;
+    }
 }
 
 #pxwebcontent .px_setting_validator {
