@@ -184,7 +184,12 @@ namespace PXWeb
             {
                 SetTitle();
             }
-            UpdateSettings();
+
+            if (Page.IsValid)
+            {
+                UpdateSettings();
+            }
+
             CreateChart();
         }
 
