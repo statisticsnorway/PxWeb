@@ -13,18 +13,44 @@ For a given PX-file entries in the "-- select classification --" list come from 
 - The shared "Aggregations" folder (default path:  ../Resources/PC/Aggregations/ ) This may have subfolders
 
 The use of classifiactions is triggered by the presence of a DOMAIN key word for the variable in the px-file:
+
 DOMAIN("variable)=domainID
-A valueSet belongs to one or more domains and has aggregations.
+
+The valueset-file has  these sections:
+[Descr]
+
+Name=Name_inValueSetFile_Region1999/2003
+
+Type=V
+
+[Aggreg]
+
+1=regional.agg
+
+[Domain]
+
+1=domain_region
+
+[Valuecode]
+
+1=0114
+
+2=0115
+
+[Valuetext]
+
+1=Upplands Väsby
+
+2=Vallentuna
 
 
-
-
-If no valueSet for the domain are found in the local folder then any found when searching the sharded folder is used.
-
-Px-files has only one valueset for each variable, so when a folder is searched for .vs files with a matching domain only the first encountered file with match is loaded. Any others will only get log line like: 
+So a valueSet belongs to one or more domains and has aggregations. If no valueSet for the domain are found in the local folder then any found when searching the sharded folder is used. Px-files has only one valueset for each variable. If more that one .vs-file with a matching domain is found in a folder, only the first is used. The others will only get log line like: 
 INFO  PCAxis.Paxiom.GroupRegistry - domain_region already loaded for
 
 (The name of the .vs file is not used, only the .vs -ending matters.)
+
+Q1: What are the roles of ValueCode and Valuetext in the .vs file (compared to the ones in the px-file)?
+Q2: What is the intented use of multiple domains, is this ?  
    
 (?)The valueset itself can not be selected by the user,(?) only the aggregations in the vs-file.  
   
