@@ -10,35 +10,26 @@ Files for classifications: .vs and .agg files  (valueset  and aggregation lists 
 
 For a given PX-file entries in the "-- select classification --" list come from 2 places.
 - The "local" folder where the PX-file is. 
-- The shared "Aggregations" folder (default path:  ../Resources/PC/Aggregations/ 
+- The shared "Aggregations" folder (default path:  ../Resources/PC/Aggregations/ ) This may have subfolders
 
 The use of classifiactions is triggered by the presence of a DOMAIN key word for the variable in the px-file:
 DOMAIN("variable)=domainID
+A valueSet belongs to one or more domains and has aggregations.
 
-If no aggregations for the domain are found in the local folder then any sharded aggregations for the domain is used.
- 
-At application startup infomation from the shared folder is read and stored by domain.
-Note the the name of the .vs file is not used, only the .vs -ending matters.
 
-All .vs-files 
 
-  
-  If domain is present, the directory of the px-file (what about the common?) is searach for .vs files with a matching domain (seems the vs-file may have multiple domains.)
-  Only the first encountered file with match is loaded. Any others will only get log line like: 
+
+If no valueSet for the domain are found in the local folder then any found when searching the sharded folder is used.
+
+Px-files has only one valueset for each variable, so when a folder is searched for .vs files with a matching domain only the first encountered file with match is loaded. Any others will only get log line like: 
 INFO  PCAxis.Paxiom.GroupRegistry - domain_region already loaded for
+
+(The name of the .vs file is not used, only the .vs -ending matters.)
    
-  (?)The valueset itself can not be selected by the user,(?) only the aggregations in the vs-file.  
+(?)The valueset itself can not be selected by the user,(?) only the aggregations in the vs-file.  
   
-  The key word DOMAIN combines the vs-file and agg-file with the pxfile.
-  Aggregation path = Path to the folder where the aggregation files (.vs and .agg) are stored
-  
-   'Groupings from the local directory overrides groupings from the default directory
-                        '==> Only add groupings from the default directory if no groupings are previously
-                        '    added to the variable
-  
-  If you are using aggregation files they are stored in the aggregation
-  path folder of your website. It is possible to create subdirectories of this
-folder and arrange aggregation files in these subdirectories.
+
+ 
 
 Pages 7 -10 in https://www.scb.se/globalassets/vara-tjanster/px-programmen/tutorial-pxwin_1.2_v1.pdf
   
