@@ -58,7 +58,7 @@ So a valueSet belongs to one or more domains and has aggregations. If no valueSe
 
 The name of the .vs file is not used, only the .vs -ending matters.
 
-The valueset itself can not be selected by the user,(current bug) only the aggregations in the vs-file.  
+The valueset itself can not be selected by the user(current bug), only the aggregations in the vs-file.  
   
 
  
