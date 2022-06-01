@@ -60,7 +60,13 @@ The name of the .vs file is not used, only the .vs -ending matters.
 
 The valueset itself can not be selected by the user(current bug), only the aggregations in the vs-file.  
   
-
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
  
 
 Pages 7 -10 in https://www.scb.se/globalassets/vara-tjanster/px-programmen/tutorial-pxwin_1.2_v1.pdf
