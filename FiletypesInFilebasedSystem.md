@@ -18,35 +18,27 @@ For a given PX-file entries in the "-- select classification --" list come from 
 
 The use of classifiactions is triggered by the presence of a DOMAIN key word for the variable in the px-file:
 
+
+
 DOMAIN("variable)=domainID
 
 The valueset-file has  these sections:
 
+```
 [Descr]
-
 Name=Name_inValueSetFile_Region1999/2003
-
 Type=V
-
 [Aggreg]
-
 1=regional.agg
-
 [Domain]
-
 1=domain_region
-
 [Valuecode]
-
 1=0114
-
 2=0115
-
 [Valuetext]
-
 1=Upplands Väsby
-
 2=Vallentuna
+```
 
 
 The Desc/name is used in the .agg-files. The items in Aggreg are filenames of .agg-files. The Domain items provides connections to the px-files. Whats does Valuecode/Valuetext do?
@@ -61,39 +53,24 @@ The name of the .vs file is not used, only the .vs -ending matters.
 The valueset itself can not be selected by the user([current bug](https://github.com/statisticssweden/PxWeb/issues/209)), only the aggregations in the vs-file.  
 
 The agg file looks like this:
-
+```
 [Aggreg]
-
 Name=5-year intervals 
-
 Valueset=ÅlderM
-
 1=-14
-
 2=15-19
-
 [Aggtext]
-
 1=-14
-
 2=15-19
-
 [-14]
-
 1=-14
-
 [15-19]
-
 1=15
-
 2=16
-
 3=17
-
 4=18
-
 5=19
-
+```
 The aggreg section consists of Name which is displayed in the --Select classification -- dropdown, the valueset must match the valueset that links to it and a list of mothercodes. The Aggtext section holds the texts for the mothercodes.  Then each mother has a section listing its children.
  
 
