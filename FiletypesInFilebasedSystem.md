@@ -55,8 +55,8 @@ The valueset itself can not be selected by the user([current bug](https://github
 The agg file looks like this:
 ```
 [Aggreg]
-Name=5-year intervals 
-Valueset=ÅlderM
+Name=Regional
+Valueset=Name_inValueSetFile_Region1999/2003
 1=-14
 2=15-19
 [Aggtext]
