@@ -4,7 +4,7 @@
 - The px-file itself. 
   https://www.scb.se/en/services/statistical-programs-for-px-files/px-file-format/
   
-  PX-edit & freinds has a .pxk file, which is a px-fila but without data
+  PX-edit & friends has a .pxk file, which is a px-fila but without data
   
 
 # Classifications
