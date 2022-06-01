@@ -4,7 +4,7 @@
 - The px-file itself. 
   https://www.scb.se/en/services/statistical-programs-for-px-files/px-file-format/
   
-  PX-edit & job has a .pxk file, which is a px-fila but without data and a .pxc for classifications.
+  PX-edit & job has a .pxk file, which is a px-file but without data and a .pxc for classifications.
   https://www.stat.fi/tup/tilastotietokannat/ohjeet_en.html
   
 
