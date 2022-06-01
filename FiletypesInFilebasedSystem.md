@@ -97,7 +97,7 @@ Valueset=ÅlderM
 The aggreg section consists of Name which is displayed in the --Select classification -- dropdown, the valueset must match the valueset that links to it and a list of mothercodes. The Aggtext section holds the texts for the mothercodes.  Then each mother has a section listing its children.
  
 
-Pages 7 -10 in https://www.scb.se/globalassets/vara-tjanster/px-programmen/tutorial-pxwin_1.2_v1.pdf
+PxWin has a editor for creation of classifications https://www.scb.se/globalassets/vara-tjanster/px-programmen/tutorial-pxwin_1.2_v1.pdf
   
   
 # Menu related files. 
