@@ -58,15 +58,43 @@ So a valueSet belongs to one or more domains and has aggregations. If no valueSe
 
 The name of the .vs file is not used, only the .vs -ending matters.
 
-The valueset itself can not be selected by the user(current bug), only the aggregations in the vs-file.  
-  
-```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-```
+The valueset itself can not be selected by the user([current bug](https://github.com/statisticssweden/PxWeb/issues/209)), only the aggregations in the vs-file.  
+
+The agg file looks like this:
+
+[Aggreg]
+
+Name=5-year intervals 
+
+Valueset=ÅlderM
+
+1=-14
+
+2=15-19
+
+[Aggtext]
+
+1=-14
+
+2=15-19
+
+[-14]
+
+1=-14
+
+[15-19]
+
+1=15
+
+2=16
+
+3=17
+
+4=18
+
+5=19
+
+The aggreg section consists of Name which is displayed in the --Select classification -- dropdown, the valueset must match the valueset that links to it and a list of mothercodes. The Aggtext section holds the texts for the mothercodes.  Then each mother has a section listing its children.
  
 
 Pages 7 -10 in https://www.scb.se/globalassets/vara-tjanster/px-programmen/tutorial-pxwin_1.2_v1.pdf
