@@ -56,12 +56,9 @@ So a valueSet belongs to one or more domains and has aggregations. If no valueSe
 
 ... INFO  PCAxis.Paxiom.GroupRegistry - domain_region already loaded for ...
 
-(The name of the .vs file is not used, only the .vs -ending matters.)
+The name of the .vs file is not used, only the .vs -ending matters.
 
-Q1: What are the roles of ValueCode and Valuetext in the .vs file (compared to the ones in the px-file)?
-Q2: What is the intented use of multiple domains, is this ?  
-   
-(?)The valueset itself can not be selected by the user,(?) only the aggregations in the vs-file.  
+The valueset itself can not be selected by the user,(current bug) only the aggregations in the vs-file.  
   
 
  
