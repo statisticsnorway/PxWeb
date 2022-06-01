@@ -120,7 +120,7 @@ the text in the Menu.sort file located within the folder.
 
 - anyString<_lang>.Link
   These files has one line: "<display text>","<url>"
-  PX\Databases\Example\alias uses this. 
+  PX\Databases\Example\alias uses this. (It is currently aliased to Population, there are 2 Population, this is the 2. :-))
   If the language is missing from the filename the language will be set to default
 language of the PXWeb installation.
    
