@@ -118,7 +118,9 @@ database by using Menu.sort files. A folder will be sorted according to
 the text in the Menu.sort file located within the folder.
 
 
-LinkFileHandler
+- anyString<_lang>.Link
+  These files has one line: "<display text>","<url>"
+  PX\Databases\Example\alias uses this. 
 This handler handles .link files that is found by the spider. It parses the content of the link file to
 extract the link and the link “description” and creates a LinkItem object setting the link url, text
 and language. If the language is missing from the filename the language will be set to default
