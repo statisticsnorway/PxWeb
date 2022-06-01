@@ -53,7 +53,8 @@ The Desc/name is used in the .agg-files. The items in Aggreg are filenames of .a
 
 
 So a valueSet belongs to one or more domains and has aggregations. If no valueSet for the domain are found in the local folder then any found when searching the sharded folder is used. Px-files has only one valueset for each variable. If more that one .vs-file with a matching domain is found in a folder, only the first is used. The others will only get log line like: 
-INFO  PCAxis.Paxiom.GroupRegistry - domain_region already loaded for
+
+... INFO  PCAxis.Paxiom.GroupRegistry - domain_region already loaded for ...
 
 (The name of the .vs file is not used, only the .vs -ending matters.)
 
