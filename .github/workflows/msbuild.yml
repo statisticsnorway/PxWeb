@@ -26,3 +26,13 @@ jobs:
       run: msbuild /p:Configuration=$env:Configuration  PCAxis.PX-Web.sln
       env:
         Configuration: ${{ matrix.configuration }}
+        
+    - name: Create a file
+      run: echo "I won't live long" > my_file.txt
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-own-artifact
+        path: my_file.txt
+        retention-days: 5
