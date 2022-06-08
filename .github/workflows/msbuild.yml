@@ -12,7 +12,7 @@ jobs:
         configuration: [Debug, Release]
 
     steps:
-
+    -  run: echo "Hello log!" 
     - uses: actions/checkout@v2
 
     - uses: microsoft/setup-msbuild@v1
