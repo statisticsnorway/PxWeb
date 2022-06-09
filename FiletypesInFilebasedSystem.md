@@ -20,7 +20,7 @@ The use of classifiactions is triggered by the presence of a DOMAIN key word for
 
 
 
-DOMAIN("variable)=domainID
+DOMAIN("variable)=domainID  (looks like domainID has to be at least 6 characters)
 
 The valueset-file has  these sections:
 
