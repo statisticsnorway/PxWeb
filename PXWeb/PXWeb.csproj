@@ -335,6 +335,7 @@
     <Content Include="Resources\Images\svg\x-square.svg" />
     <Content Include="Resources\Languages\pxlang.en.xml" />
     <Content Include="Resources\Languages\pxlang.kl.xml" />
+    <Content Include="Resources\PX\Aggregations\dummy.txt" />
     <Content Include="Resources\PX\Databases\Example\alias\Alias.txt" />
     <Content Include="Resources\PX\Databases\Example\alias\Alias_en.txt" />
     <Content Include="Resources\PX\Databases\Example\alias\Alias_fi.txt" />
@@ -1538,7 +1539,6 @@
     <Folder Include="App_Data\Queries\" />
     <Folder Include="Attributes\" />
     <Folder Include="Logs\" />
-    <Folder Include="Resources\PX\Aggregations\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
