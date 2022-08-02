@@ -382,14 +382,6 @@ namespace PXWeb
                                            "{" + PxUrl.TABLE_KEY + "}/" +
                                            PxUrl.VIEW_INFORMATION_IDENTIFIER + "/",
                                            "~/InformationSelection.aspx");
-            RouteTable.Routes.MapPageRoute("SelectionTipsRoute",
-                                           PxUrl.PX_START + "/" +
-                                           "{" + PxUrl.LANGUAGE_KEY + "}/" +
-                                           "{" + PxUrl.DB_KEY + "}/" +
-                                           "{" + PxUrl.PATH_KEY + "}/" +
-                                           "{" + PxUrl.TABLE_KEY + "}/" +
-                                           PxUrl.VIEW_TIPS_IDENTIFIER + "/",
-                                           "~/MarkingTips.aspx");
             RouteTable.Routes.MapPageRoute("TablePresentationRoute",
                                            PxUrl.PX_START + "/" +
                                            "{" + PxUrl.LANGUAGE_KEY + "}/" +
