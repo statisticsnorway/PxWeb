@@ -228,7 +228,7 @@
   <sentence name="CtrlSumVariableNameRequired" value="Navn er påkrevd" />
   <sentence name="CtrlSumDifferentOperandsRequired" value="Operasjonen krever to ulike operatorer." />
   <sentence name="CtrlSumOptions" value="Hva skal summeres?" />
-  <sentence name="CtrlSumContinueButton" value="Forsett" />
+  <sentence name="CtrlSumContinueButton" value="Fortsett" />
   <sentence name="CtrlSumComplete" value="Fullfør" />
   <sentence name="CtrlSumKeepValuesText" value="Vis også opprinnelig verdier " />
   <sentence name="CtrlFirstOperandLabel" value="Første verdi" />
