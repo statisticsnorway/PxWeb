@@ -311,10 +311,11 @@ namespace PXWeb.Admin
         protected void DefaultViewModeInfo(object sender, ImageClickEventArgs e)
         {
             Master.ShowInfoDialog("PxWebAdminSettingsSelectionDefaultViewMode", "PxWebAdminSettingsSelectionDefaultViewModeInfo");
-
+        }
         protected void AlwaysShowCodeAndTextInAdvancedSearchResultInfo(object sender, ImageClickEventArgs e)
         {
             Master.ShowInfoDialog("PxWebAdminSettingsSelectionAlwaysShowCodeAndTextInAdvancedSearchResult", "PxWebAdminSettingsSelectionAlwaysShowCodeAndTextInAdvancedSearchResultInfo");
         }
     }
 }
+
