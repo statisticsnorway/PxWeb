@@ -56,6 +56,7 @@ namespace PXWeb.Admin
             cboShowNoFootnoteForSelection.SelectedValue = PXWeb.Settings.Current.Selection.ShowNoFootnoteForSelection.ToString();
             cboSortVariableOrder.SelectedValue = PXWeb.Settings.Current.Selection.SortVariableOrder.ToString();
             cboDefaultViewMode.SelectedValue = PXWeb.Settings.Current.Selection.DefaultViewMode.ToString();
+            cboAlwaysShowCodeAndTextInAdvancedSearchResult.SelectedValue = PXWeb.Settings.Current.Selection.AlwaysShowCodeAndTextInAdvancedSearchResult.ToString();
 
             if (PXWeb.Settings.Current.Selection.SearchButtonMode != PCAxis.Web.Controls.VariableSelectorSearchButtonViewMode.ManyValues)
             {
@@ -109,7 +110,11 @@ namespace PXWeb.Admin
                         sel.PreSelectFirstContentAndTime = bool.Parse(cboPreSelectFirstContentAndTime.SelectedValue);
                         sel.ShowNoFootnoteForSelection = bool.Parse(cboShowNoFootnoteForSelection.SelectedValue);
                         sel.SortVariableOrder = bool.Parse(cboSortVariableOrder.SelectedValue);
+<<<<<<< HEAD
                         sel.DefaultViewMode = (LayoutFormat)Enum.Parse(typeof(LayoutFormat), cboDefaultViewMode.SelectedValue.ToString());
+=======
+                        sel.AlwaysShowCodeAndTextInAdvancedSearchResult = bool.Parse(cboAlwaysShowCodeAndTextInAdvancedSearchResult.SelectedValue);
+>>>>>>> 0a4e8e9d435463f50be6c31a64695ac9c471a49c
 
                         PXWeb.Settings.Save();
                     }
@@ -306,9 +311,15 @@ namespace PXWeb.Admin
             Master.ShowInfoDialog("PxWebAdminSettingsSelectionSortVariableOrder", "PxWebAdminSettingsSelectionSortVariableOrderInfo");
         }
 
+<<<<<<< HEAD
         protected void DefaultViewModeInfo(object sender, ImageClickEventArgs e)
         {
             Master.ShowInfoDialog("PxWebAdminSettingsSelectionDefaultViewMode", "PxWebAdminSettingsSelectionDefaultViewModeInfo");
+=======
+        protected void AlwaysShowCodeAndTextInAdvancedSearchResultInfo(object sender, ImageClickEventArgs e)
+        {
+            Master.ShowInfoDialog("PxWebAdminSettingsSelectionAlwaysShowCodeAndTextInAdvancedSearchResult", "PxWebAdminSettingsSelectionAlwaysShowCodeAndTextInAdvancedSearchResultInfo");
+>>>>>>> 0a4e8e9d435463f50be6c31a64695ac9c471a49c
         }
     }
 }

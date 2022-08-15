@@ -51,7 +51,7 @@
         </asp:DropDownList>
         <asp:ImageButton ID="imgShowMarkingTips" runat="server" onclick="ShowMarkingTipsInfo" Height="15px" Width="15px" ImageUrl="<%$ PxImage: questionmark.gif %>" />
     </div>
-<%--
+<%-- 
     <div class="setting-field" id="divMarkingTipsURL" runat="server">
         <asp:Label ID="lblMarkingTipsURL" runat="server" Text="<%$ PxString: PxWebAdminSettingsSelectionMarkingTipsURL %>"></asp:Label>
         <asp:TextBox ID="txtMarkingTipsURL" runat="server" ></asp:TextBox>
@@ -196,5 +196,13 @@
             <asp:ListItem Value="simple" Text="<%$ PxString: PxWebAdminSettingsSelectionDefaultViewSimple %>"></asp:ListItem>
         </asp:DropDownList>
         <asp:ImageButton ID="imgDefaultViewMode" runat="server" onclick="DefaultViewModeInfo" Height="15px" Width="15px" ImageUrl="<%$ PxImage: questionmark.gif %>" />
+    </div>
+    <div class="setting-field">
+        <asp:Label ID="lblAlwaysShowCodeAndTextInAdvancedSearchResult" runat="server" Text="<%$ PxString: PxWebAdminSettingsSelectionAlwaysShowCodeAndTextInAdvancedSearchResult %>"></asp:Label>
+        <asp:DropDownList ID="cboAlwaysShowCodeAndTextInAdvancedSearchResult" runat="server">
+            <asp:ListItem Value="True" Text="<%$ PxString: PxWebAdminYes %>"></asp:ListItem>
+            <asp:ListItem Value="False" Text="<%$ PxString: PxWebAdminNo %>"></asp:ListItem>
+        </asp:DropDownList>
+        <asp:ImageButton ID="imgAlwaysShowCodeAndTextInAdvancedSearchResult" runat="server" onclick="AlwaysShowCodeAndTextInAdvancedSearchResultInfo" Height="15px" Width="15px" ImageUrl="<%$ PxImage: questionmark.gif %>" />
     </div>
 </asp:Content>

@@ -134,6 +134,10 @@ namespace PXWeb
 
             xpath = "./defaultViewMode";
             DefaultViewMode = SettingsHelper.GetSettingValue(xpath, selectionNode, LayoutFormat.compact);
+
+            xpath = "./alwaysShowCodeAndTextInAdvancedSearchResult";
+            AlwaysShowCodeAndTextInAdvancedSearchResult = SettingsHelper.GetSettingValue(xpath, selectionNode, false);
+
         }
 
         /// <summary>
@@ -213,8 +217,13 @@ namespace PXWeb
             xpath = "./sortVariableOrder";
             SettingsHelper.SetSettingValue(xpath, selectionNode, SortVariableOrder.ToString());
 
+
             xpath = "./defaultViewMode";
             SettingsHelper.SetSettingValue(xpath, selectionNode, DefaultViewMode.ToString());
+
+            xpath = "./alwaysShowCodeAndTextInAdvancedSearchResult";
+            SettingsHelper.SetSettingValue(xpath, selectionNode, AlwaysShowCodeAndTextInAdvancedSearchResult.ToString());
+
         }
 
         #endregion
@@ -256,6 +265,7 @@ namespace PXWeb
         public bool ShowNoFootnoteForSelection { get; set; }
         public bool ClientSideValidation { get; set; }
         public bool SortVariableOrder { get; set; }
+        public bool AlwaysShowCodeAndTextInAdvancedSearchResult { get; set; }
 
         public LayoutFormat DefaultViewMode { get; set; }
 

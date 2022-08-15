@@ -117,6 +117,15 @@ namespace PXWeb
         /// </summary>
         bool SortVariableOrder { get; }
 
+        /// <summary>
+        /// Is CompactView or ListView default
+        /// </summary>
         LayoutFormat DefaultViewMode { get; }
+
+        /// <summary>
+        /// Controls display of code and text in advanced search reasult.
+        /// </summary>
+        bool AlwaysShowCodeAndTextInAdvancedSearchResult { get; }
+
     }
 }
