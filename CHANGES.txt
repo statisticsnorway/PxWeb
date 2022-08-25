@@ -1,3 +1,10 @@
+- Upgraded the Newtonsoft JSON library dependenvis to 13.0.1 due to a vulnerability issue
+- Fixed marking tips translation in Swedish
+- Fixed shortcut texts for file formats in commandbar
+- Added transparancy option for charts
+- Removed the dynamic content that as faulty generated when downloading files
+- New admin setting to control display of code and text in the advanced serach result for variable values
+- Made the compact view the default view on the selection page.
 - Added lang-attribute to change-language-link (for screen-reader)
 - New version of Excel (1.0.2) which has better performance
 - Added a admin API endpoint for build/rebuild the Menu.xml file for PX file based databases

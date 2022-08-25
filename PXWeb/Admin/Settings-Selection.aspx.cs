@@ -56,6 +56,7 @@ namespace PXWeb.Admin
             cboShowNoFootnoteForSelection.SelectedValue = PXWeb.Settings.Current.Selection.ShowNoFootnoteForSelection.ToString();
             cboSortVariableOrder.SelectedValue = PXWeb.Settings.Current.Selection.SortVariableOrder.ToString();
             cboDefaultViewMode.SelectedValue = PXWeb.Settings.Current.Selection.DefaultViewMode.ToString();
+            cboAlwaysShowCodeAndTextInAdvancedSearchResult.SelectedValue = PXWeb.Settings.Current.Selection.AlwaysShowCodeAndTextInAdvancedSearchResult.ToString();
 
             if (PXWeb.Settings.Current.Selection.SearchButtonMode != PCAxis.Web.Controls.VariableSelectorSearchButtonViewMode.ManyValues)
             {
@@ -110,6 +111,7 @@ namespace PXWeb.Admin
                         sel.ShowNoFootnoteForSelection = bool.Parse(cboShowNoFootnoteForSelection.SelectedValue);
                         sel.SortVariableOrder = bool.Parse(cboSortVariableOrder.SelectedValue);
                         sel.DefaultViewMode = (LayoutFormat)Enum.Parse(typeof(LayoutFormat), cboDefaultViewMode.SelectedValue.ToString());
+                        sel.AlwaysShowCodeAndTextInAdvancedSearchResult = bool.Parse(cboAlwaysShowCodeAndTextInAdvancedSearchResult.SelectedValue);
 
                         PXWeb.Settings.Save();
                     }
@@ -310,5 +312,10 @@ namespace PXWeb.Admin
         {
             Master.ShowInfoDialog("PxWebAdminSettingsSelectionDefaultViewMode", "PxWebAdminSettingsSelectionDefaultViewModeInfo");
         }
+        protected void AlwaysShowCodeAndTextInAdvancedSearchResultInfo(object sender, ImageClickEventArgs e)
+        {
+            Master.ShowInfoDialog("PxWebAdminSettingsSelectionAlwaysShowCodeAndTextInAdvancedSearchResult", "PxWebAdminSettingsSelectionAlwaysShowCodeAndTextInAdvancedSearchResultInfo");
+        }
     }
 }
+

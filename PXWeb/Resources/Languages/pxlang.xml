@@ -1081,9 +1081,10 @@
   <sentence name="PxWebAdminSettingsSelectionShowNoFootnoteForSelectionInfo" value="Determines whether text for missing footnotes should be displayed" />
   <sentence name="PxWebAdminSettingsSelectionSortVariableOrder" value="Sort variable order" />
   <sentence name="PxWebAdminSettingsSelectionSortVariableOrderInfo" value="If set to true, the variable order will be sorted so content, time and mandatory variables are displayed first" />
-
+  <sentence name="PxWebAdminSettingsSelectionAlwaysShowCodeAndTextInAdvancedSearchResult" value="Always show code and text in search result" />
+  <sentence name="PxWebAdminSettingsSelectionAlwaysShowCodeAndTextInAdvancedSearchResultInfo" value="If set to 'True', code and text will always be displayed in the advanced search result for variable values. If set to 'False', display of code and text will be determined by metadata." />
   <sentence name="PxWebAdminSettingsNavigationNavigationFlowVisible" value="Show Navigation flow" />
-   <sentence name="PxWebAdminSettingsNavigationNavigationFlowVisibleInfo" value="Show Navigation flow below bread crumb. Displays the Select table, select the variable, show table " />
+  <sentence name="PxWebAdminSettingsNavigationNavigationFlowVisibleInfo" value="Show Navigation flow below bread crumb. Displays the Select table, select the variable, show table " />
 
 	 <sentence name="PxWebAdminSettingsSelectionSearchButtonMode" value="Search button mode"/>
 	 <sentence name="PxWebAdminSettingsSelectionSearchButtonModeManyValues" value="Many values"/>
@@ -1270,7 +1271,13 @@
   <sentence name="PxWebAdminFeaturesChartsGeneralLineThicknessPhrameInfo" value="Select line thickness of the frame around the chart. If not specified, so there will be no frame."/>
   <sentence name="PxWebAdminFeaturesChartsGeneralBackgroundColorGraphs" value="Background color chart"/>
   <sentence name="PxWebAdminFeaturesChartsGeneralBackgroundColorGraphsInfo" value="Choose a background color to the chart."/>
-  <sentence name="PxWebChartsSourceLabel" value="Source:" />
+	<sentence name="PxWebAdminFeaturesChartsGeneralBackgroundColor" value="Background color"/>
+	<sentence name="PxWebAdminFeaturesChartsGeneralBackgroundColorInfo" value="Choose a background color behind the chart."/>
+	<sentence name="PxWebAdminFeaturesChartsGeneralBackgroundAlpha" value="Background alpha"/>
+	<sentence name="PxWebAdminFeaturesChartsGeneralBackgroundAlphaInfo" value="Choose alpha / transparency of the background. Must be a value between 0 and 255 where 0 is completely transparent and 255 opaque."/>
+	<sentence name="PxWebAdminFeaturesChartsGeneralChartAlpha" value="Chart background alpha"/>
+	<sentence name="PxWebAdminFeaturesChartsGeneralChartAlphaInfo" value="Choose alpha / transparency of the chart background. Must be a value between 0 and 255 where 0 is completely transparent and 255 opaque."/>
+	<sentence name="PxWebChartsSourceLabel" value="Source:" />
 	 <sentence name="PxWebChartsSource" value="Statistics Sweden" />
 
 	 <sentence name="PxWebAdminFeaturesApiGeneralApiSettings" value="API settings" />
