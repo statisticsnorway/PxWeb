@@ -156,6 +156,8 @@ namespace PXWeb
         {
             if (PCAxis.Web.Core.Management.LocalizationManager.CurrentCulture != ChartManager.Settings.CurrentCulture)
             {
+                ChartManager.Settings.CurrentCulture = LocalizationManager.CurrentCulture;
+
                 UpdateChartTitle();
             }
         }
@@ -183,11 +185,6 @@ namespace PXWeb
             else if (PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel != null)
             {
                 SetTitle();
-            }
-
-            if (Page.IsValid)
-            {
-                UpdateSettings();
             }
 
             CreateChart();
