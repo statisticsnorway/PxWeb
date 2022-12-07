@@ -143,7 +143,7 @@ html {
 
 #pxwebcontent .pxbox.negative {
   background-color: #274247;
-  border: solid 1px #000;
+  /*border: solid 1px #000; */
   color: #fff;
 }
 
@@ -3788,12 +3788,12 @@ span.AspNet-TreeView-ClickableNonLink {
 }
 
 #pxwebcontent .variableselector_valuesselect_box_compact {
-  margin-right: 20px;
+  /*margin-right: 20px;*/
 }
 
 @media screen and (min-width: 400px) {
   #pxwebcontent .variableselector_valuesselect_box_compact {
-    margin-right: 20px;
+   /* margin-right: 20px;*/
     width: 350px;
     min-width: 350px;
   }
@@ -4030,6 +4030,20 @@ span.AspNet-TreeView-ClickableNonLink {
 #pxwebcontent .optional-variable-icon-panel .icon {
   width: 1.8rem;
   height: 1.8rem;
+}
+.variableselector_variable_box_container {
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.variableselector_variable_box_container > div {
+    background-color: #274247;
+    border: solid 1px #000;
+    color: #222;
+}
+
+#pxwebcontent .variableselector_variable_box_container > div > div.m-margin-top {
+    margin-top: 0;
 }
 
 /* **********************************  _fullscreen.scss *********************************** */
