@@ -1,4 +1,4 @@
-﻿@include file-header("_PxWebButtons.scss");
+﻿@include file-header("_PxWebButtons.scss"); 
 
 @mixin button-icons-pxweb ($icon, $rename: "") {
     $name: #{$icon}-icon;
@@ -44,6 +44,22 @@
 
         &:hover, &:focus {
             background-image: get-icon( #{$icon}, $pxweb-primary-btn-icon-hover);
+        }
+    }
+}
+
+@mixin button-two-colored-icons-pxweb ($icon, $rename: "") {
+    $name: #{$icon}-icon;
+
+    @if $rename != "" {
+        $name: $rename;
+    }
+
+    &.#{$name} {
+        background-image: get-icon( #{$icon}, $btn-icon, $btn-icon-second-color);
+
+        &:hover, &:focus {
+            background-image: get-icon( #{$icon}, $btn-icon-hover, $btn-icon-second-color-hover);
         }
     }
 }
