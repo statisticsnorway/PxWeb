@@ -12,13 +12,13 @@ jobs:
     runs-on: windows-2019
   
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup MSBuild path
-        uses: microsoft/setup-msbuild@v1.0.2
+        uses: microsoft/setup-msbuild@v1.1.3
 
       - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.0.5
+        uses: NuGet/setup-nuget@v1.1.1
 
       - name: Restore NuGet packages
         run: nuget restore PCAxis.PX-Web.sln
@@ -36,7 +36,7 @@ jobs:
         run: sed -i 's/PxWeb 2021 v1/PxWeb 2021 from any selected branch/g' to_deploy/Resources/Languages/pxlang.xml
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ASP-app
           path: '${{ github.workspace }}\to_deploy\**'
@@ -51,7 +51,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: ASP-app
 
