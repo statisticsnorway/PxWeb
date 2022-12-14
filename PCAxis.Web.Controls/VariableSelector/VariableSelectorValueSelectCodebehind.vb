@@ -244,10 +244,11 @@ Public Class VariableSelectorValueSelectCodebehind
             If Marker.Variable.HasGroupings() Or Marker.Variable.HasValuesets() Then
                 'If Marker.Variable.CurrentGrouping Is Nothing And Marker.Variable.CurrentValueSet Is Nothing Then
                 'If RedrawGroupingValues() Then
-                li = New ListItem(Me.GetLocalizedString("CtrlVariableSelectorSelectValues"), "_RESTORE_")
+                'li = New ListItem(Me.GetLocalizedString("CtrlVariableSelectorSelectValues"), "_RESTORE_")
+                li = New ListItem(Me.GetLocalizedString("CtrlVariableSelectorSelectValues"), "") 'piv
                 If Not GroupingDropDown.Items.Contains(li) Then
                     GroupingDropDown.Items.Add(li)
-                    GroupingDropDown.Attributes.Add("data-value", GroupingDropDown.SelectedValue.ToString())
+                    'GroupingDropDown.Attributes.Add("data-value", GroupingDropDown.SelectedValue.ToString()) 'piv
                 End If
 
                 'Add valuesets
@@ -1042,7 +1043,7 @@ Public Class VariableSelectorValueSelectCodebehind
     Friend Function ApplyGrouping(ByVal code As String, Optional ByVal clearSelection As Boolean = True, Optional ByVal include As Nullable(Of GroupingIncludesType) = Nothing) As Boolean
         Dim ok As Boolean = False
 
-        If (code.Equals("_RESTORE_") And Not (Marker.ValuesetMustBeSelectedFirst)) Then
+        If (code.Equals("") And Not (Marker.ValuesetMustBeSelectedFirst)) Then 'piv
             'Code "_RESTORE_" means that the option --Select classification-- has been selected in the dropdown.
             'This shall result in the values in the dropdown being restored to the initial ones.
             'Restore of values is performed by applying the valueset _ALL_.
