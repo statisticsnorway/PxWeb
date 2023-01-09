@@ -560,7 +560,8 @@ namespace PXWeb
             templateHead = templateHead.Replace("<meta property=\"og:title\" content=\"\" />", "<meta property=\"og:title\" content=\""  + HeadTitle +  " \" />");
             templateHead = templateHead.Replace("<meta property=\"og:description\" />", "<meta property=\"og:description\" \"content=\"" + HeadTitle  + "\"/>");
             string urlPage = System.Web.HttpContext.Current.Request.Url.ToString().ToLower().Replace("http", "https");
-            templateHead = templateHead.Replace("<meta property=\"og:url\" content=\"http://www.utv.ssb.no/system/\" />", "<meta property=\"og:url\" content=\"" + urlPage + "\" />");
+            string urlFrame = CmsHost + "system/"; 
+            templateHead = templateHead.Replace("<meta property=\"og:url\" content=\"" + urlFrame + "\" />", "<meta property=\"og:url\" content=\"" + urlPage + "\" />");
 
 
             // templateHead = getGenericTemplatePart("head").ToString();
