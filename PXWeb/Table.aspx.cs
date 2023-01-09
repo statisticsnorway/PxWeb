@@ -41,6 +41,29 @@ namespace PXWeb
                     InitializeCommandBar();
                     InitializeTableInformation();
                     InitializeTable();
+
+                    if (!IsPostBack)
+                    {
+                        if (!PXWeb.Settings.Current.Selection.StandardApplicationHeadTitle)
+                        {
+                            var siteTitle = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("SiteTitle");
+
+                            if (PaxiomManager.PaxiomModel.Meta.DescriptionDefault && !string.IsNullOrEmpty(PaxiomManager.PaxiomModel.Meta.Description))
+                            {
+                                Master.HeadTitle = PaxiomManager.PaxiomModel.Meta.Description;
+                            }
+                            else
+                            {
+                                Master.HeadTitle = PaxiomManager.PaxiomModel.Meta.Title;
+                            }
+
+                            Master.HeadTitle += ". " + siteTitle;
+                        }
+                        else
+                        {
+                            Master.HeadTitle = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebTitleTable");
+                        }
+                    }
                 }
             }
             Table1.PxTableCroppedEvent += new EventHandler(HandlePxTableCroppedEvent);
@@ -51,26 +74,6 @@ namespace PXWeb
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            if (!PXWeb.Settings.Current.Selection.StandardApplicationHeadTitle)
-            {
-                var siteTitle = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("SiteTitle");
-
-                if (PaxiomManager.PaxiomModel.Meta.DescriptionDefault && !string.IsNullOrEmpty(PaxiomManager.PaxiomModel.Meta.Description))
-                {
-                    Master.HeadTitle = PaxiomManager.PaxiomModel.Meta.Description;
-                }
-                else
-                {
-                    Master.HeadTitle = PaxiomManager.PaxiomModel.Meta.Title;
-                }
-
-                Master.HeadTitle += ". " + siteTitle;
-            }
-            else
-            {
-                Master.HeadTitle = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebTitleTable");
-            }
-
             if (!IsPostBack)
             {
                 // Show mandatory footnotes?

@@ -169,7 +169,6 @@ namespace PXWeb
                 InitializeVariableSelector();
                 InitializeTableInformation();
                 SelectionFootnotes.ShowNoFootnotes = PXWeb.Settings.Current.Selection.ShowNoFootnoteForSelection;
-                InitializeMetatags();
                 InitializeMetadata(path);
                 //Check if the queryStrings contains partTable and the database type is CNMM
                 //if so download subtable variables

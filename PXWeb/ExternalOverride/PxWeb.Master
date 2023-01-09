@@ -6,7 +6,6 @@
 
 <html lang="<%= HtmlLang %>">
   <head runat="server">
- 
     <title><asp:Literal runat="server" ID="LiteralTitle"></asp:Literal></title>
       <!--debug start templateHead-->
      <%Response.Write(templateHead);%>

@@ -4,13 +4,6 @@
 <%@ Register Src="~/UserControls/VariableOverviewControl.ascx" TagPrefix="ucVariableOverview" TagName="VariableOverview" %>
 <%@ Register Src="~/UserControls/AccordianAboutTableControl.ascx" TagPrefix="ucAccordianAboutTable" TagName="AccordianAboutTable" %>
 <%@ Register TagPrefix="pxwebCustomControl" Namespace="PXWeb.CustomControls" Assembly="PXWeb" %>
-<asp:Content ID="ContentHead" ContentPlaceHolderID="ContentPlaceHolderHead" runat="server">
-    <meta name="Description" content="<%= TableTitle %>" />
-    <meta property="og:title" content="<%= TableTitle  %>-<%= PXWeb.Settings.Current.General.Site.ApplicationName.ToString() %>" />
-    <meta property="og:url" content="<%= PageUrl %>" />
-    <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="<%= PXWeb.Settings.Current.General.Site.ApplicationName.ToString() %>" />
-</asp:Content>
 <asp:Content runat="server" ID="ContentTitle" ContentPlaceHolderID="TitlePlaceHolder">
     <pxwebCustomControl:HeadingLabel ID="MenuTitle" runat="server" Text=""></pxwebCustomControl:HeadingLabel>
     <pxc:TableInformation runat="server" Type="Normal" ID="TableInformationSelect" TableTitleCssClass="hierarchical_tableinformation_title" TableDescriptionCssClass="hierarchical_tableinformation_description"  EnableViewState="true" Visible="true" />
