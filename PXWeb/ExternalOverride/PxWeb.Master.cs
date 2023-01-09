@@ -137,6 +137,19 @@ namespace PXWeb
             }
         }
         
+        private static string removeText(string strSource, string startRemove, string endRemove)
+        {
+            if (strSource.Contains(startRemove) && strSource.Contains(endRemove))
+            {
+                int StartRemoveIndex, EndRemoveIndex;
+                StartRemoveIndex = strSource.IndexOf(startRemove, 0);
+                EndRemoveIndex = strSource.IndexOf(endRemove, StartRemoveIndex);
+                return strSource.Substring(0, StartRemoveIndex) + strSource.Substring(EndRemoveIndex);
+            }
+
+            return strSource;
+        }
+
         private string GetTableListName()
         {
             var tableListPath = RouteInstance.RouteExtender.GetTableListPath(PxUrlObj.Path);
@@ -543,14 +556,22 @@ namespace PXWeb
                     templateTop = getTemplatePart("top").ToString();
                     templateFoot = getTemplatePart("foot").ToString();
                 }
+            templateHead = templateHead.Replace("<title></title>","");
+            templateHead = templateHead.Replace("<meta property=\"og:title\" content=\"\" />", "<meta property=\"og:title\" content=\""  + HeadTitle +  " \" />");
+            templateHead = templateHead.Replace("<meta property=\"og:description\" />", "<meta property=\"og:description\" \"content=\"" + HeadTitle  + "\"/>");
+            string urlPage = System.Web.HttpContext.Current.Request.Url.ToString().ToLower().Replace("http", "https");
+            templateHead = templateHead.Replace("<meta property=\"og:url\" content=\"http://www.utv.ssb.no/system/\" />", "<meta property=\"og:url\" content=\"" + urlPage + "\" />");
 
-           // templateHead = getGenericTemplatePart("head").ToString();
-           // templateTop = getGenericTemplatePart("top").ToString();
-           // templateFoot = getGenericTemplatePart("foot").ToString();
+
+            // templateHead = getGenericTemplatePart("head").ToString();
+            // templateTop = getGenericTemplatePart("top").ToString();
+            // templateFoot = getGenericTemplatePart("foot").ToString();
 
             templateTop = ReplaceLanguageLink(templateTop);
             templateTop = templateTop.Replace("class=\"mega-menu hidden-by-default\"", "class=\"mega-menu hidden-by-default\" style=\"display: none;\"");
             templateTop = templateTop.Replace("href=\"#content\"", "href=\"#pxcontent\"");
+            templateTop = removeText(templateTop, "<!-- Metainfo to make the page searchable -->", "<!-- MAIN -->");
+
         }
 
         private string GetCacheTemplateId(string part)
