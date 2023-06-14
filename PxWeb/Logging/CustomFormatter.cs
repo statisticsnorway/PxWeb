@@ -36,13 +36,11 @@ public sealed class CustomFormatter : ConsoleFormatter, IDisposable
             return;
         }
         
-        //CustomLogicGoesHere(textWriter);
-        //textWriter.WriteLine("{severity: \"ERROR\", timestamp: \"2023-06-14T07:49:16.978372Z\", jsonPayload: {msg: \"my mess\" level: \"error\"}}");
-        //textWriter.WriteLine("logtesting: {severity: \"ERROR\", timestamp: \"2023-06-14T07:49:16.978372Z\", jsonPayload: {msg: \"my mess\" level: \"error\"}}");
-        textWriter.WriteLine("{\"severity\":\"ERROR\",\"message\":\"There was an error in the application.\", \"httpRequest\":{\"requestMethod\":\"GET\" }, \"times\":\"2020-10-12T07:20:50.52Z\", \"logging.googleapis.com/insertId\":\"42\",  \"logging.googleapis.com/labels\":{    \"user_label_1\":\"value_1\",    \"user_label_2\":\"value_2\"  },  \"logging.googleapis.com/operation\":{    \"id\":\"get_data\",    \"producer\":\"github.com/MyProject/MyApplication\",     \"first\":\"true\"  },  \"logging.googleapis.com/sourceLocation\":{    \"file\":\"get_data.py\",    \"line\":\"142\",    \"function\":\"getData\"  },  \"logging.googleapis.com/spanId\":\"000000000000004a\",  \"logging.googleapis.com/trace\":\"projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824\",  \"logging.googleapis.com/trace_sampled\":false}");
+       CustomLogicGoesHere(textWriter);
+       //textWriter.WriteLine("{\"severity\":\"ERROR\",\"message\":\"There was an error in the application.\", \"httpRequest\":{\"requestMethod\":\"GET\" }, \"times\":\"2020-10-12T07:20:50.52Z\", \"logging.googleapis.com/insertId\":\"42\",  \"logging.googleapis.com/labels\":{    \"user_label_1\":\"value_1\",    \"user_label_2\":\"value_2\"  },  \"logging.googleapis.com/operation\":{    \"id\":\"get_data\",    \"producer\":\"github.com/MyProject/MyApplication\",     \"first\":\"true\"  },  \"logging.googleapis.com/sourceLocation\":{    \"file\":\"get_data.py\",    \"line\":\"142\",    \"function\":\"getData\"  },  \"logging.googleapis.com/spanId\":\"000000000000004a\",  \"logging.googleapis.com/trace\":\"projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824\",  \"logging.googleapis.com/trace_sampled\":false}");
 
 
-        //textWriter.WriteLine("applog: { severety:\""+ logEntry.LogLevel+"\" , Hei:"+message+ "}");
+        textWriter.WriteLine("{ \"severity\":\""+ logEntry.LogLevel+"\" , \"message\":"+message+"}");
     }
 
     private void CustomLogicGoesHere(TextWriter textWriter)
