@@ -31,6 +31,8 @@ using PxWeb.Code.Api2.Serialization;
 using PxWeb.Code.BackgroundWorker;
 using PxWeb.Code.Api2.DataSelection;
 
+using PxWeb.Logging;
+
 namespace PxWeb
 {
     public class Program
@@ -43,9 +45,6 @@ namespace PxWeb
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-            _logger = builder.Logging.Services.BuildServiceProvider().GetRequiredService<ILogger<Program>>();
 
             // needed to load configuration from appsettings.json
             builder.Services.AddOptions();
@@ -120,10 +119,23 @@ namespace PxWeb
             });
 
 
+            // Add services to the container.
+            _logger = builder.Logging.Services.BuildServiceProvider().GetRequiredService<ILogger<Program>>();
+
+
             // Handle CORS configuration from appsettings.json
             bool corsEnbled = builder.Services.ConfigurePxCORS(builder, _logger);
 
+            builder.Services.AddLogging(builder => builder.AddCustomFormatter(options =>
+                       options.CustomPrefix = " ~~~~~ "));
             builder.Logging.AddLog4Net();
+
+
+            using ILoggerFactory loggerFactory =
+               LoggerFactory.Create(builder =>
+                   builder.AddCustomFormatter(options =>
+                       options.CustomPrefix = " ~~~~~ "));
+            builder.Logging.Services.AddLogging();
 
             var app = builder.Build();
 

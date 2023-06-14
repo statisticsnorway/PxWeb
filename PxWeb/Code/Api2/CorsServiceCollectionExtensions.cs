@@ -12,7 +12,7 @@ namespace PxWeb.Code.Api2
         public static bool ConfigurePxCORS(this IServiceCollection services, WebApplicationBuilder builder, ILogger logger)
         {
             bool corsEnbled = false;
-
+            
             try
             {
                 // Read configuration for CORS enabled
