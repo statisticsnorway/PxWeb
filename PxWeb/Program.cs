@@ -127,7 +127,7 @@ namespace PxWeb
             bool corsEnbled = builder.Services.ConfigurePxCORS(builder, _logger);
 
             builder.Services.AddLogging(builder => builder.AddCustomFormatter(options =>
-                       options.CustomPrefix = " ~~~~~ "));
+                       options.CustomPrefix = ""));
             builder.Logging.AddLog4Net();
 
 

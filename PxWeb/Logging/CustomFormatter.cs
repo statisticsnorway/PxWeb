@@ -37,7 +37,11 @@ public sealed class CustomFormatter : ConsoleFormatter, IDisposable
         }
         
         CustomLogicGoesHere(textWriter);
-        textWriter.WriteLine("severety:"+ logEntry.LogLevel+" Hei:"+message);
+        textWriter.WriteLine("{severity: \"ERROR\", timestamp: \"2023-06-14T07:49:16.978372Z\", jsonPayload: {msg: \"my mess\" level: \"error\"}}");
+        textWriter.WriteLine("logtesting: {severity: \"ERROR\", timestamp: \"2023-06-14T07:49:16.978372Z\", jsonPayload: {msg: \"my mess\" level: \"error\"}}");
+
+
+        textWriter.WriteLine("applog: { severety:\""+ logEntry.LogLevel+"\" , Hei:"+message+ "}");
     }
 
     private void CustomLogicGoesHere(TextWriter textWriter)
