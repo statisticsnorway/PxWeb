@@ -174,7 +174,7 @@ namespace PxWeb
             {
                 appBuilder.UseCacheMiddleware();
             });
-
+            Console.WriteLine("{\r\n  \"severity\":\"ERROR\",\r\n  \"message\":\"There was an error in the application.\",\r\n  \"httpRequest\":{\r\n    \"requestMethod\":\"GET\"\r\n  },\r\n  \"times\":\"2020-10-12T07:20:50.52Z\",\r\n  \"logging.googleapis.com/insertId\":\"42\",\r\n  \"logging.googleapis.com/labels\":{\r\n    \"user_label_1\":\"value_1\",\r\n    \"user_label_2\":\"value_2\"\r\n  },\r\n  \"logging.googleapis.com/operation\":{\r\n    \"id\":\"get_data\",\r\n    \"producer\":\"github.com/MyProject/MyApplication\",\r\n     \"first\":\"true\"\r\n  },\r\n  \"logging.googleapis.com/sourceLocation\":{\r\n    \"file\":\"get_data.py\",\r\n    \"line\":\"142\",\r\n    \"function\":\"getData\"\r\n  },\r\n  \"logging.googleapis.com/spanId\":\"000000000000004a\",\r\n  \"logging.googleapis.com/trace\":\"projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824\",\r\n  \"logging.googleapis.com/trace_sampled\":false}");
             app.UseHttpLogging();
             app.Logger.LogInformation("*********** app.Run() :");
             app.Run();
