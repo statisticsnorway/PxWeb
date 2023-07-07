@@ -24,6 +24,9 @@ namespace PXWeb
                 Master.HeadTitle = value;
             }
         }
+
+        protected string AriaLabelSettingModal;
+
         /* Dublicate of public IPxUrl PxUrlObject
          * 
         private IPxUrl _pxUrlObj;
@@ -107,6 +110,16 @@ namespace PXWeb
             ShowMessages(PCAxis.Web.Core.Management.PaxiomManager.OperationsTracker.IsUnsafe);
             divUnsafeMessage.Visible = PCAxis.Web.Core.Management.PaxiomManager.OperationsTracker.IsUnsafe;
             CommandBar1.PxActionEvent += new PCAxis.Web.Controls.PxActionEventHandler(HandlePxAction);
+        }
+
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            var labelControl = (Label)cphSettingsLabel.FindControl("SettingsLabel");
+
+            if (labelControl != null)
+            {
+                AriaLabelSettingModal = labelControl.Text;
+            }
         }
 
         /// <summary>

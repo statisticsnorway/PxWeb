@@ -552,6 +552,8 @@ Namespace CommandBar
                 AddHandler control.Finished, AddressOf Plugin_Finished
 
                 ShowPlugin(pluginKey, CType(control, Control))
+
+                PluginControlHolder.Attributes.Add("aria-label", GetLocalizedString(plugin.NameCode))
             Else
                 'Otherwise execute the plugin immediately and set the result
                 SignalAction(PxActionEventType.Operation, pluginKey)
