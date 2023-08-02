@@ -520,6 +520,10 @@ namespace PXWeb
             var linkNodePart3 = topTemplateHtml.Substring(langSearchIndex, endLinkEndNodeRelativeIndex);
 
             var currentUrl = Page.Request.Url.AbsoluteUri;
+            if (currentUrl.ToLower().Contains(".ssb.no"))
+            {
+                currentUrl = currentUrl.ToLower().Replace("http", "https");
+            }
             var changeLanguageUrl = PxUrlObj.Language == "no" ? currentUrl.Replace("/statbank/", "/en/statbank/") : currentUrl.Replace("/en/statbank/", "/statbank/");
             var presentationUrlPartStartIndex = changeLanguageUrl.ToLower().IndexOf("tableview");
             if (presentationUrlPartStartIndex < 0)
