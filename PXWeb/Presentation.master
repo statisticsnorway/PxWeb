@@ -45,7 +45,7 @@
                         <span class="header-text"><asp:Label ID="SaveQueryLabel"  runat="server"></asp:Label></span>
                     </button>
                     <div id="sqModalBackground" class="modal-background">
-                        <div class="accordion-body closed dialog content-modal savequery" aria-modal="true" role="dialog" id="SaveQueryBody">
+                        <div class="accordion-body closed dialog content-modal savequery" aria-modal="true" role="dialog" aria-label="<%= Master.GetLocalizedString("CtrlSaveQuerylnkSaveQuery") %>" id="SaveQueryBody">
                             <ucSaveQuery:SaveQuery runat="server" id="SavedQueryFeature" />
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                         <asp:ContentPlaceHolder ID="cphSettingsLabel" runat="server">
                         </asp:ContentPlaceHolder>
                     <div id="settingsModalBackground" class="modal-background">
-                        <div class="accordion-body closed dialog content-modal" aria-modal="true" role="dialog" id="SettingsBody">
+                        <div class="accordion-body closed dialog content-modal" aria-modal="true" role="dialog" aria-label="<%= AriaLabelSettingModal %>" id="SettingsBody">
                             <asp:ContentPlaceHolder ID="cphSettings" runat="server">
                             </asp:ContentPlaceHolder>
                         </div>

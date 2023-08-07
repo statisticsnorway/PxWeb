@@ -519,13 +519,11 @@ Public Class VariableSelectorValueSelectCodebehind
         SelectAllButton.ToolTip = GetLocalizedString("CtrlVariableSelectorSelectAllTooltip")
         SelectAllButton.Text = GetLocalizedString("CtrlVariableSelectorSelectAllButton")
         SelectAllButton.Attributes.Add("aria-label", SelectAllButton.ToolTip)
-        SelectAllButton.Attributes.Add("aria-description", SelectAllButton.ToolTip)
 
         ' --- Deselect all button
         DeselectAllButton.ToolTip = GetLocalizedString("CtrlVariableSelectorDeSelectAllTooltip")
         DeselectAllButton.Text = GetLocalizedString("CtrlVariableSelectorDeSelectAllButton")
         DeselectAllButton.Attributes.Add("aria-label", DeselectAllButton.ToolTip)
-        DeselectAllButton.Attributes.Add("aria-description", DeselectAllButton.ToolTip)
 
 
         ' --- Select from groups link button
