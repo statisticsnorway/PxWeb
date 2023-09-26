@@ -416,11 +416,11 @@
 	 <sentence name="CtrlExcelInformationLevelAll" value="All information" />
 	 <sentence name="CtrlExcelDoubleColumn" value="Code and text in separate columns" />
 
-   <sentence name="FileTypePX" value="PX-file" />
-  <sentence name="FileTypeJson" value="Json file (json)" />
-  <sentence name="FileTypeJsonStat" value="JSON-stat file (json)" />
-  <sentence name="FileTypeJsonStat2" value="JSON-stat 2 file (json)" />
-   <sentence name="FileTypeExcel" value="Excel workbook (xml)" />
+	<sentence name="FileTypePX" value="PX-file" />
+	<sentence name="FileTypeJson" value="Json file (json)" />
+	<sentence name="FileTypeJsonStat" value="JSON-stat file (json)" />
+	<sentence name="FileTypeJsonStat2" value="JSON-stat 2 file (json)" />
+	<sentence name="FileTypeExcel" value="Excel workbook (xml)" />
 	 <sentence name="FileTypeExcelDoubleColumn" value="Excel workbook (xml) with code and text" />
 	 <sentence name="FileTypeExcelCompleteInfoFile" value="Excel file from screen" />
 	 <sentence name="FileTypeCsvWithHeadingAndTabulator" value="Tab delimited with heading" />
@@ -431,10 +431,13 @@
 	 <sentence name="FileTypeCsvWithoutHeadingAndSpace" value="Space delimited without heading" />
 	 <sentence name="FileTypeCsvWithHeadingAndSemiColon" value="Semicolon delimited with heading" />
 	 <sentence name="FileTypeCsvWithoutHeadingAndSemiColon" value="Semicolon delimited without heading" />
-	 <sentence name="FileTypeText" value="Text file (txt)" />
-	<sentence name="FileTypeHtml5Table" value="Html5 table (htm)" />
-	 <sentence name="FileTypeHtml" value="Html file (htm)" />
-	 <sentence name="FileTypeRelational" value="Relational file (scb)" />
+	 <sentence name="FileTypeCsv2" value="Csv2" />
+	 <sentence name="FileTypeCsv3" value="Csv3" />
+	
+	<sentence name="FileTypeText" value="Text file (txt)" />  
+  <sentence name="FileTypeHtml5Table" value="Html5 table (htm)" />
+  <sentence name="FileTypeHtml" value="Html file (htm)" />
+	 <sentence name="FileTypeRelational" value="Relational file (txt)" />
     <sentence name="FileTypeChartPng" value="Chart as PNG (png)" />
     <sentence name="FileTypeChartGif" value="Chart as Gif (gif)" />
     <sentence name="FileTypeChartJpeg" value="Chart as JPEG (jpg)" />
@@ -485,11 +488,13 @@
 	 <sentence name="CtrlTableQueryShowInformation" value="API query for this table" />
 	 <sentence name="CtrlTableQueryShowInformationTooltip" value="Get information about how you can connect to this table from your application" />
 	 <sentence name="CtrlTableQueryHideInformation" value="Hide" />
-	 <sentence name="CtrlTableQueryInformationText" value="Send (POST) the following JSON query to the URL below or copy to the API Console." />
+	 <sentence name="CtrlTableQueryInformationText" value="POST the following JSON query to the URL below to access this table from your application." />
+	 <sentence name="CtrlTableQueryV2InformationText" value="Send a GET request to the URL below to access this table." />
 	 <sentence name="CtrlTableQueryUrlCaption" value="URL:" />
 	 <sentence name="CtrlTableQueryQueryCaption" value="JSON query:" />
-	 <sentence name="CtrlTableQueryMoreInformation" value="More information about the Statbank API" />
-   <sentence name="CtrlTableQuerySaveQuery" value="Save API query (json)" />
+	 <sentence name="CtrlTableQueryMoreInformation" value="More information" />
+    <sentence name="CtrlTableQuerySaveQuery" value="Save API query (json)" />
+	<sentence name="CtrlTableQueryCopy" value="Copy" />
     
    <sentence name="CtrlNavigationFlowSectionScreenReader" value="Overview of the three steps in the process to get the data."/>
    <sentence name="CtrlNavigationFlowExplainScreenReader" value="The 3 steps are Choose table, Choose variable and Show result. You are currently at "/>
@@ -687,8 +692,8 @@
 
 
 	 <!-- PxWeb -->
-	 <sentence name="PxWebApplicationTitle" value="PxWeb 2022 v1"/>
-	 <sentence name="PxWebApplicationName" value="PxWeb 2022 v1"/>
+	 <sentence name="PxWebApplicationTitle" value="PxWeb 2023 Beta1"/>
+	 <sentence name="PxWebApplicationName" value="PxWeb 2023 Beta1"/>
    <sentence name="PxWebLogoAlt" value="PxWeb Logotype"/>
    <sentence name="PxWebExternalSearchText" value="Search"/>
    <sentence name="PxWebExternalSearchURL" value="https://www.google.com"/>
@@ -838,7 +843,7 @@
 
 	 <sentence name="PxWebAdminLogout" value="Log out"/>
 	 <sentence name="PxWebAdminHeading" value="PxWeb Administration"/>
-	 <sentence name="PxWebAdminVersion" value="PxWeb 2022 v1"/>
+	 <sentence name="PxWebAdminVersion" value="PxWeb 2023 Beta1"/>
 	 <sentence name="PxWebAdminHomePage" value="PxWeb Homepage"/>
 
 	 <sentence name="PxWebAdminSaveButton" value="Save"/>
@@ -1313,6 +1318,10 @@
 	 <sentence name="PxWebAdminFeaturesApiGeneralRoutePrefixInfo" value="URL route identifying API requests." />
    <sentence name="PxWebAdminFeaturesApiGeneralUrlRoot" value="URL root API" />
    <sentence name="PxWebAdminFeaturesApiGeneralUrlRootInfo" value="Specify URL root for API on other instance" />
+	<sentence name="PxWebAdminFeaturesApiGeneralUrlRootV2" value="URL root API-V2" />
+	<sentence name="PxWebAdminFeaturesApiGeneralUrlRootInfoV2" value="Specify URL root for API-V2 on other instance" />
+	<sentence name="PxWebAdminFeaturesApiGeneralEnableApiV2QueryLink" value="Enable API-V2 query link" />
+	<sentence name="PxWebAdminFeaturesApiGeneralEnableApiV2QueryLinkInfo" value="Enable API-V2 link in the results view" />
 	 <sentence name="PxWebAdminFeaturesApiGeneralMaxValuesReturned" value="Max values returned" />
 	 <sentence name="PxWebAdminFeaturesApiGeneralMaxValuesReturnedInfo" value="Maximum number of values returned from request" />
 	 <sentence name="PxWebAdminFeaturesApiGeneralLimiterRequests" value="Limiter requests" />

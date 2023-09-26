@@ -679,9 +679,10 @@ namespace PXWeb
 
             if (myLayoutCookie == null)
             {
-                _selectionLayout = Settings.Current.Selection.DefaultViewMode;
+                _selectionLayout = LayoutFormat.compact;
+
                 myLayoutCookie = new HttpCookie(layoutCookie);
-                myLayoutCookie.Value = _selectionLayout.ToString();
+                myLayoutCookie.Value = LayoutFormat.compact.ToString();
                 myLayoutCookie.Expires = DateTime.Now.AddDays(370);
                 Response.Cookies.Add(myLayoutCookie);
             }

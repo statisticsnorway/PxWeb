@@ -326,7 +326,9 @@ namespace PXWeb
             }
 
             TableQueryInformation.URLRoot = PXWeb.Settings.Current.Features.Api.UrlRoot;
-            TableQueryInformation.Database = db;
+            TableQueryInformation.URLRootV2 = PXWeb.Settings.Current.Features.Api.UrlRootV2;
+            TableQueryInformation.EnableApiV2QueryLink = PXWeb.Settings.Current.Features.Api.EnableApiV2QueryLink;
+            TableQueryInformation.Database = db; 
             TableQueryInformation.Path = PxUrlObject.Path;
             TableQueryInformation.Table = PxUrlObject.Table;
 
