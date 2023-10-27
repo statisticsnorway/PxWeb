@@ -125,7 +125,7 @@
       <HintPath>..\packages\PcAxis.Sql.1.1.5\lib\netstandard2.0\PCAxis.Sql.dll</HintPath>
     </Reference>
     <Reference Include="Serializers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Serializers.1.2.0-rc\lib\netstandard2.0\Serializers.dll</HintPath>
+      <HintPath>..\packages\PCAxis.Serializers.1.2.1-rc\lib\netstandard2.0\Serializers.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
