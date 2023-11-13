@@ -17,6 +17,11 @@
   font-weight: bold;
   margin-top: 5px;
 }
+#pxwebcontent .tablequery_V2caption {
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+}
 
 #pxwebcontent .tablequery_url {
   display: block;
@@ -53,4 +58,10 @@
   float: left;
   background: $pxweb-green-4;
   color: $pxweb-white;
+}
+
+#pxwebcontent #urlV2container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }

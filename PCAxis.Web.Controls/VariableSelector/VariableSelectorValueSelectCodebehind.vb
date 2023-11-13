@@ -1041,15 +1041,27 @@ Public Class VariableSelectorValueSelectCodebehind
     Friend Function ApplyGrouping(ByVal code As String, Optional ByVal clearSelection As Boolean = True, Optional ByVal include As Nullable(Of GroupingIncludesType) = Nothing) As Boolean
         Dim ok As Boolean = False
 
-        If (code.Equals("") And Not (Marker.ValuesetMustBeSelectedFirst)) Then 'piv
+        If (code.Equals("_RESTORE_")) Then
             'Code "_RESTORE_" means that the option --Select classification-- has been selected in the dropdown.
             'This shall result in the values in the dropdown being restored to the initial ones.
-            'Restore of values is performed by applying the valueset _ALL_.
-            Dim vsInfo As New PCAxis.Paxiom.ValueSetInfo
-            vsInfo.ID = "_ALL_"
-            Core.Management.PaxiomManager.PaxiomModelBuilder.ApplyValueSet(Marker.Variable.Code, vsInfo)
-            Marker.SelectedGroupingPresentation = GroupingIncludesType.SingleValues
-            ok = True
+
+            If (Marker.ValuesetMustBeSelectedFirst AndAlso Marker.Variable.HasValuesets) Then
+                Marker.Variable.CurrentGrouping = Nothing
+                Marker.Variable.CurrentValueSet = Nothing
+                clearSelection = True
+            Else
+                'Fix for when only one valueset and _ALL_ does not exist
+                If Marker.Variable.ValueSets.Count = 1 Then
+                    Core.Management.PaxiomManager.PaxiomModelBuilder.ApplyValueSet(Marker.Variable.Code, Marker.Variable.ValueSets(0))
+                Else
+                    'Restore of values is performed by applying the valueset _ALL_.
+                    Dim vsInfo As New PCAxis.Paxiom.ValueSetInfo
+                    vsInfo.ID = "_ALL_"
+                    Core.Management.PaxiomManager.PaxiomModelBuilder.ApplyValueSet(Marker.Variable.Code, vsInfo)
+                End If
+                Marker.SelectedGroupingPresentation = GroupingIncludesType.SingleValues
+                ok = True
+            End If
         ElseIf code.StartsWith("gr__") Then
             'Apply grouping
             Dim grpInfo As PCAxis.Paxiom.GroupingInfo
