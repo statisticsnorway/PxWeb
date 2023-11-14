@@ -338,3 +338,5 @@ ASALocalRun/
 /PXWeb/Web.config
 /PXWeb/Resources/PX/Databases/utv_24v_intern
 /PXWeb/metadata.config
+/**/_INDEX/*
+/PXWeb/Resources/PX/Databases/ssd

@@ -8,6 +8,9 @@ using System.IO;
 using PCAxis.Paxiom;
 using PCAxis.Search;
 using PCAxis.Paxiom.Extensions;
+using Px.Dcat.Interfaces;
+using Px.Dcat;
+using Px.Dcat.Helpers;
 
 namespace PXWeb.BackgroundWorker
 {
@@ -173,7 +176,7 @@ namespace PXWeb.BackgroundWorker
                 {
                     if (_run == true)
                     {
-                        CheckIndexes();
+                        CheckStatusOfDatabases();
                     }
                 }
                 catch (Exception ex)
@@ -206,11 +209,11 @@ namespace PXWeb.BackgroundWorker
         /// <summary>
         /// Check if any search index wants to be indexed
         /// </summary>
-        private static void CheckIndexes()
+        private static void CheckStatusOfDatabases()
         {
             try
             {
-                _activity = "Checking search indexes";
+                _activity = "Checking databases";
 
                 string path = GetDatabasePath();
 
@@ -224,6 +227,7 @@ namespace PXWeb.BackgroundWorker
                 foreach (DirectoryInfo dbDir in dir.GetDirectories())
                 {
                     HandleSearchIndex(dbDir.Name);
+                    HandleDcat(dbDir.Name);
                 }
             }
             catch (Exception ex)
@@ -261,6 +265,139 @@ namespace PXWeb.BackgroundWorker
                 _logger.InfoFormat("No action taken for  database:{0}", database);
             }
 
+        }
+
+        /// <summary>
+        /// Check if dcat file shall be created for database (Dcat.FileStatus = WaitingCreate). If so create the dcat file
+        /// </summary>
+        /// <param name="database">Database id</param>
+        public static void HandleDcat(string database)
+        {
+            if (_run == false)
+            {
+                return;
+            }
+
+            PXWeb.DatabaseSettings db = (PXWeb.DatabaseSettings)PXWeb.Settings.Current.GetDatabase(database);
+            PXWeb.DcatSettings dcat = (PXWeb.DcatSettings)db.Dcat;
+
+            _logger.InfoFormat("HandleDcat called for database:{0}", database);
+            if (dcat.FileStatus == DcatStatusType.WaitingCreate)
+            {
+                CreateDcatFile(dcat.Database);
+            }
+            else
+            {
+                _logger.InfoFormat("No action taken for  database:{0}", database);
+            }
+
+        }
+
+        private static string firstTwo(string s)
+        {
+            return s.Substring(0, 2);
+        }
+
+        /// <summary>
+        /// Create new dcat file
+        /// </summary>
+        /// <param name="database"></param>
+        private static void CreateDcatFile(string database)
+        {
+            _activity = "Creating dcat file for the " + database + " database";
+            PXWeb.DatabaseSettings db = (PXWeb.DatabaseSettings)PXWeb.Settings.Current.GetDatabase(database);
+            PXWeb.DcatSettings dcat = (PXWeb.DcatSettings)db.Dcat;
+
+            DcatStatusType startStatus = dcat.FileStatus;
+
+            List<string> languages = new List<string>();
+            foreach (LanguageSettings ls in Settings.Current.General.Language.SiteLanguages)
+            {
+                languages.Add(firstTwo(ls.Name));
+            }
+            string themeMapping = System.Web.Hosting.HostingEnvironment.MapPath("~/Themes.json");
+            string organizationMapping = System.Web.Hosting.HostingEnvironment.MapPath("~/Organizations.json");
+
+            Px.Dcat.Helpers.DatabaseType dbType = dcat.DatabaseType == "PX" ? Px.Dcat.Helpers.DatabaseType.PX : Px.Dcat.Helpers.DatabaseType.CNMM;
+            
+            string dbid;
+            string databasepath = GetDatabasePath();
+
+            string savePath = databasepath + dcat.Database + "/dcat-ap.xml";
+            
+            string localThemeMapping = databasepath + dcat.Database + "/Themes.json";
+            string localOrganizationMapping = databasepath + dcat.Database + "/Organizations.json";
+
+            if (File.Exists(localThemeMapping)) themeMapping = localThemeMapping;
+            if (File.Exists(localOrganizationMapping)) organizationMapping = localOrganizationMapping;
+
+            switch (dbType)
+            {
+                case DatabaseType.PX:
+                    dbid = databasepath + dcat.Database + "/Menu.xml";
+                    break;
+                case DatabaseType.CNMM:
+                    dbid = dcat.Database;
+                    break;
+                default:
+                    return;
+            }
+
+            List<KeyValuePair<string, string>> titles = new List<KeyValuePair<string, string>>();
+            List<KeyValuePair<string, string>> descriptions = new List<KeyValuePair<string, string>>();
+
+            foreach (IDcatLanguageSpecificSettings s in dcat.LanguageSpecificSettings)
+            {
+                string lang = s.Language;
+                string title = s.CatalogTitle;
+                string desc = s.CatalogDescription;
+                titles.Add(new KeyValuePair<string, string>(lang, title));
+                descriptions.Add(new KeyValuePair<string, string>(lang, desc));
+            }
+
+            string mainLanguage = new string(Settings.Current.General.Language.DefaultLanguage.Take(2).ToArray());
+            var settings = new Px.Dcat.DcatSettings
+            {
+                BaseUri = dcat.BaseURI,
+
+                BaseApiUrl = dcat.BaseApiUrl,
+
+                Languages = languages,
+
+                CatalogTitles = titles,
+                CatalogDescriptions = descriptions,
+
+                PublisherName = dcat.Publisher,
+                DatabaseId = dbid,
+                DatabaseType = dbType,
+                LandingPageUrl = dcat.LandingPageUrl,
+                License = dcat.License,
+                ThemeMapping = themeMapping,
+                OrganizationMapping = organizationMapping,
+                MainLanguage = mainLanguage
+            };
+
+            try
+            {
+                dcat.FileStatus = DcatStatusType.Creating;
+                db.Save();
+
+                DcatWriter.WriteToFile(savePath, settings);
+
+                _logger.Info("Dcat-file for the '" + database + "' database was created successfully");
+                dcat.FileStatus = DcatStatusType.Created;
+                dcat.FileUpdated = DateTime.Now.ToString(PXConstant.PXDATEFORMAT);
+                db.Save();
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("Error when creating dcat-file for the '" + database + "' database : " + ex.Message);
+                dcat.FileStatus = startStatus;
+                db.Save();
+            }
+
+            // Force reload of database settings
+            db = (PXWeb.DatabaseSettings)PXWeb.Settings.Current.GetDatabase(database);
         }
 
         /// <summary>
