@@ -46,15 +46,15 @@ namespace PXWeb.kompis
 
                 if (lang == "no")
                 {
-                    lblTitleValue.Text = kompisresult.variable.labelNo;
-                    lblDescription.Text = kompisresult.variable.descriptionNo;
+                    lblTitleValue.Text = Server.HtmlEncode(kompisresult.variable.labelNo);
+                    lblDescription.Text = Server.HtmlEncode(kompisresult.variable.descriptionNo);
                     //lblFormulaHeading.Text = "Formel:";
                     btnClose.Text = "Lukk";
                 }
                 else
                 {
-                    lblTitleValue.Text = kompisresult.variable.labelEn;
-                    lblDescription.Text = kompisresult.variable.descriptionEn;
+                    lblTitleValue.Text = Server.HtmlEncode(kompisresult.variable.labelEn);
+                    lblDescription.Text = Server.HtmlEncode(kompisresult.variable.descriptionEn);
                     //lblFormulaHeading.Text = "Formel:";
                     btnClose.Text = "Close";
                 }
