@@ -10,6 +10,8 @@
       <!--debug start templateHead-->
      <%Response.Write(templateHead);%>
       <!--debug end templateHead-->
+
+    <link rel="canonical" runat="server" id="CanonicalUrl"/>
     <link href="<%= ResolveUrl("~/Resources/Styles/reset.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/main-common.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/main-pxweb.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />

@@ -231,6 +231,7 @@ namespace PXWeb
         {
             GetCMSContents();
             string ctrlname = Request.Params.Get("__EVENTTARGET");
+            SetCanonicalUrl();
             bool languageChanged = false;
             if (!string.IsNullOrEmpty(ctrlname))
             {
@@ -240,6 +241,22 @@ namespace PXWeb
                 }
             }
             ToTheTopButtonLiteralText.Text = GetLocalizedString("PxWebToTheTopButtonLiteralText");
+        }
+
+        private void SetCanonicalUrl()
+        {
+            var pageUrl = Page.Request.Url.AbsoluteUri;
+            int index = pageUrl.IndexOf('?');
+
+            if (index > 0) 
+            {
+                CanonicalUrl.Href = pageUrl.Substring(0, index).TrimEnd('/');
+            }
+            else
+            {
+                CanonicalUrl.Href = pageUrl.TrimEnd('/'); 
+            }
+            
         }
 
         /// <summary>
@@ -560,7 +577,7 @@ namespace PXWeb
                     templateTop = getTemplatePart("top").ToString();
                     templateFoot = getTemplatePart("foot").ToString();
                 }
-            templateHead = templateHead.Replace("<title></title>","");
+            templateHead = templateHead.Replace("<title>  –  SSB</title>", "");
             templateHead = templateHead.Replace("<meta property=\"og:title\" content=\"\" />", "<meta property=\"og:title\" content=\""  + HeadTitle +  " \" />");
             templateHead = templateHead.Replace("<meta property=\"og:description\" />", "<meta property=\"og:description\" \"content=\"" + HeadTitle  + "\"/>");
             string urlPage = System.Web.HttpContext.Current.Request.Url.ToString().ToLower().Replace("http", "https");
