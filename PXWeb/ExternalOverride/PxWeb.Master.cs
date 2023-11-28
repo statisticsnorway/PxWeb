@@ -245,7 +245,7 @@ namespace PXWeb
 
         private void SetCanonicalUrl()
         {
-            var pageUrl = Page.Request.Url.AbsoluteUri;
+            var pageUrl = Page.Request.Url.AbsoluteUri.ToLower().Replace("http", "https");
             int index = pageUrl.IndexOf('?');
 
             if (index > 0) 
