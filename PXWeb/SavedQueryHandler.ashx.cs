@@ -108,6 +108,9 @@ namespace PXWeb
             PXModel model = null;
             bool safe = true;
 
+            //SSB only:
+            bool cached = false;
+
             try
             {
                 if (PCAxis.Query.SavedQueryManager.StorageType == PCAxis.Query.SavedQueryStorageType.File)
@@ -222,7 +225,7 @@ namespace PXWeb
                 // Try to get model from cache
                 model = PXWeb.Management.SavedQueryPaxiomCache.Current.Fetch(cacheKey, createCopy);
                 PaxiomManager.QueryModel = PXWeb.Management.SavedQueryPaxiomCache.Current.FetchQueryModel(cacheKey, createCopy);
-                bool cached = false;
+               
                 if (model == null || PaxiomManager.QueryModel == null)
                 {
                     DateTime timeStamp = DateTime.Now;
@@ -257,6 +260,7 @@ namespace PXWeb
                 }
                 else
                 {
+                    //SSB only:
                     cached = true;
                 }
 
