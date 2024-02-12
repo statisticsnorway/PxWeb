@@ -222,7 +222,7 @@ namespace PXWeb
                 // Try to get model from cache
                 model = PXWeb.Management.SavedQueryPaxiomCache.Current.Fetch(cacheKey, createCopy);
                 PaxiomManager.QueryModel = PXWeb.Management.SavedQueryPaxiomCache.Current.FetchQueryModel(cacheKey, createCopy);
-
+                bool cached = false;
                 if (model == null || PaxiomManager.QueryModel == null)
                 {
                     DateTime timeStamp = DateTime.Now;
@@ -255,6 +255,10 @@ namespace PXWeb
                     PXWeb.Management.SavedQueryPaxiomCache.Current.Store(cacheKey, model, timeStamp);
                     PXWeb.Management.SavedQueryPaxiomCache.Current.StoreQueryModel(cacheKey, PaxiomManager.QueryModel, timeStamp);
                 }
+                else
+                {
+                    cached = true;
+                }
 
                 if (!sq.Safe)
                 {
@@ -278,7 +282,7 @@ namespace PXWeb
             PCAxis.Query.SavedQueryManager.Current.MarkAsRunned(queryName);
 
             //Disse 3 linjene finnes ikke i statsweden: Det mangler en altså/også en default å avvike fra.  
-            bool cached = false;  //TODO Was allways false in assembla
+            //bool cached = false;  //TODO Was allways false in assembla
             int ContentVariablesCount = model.Meta.ContentVariable is null ? 0 : model.Meta.ContentVariable.Values.Count();  //For testing with px-files
             Norway.LogVisitorStatistics.SavedQueryHelper.LoggStatistics("SavedQuery", _language, sq.Sources[0].DatabaseId, model.Meta.MainTable, "Presentation", sq.Output.Type, model.Data.MatrixSize, ContentVariablesCount, cached);
             //
