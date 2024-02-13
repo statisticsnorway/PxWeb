@@ -381,7 +381,7 @@ html {
 }
 
 #pxwebcontent .px_setting_validator {
-  color: #ed5935;
+  color: #dc3400;
 }
 
 #pxwebcontent .px_setting_heading {
@@ -1646,7 +1646,7 @@ html {
 }
 
 #pxwebcontent .commandbar_perpart_errormessage {
-  color: #ed5935;
+  color: #dc3400;
 }
 
 #pxwebcontent .per_part_rootdiv .commandbar_perpart_radio.commandbar_radioButtonList label {
@@ -1682,7 +1682,7 @@ html {
 }
 
 #pxwebcontent .commandbar_changepresentation_errormessage {
-  color: #ed5935;
+  color: #dc3400;
 }
 
 /* ********* End. Back in _CommandBar.scss */
@@ -3745,7 +3745,7 @@ span.AspNet-TreeView-ClickableNonLink {
 }
 
 #pxwebcontent .variableselector_selectionerror_label {
-  color: #ed5935;
+  color: #dc3400;
 }
 
 #pxwebcontent .variableselector_selectionerror_label_text {
@@ -3764,8 +3764,8 @@ span.AspNet-TreeView-ClickableNonLink {
   padding-bottom: 10px;
   background-position-x: 10px;
   background-position-y: 10px;
-  border: 2px solid #ed5935 !important;
-  border-left: 4px solid #ed5935 !important;
+  border: 2px solid #dc3400 !important;
+  border-left: 4px solid #dc3400 !important;
   width: auto;
   margin-top: 1em !important;
   margin-bottom: 1em !important;
