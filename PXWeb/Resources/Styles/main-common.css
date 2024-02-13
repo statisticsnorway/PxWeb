@@ -753,9 +753,11 @@ $scrollbar-color: #b0b0b0;
   padding: 4px 8px;
   position: relative;
 }
+/*
 #pxwebcontent .pxweb-input-error.negative {
   color: #274247;
 }
+*/
 #pxwebcontent .pxweb-input-error:before {
   border-color: transparent transparent #dc3400 transparent;
   border-style: solid;
