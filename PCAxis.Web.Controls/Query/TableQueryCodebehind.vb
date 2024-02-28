@@ -266,6 +266,17 @@ Public Class TableQueryCodebehind
 
         Dim builder As IPXModelBuilder = PaxiomManager.PaxiomModelBuilder()
         Dim model As PXModel = PaxiomManager.PaxiomModel
+
+        'Bug for things like
+        'http://localhost:56338/table/08888/tableViewLayout1/
+        ' which should tell me: Object moved to /table/08888/ 
+        'but it comes here without model, 
+        'so it crashed without this if.
+        If model Is Nothing Then
+            txtUrlV2.Text = ""
+            Return
+        End If
+                
         Dim tableId As String = model.Meta.TableID
 
         'If PX file the Matrix should be used as tabled identifier
