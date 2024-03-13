@@ -14,13 +14,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup MSBuild path
-        uses: microsoft/setup-msbuild@v1.3.1
+        uses: microsoft/setup-msbuild@v2.0.0
 
       - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.2.0
+        uses: NuGet/setup-nuget@v2.0.0
 
       - name: Restore NuGet packages
         run: nuget restore
@@ -29,7 +29,7 @@ jobs:
         run: msbuild /nologo /verbosity:m /t:Build /t:pipelinePreDeployCopyAllFilesToOneFolder /p:_PackageTempDir="\published\"
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ASP-app
           path: '/published/**'
@@ -43,7 +43,7 @@ jobs:
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ASP-app
 
