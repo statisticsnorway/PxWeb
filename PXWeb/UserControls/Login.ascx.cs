@@ -104,7 +104,7 @@ namespace PXWeb.UserControls
                     string currentUrl = Request.RawUrl;
                     Response.Redirect(currentUrl, false);
                     //Used to be Response.Redirect(currentUrl, true);
-                    //,but then we get "Failed to Login. Username Last312Error:Thread was being aborted."
+                    //,but then we get "Failed to Login ... Error:Thread was being aborted."
                     // in the log, from the catch a few lines down.
                     // so: OBS: the execution continues here, even after the redirect 
                 }
