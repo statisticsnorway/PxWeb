@@ -356,8 +356,8 @@
   <sentence name="FileTypeCsvWithoutHeadingAndSpace" value="Blankstegsavgränsad utan rubrik" />
   <sentence name="FileTypeCsvWithHeadingAndSemiColon" value="Semikolonavgränsad med rubrik" />
   <sentence name="FileTypeCsvWithoutHeadingAndSemiColon" value="Semikolonavgränsad utan rubrik" />
-  <sentence name="FileTypeCsv2" value="Csv2" />
-  <sentence name="FileTypeCsv3" value="Csv3" />	
+  <sentence name="FileTypeCsv2" value="Kommaavgränsad utan rubrik (kod och text för variabelvärden)" />
+  <sentence name="FileTypeCsv3" value="Kommaavgränsad utan rubrik (kod för variabelvärdena)" />	
   <sentence name="FileTypeText" value="Textfil (txt)" />
   <sentence name="FileTypeHtml5Table" value="Html5 tabell (htm)" />
   <sentence name="FileTypeHtml" value="Html fil (htm)" />
@@ -1156,36 +1156,31 @@
   <sentence name="PxWebAdminConfirmSaveSettings" value="Vill du spara inställningarna?" />
   <sentence name="PxWebAdminConfirmGenerateDb" value="Vill du generera ny databas?" />
   <sentence name="PxWebAdminSettingsImplementedInComingVersions" value="Denna funktion kommer att implementeras i en kommande version av PxWeb" />
-
-  <sentence name="UnauthorizedTableMessage" value="Du saknar behörighet för att få se denna tabell!"/>
-  <sentence name="UnauthorizedTableTitle" value="Åtkomst nekad"/>
-
-  <sentence name="UnauthorizedDatabaseMessage" value="Du saknar behörighet för att få se denna databas!"/>
-  <sentence name="UnauthorizedDatabaseTitle" value="Åtkomst nekad"/>
-
-  <sentence name="PxWebAdminUsers" value="Användare"/>
-  <sentence name="PxWebAdminUsersGeneral" value="Generellt"/>
-  <sentence name="PxWebAdminUsersUsername" value="Användarnamn"/>
-  <sentence name="PxWebAdminUsersPassword" value="Lösenord"/>
-  <sentence name="PxWebAdminUsersLoginFailure" value="Ditt inloggningsförsök misslyckades. Försök igen."/>
-  <sentence name="PxWebAdminUsersMail" value="E-post"/>
-  <sentence name="PxWebAdminUsersLocked" value="Låst"/>
-  <sentence name="PxWebAdminUsersExpires" value="Utgår"/>
-  <sentence name="PxWebAdminUsersNeverExpires" value="Aldrig"/>
-  <sentence name="PxWebAdminUsersHasExpired" value="Utgått"/>
-  <sentence name="PxWebAdminUsersRenew" value="Förnya"/>
-  <sentence name="PxWebAdminUsersLicense" value="Licens"/>
-  <sentence name="PxWebAdminUsersLicenseMustBeNumber" value="Licens måste vara ett nummer"/>
-  <sentence name="PxWebAdminUsersCreateNewUser" value="Skapa ny användare"/>
-  <sentence name="PxWebAdminUsersCreateNew" value="Skapa ny"/>
-  <sentence name="PxWebAdminUsersAdmin" value="Admin"/>
-  <sentence name="PxWebAdminUsersDelete" value="Ta bort"/>
-  <sentence name="PxWebAdminUsersEdit" value="Redigera"/>
-  <sentence name="PxWebAdminUsersUpdate" value="Uppdatera"/>
-  <sentence name="PxWebAdminUsersCancel" value="Avbryt"/>
-  <sentence name="PxWebAdminUsersErrorMail" value="E-posten är inte korrekt ifylld"/>
-  <sentence name="PxWebAdminUsersLogin" value="Logga in"/>
-  <sentence name="PxWebAdminUsersAddedUser" value="har lagts till som användare"/>
-  
-  
+  <sentence name="UnauthorizedTableMessage" value="Du saknar behörighet för att få se denna tabell!" />
+  <sentence name="UnauthorizedTableTitle" value="Åtkomst nekad" />
+  <sentence name="UnauthorizedDatabaseMessage" value="Du saknar behörighet för att få se denna databas!" />
+  <sentence name="UnauthorizedDatabaseTitle" value="Åtkomst nekad" />
+  <sentence name="PxWebAdminUsers" value="Användare" />
+  <sentence name="PxWebAdminUsersGeneral" value="Generellt" />
+  <sentence name="PxWebAdminUsersUsername" value="Användarnamn" />
+  <sentence name="PxWebAdminUsersPassword" value="Lösenord" />
+  <sentence name="PxWebAdminUsersLoginFailure" value="Ditt inloggningsförsök misslyckades. Försök igen." />
+  <sentence name="PxWebAdminUsersMail" value="E-post" />
+  <sentence name="PxWebAdminUsersLocked" value="Låst" />
+  <sentence name="PxWebAdminUsersExpires" value="Utgår" />
+  <sentence name="PxWebAdminUsersNeverExpires" value="Aldrig" />
+  <sentence name="PxWebAdminUsersHasExpired" value="Utgått" />
+  <sentence name="PxWebAdminUsersRenew" value="Förnya" />
+  <sentence name="PxWebAdminUsersLicense" value="Licens" />
+  <sentence name="PxWebAdminUsersLicenseMustBeNumber" value="Licens måste vara ett nummer" />
+  <sentence name="PxWebAdminUsersCreateNewUser" value="Skapa ny användare" />
+  <sentence name="PxWebAdminUsersCreateNew" value="Skapa ny" />
+  <sentence name="PxWebAdminUsersAdmin" value="Admin" />
+  <sentence name="PxWebAdminUsersDelete" value="Ta bort" />
+  <sentence name="PxWebAdminUsersEdit" value="Redigera" />
+  <sentence name="PxWebAdminUsersUpdate" value="Uppdatera" />
+  <sentence name="PxWebAdminUsersCancel" value="Avbryt" />
+  <sentence name="PxWebAdminUsersErrorMail" value="E-posten är inte korrekt ifylld" />
+  <sentence name="PxWebAdminUsersLogin" value="Logga in" />
+  <sentence name="PxWebAdminUsersAddedUser" value="har lagts till som användare" />
 </language>
