@@ -18,8 +18,6 @@ spec:
   lifecycle: production
   providesApis:
     - PXWEB-API-V0
-  dependsOn:
-    - resource:job-db
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
