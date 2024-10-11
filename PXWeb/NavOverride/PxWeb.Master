@@ -11,6 +11,7 @@
       <!--debug start templateHead-->
      <%Response.Write(templateHead);%>
       <!--debug end templateHead-->
+    <link rel="canonical" runat="server" id="CanonicalUrl"/>
     <link href="<%= ResolveUrl("~/Resources/Styles/reset.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/main-common.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/main-pxweb.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
@@ -18,10 +19,10 @@
     <link href="<%= ResolveUrl("~/Resources/Styles/jQuery/tablesorter/style.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/main-custom.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/main-custom2.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
        
     <script src="<%= ResolveUrl("~/Resources/Scripts/jquery-3.5.1.min.js") %>?v=<%= DisplayVersion %>"></script>
-    <script src="<%= ResolveUrl("~/Resources/Scripts/jquery-ui-1.12.1.min.js") %>?v=<%= DisplayVersion %>" defer></script>
+    <script src="<%= ResolveUrl("~/Resources/Scripts/jquery-ui-1.13.1.min.js") %>?v=<%= DisplayVersion %>" defer></script>
     <script src="<%= ResolveUrl("~/Resources/Scripts/pcaxis.web.client.js") %>?v=<%= DisplayVersion %>"></script>
     <script src="<%= ResolveUrl("~/Resources/Scripts/pcaxis.web.controls.js") %>?v=<%= DisplayVersion %>"></script>
     <script src="<%= ResolveUrl("~/Resources/Scripts/jquery.tablesorter.min.js") %>?v=<%= DisplayVersion %>"></script>
@@ -80,10 +81,10 @@
                 </div>
             </div>
            
-            <main id="place-holder">
+            <!-- main id="place-holder" -->
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
                 </asp:ContentPlaceHolder>
-            </main>
+            <!--/main-->
             
             <footer id="pxfooter">
                 <div class="footerleft">
