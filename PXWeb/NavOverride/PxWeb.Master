@@ -9,7 +9,7 @@
  
     <title><asp:Literal runat="server" ID="LiteralTitle"></asp:Literal></title>
       <!--debug start templateHead-->
-     <%Response.Write(templateHead);%>
+     <%Response.Write(templateHead);%> 
       <!--debug end templateHead-->
     <link rel="canonical" runat="server" id="CanonicalUrl"/>
     <link href="<%= ResolveUrl("~/Resources/Styles/reset.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />

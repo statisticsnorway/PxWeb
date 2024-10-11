@@ -175,7 +175,7 @@ namespace PXWeb
             // {
             //     Page.Controls.Remove(this.breadcrumb1);
             // ekstern har ikke breadC . men hvorfor er denne i nav:
-            //     this.breadcrumb1.HomePage = "Default.aspx";
+            this.breadcrumb1.HomePage = "Default.aspx";
             //}
 
             //Add eventhandlers
