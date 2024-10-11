@@ -18,7 +18,7 @@
     <link href="<%= ResolveUrl("~/Resources/Styles/jQuery/redmond/jquery-ui.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/jQuery/tablesorter/style.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<%= ResolveUrl("~/Resources/Styles/main-custom.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
-    <link href="<%= ResolveUrl("~/Resources/Styles/main-custom_nav.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
+    <link href="<%= ResolveUrl("~/Resources/Styles/main-custom-nav.css") + "?v=" + DisplayVersion %>" rel="stylesheet" type="text/css" media="screen" />
    
       
     <script src="<%= ResolveUrl("~/Resources/Scripts/jquery-3.5.1.min.js") %>?v=<%= DisplayVersion %>"></script>
