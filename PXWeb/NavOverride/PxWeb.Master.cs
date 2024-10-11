@@ -14,6 +14,7 @@ using System.Configuration;
 using log4net;
 using PCAxis.Web.Core.Enums;
 using PCAxis.Web.Core;
+using System.Web.Security;
 using System.Net; //ssb
 
 namespace PXWeb
@@ -21,8 +22,6 @@ namespace PXWeb
     public partial class PxWeb : System.Web.UI.MasterPage
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(PxWeb));
-
-       
 
         public string HtmlLang
         {
@@ -171,11 +170,13 @@ namespace PXWeb
 
             var queryStringPart = ValidationManager.GetValue(Page.Request.QueryString[PCAxis.Web.Core.StateProvider.StateProviderFactory.REQUEST_ID]);
 
-            if (DoNotUseBreadCrumb())
-            {
-                Page.Controls.Remove(this.breadcrumb1);
-                this.breadcrumb1.HomePage = "Default.aspx";
-            }
+           // ekstern har ikke breadC .
+           // if (DoNotUseBreadCrumb())
+           // {
+           //     Page.Controls.Remove(this.breadcrumb1);
+// ekstern har ikke breadC . men hvorfor er denne i nav:
+           //     this.breadcrumb1.HomePage = "Default.aspx";
+           //}
 
             //Add eventhandlers
             LinkManager.RegisterEnsureQueries(new EnsureQueriesEventHandler(LinkManager_EnsureQueries));
@@ -247,9 +248,38 @@ namespace PXWeb
         {
             GetCMSContents();
             string ctrlname = Request.Params.Get("__EVENTTARGET");
-            
+            SetCanonicalUrl();
+            bool languageChanged = false;
+            if (!string.IsNullOrEmpty(ctrlname))
+            {
+                if ((ctrlname.Contains("cboSelectLanguages")))
+                {
+                    languageChanged = true;
+                }
+            }
             ToTheTopButtonLiteralText.Text = GetLocalizedString("PxWebToTheTopButtonLiteralText");
         }
+
+        private void SetCanonicalUrl()
+        {
+            var pageUrl = Page.Request.Url.AbsoluteUri.ToLower().Replace("http", "https");
+            int index = pageUrl.IndexOf('?');
+            if (index > 0)
+            {
+                CanonicalUrl.Href = pageUrl.Substring(0, index).TrimEnd('/');
+            }
+            else
+            {
+                CanonicalUrl.Href = pageUrl.TrimEnd('/');
+            }
+        }
+
+
+
+
+
+
+
 
         /// <summary>
         /// Set database name as H1 text
@@ -262,7 +292,7 @@ namespace PXWeb
 
                 if (dbi != null)
                 {
-                   lblH1Title.Text = dbi.GetDatabaseName(PxUrlObj.Language);
+                    lblH1Title.Text = dbi.GetDatabaseName(PxUrlObj.Language);
                 }
             }
 
@@ -302,14 +332,13 @@ namespace PXWeb
             }
         }
 
-
         /// <summary>
         /// Page unload - remove eventhandler for LinkManager.EnsureQueries
         /// </summary>
         protected void Page_Unload(object sender, EventArgs e)
         {
 
-            LinkManager.UnregisterEnsureQueries(LinkManager_EnsureQueries);
+           LinkManager.UnregisterEnsureQueries(LinkManager_EnsureQueries);
         }
 
 
@@ -520,7 +549,9 @@ namespace PXWeb
 
             cmsHelper.GetCMSContents(Language,KortNavnWeb, AbackupCmsCss, AbackupCmsImg,Cache, pathToBackupFiles,pageUrl, Page_Request_Url_AbsoluteUri);
 
-        }    
+        }
+    
+
 
 
         private string _displayVersion = null;
