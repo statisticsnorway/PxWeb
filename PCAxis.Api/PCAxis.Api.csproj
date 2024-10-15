@@ -75,8 +75,9 @@
     <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
-    <Reference Include="IronCompress, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d380b3dee6d01926, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronCompress.1.5.2\lib\netstandard2.0\IronCompress.dll</HintPath>
+    <Reference Include="IronCompress, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d380b3dee6d01926">
+      <HintPath>..\packages\IronCompress.1.6.3\lib\netstandard2.0\IronCompress.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Irony, Version=1.1.11.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Irony.NetCore.1.1.11\lib\netstandard2.0\Irony.dll</HintPath>
