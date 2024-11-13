@@ -1,6 +1,7 @@
 ﻿using PXWeb.Database;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -27,11 +28,20 @@ namespace PXWeb.API
             _logger.Info("RebuildMenu - started");
             try
             {
-                // Validate the database parameter (from AI)
+                // Validate the database parameter (from CodeQL AI)
                 if (database.Contains("..") || database.Contains("/") || database.Contains("\\"))
                 {
+                    //dont think it is possible to hit this
                     return Request.CreateResponse(HttpStatusCode.BadRequest, "Invalid database name");
                 }
+
+                // this prevents typos
+                if (!(PXWeb.Settings.Current.General.Databases.CnmmDatabases.Contains(database) ||
+                    PXWeb.Settings.Current.General.Databases.PxDatabases.Contains(database)))
+                {
+                    return Request.CreateResponse(HttpStatusCode.BadRequest, "Unknown database name");
+                }
+
 
                 string path;
 
