@@ -421,8 +421,50 @@ namespace PXWeb
                 bool bMeta = PXWeb.Settings.Current.Database[url.Database].Metadata.UseMetadata;
             }
 
+
+           SetBulkLink();
+
         }
 
+        private void SetBulkLink()
+        {
+            var bBulkLink = PXWeb.Settings.Current.Features.General.BulkLinkEnabled;
+
+            if (!bBulkLink)
+            {
+                linkBulkLink.Visible = false;
+                linkBulkDiv.Visible = false;
+                return;
+            }
+            else
+            {  
+                var language = PaxiomManager.PaxiomModel.Meta.Language;
+                var tableid = PaxiomManager.PaxiomModel.Meta.TableID;
+                if (tableid != null)
+                {
+                    IPxUrl url = RouteInstance.PxUrlProvider.Create(null);
+                    var path = "/Resources/PX/bulk/" + url.Database + "/" + language + "/" + tableid + "_" +language + ".zip";
+                    var linkText = LocalizationManager.GetLocalizedString("PxWebBulkLink") + " (" + tableid + "_" + language + ".zip)";
+                    var realPath = Server.MapPath(path);
+
+                    if (File.Exists(realPath))
+                    {
+                        linkBulkLink.Visible = true;
+                        linkBulkDiv.Visible = true;
+                        linkBulkLink.Text = linkText;
+                        linkBulkLink.NavigateUrl = path;
+                        return;
+                    }
+                }
+                else
+                {
+                    linkBulkLink.Visible = false;
+                    linkBulkDiv.Visible = false;
+                    return;
+                }                
+                
+            }
+        }
 
         /// <summary>
         /// Initializes the link with detailed information about the table
