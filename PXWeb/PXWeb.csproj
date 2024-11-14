@@ -470,13 +470,7 @@
     <Content Include="Resources\Styles\scss\not_in_use\_AReadMe.txt" />
     <Content Include="Resources\Styles\scss\common\_nested-accordion.scss" />
     <Content Include="Resources\PX\Databases\Example\Misc\OfficialStatistics\officialstatistics.px" />
-    <Content Include="Monitor\web.config" />
-    <None Include="Monitor\Web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="Monitor\Web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
+
     <Content Include="Resources\Styles\scss\custom\_ssbTableList.scss" />
     <Content Include="Resources\Styles\scss\pxweb\CommandBar\_cb_common.scss" />
     <Content Include="Resources\Styles\scss\pxweb\CommandBar\_changepresentation.scss" />
