@@ -1,0 +1,9 @@
+﻿#pxwebcontent .search_panel {
+  border: solid 3px #00824d;
+  background-color: #fff;
+  padding: 3px 10px 10px 10px;
+}
+
+#pxwebcontent #TableOfContent {
+  padding-top: 16px;
+}
