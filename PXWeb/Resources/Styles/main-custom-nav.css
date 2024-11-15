@@ -7,3 +7,46 @@
 #pxwebcontent #TableOfContent {
   padding-top: 16px;
 }
+
+#pxwebcontent li.AspNet-TreeView-Root span {
+  font-size: 16px;
+}
+
+#pxwebcontent .tableofcontent_link:hover {
+  color: #FFFFFF;
+}
+
+#pxwebcontent .tableofcontent_link {
+  background: none;
+  padding: 0 0 0 0;
+  display: block;
+  color: #00824d;
+}
+
+  #pxwebcontent .tableofcontent_link:hover {
+    color: #FFFFFF;
+  }
+
+#pxwebcontent div.AspNet-TreeView a,
+#pxwebcontent div.AspNet-TreeView a:visited,
+#pxwebcontent div.AspNet-TreeView a:active,
+#pxwebcontent div.AspNet-TreeView a:hover,
+#pxwebcontent div.AspNet-TreeView a:link {
+  font-family: Roboto;
+  font-weight: normal;
+  padding-top: 0px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#pxwebcontent #TableOfContent a:hover em {
+  color: #FFFFFF;
+}
+
+#pxwebcontent #TableOfContent a em {
+  color: #333;
+}
+
+#pxwebcontent #TableOfContent div.AspNet-TreeView li.AspNet-TreeView-Leaf a {
+  display: block;
+}
