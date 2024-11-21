@@ -15,7 +15,8 @@ namespace PXWeb.Code.API.Interfaces
         /// Sets the context for the bulk registry.
         /// </summary>
         /// <param name="context">The context to set.</param>
-        void SetContext(string context);
+        /// <param name="language">The language for the current context.</param>
+        void SetContext(string context, string language);
 
         /// <summary>
         /// Determines whether a table should be updated based on its last updated date.
@@ -29,8 +30,9 @@ namespace PXWeb.Code.API.Interfaces
         /// Registers that a table bulk file has been updated.
         /// </summary>
         /// <param name="tableId">The ID of the table.</param>
+        /// <param name="tableText">The presentation text of the table.</param>
         /// <param name="generationDate">The generation date of the bulk file.</param>
-        void RegisterTableBulkFileUpdated(string tableId, DateTime generationDate);
+        void RegisterTableBulkFileUpdated(string tableId, string tableText, DateTime generationDate);
 
         /// <summary>
         /// Saves the changes made to the bulk registry.
