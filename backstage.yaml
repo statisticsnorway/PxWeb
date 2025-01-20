@@ -10,7 +10,7 @@ metadata:
     - .NET
     - Oracle
   annotations:
-    github.com/project-slug: 
+    github.com/project-slug: statisticsnorway/PxWeb
 spec:
   type: website
   system: PXWEB
@@ -25,9 +25,9 @@ metadata:
   name: PXWEB-API-V0
   description: API data and metadata statbank
 spec:
-  type: openapi
+  type: custom
   system: PXWEB
   owner: statbank-developers
   lifecycle: production
-  definition:
-    $text: 
+  definition: "N/A"
+  
