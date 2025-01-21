@@ -6,7 +6,7 @@ metadata:
   description: |
     web page statbank
   tags:
-    - C#
+    - "C#"
     - .NET
     - Oracle
   annotations:
