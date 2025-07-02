@@ -417,6 +417,7 @@
   <sentence name="CtrlTableQueryShowInformationTooltip" value="Få informasjon om hvordan du kan koble denne tabellen i applikasjonen din" />
   <sentence name="CtrlTableQueryHideInformation" value="Skjul" />
   <sentence name="CtrlTableQueryInformationText" value="Send (POST) følgende JSON-spørring til URL under eller kopier til API Konsoll." />
+  <sentence name="CtrlTableQueryV2InformationText" value="Teste den nye betaversonen av PxWebApi 2.0. Send GET til URL:en under for å kunne hente opp denne tabellen. Se brukerveiledning til nytt PxWebAPI 2.0 https://www.ssb.no/api/api-mot-statistikkbanken--brukerveiledning" />
   <sentence name="CtrlTableQueryQueryCaption" value="JSON-spørring: " />
   <sentence name="CtrlTableQueryMoreInformation" value="Mer Informasjon om API mot Statistikkbanken" />
   <sentence name="CtrlTableQuerySaveQuery" value="Lagre API-spørring (json)" />
