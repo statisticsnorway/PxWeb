@@ -492,7 +492,7 @@
 	 <sentence name="CtrlTableQueryV2InformationText" value="Have a look at the beta version of PxWebApi 2.0. Send a GET request to the URL below to access this table." />
 	 <sentence name="CtrlTableQueryUrlCaption" value="URL:" />
 	 <sentence name="CtrlTableQueryQueryCaption" value="JSON query:" />
-	 <sentence name="CtrlTableQueryMoreInformation" value="More information" />
+	 <sentence name="CtrlTableQueryMoreInformation" value="More information on new and old API" />
     <sentence name="CtrlTableQuerySaveQuery" value="Save API query (json)" />
 	<sentence name="CtrlTableQueryCopy" value="Copy" />
     

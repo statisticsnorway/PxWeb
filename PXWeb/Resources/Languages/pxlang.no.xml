@@ -419,7 +419,7 @@
   <sentence name="CtrlTableQueryInformationText" value="Send (POST) følgende JSON-spørring til URL under eller kopier til API Konsoll." />
   <sentence name="CtrlTableQueryV2InformationText" value="Teste den nye betaversonen av PxWebApi 2.0. Send GET til URL:en under for å kunne hente opp denne tabellen." />
   <sentence name="CtrlTableQueryQueryCaption" value="JSON-spørring: " />
-  <sentence name="CtrlTableQueryMoreInformation" value="Mer Informasjon om API mot Statistikkbanken" />
+  <sentence name="CtrlTableQueryMoreInformation" value="Mer Informasjon om nytt og gammelt API mot Statistikkbanken" />
   <sentence name="CtrlTableQuerySaveQuery" value="Lagre API-spørring (json)" />
   <sentence name="CtrlNavigationFlowSectionScreenReader" value="Oversikt over de tre stegene i prosessen med å få data."/>
   <sentence name="CtrlNavigationFlowExplainScreenReader" value="De 3 stegene er Velg tabell, Velg variabler og Vis resultat. Du er nå på "/>
