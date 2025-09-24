@@ -489,7 +489,7 @@
 	 <sentence name="CtrlTableQueryShowInformationTooltip" value="Get information about how you can connect to this table from your application" />
 	 <sentence name="CtrlTableQueryHideInformation" value="Hide" />
 	 <sentence name="CtrlTableQueryInformationText" value="POST the following JSON query to the URL below to access this table from your application." />
-	 <sentence name="CtrlTableQueryV2InformationText" value="Have a look at the new beta version of PxWebApi 2.0. Use the GET URL below to retrieve this table." />
+	 <sentence name="CtrlTableQueryV2InformationText" value="Have a look at the new PxWebApi 2. Use the GET URL below to retrieve this table." />
 	 <sentence name="CtrlTableQueryUrlCaption" value="URL:" />
 	 <sentence name="CtrlTableQueryQueryCaption" value="JSON query:" />
 	 <sentence name="CtrlTableQueryMoreInformation" value="More information on new and old API" />

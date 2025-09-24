@@ -23,7 +23,7 @@
             </div>
         </asp:Panel>
         <asp:Panel ID="pnlQueryInformationV2" CssClass="tablequery_informationpanel" runat="server">
-            <asp:Label ID="lblV2text" runat="server" Text="" CssClass="tablequery_V2caption">PxWebApi 2.0 beta:</asp:Label>
+            <asp:Label ID="lblV2text" runat="server" Text="" CssClass="tablequery_V2caption">PxWebApi 2:</asp:Label>
             <asp:Label ID="lblInformationTextV2" runat="server" Text="" CssClass="tablequery_informationtext"></asp:Label>
             <asp:Label ID="lblUrlV2" runat="server" Text="" AssociatedControlID="txtUrl" CssClass="tablequery_urlcaption"></asp:Label>
             <asp:TextBox ID="txtUrlV2" runat="server" ReadOnly="true" CssClass="tablequery_url"></asp:TextBox>
