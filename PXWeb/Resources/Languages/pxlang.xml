@@ -494,7 +494,7 @@
 	 <sentence name="CtrlTableQueryQueryCaption" value="JSON query:" />
 	 <sentence name="CtrlTableQueryMoreInformation" value="More information on new and old API" />
     <sentence name="CtrlTableQuerySaveQuery" value="Save API query (json)" />
-	<sentence name="CtrlTableQueryCopy" value="Copy" />
+	<sentence name="CtrlTableQueryCopy" value="Get link" />
     
    <sentence name="CtrlNavigationFlowSectionScreenReader" value="Overview of the three steps in the process to get the data."/>
    <sentence name="CtrlNavigationFlowExplainScreenReader" value="The 3 steps are Choose table, Choose variable and Show result. You are currently at "/>
