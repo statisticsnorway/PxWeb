@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
 
-    runs-on: windows-2019
+    runs-on: windows-2022
 
     strategy:
       matrix:
@@ -13,7 +13,7 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - uses: microsoft/setup-msbuild@v2.0.0
 
