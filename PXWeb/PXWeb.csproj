@@ -161,12 +161,12 @@
       <HintPath>..\packages\Microsoft.IdentityModel.Protocols.8.15.0\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=8.14.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.8.14.0\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.8.15.0\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.14.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.8.14.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.8.15.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -219,8 +219,9 @@
       <HintPath>..\packages\PCAxis.Menu.OracleDatamodelMenu.1.0.6\lib\netstandard2.0\PCAxis.Menu.OracleDatamodelMenu.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PCAxis.Metadata, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PCAxis.Metadata.1.0.4\lib\netstandard2.0\PCAxis.Metadata.dll</HintPath>
+    <Reference Include="PCAxis.Metadata, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\PCAxis.Metadata.1.0.5\lib\netstandard2.0\PCAxis.Metadata.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="PCAxis.Query, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\PcAxis.Query.1.0.10\lib\netstandard2.0\PCAxis.Query.dll</HintPath>
