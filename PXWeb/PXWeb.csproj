@@ -62,8 +62,8 @@
       <HintPath>..\packages\Azure.Core.1.50.0\lib\net472\Azure.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Azure.Identity, Version=1.17.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8">
-      <HintPath>..\packages\Azure.Identity.1.17.0\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    <Reference Include="Azure.Identity, Version=1.17.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8">
+      <HintPath>..\packages\Azure.Identity.1.17.1\lib\netstandard2.0\Azure.Identity.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b">
@@ -85,8 +85,9 @@
     <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
-    <Reference Include="Irony, Version=1.1.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Irony.NetCore.1.1.11\lib\netstandard2.0\Irony.dll</HintPath>
+    <Reference Include="Irony, Version=1.5.3.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47">
+      <HintPath>..\packages\Irony.1.5.3\lib\netstandard2.0\Irony.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=3.2.0.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a">
       <HintPath>..\packages\log4net.3.2.0\lib\net462\log4net.dll</HintPath>
@@ -423,8 +424,9 @@
       <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
-    <Reference Include="XLParser, Version=1.5.2.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\XLParser.1.5.2\lib\net461\XLParser.dll</HintPath>
+    <Reference Include="XLParser, Version=1.7.5.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4">
+      <HintPath>..\packages\XLParser.1.7.5\lib\net462\XLParser.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
