@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Xml;
 
 namespace Norway.PCAxis.Metadata
@@ -148,7 +147,7 @@ namespace Norway.PCAxis.Metadata
         /// <summary>
         ///  Integer that defines how many parametes a metaIdsystem consist of
         /// </summary>
-        private int _numberOfMetaIdParams;
+        //private int _numberOfMetaIdParams;
 
         #endregion
 
