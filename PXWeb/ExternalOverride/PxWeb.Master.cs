@@ -541,7 +541,7 @@ namespace PXWeb
             {
                 currentUrl = currentUrl.ToLower().Replace("http", "https");
             }
-            var changeLanguageUrl = PxUrlObj.Language == "no" ? currentUrl.Replace("/statbank/", "/en/statbank/") : currentUrl.Replace("/en/statbank/", "/statbank/");
+            var changeLanguageUrl = PxUrlObj.Language == "no" ? currentUrl.Replace("/statbank", "/en/statbank") : currentUrl.Replace("/en/statbank", "/statbank");
             var presentationUrlPartStartIndex = changeLanguageUrl.ToLower().IndexOf("tableview");
             if (presentationUrlPartStartIndex < 0)
             {
