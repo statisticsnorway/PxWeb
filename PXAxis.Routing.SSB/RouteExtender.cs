@@ -604,13 +604,13 @@ namespace PXAxis.Routing.SSB
             string fullUrl = uri.OriginalString;
             var fullUrlPathParts = fullUrl.Split('/').Select(x => ValidationManager.GetValue(x)).ToArray();
 
-            if (fullUrlPathParts.Any(x => x.ToLower() == SSBUrl.SitePathStart))
+            if (fullUrlPathParts.Any(x => x.ToLower().StartsWith( SSBUrl.SitePathStart)))
             {
                 for (int i = 0; i < fullUrlPathParts.Length; i++)
                 {
                     string fullUrlPathPart = fullUrlPathParts[i];
 
-                    if (fullUrlPathPart.ToLower() == SSBUrl.SitePathStart.ToLower() && i > 0)
+                    if (fullUrlPathPart.ToLower().StartsWith(SSBUrl.SitePathStart) && i > 0)
                     {
                         string maybeLanguage = fullUrlPathParts[i - 1];
 
