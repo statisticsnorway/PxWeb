@@ -1,34 +1,24 @@
-﻿using System;
-using System.Collections;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.SessionState;
-using System.Xml.Linq;
+﻿using log4net;
 using PCAxis.Chart;
-using PCAxis.Web.Controls;
-using System.Web.Routing;
-using PCAxis.Api;
 using PCAxis.Search;
-using PXWeb.BackgroundWorker;
-using System.Collections.Generic;
-using log4net;
 using PX.Web.Interfaces.Cache;
-using System.Runtime.Caching;
-using System.Web.Http;
-using PXWeb.API;
-using Ninject;
-using Ninject.Web.Common;
+using PXWeb.BackgroundWorker;
 using PXWeb.Code.Management;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Runtime.Caching;
+using System.Web;
+using System.Web.Http;
+using System.Web.Routing;
 
 namespace PXWeb
 {
     public class RouteInstance
     {
         public static IRouteExtender RouteExtender { get; set; }
-        public static IPxUrlProvider PxUrlProvider { get; set; }   
+        public static IPxUrlProvider PxUrlProvider { get; set; }
     }
 
     public interface ICacheService
@@ -431,7 +421,7 @@ namespace PXWeb
                                            PxUrl.VIEW_SORTEDTABLE_IDENTIFIER + "/" +
                                            "{" + PxUrl.LAYOUT_KEY + "}/",
                                            "~/DataSort.aspx");
-            
+
             RouteTable.Routes.MapHttpRoute(name: "CacheApi", routeTemplate: "api/admin/v1/{controller}");
             RouteTable.Routes.MapHttpRoute(name: "MenuApi", routeTemplate: "api/admin/v1/{controller}/{database}");
             RouteTable.Routes.MapHttpRoute(name: "DcatApi", routeTemplate: "api/admin/v1/{controller}/{databaseType}/{database}");
