@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Data;
-using System.Linq;
+﻿using PCAxis.Chart;
+using PCAxis.Web.Controls;
+using PCAxis.Web.Core.Management;
+using System;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Web;
 using System.Web.Services;
-using System.Web.Services.Protocols;
-using System.Xml.Linq;
 using System.Web.SessionState;
-using PCAxis.Paxiom;
-using PCAxis.Charting;
-using System.IO;
-using System.Drawing.Imaging;
 using System.Windows.Forms.DataVisualization.Charting;
-using PCAxis.Web.Controls;
-using PCAxis.Chart;
-using PCAxis.Web.Core.Management;
 
 namespace PXWeb
 {
@@ -25,39 +18,50 @@ namespace PXWeb
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     public class ChartHandler : IHttpHandler, IRequiresSessionState
     {
+        private static readonly log4net.ILog _logger = log4net.LogManager.GetLogger(typeof(ChartHandler));
 
         public void ProcessRequest(HttpContext context)
         {
-            ChartSettings settings = ChartManager.Settings;
-            settings.IsColumnLine = IsColumnLine(context);
-            if (!settings.IsColumnLine)
+            _logger.Info("Hei fra ChartHandler.ProcessRequest");
+            try
             {
-                settings.ChartType = GetChartType(context, settings);
+                ChartSettings settings = ChartManager.Settings;
+                settings.IsColumnLine = IsColumnLine(context);
+                if (!settings.IsColumnLine)
+                {
+                    settings.ChartType = GetChartType(context, settings);
+                }
+                else
+                {
+                    settings.ChartType = SeriesChartType.Column;
+                }
+                settings.Title = GetTitle(context, settings);
+                settings.Width = GetWidth(context, settings);
+                settings.Height = GetHeight(context, settings);
+                settings.LineThickness = GetLineThickness(context, settings);
+                settings.LabelOrientation = GetLabelOrientation(context, settings);
+                settings.Guidelines = GetGuidelines(context, settings);
+                settings.ShowLegend = GetLegend(context, settings);
+                settings.LegendHeight = GetLegendHeight(context, settings);
+
+                PxWebChart chart;
+                chart = ChartHelper.GetChart(settings, PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel);
+
+                MemoryStream s = new MemoryStream();
+
+                // Display on screen
+                context.Response.ContentType = "image/png";
+                chart.SaveImage(s, ImageFormat.Png);
+
+                s.WriteTo(context.Response.OutputStream);
+                context.Response.End();
             }
-            else
+            catch (Exception ex)
             {
-                settings.ChartType = SeriesChartType.Column;
+                _logger.Error(ex);
+
+                throw ex;
             }
-            settings.Title = GetTitle(context, settings);
-            settings.Width = GetWidth(context, settings);
-            settings.Height = GetHeight(context, settings);
-            settings.LineThickness = GetLineThickness(context, settings);
-            settings.LabelOrientation = GetLabelOrientation(context, settings);
-            settings.Guidelines = GetGuidelines(context, settings);
-            settings.ShowLegend = GetLegend(context, settings);
-            settings.LegendHeight = GetLegendHeight(context, settings);
-
-            PxWebChart chart;
-            chart = ChartHelper.GetChart(settings, PCAxis.Web.Core.Management.PaxiomManager.PaxiomModel);
-
-            MemoryStream s = new MemoryStream();
-
-            // Display on screen
-            context.Response.ContentType = "image/png";
-            chart.SaveImage(s, ImageFormat.Png);
-            
-            s.WriteTo(context.Response.OutputStream);
-            context.Response.End();
         }
 
         /// <summary>
@@ -157,7 +161,7 @@ namespace PXWeb
                         return PXWeb.Settings.Current.Features.Charts.MaxWidth;
                     }
                     else
-                    { 
+                    {
                         return width;
                     }
                 }
@@ -184,7 +188,7 @@ namespace PXWeb
                         return PXWeb.Settings.Current.Features.Charts.MaxHeight;
                     }
                     else
-                    { 
+                    {
                         return height;
                     }
                 }
