@@ -1,11 +1,10 @@
-﻿using PXWeb;
+﻿using Oracle.ManagedDataAccess.Client;
+using PCAxis.Web.Core.Management;
+using PXWeb;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using log4net;
 using System.Web;
-using PCAxis.Web.Core.Management;
-using Oracle.ManagedDataAccess.Client;
 
 namespace PXAxis.Routing.SSB
 {
@@ -259,7 +258,7 @@ namespace PXAxis.Routing.SSB
                         //TODO: Sjekk om det er mulig å ha gyldig tabell uten path for de to tilfellene over (tableId/tableName)
                     }
                 }
-                catch(Exception ex) when (ex is NullReferenceException || ex is ArgumentException) 
+                catch (Exception ex) when (ex is NullReferenceException || ex is ArgumentException)
                 {
                     throw new HttpException(404, "HTTP/1.1 404 Not Found");
                 }
@@ -531,15 +530,15 @@ namespace PXAxis.Routing.SSB
             {
                 if (_layout == NoLayout) return null;
                 if (!string.IsNullOrEmpty(_layout)) return _layout;
-                
+
                 System.Web.UI.Page page = HttpContext.Current.Handler as System.Web.UI.Page;
                 if (page == null) return null;
-                
+
                 string requestPath = ValidationManager.GetValue(page.Request.Path);
                 var pathParts = requestPath.Split(new string[] { "/" }, StringSplitOptions.RemoveEmptyEntries);
 
                 //different from localhost
-                var sitePathStartIndex = Array.IndexOf(pathParts.Select(x => x.ToLower()).ToArray<string>(), SSBUrl.SitePathStart.ToLower());
+                var sitePathStartIndex = Array.FindIndex(pathParts, s => s.StartsWith(SSBUrl.SitePathStart.ToLower()));
 
                 int baseIndex = 0;
 
