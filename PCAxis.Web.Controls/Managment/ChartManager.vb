@@ -1,25 +1,29 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Web
+﻿Imports PCAxis.Chart
 Imports PCAxis.Web.Core.StateProvider
-Imports PCAxis.Chart
 
 Public NotInheritable Class ChartManager
 
     Const CHART_SETTINGS As String = "CharSettings"
+    Private Shared _logger As log4net.ILog = log4net.LogManager.GetLogger(GetType(ChartManager))
 
     Public Shared Property Settings() As ChartSettings
         Get
+            _logger.Debug("ChartManager: start")
             'Fetch the current model from the stateprovider
             Dim s As ChartSettings = CType(StateProviderFactory.GetStateProvider().Item(GetType(ChartSettings), CHART_SETTINGS), ChartSettings)
             If s Is Nothing Then
+                _logger.Debug("ChartManager: s is nothing")
                 s = New ChartSettings()
                 ChartManager.Settings = s
                 If _initializer IsNot Nothing Then
+                    _logger.Debug("ChartManager: _initializer IsNot Nothing")
                     _initializer(s)
                 End If
             End If
+
+
+
+
             Return s
         End Get
         Set(ByVal value As ChartSettings)
@@ -36,7 +40,15 @@ Public NotInheritable Class ChartManager
             Return _initializer
         End Get
         Set(ByVal value As InitializeSettings)
+            _logger.Debug("ChartManager: SettingsInitializer")
+
             _initializer = value
+            If _initializer IsNot Nothing Then
+                _logger.Debug("ChartManager: _initializer IsNot Nothing")
+            Else
+                _logger.Debug("ChartManager: false _initializer IsNot Nothing")
+            End If
+
         End Set
     End Property
 
