@@ -12,18 +12,20 @@ Public NotInheritable Class ChartManager
             'Fetch the current model from the stateprovider
             Dim s As ChartSettings = CType(StateProviderFactory.GetStateProvider().Item(GetType(ChartSettings), CHART_SETTINGS), ChartSettings)
             If s Is Nothing Then
-                _logger.Debug("ChartManager: s is nothing")
+                _logger.Debug("ChartManager: if s is nothing")
                 s = New ChartSettings()
                 ChartManager.Settings = s
                 If _initializer IsNot Nothing Then
-                    _logger.Debug("ChartManager: _initializer IsNot Nothing")
+                    _logger.Debug("ChartManager: if _initializer IsNot Nothing")
                     _initializer(s)
+                Else
+                    _logger.Debug("ChartManager: else _initializer IsNot Nothing")
                 End If
+            Else
+                _logger.Debug("ChartManager: else s is nothing")
             End If
 
-
-
-
+            _logger.Debug("ChartManager: end")
             Return s
         End Get
         Set(ByVal value As ChartSettings)
@@ -44,9 +46,9 @@ Public NotInheritable Class ChartManager
 
             _initializer = value
             If _initializer IsNot Nothing Then
-                _logger.Debug("ChartManager: _initializer IsNot Nothing")
+                _logger.Debug("ChartManager: if _initializer IsNot Nothing")
             Else
-                _logger.Debug("ChartManager: false _initializer IsNot Nothing")
+                _logger.Debug("ChartManager: else _initializer IsNot Nothing")
             End If
 
         End Set
