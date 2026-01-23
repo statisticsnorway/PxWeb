@@ -8,24 +8,24 @@ Public NotInheritable Class ChartManager
 
     Public Shared Property Settings() As ChartSettings
         Get
-            _logger.Debug("ChartManager: start")
+            _logger.Info("ChartManager: start")
             'Fetch the current model from the stateprovider
             Dim s As ChartSettings = CType(StateProviderFactory.GetStateProvider().Item(GetType(ChartSettings), CHART_SETTINGS), ChartSettings)
             If s Is Nothing Then
-                _logger.Debug("ChartManager: if s is nothing")
+                _logger.Info("ChartManager: if s is nothing")
                 s = New ChartSettings()
                 ChartManager.Settings = s
                 If _initializer IsNot Nothing Then
-                    _logger.Debug("ChartManager: if _initializer IsNot Nothing")
+                    _logger.Info("ChartManager: if _initializer IsNot Nothing")
                     _initializer(s)
                 Else
-                    _logger.Debug("ChartManager: else _initializer IsNot Nothing")
+                    _logger.Info("ChartManager: else _initializer IsNot Nothing")
                 End If
             Else
-                _logger.Debug("ChartManager: else s is nothing")
+                _logger.Info("ChartManager: else s is nothing")
             End If
 
-            _logger.Debug("ChartManager: end")
+            _logger.Info("ChartManager: end")
             Return s
         End Get
         Set(ByVal value As ChartSettings)
@@ -42,15 +42,15 @@ Public NotInheritable Class ChartManager
             Return _initializer
         End Get
         Set(ByVal value As InitializeSettings)
-            _logger.Debug("ChartManager: SettingsInitializer")
+            _logger.Info("ChartManager: start SettingsInitializer")
 
             _initializer = value
             If _initializer IsNot Nothing Then
-                _logger.Debug("ChartManager: if _initializer IsNot Nothing")
+                _logger.Info("ChartManager: if _initializer IsNot Nothing")
             Else
-                _logger.Debug("ChartManager: else _initializer IsNot Nothing")
+                _logger.Info("ChartManager: else _initializer IsNot Nothing")
             End If
-
+            _logger.Info("ChartManager: end SettingsInitializer")
         End Set
     End Property
 
