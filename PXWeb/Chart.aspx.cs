@@ -1,31 +1,26 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
-using System.Xml.Linq;
+﻿using PCAxis.Chart;
+using PCAxis.Paxiom;
+using PCAxis.Paxiom.Operations;
 using PCAxis.Web.Controls;
 using PCAxis.Web.Controls.CommandBar.Plugin;
 using PCAxis.Web.Core.Management;
-using PCAxis.Chart;
-using PCAxis.Paxiom.Operations;
-using System.Windows.Forms.DataVisualization.Charting;
 using PXWeb.Misc;
-using PCAxis.Paxiom;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using System.Text;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace PXWeb
 {
     public partial class Chart : System.Web.UI.Page
     {
         private int _errorNumber = 1;
+
+        private static readonly log4net.ILog _logger = log4net.LogManager.GetLogger(typeof(Chart));
 
         private string GetLayout()
         {
@@ -112,20 +107,20 @@ namespace PXWeb
             {
                 result.Append(".");
             }
-            
+
             txtTitle.Text = result.ToString();
         }
-        
+
         protected void Page_PreRender(object sender, EventArgs e)
         {
             if (VerifyChartData())
             {
-                pnlChart.Visible = true;              
+                pnlChart.Visible = true;
                 SetLocalizedTexts();
             }
             else
             {
-                pnlChart.Visible = false;               
+                pnlChart.Visible = false;
             }
 
             if (!PXWeb.Settings.Current.Selection.StandardApplicationHeadTitle)
@@ -139,7 +134,7 @@ namespace PXWeb
             {
                 Master.HeadTitle = PCAxis.Web.Core.Management.LocalizationManager.GetLocalizedString("PxWebTitleChart");
             }
-            
+
             ChartManager.Settings.UseSettingTitle = false;
             SettingsLabel.Text = Master.GetLocalizedString("PxWebChartUserSettingsShow");
             pnlSortTime.GroupingText = "<span class='font-heading'>" + Master.GetLocalizedString("PxWebChartUserSettingsSortTime") + "</span>";
@@ -213,10 +208,10 @@ namespace PXWeb
                 }
                 Master.EnableSaveQueryFeature(true);
                 return true;
-            }            
-            return false;            
+            }
+            return false;
         }
-        
+
         private bool VerifyPieOrPyramid()
         {
             switch (GetLayout())
@@ -336,7 +331,7 @@ namespace PXWeb
         /// </summary>
         /// <param name="chart">Chart type</param>
         private void DisplayChartInformation(string chart)
-        {            
+        {
             switch (chart)
             {
                 case Plugins.Views.CHART_PIE:
@@ -381,12 +376,14 @@ namespace PXWeb
         /// </summary>
         private void InitializeChart()
         {
+            _logger.Info("InitializeChart start");
             //pnlSettings.Visible = false;
 
             // Default values for user settings
             ChartSettings settings = ChartManager.Settings;
+            _logger.Info("InitializeChart p2");
             settings.ChartType = ChartSettings.ConvertToChartType(GetLayout(), settings.ChartType);
-            
+            _logger.Info("InitializeChart p3");
             if (GetLayout().Equals(Plugins.Views.CHART_COLUMNLINE))
             {
                 settings.IsColumnLine = true;
@@ -502,7 +499,7 @@ namespace PXWeb
         /// </summary>
         private void SetLocalizedTexts()
         {
-            
+
             foreach (ListItem li in rblSortTime.Items)
             {
                 switch (li.Value.ToLower())
@@ -518,7 +515,7 @@ namespace PXWeb
                         break;
                 }
             }
-           
+
             foreach (ListItem li in rblLabelOrientation.Items)
             {
                 switch (li.Value.ToLower())

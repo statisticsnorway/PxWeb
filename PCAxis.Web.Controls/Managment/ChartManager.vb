@@ -24,7 +24,9 @@ Public NotInheritable Class ChartManager
             Else
                 _logger.Info("ChartManager: else s is nothing")
             End If
-
+            If s Is Nothing Then
+                _logger.Info("ChartManager: will return Nothing")
+            End If
             _logger.Info("ChartManager: end")
             Return s
         End Get
