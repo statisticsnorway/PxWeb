@@ -275,7 +275,7 @@ namespace PXWeb
 
             TableQueryInformation.ShowSaveApiQueryButton = PXWeb.Settings.Current.Features.Api.ShowSaveApiQueryButton;
 
-            if (!PXWeb.Settings.Current.Features.General.ApiEnabled || !PXWeb.Settings.Current.Features.Api.ShowQueryInformation)
+            if (!PXWeb.Settings.Current.Features.Api.ShowQueryInformation)
             {
                 TableQueryInformation.Visible = false;
                 return;
