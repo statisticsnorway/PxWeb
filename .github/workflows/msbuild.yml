@@ -16,7 +16,7 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v6.0.2
+    - uses: actions/checkout@v6.0.3
 
     - uses: microsoft/setup-msbuild@v2.0.0
 
