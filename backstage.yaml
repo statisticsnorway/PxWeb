@@ -6,8 +6,8 @@ metadata:
   description: |
     web page statbank
   tags:
-    - "C#"
-    - .NET
+    - c-sharp
+    - dotnet
     - Oracle
   annotations:
     github.com/project-slug: statisticsnorway/PxWeb
