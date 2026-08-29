@@ -121,17 +121,13 @@ $scrollbar-color: #b0b0b0;
   }
 }
 /* **********************************  _PxWeb.scss *********************************** */
-html {
-  /*Just to aid the conversion job from px to rem, making 1px = 0.1 rem. */
-  font-size: 62.5%;
-}
 
 #pxwebcontent {
   background: #fff;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
   color: #333;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
@@ -168,7 +164,7 @@ html {
 
 #pxwebcontent .font-normal-text {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent #header {
@@ -259,7 +255,7 @@ html {
 }
 
 #pxwebcontent #header .link-text.px-change-lang, #pxwebcontent #header .link-text.px-external-search {
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   letter-spacing: normal;
   padding-top: 0px;
   padding-right: 1px;
@@ -374,7 +370,7 @@ html {
   background-color: #fff;
   position: relative;
   z-index: 2;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 #pxwebcontent .px-settings legend {
   float: none;
@@ -398,7 +394,7 @@ html {
 }
 
 #pxwebcontent .px_setting_textbox_normal {
-  width: 6rem;
+  width: 3.75rem;
   margin-bottom: 5px;
   margin-left: 5px;
 }
@@ -558,7 +554,7 @@ html {
   font-family: "Open Sans", sans-serif !important;
   font-stretch: normal;
   font-weight: normal;
-  font-size: 1.6rem;
+  font-size: 1rem;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -648,7 +644,7 @@ html {
 
 .footnote_heading {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.25rem;
     margin-bottom: 10px;
 }
 
@@ -721,7 +717,7 @@ html {
   background-repeat: no-repeat;
   margin-right: 20px;
   margin-top: 10px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 #pxwebcontent .pxweb-buttons.minimize-icon {
   background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize-2"><polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" y1="10" x2="21" y2="3"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>');
@@ -906,7 +902,7 @@ html {
 
 #pxwebcontent .pxweb-symbol-buttons {
   background-repeat: no-repeat;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   padding: 10px 12px;
   height: 1px;
   min-height: 30px;
@@ -940,7 +936,7 @@ html {
   background-repeat: no-repeat;
   margin-right: 20px;
   margin-top: 10px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 #pxwebcontent .variableselector-buttons.variableselector_valuesselect_deselect_all_button {
   background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="8" y1="12" x2="16" y2="12"></line></svg>');
@@ -1057,7 +1053,7 @@ html {
 #pxwebcontent .metadata_selectVariable {
   margin-top: 10px;
   font-family: "Open Sans";
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: #333;
 }
 
@@ -1180,7 +1176,7 @@ html {
 /* **********************************  _breadcrumb.scss TODO *********************************** */
 #pxwebcontent .pxweb-link.breadcrumb_text {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 /*
@@ -1190,7 +1186,7 @@ html {
 #pxwebcontent .breadcrumb_text {
     color: $breadcrumb-text;
     @include pxweb-font;
-    font-size: 1.4rem;
+    font-size: 0.875rem;
     display: inline-block;
     background-image: none !important;
     transition: none;
@@ -1199,7 +1195,7 @@ html {
 #pxwebcontent .breadcrumb_text:hover {
     color: $breadcrumb-text;
     @include pxweb-font;
-    font-size: 1.4rem;
+    font-size: 0.875rem;
 }
 
 #pxwebcontent .breadcrumb_text:focus {
@@ -1211,7 +1207,7 @@ html {
   color: #000;
   font-family: "Open Sans", sans-serif;
   /*   @include pxweb-font;*/
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   display: inline-block;
 }
 
@@ -1219,7 +1215,7 @@ html {
   color: #000;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent .breadcrumb_sep {
@@ -1229,7 +1225,7 @@ html {
       font-family: Verdana;
       @include pxweb-font;
   */
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent .breadcrumb_homebutton {
@@ -1278,20 +1274,20 @@ html {
   /*float: left;*/
   display: flex;
   overflow: auto;
-  width: 62rem;
+  width: 38.75rem;
   position: relative;
   z-index: 2;
   background-color: #fff;
 }
 
 #pxwebcontent .commandbar_container > div {
-  width: 62rem;
+  width: 38.75rem;
 }
 
 #pxwebcontent .container_titletext {
   /*font-weight: bold; these are roboto condensed  */
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   border-bottom: 1px solid #00824d;
 }
 
@@ -1304,7 +1300,7 @@ html {
 }
 
 #pxwebcontent .container_exit_buttons_row .pxweb-btn {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   margin-right: 20px;
 }
 
@@ -1452,7 +1448,7 @@ html {
   background: #25a23c;
   border: 1px solid #008451;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.5rem;
+  font-size: 0.9375rem;
   font-weight: bold;
 }
 
@@ -1462,7 +1458,7 @@ html {
   background: #25a23c;
   border: 1px solid #008451;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.5rem;
+  font-size: 0.9375rem;
   font-weight: bold;
 }*/
 /*#pxwebcontent input[type=submit].commandbar_continuebutton {
@@ -1471,7 +1467,7 @@ html {
   background: #25a23c;
   border: 1px solid #008451;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.5rem;
+  font-size: 0.9375rem;
   font-weight: bold;
 }*/
 #pxwebcontent .commandbar_pivot_button {
@@ -1697,19 +1693,19 @@ html {
 
 #pxwebcontent .commandbar_function_dropdownlist {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: #333333;
 }
 
 #pxwebcontent .commandbar_saveas_dropdownlist {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: #333333;
 }
 
 #pxwebcontent .commandbar_link_dropdownlist {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: #333333;
 }
 
@@ -1734,12 +1730,12 @@ html {
 }
 
 #pxwebcontent .commandbar_button_row .pxweb-btn {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   margin-right: 20px;
 }
 
 #pxwebcontent .commandbar_button_row .pxweb-btn {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   margin-right: 20px;
 }
 
@@ -1810,12 +1806,12 @@ html {
 }
 
 #pxwebcontent .tablesorter th {
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 #pxwebcontent .tablesorter td {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent table.tablesorter thead tr th span {
@@ -1906,7 +1902,7 @@ html {
 #pxwebcontent .footnote_heading {
   @include just-open-sans;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.125rem;
 }
 
 #pxwebcontent dl.footnote_definitionlist dt {
@@ -1948,10 +1944,10 @@ html {
   font-family: "Open Sans", sans-serif;
   display: block;
   margin-bottom: 20px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 #pxwebcontent .footnotes_container .obs-notes .the_long_text {
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 #pxwebcontent .footnotes_container .pxweb-accordion {
   margin-top: 20px;
@@ -1961,7 +1957,7 @@ html {
 }
 #pxwebcontent .footnotes_container h3, #pxwebcontent .footnotes_container h4, #pxwebcontent .footnotes_container .accordion-header, #pxwebcontent .footnotes_container .obs-notes {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.125rem;
 }
 #pxwebcontent .footnotes_container .notetype_valuenote_key, #pxwebcontent .footnotes_container .notetype_valuenote_value {
   margin-left: 32px;
@@ -1991,7 +1987,7 @@ html {
   color: #00824d;
   cursor: pointer;
   display: inline-flex;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   line-height: 1.25;
   margin-top: -3px;
   margin-bottom: -2px;
@@ -2099,7 +2095,7 @@ html {
 
 #pxwebcontent .information_definitionlist .dd {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent .information_definitionlist_heading {
@@ -2259,7 +2255,7 @@ html {
   font-weight: normal;
   animation: fadein 0.2s;
   display: none;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   opacity: 0;
   transition: opacity 0.18s;
   border: 1.5px solid #b6e8b8;
@@ -2332,7 +2328,7 @@ html {
 }
 
 #pxwebcontent .pxbox .metadata-links .link-text {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent .metadata-links a:focus {
@@ -2429,14 +2425,14 @@ html {
   font-family: "Roboto Condensed", "Open Sans", sans-serif !important;
   text-decoration: none;
   border-bottom: none;
-  font-size: 1.8rem;
+  font-size: 1.125rem;
   font-weight: bold;
   margin-top: 5px;
 }
 
 #pxwebcontent span.nav-step.active {
   color: #293F44;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -2446,7 +2442,7 @@ html {
 }
 
 #pxwebcontent span.nav-step.passive {
-  font-size: 1.8rem;
+  font-size: 1.125rem;
   border-bottom-style: solid;
 }
 
@@ -2660,7 +2656,7 @@ html {
   font-family: "Roboto Condensed", sans-serif !important;
   font-stretch: condensed;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 0.9375rem;
   margin-top: 5px;
   display: block;
 }
@@ -2795,7 +2791,7 @@ html {
   background-repeat: no-repeat;
   background-position: left 0.4em top 50%, 0 0;
   background-size: 24px auto, 100%;
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 #pxwebcontent select.selectfromgroup-selectgrouping:hover {
   border: 1px solid #b6e8b8;
@@ -2811,7 +2807,7 @@ html {
   width: 100%;
   height: 10em;
   display: block;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent .selectfromgroup-radiobuttons {
@@ -2819,7 +2815,7 @@ html {
 }
 
 #pxwebcontent .selectfromgroup-groupsbutton {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent .selectfromgroup-valuespanel {
@@ -2830,13 +2826,13 @@ html {
   width: 100%;
   height: 10em;
   display: block;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent .selectfromgroup-cancel {
   margin-right: 20px;
   margin-top: 10px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent .selectfromgroup-button-container {
@@ -2862,7 +2858,7 @@ html {
   border-left: none;
   border-bottom: #a9a9a9 1px solid;
   border-collapse: separate;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   clear: both;
   padding-right: 2px;
   width: 100%;
@@ -3324,18 +3320,18 @@ html {
   Private Sub DisplayCellInformationDialog(ByVal cellInfo As CellInformation) */
 .table_cellinformation_cell {
   font-weight: bold !important;
-  font-size: 1.4rem !important;
+  font-size: 0.875rem !important;
   padding-bottom: 4px !important;
 }
 
 .table_cellinformation_attributes {
   font-weight: bold !important;
-  font-size: 1.2rem !important;
+  font-size: 0.75rem !important;
 }
 
 .table_cellinformation_notes {
   font-weight: bold !important;
-  font-size: 1.4rem !important;
+  font-size: 0.875rem !important;
 }
 
 .table_cellinformation_text {
@@ -3495,7 +3491,7 @@ html {
   display: block;
   width: 95%;
   font-family: "Source Code Pro";
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 #pxwebcontent .tablequery_querycaption {
@@ -3509,7 +3505,7 @@ html {
   width: 95%;
   margin-bottom: 10px;
   font-family: "Source Code Pro";
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 #pxwebcontent .tablequery_query:focus {
   outline: #9272fc solid 2px;
@@ -3632,7 +3628,7 @@ span.AspNet-TreeView-ClickableNonLink {
     font-family: Roboto;
     font-weight: normal;
     padding-top: 0px;
-    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 26px;
 }
 
@@ -3674,7 +3670,7 @@ span.AspNet-TreeView-ClickableNonLink {
   font-family: Roboto;
   font-weight: normal;
   padding-top: 0px;
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 26px;
   */
   color: #000;
@@ -3716,21 +3712,21 @@ span.AspNet-TreeView-ClickableNonLink {
   }
 
   #pxwebcontent .variable_overview_heading {
-    font-size: 2.8rem;
+    font-size: 1.75rem;
   }
 
   #pxwebcontent .variable_overview_title {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: normal;
     text-transform: capitalize;
   }
 
   #pxwebcontent .variable_overview_mandatory_text {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
   }
 
   #pxwebcontent .variable_overview_mandatory_star {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 }
 /* **********************************  _variableselector.scss *********************************** */
@@ -3770,7 +3766,7 @@ span.AspNet-TreeView-ClickableNonLink {
   margin-top: 1em !important;
   margin-bottom: 1em !important;
   font-family: "Roboto Condensed", sans-serif !important;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 #pxwebcontent .variableselector_error_summary ul {
@@ -3778,7 +3774,7 @@ span.AspNet-TreeView-ClickableNonLink {
 }
 
 #pxwebcontent .variableselector_error_summary li {
-  font-size: 1.6rem;
+  font-size: 1rem;
   list-style-type: disc;
   list-style-position: inside;
   color: black;
@@ -3786,9 +3782,9 @@ span.AspNet-TreeView-ClickableNonLink {
 
 /*TO DO - end*/
 #pxwebcontent .variableselector_continue_button {
-  height: 8.6rem;
-  width: 29.4rem;
-  font-size: 2.8rem;
+  height: 5.375rem;
+  width: 18.375rem;
+  font-size: 1.75rem;
 }
 
 #pxwebcontent .variableselector_valuesselect_box {
@@ -3826,7 +3822,7 @@ span.AspNet-TreeView-ClickableNonLink {
   font-family: "Roboto Condensed", sans-serif !important;
   font-stretch: condensed;
   font-weight: bold;
-  font-size: 2.8rem;
+  font-size: 1.75rem;
   display: inline-block;
   padding-right: 40px;
   overflow-wrap: break-word;
@@ -3837,7 +3833,7 @@ span.AspNet-TreeView-ClickableNonLink {
   font-family: "Roboto", sans-serif !important;
   font-stretch: normal;
   font-weight: normal;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: #162327;
   cursor: pointer;
 }
@@ -3912,7 +3908,7 @@ span.AspNet-TreeView-ClickableNonLink {
   font-family: "Open Sans", sans-serif !important;
   font-stretch: normal;
   font-weight: normal;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: #fff;
 }
 
@@ -3994,16 +3990,16 @@ span.AspNet-TreeView-ClickableNonLink {
 }
 
 #pxwebcontent .variableselector_valuesselect_mandatory_text {
-  font-size: 1.2rem;
+  font-size: 0.75rem;
 }
 
 /* Star in html or css*/
 /* #pxwebcontent .variableselector_valuesselect_mandatory_text:after {
     content: "*";
-    font-size: 2.8rem;
+    font-size: 1.75rem;
 }*/
 #pxwebcontent .variableselector_valuesselect_mandatory_star {
-  font-size: 2.8rem;
+  font-size: 1.75rem;
 }
 
 #pxwebcontent .link-buttons-container {
@@ -4023,7 +4019,7 @@ span.AspNet-TreeView-ClickableNonLink {
 #pxwebcontent .optional-variable-text {
   color: #333;
   padding-left: 5px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   font-family: "Roboto Condensed", sans-serif !important;
   font-stretch: condensed;
   font-weight: bold;
@@ -4032,13 +4028,13 @@ span.AspNet-TreeView-ClickableNonLink {
 #pxwebcontent .optional-variable-icon-panel {
   background-color: #3396d2;
   box-sizing: border-box;
-  width: 2.2rem;
-  height: 2.1rem;
+  width: 1.375rem;
+  height: 1.3125rem;
   border: solid #3396d2 2px;
 }
 #pxwebcontent .optional-variable-icon-panel .icon {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.125rem;
+  height: 1.125rem;
 }
 .variableselector_variable_box_container {
     gap: 20px;
